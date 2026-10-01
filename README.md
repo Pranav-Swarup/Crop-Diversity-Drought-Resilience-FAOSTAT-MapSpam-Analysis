@@ -50,8 +50,8 @@ All scripts run from the repo root as `python -m src.<module>.<script>`.
 
 1. `src.common.make_dummy` (once, for development)
 2. `src.crops`: `download`, `countries`, `crops`, `controls`, `quality`
-3. `src.climate`: `download`, `geometry`, `cropland`, `aggregate`, `events` (`geometry` reads `countries.csv` from step 2)
-4. `src.metrics`: `run`, `stats`, `figures`
+3. `src.climate`: `download`, `geometry`, `cropland`, `aggregate`, `events`. The MapSPAM file must be downloaded by hand (Dataverse guestbook); `download` prints the steps. `src.crops.countries` needs the Natural Earth file from `src.climate.download`.
+4. `src.metrics`: `all` (runs `run`, `stats`, `robustness`, `figures`); methods in `src/metrics/METHODS.md`
 5. `src.validation`: `hit_rate`, `case_studies`
 6. `src.explorer`: `build`, `diagram`, `collect`
 

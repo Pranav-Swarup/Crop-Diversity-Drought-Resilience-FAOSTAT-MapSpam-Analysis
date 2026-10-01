@@ -31,3 +31,12 @@ VALIDATION_DIR = OUT / "validation"
 FIGURES = ROOT / "figures"
 EXPLORER = ROOT / "explorer"
 SOURCES_MD = RAW / "SOURCES.md"
+
+NATIONAL = OUT / "metrics_national.parquet"
+
+
+def fig_dir(owner):
+    """figures/<owner>/, or figures/<owner>/dummy/ under USE_DUMMY so dummy plots never sit beside real ones."""
+    d = FIGURES / owner / "dummy" if USE_DUMMY else FIGURES / owner
+    d.mkdir(parents=True, exist_ok=True)
+    return d

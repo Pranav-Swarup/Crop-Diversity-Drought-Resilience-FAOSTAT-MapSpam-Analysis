@@ -1,0 +1,196 @@
+iso3,n_crops,share_imputed,included,reason
+AFG,40,0.31670031637891366,True,
+AGO,35,0.19407222487998343,True,
+ALB,59,0.1032354954873452,True,
+ARE,30,0.07734037559204769,True,
+ARG,73,0.1207967344153089,True,
+ARM,41,0.007861219906304234,True,
+ATG,27,0.9916420280017947,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+AUS,90,0.10602211445909408,True,
+AUT,62,0.041994297705253036,True,
+AZE,63,0.02685534755398671,True,
+BDI,25,0.7148872919685083,False,fewer than 25 non-imputed years (10)
+BEN,41,0.10130690897917329,True,
+BFA,38,0.3699135138626222,True,
+BGD,63,0.03726621199705094,True,
+BGR,85,0.014229233352172646,True,
+BHR,22,0.39894616774222547,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (20)"
+BHS,24,0.8958466117861225,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (3)"
+BIH,55,0.4299968649423587,True,
+BLR,38,0.05186442037771412,True,
+BLX,55,0.047205519758770416,True,
+BLZ,40,0.09083437288340683,False,"mean harvested area < 100,000 ha"
+BOL,69,0.05511492087597457,True,
+BRA,71,0.014779131044468069,True,
+BRB,28,0.37965102630172165,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (20)"
+BRN,26,0.9400605883619609,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+BTN,66,0.4442603320111388,False,fewer than 25 non-imputed years (19)
+BWA,21,0.7217367533983132,False,fewer than 25 non-imputed years (2)
+CAF,33,0.40268325156425927,False,fewer than 25 non-imputed years (19)
+CAN,59,0.0036531415150510365,True,
+CHE,60,0.012928480105938731,True,
+CHL,71,0.3884339382855741,False,fewer than 25 non-imputed years (19)
+CHN,115,0.3880292162064382,True,
+CIV,55,0.6574570372236075,False,fewer than 25 non-imputed years (11)
+CMR,67,0.4122988272599349,False,fewer than 25 non-imputed years (22)
+COD,53,0.6723262310763356,False,fewer than 25 non-imputed years (17)
+COG,43,0.9284028062590368,False,fewer than 25 non-imputed years (4)
+COK,19,0.8161544870852325,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (3)"
+COL,72,0.138200817246181,True,
+COM,22,0.9995099507008793,False,fewer than 25 non-imputed years (0)
+CPV,26,0.6757738044166505,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (11)"
+CRI,54,0.12104755625122872,True,
+CUB,44,0.07046478318059177,True,
+CYP,69,0.002279107064896373,False,"mean harvested area < 100,000 ha"
+CZE,68,0.03385489708991271,True,
+DEU,55,0.031152444623731824,True,
+DJI,24,1.0,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+DMA,40,1.0,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+DNK,43,0.010936600954963368,True,
+DOM,57,0.09218859388805781,True,
+DZA,59,0.10803641663823127,True,
+ECU,79,0.08759779041607643,True,
+EGY,77,0.057597346407141634,True,
+ERI,22,0.5672014427737152,False,fewer than 25 non-imputed years (5)
+ESP,102,0.02674921691970983,True,
+EST,37,0.00012403536811023382,True,
+ETH,72,0.35674278168228707,True,
+FIN,39,0.004573119538331586,True,
+FJI,37,0.1502031695566268,True,
+FRA,87,0.0016388493467633068,True,
+FRO,1,1.0,False,"mean harvested area < 100,000 ha; fewer than 5 crops; fewer than 25 non-imputed years (0)"
+FSM,11,0.41861277523162993,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (23)"
+GAB,25,0.9984583090638421,False,fewer than 25 non-imputed years (0)
+GBR,39,0.012415933934720855,True,
+GEO,51,0.3557881473792072,False,fewer than 25 non-imputed years (24)
+GHA,48,0.3332504255649246,True,
+GIN,41,0.5968478268510411,False,fewer than 25 non-imputed years (10)
+GMB,16,0.1850336841135112,True,
+GNB,27,0.808385610573488,False,fewer than 25 non-imputed years (0)
+GNQ,10,1.0,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+GRC,90,0.0089292322128787,True,
+GRD,45,1.0,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+GTM,60,0.298830786493737,True,
+GUY,44,0.2701187599569346,True,
+HKG,14,0.8568220053976896,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (3)"
+HND,50,0.4396364314203197,False,fewer than 25 non-imputed years (21)
+HRV,72,0.02790759505637291,True,
+HTI,44,0.8937383833035424,False,fewer than 25 non-imputed years (3)
+HUN,84,0.017451631435291794,True,
+IDN,60,0.39477252818952346,False,fewer than 25 non-imputed years (21)
+IND,84,0.058821175427014365,True,
+IRL,31,0.04569768024188674,True,
+IRN,83,0.17107569245698218,True,
+IRQ,68,0.3289254860547004,False,fewer than 25 non-imputed years (23)
+ISL,7,0.2267001961622985,False,"mean harvested area < 100,000 ha"
+ISR,70,0.2600134574409285,True,
+ITA,88,0.027825691902384174,True,
+JAM,52,0.3759211629361088,True,
+JOR,59,0.012298957650275964,True,
+JPN,71,0.2546885660916325,True,
+KAZ,66,0.0323201698091653,True,
+KEN,85,0.4259042897435105,False,fewer than 25 non-imputed years (22)
+KGZ,68,0.07974319550594867,True,
+KHM,31,0.16517846115316295,True,
+KIR,6,0.2238702307417234,False,"mean harvested area < 100,000 ha"
+KNA,19,0.5173998722945152,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (9)"
+KOR,58,0.08419129311536262,True,
+KWT,36,0.1292781473002609,False,"mean harvested area < 100,000 ha"
+LAO,36,0.1414252536804572,True,
+LBN,65,0.2624278876835312,False,fewer than 25 non-imputed years (24)
+LBR,23,0.8502417669370692,False,fewer than 25 non-imputed years (0)
+LBY,42,0.6887366579764743,False,fewer than 25 non-imputed years (8)
+LCA,31,0.9374106430354646,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (3)"
+LKA,51,0.5152527253186138,False,fewer than 25 non-imputed years (11)
+LSO,10,0.5793782417773429,False,fewer than 25 non-imputed years (10)
+LTU,59,0.005498238944951903,True,
+LVA,46,0.006683287084683428,True,
+MAC,1,1.0,False,"mean harvested area < 100,000 ha; fewer than 5 crops; fewer than 25 non-imputed years (0)"
+MAR,92,0.043775597124953554,True,
+MDA,55,0.013409025412471326,True,
+MDG,71,0.5541241619125975,False,fewer than 25 non-imputed years (18)
+MDV,20,0.9910735311313881,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+MEX,109,0.04962507375214223,True,
+MHL,1,0.20781344601806367,False,"mean harvested area < 100,000 ha; fewer than 5 crops; fewer than 25 non-imputed years (24)"
+MKD,67,0.1808410589208474,True,
+MLI,57,0.1906131306457673,True,
+MLT,40,0.7623004727069999,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (10)"
+MMR,43,0.12947546462966866,True,
+MNG,17,0.1103568965832674,True,
+MOZ,41,0.4100290886260391,False,fewer than 25 non-imputed years (24)
+MRT,19,0.5602361983273972,False,fewer than 25 non-imputed years (20)
+MUS,37,0.07985703385875176,False,"mean harvested area < 100,000 ha"
+MWI,66,0.4137131474365913,True,
+MYS,50,0.28176602155491415,False,fewer than 25 non-imputed years (17)
+NAM,25,0.8442407520300522,False,fewer than 25 non-imputed years (0)
+NCL,20,0.974297568470357,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+NER,46,0.13875702860619576,True,
+NGA,50,0.2994286108014753,True,
+NIC,33,0.1372810302210933,True,
+NIU,10,1.0,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+NLD,49,0.016482663685699523,True,
+NOR,30,0.0041392311756279915,True,
+NPL,54,0.06266402484142758,True,
+NRU,2,1.0,False,"mean harvested area < 100,000 ha; fewer than 5 crops; fewer than 25 non-imputed years (0)"
+NZL,60,0.4710845505333905,False,fewer than 25 non-imputed years (18)
+OMN,29,0.14806489576587437,False,"mean harvested area < 100,000 ha"
+PAK,79,0.013341140551592206,True,
+PAN,45,0.48503045710984094,False,fewer than 25 non-imputed years (12)
+PER,96,0.054538661755689485,True,
+PHL,72,0.1456915608835925,True,
+PNG,34,0.9203857327049627,False,fewer than 25 non-imputed years (0)
+POL,68,0.025904755598676943,True,
+PRI,41,0.6589638971770411,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (10)"
+PRK,34,0.6237331242940343,False,fewer than 25 non-imputed years (1)
+PRT,76,0.07123866438267003,True,
+PRY,50,0.03382630193500909,True,
+PSE,71,0.2325443721438567,False,fewer than 25 non-imputed years (22)
+PYF,43,0.8862980408294916,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (5)"
+QAT,34,0.076001495017114,False,"mean harvested area < 100,000 ha"
+ROU,74,0.010991576523260363,True,
+RUS,67,0.051973158139785994,True,
+RWA,40,0.35257329104023005,False,fewer than 25 non-imputed years (19)
+SAU,39,0.034473391859996746,True,
+SCG,68,0.24581898335419128,True,
+SDX,50,0.34236382422133943,True,
+SEN,37,0.18176060801350763,True,
+SGP,12,0.9990835840509044,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+SLB,17,0.6937004927102932,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (5)"
+SLE,39,0.5636967294288407,False,fewer than 25 non-imputed years (13)
+SLV,44,0.15959749153737482,True,
+SOM,24,0.7496094617252399,False,fewer than 25 non-imputed years (3)
+STP,20,0.9391927591831108,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (1)"
+SUR,31,0.06006597096577136,False,"mean harvested area < 100,000 ha"
+SVK,73,0.030353448384707424,True,
+SVN,68,0.010115708469248162,True,
+SWE,41,0.011981956213509962,True,
+SWZ,28,0.6544984984375634,False,fewer than 25 non-imputed years (13)
+SYC,14,0.9861007572487935,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+SYR,72,0.012131990191920286,True,
+TCD,23,0.1453797413120631,True,
+TGO,36,0.2213514684383358,True,
+THA,69,0.09264847999539177,True,
+TJK,44,0.17148454764333948,True,
+TKM,25,0.2752270608206876,True,
+TLS,27,0.5345652806646695,False,fewer than 25 non-imputed years (13)
+TON,20,0.8993011597965227,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (5)"
+TTO,41,0.7390631742895384,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (6)"
+TUN,73,0.4420253985105493,False,fewer than 25 non-imputed years (24)
+TUR,93,0.0025072500301534556,True,
+TUV,5,1.0,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+TWN,68,0.07888127130066938,True,
+TZA,70,0.41134105297706614,True,
+UGA,36,0.38141420634565726,False,fewer than 25 non-imputed years (22)
+UKR,80,0.00611530711505014,True,
+URY,44,0.08403465385859774,True,
+USA,90,0.017619594039424976,True,
+UZB,76,0.08064292495110355,True,
+VCT,27,0.8623524892470658,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+VEN,58,0.04632489849080913,True,
+VNM,43,0.08974784328246835,True,
+VUT,31,0.35915631461311287,True,
+WSM,22,0.9113447421318556,False,"mean harvested area < 100,000 ha; fewer than 25 non-imputed years (0)"
+YEM,56,0.04739900065958047,True,
+ZAF,71,0.39072098845452047,False,fewer than 25 non-imputed years (22)
+ZMB,32,0.3956046243407197,False,fewer than 25 non-imputed years (21)
+ZWE,79,0.39822735730716835,False,fewer than 25 non-imputed years (22)

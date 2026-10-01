@@ -1,0 +1,15 @@
+quantity,value
+n_countries,107.0
+n_events,232.0
+n_countries_with_events,102.0
+n_countries_with_resp_div,106.0
+median_hill1,9.158923577508181
+median_resp_div,0.026786878978199702
+median_stability,13.043660711184149
+median_resistance,0.9819439731387476
+median_recovery,1.0225928122217922
+median_vulnerability,0.0967741935483871
+median_vuln_drought,0.16666666666666666
+median_resp_divergence,0.5739098086943138
+median_phi_sync,0.2312139492487306
+median_mean_crop_cv,0.14740012810416306

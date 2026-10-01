@@ -2,3 +2,6 @@ data/raw/
 .venv
 __pycache__
 .ipynb_checkpoints
+data/dataverse_files/
+data/dataverse_files.zip
+.pytest_cache

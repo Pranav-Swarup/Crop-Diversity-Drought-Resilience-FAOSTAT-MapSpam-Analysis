@@ -1,0 +1,15 @@
+pandas
+pyarrow
+numpy
+scipy
+statsmodels
+xarray
+netCDF4
+rioxarray
+rasterio
+geopandas
+exactextract
+plotly
+matplotlib
+requests
+pytest

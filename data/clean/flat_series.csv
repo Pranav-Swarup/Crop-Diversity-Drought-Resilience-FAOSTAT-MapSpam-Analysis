@@ -375,7 +375,7 @@ KWT,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.154648170000586
 LAO,116,Potatoes,31,0.20611995688631388,5,0.6129032258064516,6632774.193548387,"same value 5 years running, 61% of years imputed",True
 LBN,181,"Broad beans and horse beans, dry",30,0.5837848925979164,3,0.5333333333333333,226666.66666666666,"same value 3 years running, 53% of years imputed",False
 LBN,187,"Peas, dry",31,0.0636793420696382,7,0.7419354838709677,931387.0967741936,"same value 7 years running, 74% of years imputed",False
-LBN,289,Sesame seed,29,0.12064596207400109,4,0.8275862068965517,300827.5862068966,"same value 4 years running, 83% of years imputed",False
+LBN,289,Sesame seed,29,0.12064596207400109,3,0.8275862068965517,300827.5862068966,"same value 3 years running, 83% of years imputed",False
 LBN,619,"Other fruits, n.e.c.",31,0.17572359078556438,3,0.6129032258064516,23918354.83870968,"same value 3 years running, 61% of years imputed",False
 LBN,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.11471284810340475,9,0.967741935483871,189129.03225806452,"same value 9 years running, 97% of years imputed",False
 LBR,156,Sugar cane,31,0.009329344146258536,7,1.0,11691548.387096774,"detrended CV < 1%; same value 7 years running, 100% of years imputed",False

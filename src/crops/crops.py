@@ -71,8 +71,7 @@ def main():
     df = df.merge(qv, on=key, how="left")
     df["price"] = df["Item Code"].map(prices)
     df["value_const"] = df["value_fao"].fillna(df["prod_t"] * df["price"])
-    n_fao, n_fill, n_none = df["value_fao"].notna().sum(), (df["value_fao"].isna() & df["price"].notna()).sum(), df["value_const"].isna().sum()
-    filled = df[df["value_fao"].isna() & df["price"].notna()]
+    df["computed"] = df["value_fao"].isna()
 
     # Map to iso3 and sum merged entities (a merged country-year is imputed if any part is).
     amap = area_map().dropna(subset=["iso3"])
@@ -83,15 +82,17 @@ def main():
     out = df.groupby(["iso3", "Year", "Item Code"], as_index=False).agg(
         item=("Item", "first"), area_ha=("area_ha", "sum"), prod_t=("prod_t", "sum"),
         value_const=("value_const", lambda s: s.sum(min_count=len(s))), is_imputed=("is_imputed", "any"),
-        n_parts=("area_code", "nunique"))
+        computed=("computed", "any"))
     old_and_new = df[df["iso3"].isin(["BLX", "SCG", "SDX"])].groupby(["iso3", "Year"])["area_code"].agg(set)
     for codes in old_and_new:
         assert not ({15, 186, 206} & codes and codes - {15, 186, 206}), f"merged entity and its successors overlap: {codes}"
     out = out.rename(columns={"Year": "year", "Item Code": "item_code"})
     out["yield_t_ha"] = out["prod_t"] / out["area_ha"]
-    out = out[["iso3", "year", "item_code", "item", "area_ha", "prod_t", "yield_t_ha", "value_const", "is_imputed"]]
     out = out.astype({"year": int, "item_code": int, "area_ha": float, "prod_t": float, "value_const": float})
     out = out.sort_values(["iso3", "item_code", "year"]).reset_index(drop=True)
+    # Rows of the final table whose value is (partly) production x item price rather than FAOSTAT's figure.
+    comp = out[out["computed"] & out["value_const"].notna()]
+    out = out[["iso3", "year", "item_code", "item", "area_ha", "prod_t", "yield_t_ha", "value_const", "is_imputed"]]
 
     validate(out, "crops")
     assert np.allclose(out["yield_t_ha"], out["prod_t"] / out["area_ha"])
@@ -103,10 +104,16 @@ def main():
 
     print(summary(out, "crops"))
     print(f"items: {out['item_code'].nunique()} crops ({len(AGGREGATE_ITEMS)} aggregate items dropped)")
-    print(f"value_const rows: {n_fao} published by FAOSTAT, {n_fill} computed as production x item price "
-          f"({100 * n_fill / len(df):.1f}%), {n_none} without a price (left missing)")
-    print(f"  share of total value computed from price: {100 * filled['prod_t'].mul(filled['price']).sum() / df['value_const'].sum():.1f}%")
-    print(f"  countries with any computed value: {len(filled_iso)}; full list in data/raw/faostat/value_filled_from_price.csv")
+    n_none = int(out["value_const"].isna().sum())
+    print(f"value_const rows: {len(out) - len(comp) - n_none} published by FAOSTAT, {len(comp)} computed as production x item price "
+          f"({100 * len(comp) / len(out):.1f}%), {n_none} without a price (left missing)")
+    total, late = out["value_const"].sum(), out["year"] >= 2018
+    print(f"  share of total value computed from price: {100 * comp['value_const'].sum() / total:.1f}% "
+          f"(1993-2017: {100 * comp.loc[comp['year'] < 2018, 'value_const'].sum() / out.loc[~late, 'value_const'].sum():.1f}%, "
+          f"2018-2023: {100 * comp.loc[comp['year'] >= 2018, 'value_const'].sum() / out.loc[late, 'value_const'].sum():.1f}%)")
+    by_country = (comp.groupby("iso3")["value_const"].sum() / out.groupby("iso3")["value_const"].sum()).dropna()
+    print(f"  countries with any computed value: {len(filled_iso)} ({(by_country > 0.1).sum()} with more than 10% of their value computed); "
+          f"full list in data/raw/faostat/value_filled_from_price.csv")
     print(f"  items without a price: {sorted(df.loc[df['price'].isna(), 'Item'].unique())}")
     print(f"rows imputed (flags E, I): {100 * out['is_imputed'].mean():.1f}%; "
           f"value imputed: {100 * out.loc[out['is_imputed'], 'value_const'].sum() / out['value_const'].sum():.1f}%")

@@ -12,10 +12,11 @@ kept. The list is a record only: crops.parquet and the inclusion rules above are
 Run: python -m src.crops.quality
 """
 import pandas as pd
-from statsmodels.nonparametric.smoothers_lowess import lowess
 
 from ..common import paths
 from ..common.contract import load, summary, validate
+from ..metrics.detrend import lowess_trend
+from ..metrics.faces import cv_resid
 
 MIN_AREA_HA, MIN_CROPS, MIN_GOOD_YEARS = 100_000, 5, 25
 MAX_IMPUTED_VALUE_SHARE = 0.5
@@ -23,10 +24,11 @@ FLAT_MIN_YEARS, FLAT_CV, FLAT_RUN, FLAT_IMPUTED_SHARE = 10, 0.01, 3, 0.5
 FLAT_SERIES = paths.CLEAN / "flat_series.csv"
 
 
-def max_run(v):
+def max_run(v, years):
+    """Longest run of identical values in consecutive years."""
     best = run = 1
-    for a, b in zip(v[:-1], v[1:]):
-        run = run + 1 if a == b else 1
+    for i in range(1, len(v)):
+        run = run + 1 if v[i] == v[i - 1] and years[i] == years[i - 1] + 1 else 1
         best = max(best, run)
     return best
 
@@ -36,9 +38,9 @@ def flat_series(crops, q):
     for (iso3, code), g in crops[crops["prod_t"] > 0].sort_values("year").groupby(["iso3", "item_code"]):
         if len(g) < FLAT_MIN_YEARS:
             continue
-        y = g["prod_t"].to_numpy(float)
-        cv = (y - lowess(y, g["year"].to_numpy(float), frac=0.5, return_sorted=False)).std(ddof=1) / y.mean()
-        run, imp = max_run(y), g["is_imputed"].mean()
+        y, years = g["prod_t"].to_numpy(float), g["year"].to_numpy()
+        cv = cv_resid(y, y - lowess_trend(y, years))
+        run, imp = max_run(y, years), g["is_imputed"].mean()
         reasons = []
         if cv < FLAT_CV:
             reasons.append("detrended CV < 1%")

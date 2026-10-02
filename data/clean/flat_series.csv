@@ -1,0 +1,720 @@
+iso3,item_code,item,n_years,detrended_cv,max_identical_run,share_years_imputed,mean_value_const,reason,country_included
+AFG,223,"Pistachios, in shell",31,0.07460745961579926,4,0.5483870967741935,16515741.935483871,"same value 4 years running, 55% of years imputed",True
+AFG,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.28147561274836785,10,0.5483870967741935,3800548.3870967743,"same value 10 years running, 55% of years imputed",True
+AFG,333,Linseed,31,0.5798063059122348,4,0.8064516129032258,5346645.161290322,"same value 4 years running, 81% of years imputed",True
+AFG,512,"Other citrus fruit, n.e.c.",31,0.5720991246949458,4,0.967741935483871,3355806.4516129033,"same value 4 years running, 97% of years imputed",True
+AFG,568,Cantaloupes and other melons,31,0.2859275918033812,3,0.7419354838709677,101464000.0,"same value 3 years running, 74% of years imputed",True
+AFG,569,Figs,31,0.3904773761703808,3,0.7096774193548387,12111483.870967742,"same value 3 years running, 71% of years imputed",True
+AGO,15,Wheat,31,0.4682089322318783,7,0.9354838709677419,1226483.8709677418,"same value 7 years running, 94% of years imputed",True
+AGO,156,Sugar cane,31,0.13253728345445093,3,1.0,22685838.70967742,"same value 3 years running, 100% of years imputed",True
+AGO,254,Oil palm fruit,31,0.022331545913977926,8,1.0,27007483.870967742,"same value 8 years running, 100% of years imputed",True
+AGO,265,Castor oil seeds,31,0.016271633917034584,4,1.0,1898580.6451612904,"same value 4 years running, 100% of years imputed",True
+AGO,328,"Seed cotton, unginned",31,0.2613739929546796,6,0.8064516129032258,5063096.774193549,"same value 6 years running, 81% of years imputed",True
+AGO,661,Cocoa beans,31,0.07284422486135632,4,1.0,462129.03225806454,"same value 4 years running, 100% of years imputed",True
+AGO,826,Unmanufactured tobacco,31,0.029912978794517434,5,0.9032258064516129,7181322.580645162,"same value 5 years running, 90% of years imputed",True
+ALB,211,Other pulses n.e.c.,31,0.11254123588157224,3,1.0,474774.1935483871,"same value 3 years running, 100% of years imputed",True
+ALB,220,"Chestnuts, in shell",28,0.06613751100929051,12,0.5357142857142857,9034142.857142856,"same value 12 years running, 54% of years imputed",True
+ALB,328,"Seed cotton, unginned",31,0.13184270596962025,6,0.967741935483871,686870.9677419355,"same value 6 years running, 97% of years imputed",True
+ALB,420,"Broad beans and horse beans, green",28,0.35405720480697545,8,0.75,55178.57142857143,"same value 8 years running, 75% of years imputed",True
+ALB,512,"Other citrus fruit, n.e.c.",13,1.315655656798489,4,0.6923076923076923,139384.61538461538,"same value 4 years running, 69% of years imputed",True
+ALB,526,Apricots,31,0.1291482067691602,3,0.5161290322580645,2447967.7419354836,"same value 3 years running, 52% of years imputed",True
+ALB,530,Sour cherries,31,0.07336901481984827,4,1.0,10906064.516129032,"same value 4 years running, 100% of years imputed",True
+ARE,560,Grapes,31,0.2922839341380631,3,0.5806451612903226,45000.0,"same value 3 years running, 58% of years imputed",True
+ARG,108,Cereals n.e.c.,31,0.14336780080968214,4,1.0,4437516.129032258,"same value 4 years running, 100% of years imputed",True
+ARG,125,"Cassava, fresh",31,0.015135546405374452,4,0.9354838709677419,25924290.322580647,"same value 4 years running, 94% of years imputed",True
+ARG,181,"Broad beans and horse beans, dry",31,0.018484771045074788,3,1.0,5049870.9677419355,"same value 3 years running, 100% of years imputed",True
+ARG,201,"Lentils, dry",31,0.7470923386266912,3,0.6451612903225806,10946935.483870968,"same value 3 years running, 65% of years imputed",True
+ARG,210,Lupins,31,0.02730098093388727,5,1.0,42225.8064516129,"same value 5 years running, 100% of years imputed",True
+ARG,222,"Walnuts, in shell",31,0.08043631093239635,3,0.9032258064516129,38792677.41935484,"same value 3 years running, 90% of years imputed",True
+ARG,417,"Peas, green",31,0.006387742623718566,1,1.0,16359322.58064516,detrended CV < 1%,True
+ARG,423,String beans,31,0.007954545825475045,2,1.0,59455935.48387097,detrended CV < 1%,True
+ARG,567,Watermelons,31,0.006455352731594794,1,1.0,29296935.48387097,detrended CV < 1%,True
+ARG,677,Hop cones,31,0.06208553547164515,6,1.0,2097709.6774193547,"same value 6 years running, 100% of years imputed",True
+ARG,748,"Peppermint, spearmint",31,0.021406932144120646,11,1.0,20708387.096774194,"same value 11 years running, 100% of years imputed",True
+ARG,821,"Other fibre crops, raw, n.e.c.",31,0.03643443407896149,5,1.0,636774.1935483871,"same value 5 years running, 100% of years imputed",True
+ARM,157,Sugar beet,31,0.23837707876294145,9,0.9354838709677419,1314701.8129725433,"same value 9 years running, 94% of years imputed",True
+ATG,328,"Seed cotton, unginned",31,0.08222095651716514,9,1.0,86806.45161290323,"same value 9 years running, 100% of years imputed",False
+ATG,399,Eggplants (aubergines),31,0.18639649244455367,5,0.8709677419354839,12161.290322580646,"same value 5 years running, 87% of years imputed",False
+ATG,486,Bananas,31,0.0784198810943169,4,0.9032258064516129,2032.258064516129,"same value 4 years running, 90% of years imputed",False
+AUS,101,Canary seed,31,0.2444494279649446,4,0.967741935483871,2329161.290322581,"same value 4 years running, 97% of years imputed",True
+AUT,558,Other berries and fruits of the genus vaccinium n.e.c.,25,0.2897684036610854,5,0.64,6608320.0,"same value 5 years running, 64% of years imputed",True
+AZE,236,Soya beans,29,1.0885431465594524,3,0.7586206896551724,28089.295564427845,"same value 3 years running, 76% of years imputed",True
+BDI,108,Cereals n.e.c.,24,0.40625332535777653,3,0.75,3415750.0,"same value 3 years running, 75% of years imputed",False
+BDI,137,Yams,31,0.2284934985595188,4,0.7741935483870968,1975548.3870967743,"same value 4 years running, 77% of years imputed",False
+BEN,156,Sugar cane,31,0.16508435888626177,7,0.5161290322580645,2825548.3870967743,"same value 7 years running, 52% of years imputed",True
+BEN,224,Kola nuts,31,0.014878392114170169,3,1.0,425322.5806451613,"same value 3 years running, 100% of years imputed",True
+BEN,249,"Coconuts, in shell",31,0.04769806732480109,11,0.5483870967741935,2994032.2580645164,"same value 11 years running, 55% of years imputed",True
+BEN,254,Oil palm fruit,31,0.04967368930420249,3,1.0,39851580.64516129,"same value 3 years running, 100% of years imputed",True
+BEN,265,Castor oil seeds,31,0.007466948108279457,3,1.0,318225.8064516129,"detrended CV < 1%; same value 3 years running, 100% of years imputed",True
+BEN,490,Oranges,31,0.008370492056867775,1,1.0,4204258.064516129,detrended CV < 1%,True
+BFA,116,Potatoes,31,0.2986227280987914,3,0.7741935483870968,3163096.7741935486,"same value 3 years running, 77% of years imputed",True
+BFA,125,"Cassava, fresh",31,0.2504894814303039,5,1.0,1623870.9677419355,"same value 5 years running, 100% of years imputed",True
+BFA,156,Sugar cane,31,0.026060782539235126,8,1.0,20549096.774193548,"same value 8 years running, 100% of years imputed",True
+BFA,217,"Cashew nuts, in shell",31,0.19791564646333096,3,1.0,51057129.03225806,"same value 3 years running, 100% of years imputed",True
+BFA,222,"Walnuts, in shell",11,0.0763018280195596,3,1.0,356121454.54545456,"same value 3 years running, 100% of years imputed",True
+BFA,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.005329878269816618,1,1.0,5461967.741935484,detrended CV < 1%,True
+BGD,265,Castor oil seeds,31,0.10705339888708497,3,0.5161290322580645,129612.90322580645,"same value 3 years running, 52% of years imputed",True
+BGD,489,Plantains and cooking bananas,11,0.007992627476931037,1,0.0,60478545.45454545,detrended CV < 1%,True
+BGD,667,Tea leaves,31,0.05857870380882515,3,0.967741935483871,540581741.9354838,"same value 3 years running, 97% of years imputed",True
+BGD,836,Natural rubber in primary forms,31,0.20472713965719355,5,1.0,12970516.129032258,"same value 5 years running, 100% of years imputed",True
+BGR,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",25,0.07354672940005881,4,0.76,3286599.326065412,"same value 4 years running, 76% of years imputed",True
+BGR,552,Blueberries,17,0.29214529819982776,3,0.7058823529411765,269306.48463107884,"same value 3 years running, 71% of years imputed",True
+BGR,554,Cranberries,12,0.008384293741325752,3,1.0,102333.33333333333,"detrended CV < 1%; same value 3 years running, 100% of years imputed",True
+BGR,558,Other berries and fruits of the genus vaccinium n.e.c.,31,1.0704179485803922,3,0.6774193548387096,896083.4635241935,"same value 3 years running, 68% of years imputed",True
+BHR,211,Other pulses n.e.c.,28,0.13240101469035984,3,0.8928571428571429,8000.0,"same value 3 years running, 89% of years imputed",False
+BHR,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.005244122760534866,2,1.0,898741.9354838709,detrended CV < 1%,False
+BHR,560,Grapes,28,0.006640459266989914,1,0.8928571428571429,120357.14285714286,detrended CV < 1%,False
+BHS,56,Maize (corn),31,0.08012666098028404,3,0.7741935483870968,98967.74193548386,"same value 3 years running, 77% of years imputed",False
+BHS,156,Sugar cane,31,0.11319435660031053,8,1.0,2514354.8387096776,"same value 8 years running, 100% of years imputed",False
+BHS,394,"Pumpkins, squash and gourds",14,0.0011937795950699148,1,0.7857142857142857,602071.4285714285,detrended CV < 1%,False
+BHS,402,"Onions and shallots, green",14,0.006682943921872337,1,0.7857142857142857,292357.14285714284,detrended CV < 1%,False
+BHS,430,Okra,14,0.005341629339032839,1,0.7857142857142857,456714.28571428574,detrended CV < 1%,False
+BHS,463,"Other vegetables, fresh n.e.c.",31,0.04623397088598509,5,1.0,5629290.322580645,"same value 5 years running, 100% of years imputed",False
+BHS,489,Plantains and cooking bananas,14,0.009129010445541834,1,0.7857142857142857,70857.14285714286,detrended CV < 1%,False
+BHS,490,Oranges,14,9.680914485125392e-07,1,0.7857142857142857,1198500.0,detrended CV < 1%,False
+BHS,507,Pomelos and grapefruits,31,0.124267271257421,3,0.8709677419354839,6996064.516129033,"same value 3 years running, 87% of years imputed",False
+BHS,571,"Mangoes, guavas and mangosteens",14,0.006130803089725076,2,0.7857142857142857,1601500.0,detrended CV < 1%,False
+BHS,572,Avocados,14,0.008327892324134221,1,0.7857142857142857,1234785.7142857143,detrended CV < 1%,False
+BHS,600,Papayas,14,0.006691642234691472,2,0.7857142857142857,199642.85714285713,detrended CV < 1%,False
+BIH,157,Sugar beet,28,2.6511036252570874,3,0.8571428571428571,423721.6357899606,"same value 3 years running, 86% of years imputed",True
+BIH,260,Olives,20,0.7098480110608305,3,0.9,341550.0,"same value 3 years running, 90% of years imputed",True
+BIH,459,Chicory roots,21,0.05177719268472794,5,1.0,67571.42857142857,"same value 5 years running, 100% of years imputed",True
+BIH,558,Other berries and fruits of the genus vaccinium n.e.c.,31,0.6701549991998335,3,0.9354838709677419,1627905.3429032257,"same value 3 years running, 94% of years imputed",True
+BIH,619,"Other fruits, n.e.c.",31,0.8978221219308222,3,1.0,218984.51077252708,"same value 3 years running, 100% of years imputed",True
+BIH,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.14481457739538472,3,1.0,1309474.8813754614,"same value 3 years running, 100% of years imputed",True
+BLX,222,"Walnuts, in shell",31,0.16591411911781256,3,0.7096774193548387,1358149.060616802,"same value 3 years running, 71% of years imputed",True
+BLX,523,Quinces,25,0.2825884187891606,3,1.0,1015280.0,"same value 3 years running, 100% of years imputed",True
+BLX,549,Gooseberries,18,0.4853992518899217,9,0.8333333333333334,607277.7777777778,"same value 9 years running, 83% of years imputed",True
+BLX,558,Other berries and fruits of the genus vaccinium n.e.c.,29,0.3942759800286069,3,0.6896551724137931,1074622.3103448276,"same value 3 years running, 69% of years imputed",True
+BLZ,463,"Other vegetables, fresh n.e.c.",31,0.03607766168607298,3,1.0,1138322.5806451612,"same value 3 years running, 100% of years imputed",False
+BLZ,619,"Other fruits, n.e.c.",31,0.08849280416566847,7,1.0,1952258.064516129,"same value 7 years running, 100% of years imputed",False
+BOL,187,"Peas, dry",31,0.07683140606559932,5,0.8387096774193549,1714774.1935483871,"same value 5 years running, 84% of years imputed",True
+BOL,333,Linseed,11,0.013991557625724056,4,0.9090909090909091,26909.090909090908,"same value 4 years running, 91% of years imputed",True
+BRA,137,Yams,31,0.009425622791927584,1,1.0,63677516.12903226,detrended CV < 1%,True
+BRA,507,Pomelos and grapefruits,31,0.009578464071033289,2,1.0,29484032.258064516,detrended CV < 1%,True
+BRB,211,Other pulses n.e.c.,31,0.0724247206684695,6,1.0,967096.7741935484,"same value 6 years running, 100% of years imputed",False
+BRB,249,"Coconuts, in shell",31,0.10051794190978075,7,1.0,302903.22580645164,"same value 7 years running, 100% of years imputed",False
+BRB,446,Green corn (maize),31,0.20192937863364221,3,1.0,284225.8064516129,"same value 3 years running, 100% of years imputed",False
+BRB,463,"Other vegetables, fresh n.e.c.",31,0.027115744746210934,5,1.0,1221451.6129032257,"same value 5 years running, 100% of years imputed",False
+BRB,486,Bananas,31,0.19254779961825932,4,0.967741935483871,267096.77419354836,"same value 4 years running, 97% of years imputed",False
+BRB,572,Avocados,31,0.03615554941306865,6,0.9354838709677419,442387.0967741936,"same value 6 years running, 94% of years imputed",False
+BRB,603,"Other tropical fruits, n.e.c.",31,0.052159430270755536,4,1.0,833096.7741935484,"same value 4 years running, 100% of years imputed",False
+BRB,619,"Other fruits, n.e.c.",31,0.059802052298209306,3,1.0,387451.6129032258,"same value 3 years running, 100% of years imputed",False
+BRN,249,"Coconuts, in shell",31,0.3294297911865827,4,1.0,47580.645161290326,"same value 4 years running, 100% of years imputed",False
+BRN,372,Lettuce and chicory,31,0.09686153918766265,5,1.0,2870.967741935484,"same value 5 years running, 100% of years imputed",False
+BTN,108,Cereals n.e.c.,31,0.05820016825718021,11,0.967741935483871,309774.1935483871,"same value 11 years running, 97% of years imputed",False
+BTN,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.005128674763478939,1,1.0,2801967.7419354836,detrended CV < 1%,False
+BTN,826,Unmanufactured tobacco,31,0.009828573823301738,1,1.0,429967.7419354839,detrended CV < 1%,False
+BWA,328,"Seed cotton, unginned",31,0.09869727087409047,7,1.0,1620516.1290322582,"same value 7 years running, 100% of years imputed",False
+CAF,79,Millet,31,0.021062435160921177,17,0.7096774193548387,2999612.9032258065,"same value 17 years running, 71% of years imputed",False
+CAF,136,Taro,31,0.002692615663892694,1,1.0,15121129.032258065,detrended CV < 1%,False
+CAF,137,Yams,31,0.0021664327957777144,1,1.0,57804774.19354839,detrended CV < 1%,False
+CAF,156,Sugar cane,31,0.06109958605204147,6,0.7741935483870968,4506225.806451613,"same value 6 years running, 77% of years imputed",False
+CAF,254,Oil palm fruit,31,0.13203408539204028,4,1.0,1931580.6451612904,"same value 4 years running, 100% of years imputed",False
+CAF,486,Bananas,31,0.008525459232979536,1,0.967741935483871,25348903.225806452,detrended CV < 1%,False
+CAN,821,"Other fibre crops, raw, n.e.c.",31,0.2612748754732311,3,1.0,16480741.935483871,"same value 3 years running, 100% of years imputed",True
+CHE,220,"Chestnuts, in shell",31,0.32325595732323126,7,1.0,349096.77419354836,"same value 7 years running, 100% of years imputed",True
+CHL,495,"Tangerines, mandarins, clementines",31,0.1837584915633492,5,1.0,30074548.387096774,"same value 5 years running, 100% of years imputed",False
+CHL,523,Quinces,31,0.03667441232497597,3,1.0,308193.5483870968,"same value 3 years running, 100% of years imputed",False
+CHL,530,Sour cherries,31,0.18769643953455542,4,1.0,566677.4193548387,"same value 4 years running, 100% of years imputed",False
+CHL,550,Currants,31,0.8479632007254074,6,1.0,38129.032258064515,"same value 6 years running, 100% of years imputed",False
+CHL,552,Blueberries,31,0.13600839053030966,10,1.0,125582354.83870968,"same value 10 years running, 100% of years imputed",False
+CHL,619,"Other fruits, n.e.c.",31,0.008473950864633113,1,1.0,5745709.677419355,detrended CV < 1%,False
+CHL,777,"True hemp, raw or retted",31,0.011652058091656424,7,1.0,2125032.2580645164,"same value 7 years running, 100% of years imputed",False
+CHN,254,Oil palm fruit,31,0.011021650825717927,3,1.0,63874451.61290322,"same value 3 years running, 100% of years imputed",True
+CHN,677,Hop cones,31,0.11517307091019889,3,0.8064516129032258,55394645.161290325,"same value 3 years running, 81% of years imputed",True
+CIV,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.08532243061487298,4,1.0,110335967.74193548,"same value 4 years running, 100% of years imputed",False
+CIV,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.003263104552385515,1,1.0,698806.4516129033,detrended CV < 1%,False
+CIV,826,Unmanufactured tobacco,31,0.08192268690064079,3,0.7741935483870968,21643645.16129032,"same value 3 years running, 77% of years imputed",False
+CMR,15,Wheat,31,0.09080045936241804,3,0.967741935483871,163483.87096774194,"same value 3 years running, 97% of years imputed",False
+CMR,79,Millet,31,0.08346637784625448,6,0.7096774193548387,23256032.258064516,"same value 6 years running, 71% of years imputed",False
+CMR,83,Sorghum,31,0.07642833098058519,3,0.5806451612903226,183793354.83870968,"same value 3 years running, 58% of years imputed",False
+CMR,156,Sugar cane,31,0.10043258966281163,9,0.967741935483871,56612258.06451613,"same value 9 years running, 97% of years imputed",False
+CMR,220,"Chestnuts, in shell",31,0.06371829417287099,11,1.0,196225.8064516129,"same value 11 years running, 100% of years imputed",False
+CMR,225,"Hazelnuts, in shell",25,0.0649562018955344,9,1.0,454600.0,"same value 9 years running, 100% of years imputed",False
+CMR,249,"Coconuts, in shell",31,0.05211127893825153,9,1.0,767774.1935483871,"same value 9 years running, 100% of years imputed",False
+CMR,254,Oil palm fruit,31,0.0681347183616414,3,1.0,171009387.0967742,"same value 3 years running, 100% of years imputed",False
+CMR,459,Chicory roots,31,0.025055753135393478,8,1.0,97419.35483870968,"same value 8 years running, 100% of years imputed",False
+CMR,512,"Other citrus fruit, n.e.c.",31,0.263357921245333,3,1.0,21000.0,"same value 3 years running, 100% of years imputed",False
+COD,44,Barley,31,0.045129001094781344,4,1.0,140161.29032258064,"same value 4 years running, 100% of years imputed",False
+COD,328,"Seed cotton, unginned",31,0.0534852221170294,3,1.0,26316903.225806452,"same value 3 years running, 100% of years imputed",False
+COD,339,"Other oil seeds, n.e.c.",30,0.13854834858923165,3,1.0,12733733.333333334,"same value 3 years running, 100% of years imputed",False
+COG,27,Rice,31,0.1337407395178191,3,0.8709677419354839,473290.32258064515,"same value 3 years running, 87% of years imputed",False
+COG,56,Maize (corn),31,0.11460702539005904,4,0.7419354838709677,1962806.4516129033,"same value 4 years running, 74% of years imputed",False
+COG,249,"Coconuts, in shell",28,0.1622655275658009,5,1.0,587535.7142857143,"same value 5 years running, 100% of years imputed",False
+COG,254,Oil palm fruit,31,0.04217938513320973,5,1.0,12022806.451612903,"same value 5 years running, 100% of years imputed",False
+COK,388,Tomatoes,31,0.27665775731117914,5,0.8064516129032258,148129.03225806452,"same value 5 years running, 81% of years imputed",False
+COK,497,Lemons and limes,17,1.2959325197434652,4,0.7058823529411765,8176.470588235294,"same value 4 years running, 71% of years imputed",False
+COK,507,Pomelos and grapefruits,12,0.0006926401261962411,1,0.9166666666666666,23833.333333333332,detrended CV < 1%,False
+COL,420,"Broad beans and horse beans, green",25,0.13825808786830435,3,0.8,17183560.0,"same value 3 years running, 80% of years imputed",True
+COM,197,"Pigeon peas, dry",31,0.017971018736834894,4,1.0,252870.96774193548,"same value 4 years running, 100% of years imputed",False
+COM,397,Cucumbers and gherkins,10,3.69518550450472e-13,1,1.0,742500.0,detrended CV < 1%,False
+COM,692,"Vanilla, raw",31,0.20846562582589553,4,1.0,342096.77419354836,"same value 4 years running, 100% of years imputed",False
+COM,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.006359291158340023,1,1.0,55806.45161290323,detrended CV < 1%,False
+CPV,125,"Cassava, fresh",31,0.24491599101147105,3,0.7096774193548387,563064.5161290322,"same value 3 years running, 71% of years imputed",False
+CPV,156,Sugar cane,31,0.1293134259304937,6,0.6129032258064516,1043903.2258064516,"same value 6 years running, 61% of years imputed",False
+CPV,249,"Coconuts, in shell",31,0.0739899539677389,9,1.0,945774.1935483871,"same value 9 years running, 100% of years imputed",False
+CPV,393,Cauliflowers and broccoli,27,0.35113085526613536,3,0.6666666666666666,32703.703703703704,"same value 3 years running, 67% of years imputed",False
+CPV,394,"Pumpkins, squash and gourds",31,0.2393621766458009,3,0.5806451612903226,264451.6129032258,"same value 3 years running, 58% of years imputed",False
+CPV,406,Green garlic,31,0.12296574368399923,3,0.9032258064516129,60612.903225806454,"same value 3 years running, 90% of years imputed",False
+CPV,486,Bananas,31,0.14065779802660755,4,0.6451612903225806,2493741.935483871,"same value 4 years running, 65% of years imputed",False
+CPV,571,"Mangoes, guavas and mangosteens",31,0.22540615180509466,4,1.0,1636096.7741935484,"same value 4 years running, 100% of years imputed",False
+CRI,249,"Coconuts, in shell",31,0.18994857485332334,6,0.7419354838709677,3209967.7419354836,"same value 6 years running, 74% of years imputed",True
+CRI,328,"Seed cotton, unginned",31,0.2741361902839345,3,1.0,483000.0,"same value 3 years running, 100% of years imputed",True
+CRI,497,Lemons and limes,31,0.11197374926771818,3,0.8064516129032258,12237129.032258065,"same value 3 years running, 81% of years imputed",True
+CRI,558,Other berries and fruits of the genus vaccinium n.e.c.,31,0.04003774398625086,7,1.0,1487419.3548387096,"same value 7 years running, 100% of years imputed",True
+CUB,512,"Other citrus fruit, n.e.c.",31,0.14288379606911952,4,1.0,1103516.1290322582,"same value 4 years running, 100% of years imputed",True
+CUB,572,Avocados,31,0.10558368236275814,4,1.0,4610838.70967742,"same value 4 years running, 100% of years imputed",True
+CUB,782,"Kenaf, and other textile bast fibres, raw or retted",31,0.017503865992064785,4,1.0,6564548.387096774,"same value 4 years running, 100% of years imputed",True
+CZE,367,Asparagus,23,0.24904921543790864,3,0.8260869565217391,812657.947315197,"same value 3 years running, 83% of years imputed",True
+DJI,156,Sugar cane,31,0.013622735860769628,17,1.0,2064.516129032258,"same value 17 years running, 100% of years imputed",False
+DJI,358,Cabbages,31,0.12810159258006015,3,1.0,1935.483870967742,"same value 3 years running, 100% of years imputed",False
+DJI,372,Lettuce and chicory,20,0.25426191728967557,3,1.0,1200.0,"same value 3 years running, 100% of years imputed",False
+DJI,397,Cucumbers and gherkins,31,0.03679937654174292,3,1.0,2935.483870967742,"same value 3 years running, 100% of years imputed",False
+DJI,426,Carrots and turnips,18,0.31906934074567345,4,1.0,2388.8888888888887,"same value 4 years running, 100% of years imputed",False
+DJI,495,"Tangerines, mandarins, clementines",25,0.05339159131602493,11,1.0,1000.0,"same value 11 years running, 100% of years imputed",False
+DJI,521,Pears,31,1.2265941769291619e-13,31,1.0,1000.0,"detrended CV < 1%; same value 31 years running, 100% of years imputed",False
+DMA,156,Sugar cane,31,0.016849400521813464,8,1.0,209193.5483870968,"same value 8 years running, 100% of years imputed",False
+DMA,249,"Coconuts, in shell",31,0.11133699062734023,4,1.0,1632161.2903225806,"same value 4 years running, 100% of years imputed",False
+DMA,567,Watermelons,31,0.1117114438489963,6,1.0,54612.903225806454,"same value 6 years running, 100% of years imputed",False
+DMA,600,Papayas,24,0.07160909645339508,5,1.0,28916.666666666668,"same value 5 years running, 100% of years imputed",False
+DMA,661,Cocoa beans,31,0.5563178268609078,6,1.0,628000.0,"same value 6 years running, 100% of years imputed",False
+DMA,702,"Nutmeg, mace, cardamoms, raw",31,0.20376057281897084,6,1.0,9225.806451612903,"same value 6 years running, 100% of years imputed",False
+DNK,225,"Hazelnuts, in shell",14,0.09639506863392525,3,0.7857142857142857,17928.571428571428,"same value 3 years running, 79% of years imputed",True
+DNK,414,"Other beans, green",12,0.005007908267065355,5,0.75,666.6666666666666,"detrended CV < 1%; same value 5 years running, 75% of years imputed",True
+DOM,217,"Cashew nuts, in shell",31,0.08842787435080599,6,0.967741935483871,792096.7741935484,"same value 6 years running, 97% of years imputed",True
+DOM,603,"Other tropical fruits, n.e.c.",31,0.16240184514264716,3,0.5161290322580645,39972967.741935484,"same value 3 years running, 52% of years imputed",True
+DOM,720,"Ginger, raw",31,0.15367549956552776,5,0.8709677419354839,737096.7741935484,"same value 5 years running, 87% of years imputed",True
+DZA,267,Sunflower seed,31,0.020099488148269142,3,1.0,34064.51612903226,"same value 3 years running, 100% of years imputed",True
+DZA,270,Rape or colza seed,31,0.03640480345380667,4,0.6774193548387096,12667483.870967742,"same value 4 years running, 68% of years imputed",True
+DZA,328,"Seed cotton, unginned",31,0.11398213076521119,5,1.0,59903.22580645161,"same value 5 years running, 100% of years imputed",True
+DZA,512,"Other citrus fruit, n.e.c.",31,0.04402481551936575,3,1.0,194612.90322580645,"same value 3 years running, 100% of years imputed",True
+ECU,83,Sorghum,31,0.14960830724550514,3,0.6774193548387096,2185290.3225806453,"same value 3 years running, 68% of years imputed",True
+ECU,249,"Coconuts, in shell",31,0.21981100501311457,3,0.6774193548387096,3298193.5483870967,"same value 3 years running, 68% of years imputed",True
+ECU,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.8176865883451516,3,0.967741935483871,31516.129032258064,"same value 3 years running, 97% of years imputed",True
+ECU,754,"Pyrethrum, dried flowers",31,0.0307897062233517,4,1.0,165645.16129032258,"same value 4 years running, 100% of years imputed",True
+EGY,71,Rye,31,0.14585886947001458,4,1.0,17512483.870967742,"same value 4 years running, 100% of years imputed",True
+EGY,222,"Walnuts, in shell",24,0.07287088865652941,3,0.7916666666666666,76867916.66666667,"same value 3 years running, 79% of years imputed",True
+EGY,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.042443954916971095,10,1.0,75439967.74193548,"same value 10 years running, 100% of years imputed",True
+EGY,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.03509731060145755,10,1.0,53561677.41935484,"same value 10 years running, 100% of years imputed",True
+EGY,780,"Jute, raw or retted",31,0.08301002405951884,3,0.9354838709677419,1027645.1612903225,"same value 3 years running, 94% of years imputed",True
+ESP,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.31197888549277736,7,0.8064516129032258,19503117.863955583,"same value 7 years running, 81% of years imputed",True
+ESP,547,Raspberries,31,0.4302927925972056,3,0.5483870967741935,51785349.67566029,"same value 3 years running, 55% of years imputed",True
+ESP,558,Other berries and fruits of the genus vaccinium n.e.c.,31,0.28847770627016156,4,0.8064516129032258,7152785.354838709,"same value 4 years running, 81% of years imputed",True
+ESP,723,"Other stimulant, spice and aromatic crops, n.e.c.",25,0.041240073272160296,3,1.0,2854760.0,"same value 3 years running, 100% of years imputed",True
+ETH,265,Castor oil seeds,31,0.15278766346422223,3,1.0,3752064.5161290322,"same value 3 years running, 100% of years imputed",True
+ETH,328,"Seed cotton, unginned",31,0.1499659481061996,7,0.7741935483870968,81524741.93548387,"same value 7 years running, 77% of years imputed",True
+ETH,702,"Nutmeg, mace, cardamoms, raw",31,0.07104533750184058,16,1.0,489000.0,"same value 16 years running, 100% of years imputed",True
+ETH,826,Unmanufactured tobacco,31,0.02500800596762969,3,0.9032258064516129,6199354.838709678,"same value 3 years running, 90% of years imputed",True
+FJI,83,Sorghum,31,0.05042928490716036,3,1.0,6290.322580645161,"same value 3 years running, 100% of years imputed",True
+FJI,687,"Pepper (Piper spp.), raw",31,0.04019313436216656,8,1.0,790967.7419354839,"same value 8 years running, 100% of years imputed",True
+FRA,249,"Coconuts, in shell",25,4.439777269378685e-06,1,0.8,178560.0,detrended CV < 1%,True
+FRA,552,Blueberries,30,0.1754783838865499,4,0.5333333333333333,31080340.688718118,"same value 4 years running, 53% of years imputed",True
+FSM,463,"Other vegetables, fresh n.e.c.",29,0.00040800899611498153,1,1.0,993517.2413793104,detrended CV < 1%,False
+FSM,486,Bananas,29,0.007097543341647005,1,1.0,724413.7931034482,detrended CV < 1%,False
+GAB,397,Cucumbers and gherkins,23,6.538088081984562e-14,23,1.0,9000.0,"detrended CV < 1%; same value 23 years running, 100% of years imputed",False
+GAB,661,Cocoa beans,31,0.6157554080309576,9,1.0,549612.9032258064,"same value 9 years running, 100% of years imputed",False
+GBR,560,Grapes,31,0.17889135359824973,6,0.6451612903225806,4374193.548387097,"same value 6 years running, 65% of years imputed",True
+GEO,108,Cereals n.e.c.,19,0.0638203742948688,4,1.0,1776631.5789473683,"same value 4 years running, 100% of years imputed",False
+GEO,221,"Almonds, in shell",31,0.17893493718824258,4,0.967741935483871,4323065.1247481145,"same value 4 years running, 97% of years imputed",False
+GEO,242,"Groundnuts, excluding shelled",31,0.7295068112051969,5,0.5483870967741935,132732.67882443225,"same value 5 years running, 55% of years imputed",False
+GEO,826,Unmanufactured tobacco,31,0.6335724617449873,3,0.5161290322580645,1864982.3447053528,"same value 3 years running, 52% of years imputed",False
+GHA,156,Sugar cane,31,0.06353653974944921,8,0.9032258064516129,6412032.258064516,"same value 8 years running, 90% of years imputed",True
+GHA,263,Karite nuts (sheanuts),31,0.07558627127753823,3,1.0,15927741.935483871,"same value 3 years running, 100% of years imputed",True
+GHA,328,"Seed cotton, unginned",31,0.27040890637958065,5,0.5806451612903226,20593741.93548387,"same value 5 years running, 58% of years imputed",True
+GHA,388,Tomatoes,31,0.10092277772781157,3,0.5806451612903226,131270096.77419356,"same value 3 years running, 58% of years imputed",True
+GHA,399,Eggplants (aubergines),31,0.11155330606345168,3,0.7419354838709677,7842225.806451613,"same value 3 years running, 74% of years imputed",True
+GHA,401,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",31,0.21129754747928117,3,0.6129032258064516,107989516.12903225,"same value 3 years running, 61% of years imputed",True
+GHA,403,"Onions and shallots, dry (excluding dehydrated)",31,0.13448503078234764,3,0.5806451612903226,35580548.38709678,"same value 3 years running, 58% of years imputed",True
+GHA,430,Okra,31,0.10636373329821033,3,0.7096774193548387,78488903.22580644,"same value 3 years running, 71% of years imputed",True
+GHA,486,Bananas,31,0.09307356617620458,3,0.5483870967741935,20248741.93548387,"same value 3 years running, 55% of years imputed",True
+GHA,490,Oranges,31,0.04380289938419842,3,0.5806451612903226,161058387.0967742,"same value 3 years running, 58% of years imputed",True
+GHA,571,"Mangoes, guavas and mangosteens",31,0.16152977025708254,3,0.7096774193548387,31184580.64516129,"same value 3 years running, 71% of years imputed",True
+GHA,574,Pineapples,31,0.15420299483016445,3,0.7419354838709677,135073612.9032258,"same value 3 years running, 74% of years imputed",True
+GHA,600,Papayas,28,0.046297473863075415,3,0.6428571428571429,1412785.7142857143,"same value 3 years running, 64% of years imputed",True
+GHA,656,"Coffee, green",31,0.6708841591368961,10,0.7419354838709677,3886000.0,"same value 10 years running, 74% of years imputed",True
+GHA,661,Cocoa beans,31,0.13963572699491766,3,0.5161290322580645,944119129.032258,"same value 3 years running, 52% of years imputed",True
+GHA,826,Unmanufactured tobacco,31,0.1257466787998783,6,0.7419354838709677,4844548.387096774,"same value 6 years running, 74% of years imputed",True
+GHA,836,Natural rubber in primary forms,31,0.3935499920570482,3,0.6774193548387096,34237419.35483871,"same value 3 years running, 68% of years imputed",True
+GIN,156,Sugar cane,31,0.02050751454021045,5,1.0,12609258.064516129,"same value 5 years running, 100% of years imputed",False
+GIN,249,"Coconuts, in shell",31,0.10163463416661349,8,1.0,6447064.516129033,"same value 8 years running, 100% of years imputed",False
+GIN,254,Oil palm fruit,31,0.010151020403462148,18,1.0,82026580.64516129,"same value 18 years running, 100% of years imputed",False
+GIN,289,Sesame seed,31,0.4096071963461189,8,1.0,1687225.8064516129,"same value 8 years running, 100% of years imputed",False
+GIN,328,"Seed cotton, unginned",31,0.2072150178587742,3,0.8064516129032258,35459064.51612903,"same value 3 years running, 81% of years imputed",False
+GIN,661,Cocoa beans,31,0.48251184975011785,3,1.0,18126903.225806452,"same value 3 years running, 100% of years imputed",False
+GMB,254,Oil palm fruit,31,0.005122921095091148,14,1.0,3433483.870967742,"detrended CV < 1%; same value 14 years running, 100% of years imputed",True
+GMB,328,"Seed cotton, unginned",31,0.94977176973604,3,0.7096774193548387,664806.4516129033,"same value 3 years running, 71% of years imputed",True
+GNB,108,Cereals n.e.c.,23,0.13956190200880514,3,1.0,396956.52173913043,"same value 3 years running, 100% of years imputed",False
+GNB,149,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",31,0.07733343504440122,3,1.0,15645149.677419355,"same value 3 years running, 100% of years imputed",False
+GNB,156,Sugar cane,31,0.017775247436210777,15,1.0,272010.47177368094,"same value 15 years running, 100% of years imputed",False
+GNB,249,"Coconuts, in shell",31,0.04031774822291069,9,1.0,7431035.492393391,"same value 9 years running, 100% of years imputed",False
+GNB,254,Oil palm fruit,31,0.04329819548668248,12,1.0,7736013.771480253,"same value 12 years running, 100% of years imputed",False
+GNB,328,"Seed cotton, unginned",31,0.04298870244077997,3,1.0,4256642.444834008,"same value 3 years running, 100% of years imputed",False
+GNB,490,Oranges,31,0.008413086831207754,1,1.0,1997174.3624156667,detrended CV < 1%,False
+GNQ,249,"Coconuts, in shell",31,0.05582704897102509,6,1.0,682645.1612903225,"same value 6 years running, 100% of years imputed",False
+GNQ,254,Oil palm fruit,31,0.026998611879492783,13,1.0,3594645.1612903224,"same value 13 years running, 100% of years imputed",False
+GNQ,656,"Coffee, green",31,0.07773359120231994,4,1.0,9270322.58064516,"same value 4 years running, 100% of years imputed",False
+GNQ,661,Cocoa beans,31,0.2664210220398602,6,1.0,3281967.7419354836,"same value 6 years running, 100% of years imputed",False
+GRC,79,Millet,11,0.0013807850631306934,2,0.8181818181818182,26272.727272727272,detrended CV < 1%,True
+GRC,299,Melonseed,25,0.08521247502806199,7,1.0,1405200.0,"same value 7 years running, 100% of years imputed",True
+GRD,156,Sugar cane,31,0.1244552085583548,8,1.0,299580.6451612903,"same value 8 years running, 100% of years imputed",False
+GRD,197,"Pigeon peas, dry",31,0.1271665732284421,9,1.0,415290.32258064515,"same value 9 years running, 100% of years imputed",False
+GRD,249,"Coconuts, in shell",31,0.08702015734221094,7,1.0,1185677.4193548388,"same value 7 years running, 100% of years imputed",False
+GRD,328,"Seed cotton, unginned",31,0.04563075604679269,14,1.0,38419.354838709674,"same value 14 years running, 100% of years imputed",False
+GRD,388,Tomatoes,31,0.7755815738318795,3,1.0,287032.2580645161,"same value 3 years running, 100% of years imputed",False
+GRD,397,Cucumbers and gherkins,31,0.7373350928483972,3,1.0,155161.29032258064,"same value 3 years running, 100% of years imputed",False
+GRD,486,Bananas,31,0.24415804706154762,5,1.0,1607580.6451612904,"same value 5 years running, 100% of years imputed",False
+GRD,507,Pomelos and grapefruits,31,0.04361877326011137,10,1.0,739161.2903225806,"same value 10 years running, 100% of years imputed",False
+GRD,512,"Other citrus fruit, n.e.c.",31,0.017510922045740913,4,1.0,458000.0,"same value 4 years running, 100% of years imputed",False
+GRD,515,Apples,31,0.15194660436127028,3,1.0,202774.1935483871,"same value 3 years running, 100% of years imputed",False
+GRD,720,"Ginger, raw",31,0.6859608830523124,4,1.0,98451.6129032258,"same value 4 years running, 100% of years imputed",False
+GTM,211,Other pulses n.e.c.,31,0.026751126172508296,6,0.8387096774193549,18824387.096774194,"same value 6 years running, 84% of years imputed",True
+GTM,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.059528846716830716,4,0.7096774193548387,73555225.80645162,"same value 4 years running, 71% of years imputed",True
+GTM,249,"Coconuts, in shell",31,0.3770167037970007,3,1.0,3526290.3225806453,"same value 3 years running, 100% of years imputed",True
+GTM,782,"Kenaf, and other textile bast fibres, raw or retted",31,0.051519179778065576,3,1.0,198225.8064516129,"same value 3 years running, 100% of years imputed",True
+GTM,800,"Agave fibres, raw, n.e.c.",31,0.055779238184240514,3,1.0,79612.90322580645,"same value 3 years running, 100% of years imputed",True
+GUY,56,Maize (corn),31,0.29864563094815166,12,0.967741935483871,814677.4193548387,"same value 12 years running, 97% of years imputed",True
+GUY,242,"Groundnuts, excluding shelled",31,0.3422753172746995,3,0.8387096774193549,966387.0967741936,"same value 3 years running, 84% of years imputed",True
+GUY,249,"Coconuts, in shell",31,0.26042849984326727,4,0.7419354838709677,9342516.129032258,"same value 4 years running, 74% of years imputed",True
+GUY,591,Cashewapple,24,0.049061327897900464,5,1.0,1250.0,"same value 5 years running, 100% of years imputed",True
+GUY,656,"Coffee, green",31,0.3219465275615451,9,1.0,800903.2258064516,"same value 9 years running, 100% of years imputed",True
+GUY,826,Unmanufactured tobacco,31,0.008162345547459515,4,0.9032258064516129,209483.87096774194,"detrended CV < 1%; same value 4 years running, 90% of years imputed",True
+HND,236,Soya beans,31,0.5469012855438826,4,0.8064516129032258,1010354.8387096775,"same value 4 years running, 81% of years imputed",False
+HND,328,"Seed cotton, unginned",31,0.18835300339303715,7,0.9354838709677419,2580225.806451613,"same value 7 years running, 94% of years imputed",False
+HND,399,Eggplants (aubergines),31,0.25975052373774515,3,0.6129032258064516,2875032.2580645164,"same value 3 years running, 61% of years imputed",False
+HND,490,Oranges,31,0.16532426152774246,3,0.5161290322580645,67438387.09677419,"same value 3 years running, 52% of years imputed",False
+HND,507,Pomelos and grapefruits,31,0.1818636549763016,3,0.7419354838709677,9686193.548387097,"same value 3 years running, 74% of years imputed",False
+HND,567,Watermelons,31,0.24132787349529344,3,0.5483870967741935,13674258.064516129,"same value 3 years running, 55% of years imputed",False
+HND,571,"Mangoes, guavas and mangosteens",31,0.3370469710804728,3,0.7096774193548387,5148741.935483871,"same value 3 years running, 71% of years imputed",False
+HND,572,Avocados,31,0.20055961341046474,6,0.6774193548387096,1293064.5161290322,"same value 6 years running, 68% of years imputed",False
+HND,661,Cocoa beans,31,0.21329190704119266,7,0.6129032258064516,2614903.2258064514,"same value 7 years running, 61% of years imputed",False
+HRV,195,"Cow peas, dry",25,0.4929095814711597,4,0.52,358480.0,"same value 4 years running, 52% of years imputed",True
+HTI,242,"Groundnuts, excluding shelled",31,0.23504120104087817,3,0.6451612903225806,16575129.032258065,"same value 3 years running, 65% of years imputed",False
+HTI,249,"Coconuts, in shell",31,0.10877570421509354,3,0.9354838709677419,5016129.0322580645,"same value 3 years running, 94% of years imputed",False
+HTI,265,Castor oil seeds,31,0.0675602323649597,3,0.9354838709677419,708193.5483870967,"same value 3 years running, 94% of years imputed",False
+HTI,289,Sesame seed,31,0.048934072351746814,4,0.9354838709677419,4501193.548387097,"same value 4 years running, 94% of years imputed",False
+HTI,328,"Seed cotton, unginned",31,0.09695879358479244,5,0.7741935483870968,1108483.8709677418,"same value 5 years running, 77% of years imputed",False
+HTI,399,Eggplants (aubergines),31,0.008239313881742278,2,1.0,238903.2258064516,detrended CV < 1%,False
+HTI,406,Green garlic,31,0.11622863914482925,3,0.9032258064516129,537129.0322580645,"same value 3 years running, 90% of years imputed",False
+HTI,459,Chicory roots,31,7.215063067320284e-14,31,1.0,141000.0,"detrended CV < 1%; same value 31 years running, 100% of years imputed",False
+HTI,789,"Sisal, raw",31,0.0791729869456238,3,0.8709677419354839,4324838.70967742,"same value 3 years running, 87% of years imputed",False
+HTI,826,Unmanufactured tobacco,31,0.08370478151320793,3,0.9032258064516129,1247451.6129032257,"same value 3 years running, 90% of years imputed",False
+HUN,541,Other stone fruits,31,0.32244342103594426,6,0.6774193548387096,23726503.745519713,"same value 6 years running, 68% of years imputed",True
+HUN,619,"Other fruits, n.e.c.",25,0.6690586892425501,3,0.56,8547360.0,"same value 3 years running, 56% of years imputed",True
+HUN,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",25,0.07949963766876979,3,1.0,6431720.0,"same value 3 years running, 100% of years imputed",True
+HUN,777,"True hemp, raw or retted",27,0.8983641072010823,9,0.7407407407407407,287126.49436367967,"same value 9 years running, 74% of years imputed",True
+IDN,161,Other sugar crops n.e.c.,31,0.07979373754348615,10,0.9032258064516129,8737967.741935484,"same value 10 years running, 90% of years imputed",False
+IRL,71,Rye,25,0.0035175577250197492,2,1.0,147760.0,detrended CV < 1%,True
+IRL,407,Leeks and other alliaceous vegetables,31,0.2094956302919213,5,0.7419354838709677,1757433.6556837403,"same value 5 years running, 74% of years imputed",True
+IRL,417,"Peas, green",25,0.5485473564273702,3,1.0,4297480.0,"same value 3 years running, 100% of years imputed",True
+IRL,558,Other berries and fruits of the genus vaccinium n.e.c.,25,0.06462009191555558,6,1.0,229560.0,"same value 6 years running, 100% of years imputed",True
+IRL,619,"Other fruits, n.e.c.",25,0.10105089351142953,3,1.0,3205800.0,"same value 3 years running, 100% of years imputed",True
+IRQ,157,Sugar beet,31,0.20865983938086471,3,0.7419354838709677,788741.9354838709,"same value 3 years running, 74% of years imputed",False
+IRQ,176,"Beans, dry",31,0.2911095040999121,3,0.6129032258064516,4961483.870967742,"same value 3 years running, 61% of years imputed",False
+IRQ,236,Soya beans,31,0.48931018756815586,8,0.8064516129032258,150129.03225806452,"same value 8 years running, 81% of years imputed",False
+IRQ,260,Olives,31,0.4264243047515679,3,0.9032258064516129,15772000.0,"same value 3 years running, 90% of years imputed",False
+IRQ,536,Plums and sloes,31,0.4070460596658937,3,0.9032258064516129,5181516.129032258,"same value 3 years running, 90% of years imputed",False
+IRQ,569,Figs,31,0.2267603783018309,3,0.6774193548387096,6941548.387096774,"same value 3 years running, 68% of years imputed",False
+ISR,75,Oats,31,0.14962307046247642,4,0.9032258064516129,57161.290322580644,"same value 4 years running, 90% of years imputed",True
+ISR,187,"Peas, dry",31,2.047124534834473,3,1.0,546354.8387096775,"same value 3 years running, 100% of years imputed",True
+ISR,201,"Lentils, dry",31,0.09990565107955589,12,1.0,21870.967741935485,"same value 12 years running, 100% of years imputed",True
+ISR,280,Safflower seed,26,2.8861680516384998,5,1.0,6153.846153846154,"same value 5 years running, 100% of years imputed",True
+ISR,289,Sesame seed,31,0.08527240662046849,5,1.0,52677.41935483871,"same value 5 years running, 100% of years imputed",True
+ISR,420,"Broad beans and horse beans, green",31,0.20409373468756645,5,0.8064516129032258,153935.48387096773,"same value 5 years running, 81% of years imputed",True
+ISR,461,Locust beans (carobs),31,0.1085065562794915,9,1.0,83677.41935483871,"same value 9 years running, 100% of years imputed",True
+ISR,523,Quinces,31,0.17799407288758465,3,0.8709677419354839,811419.3548387097,"same value 3 years running, 87% of years imputed",True
+ITA,211,Other pulses n.e.c.,16,0.5032107987546189,4,0.625,14133962.16601054,"same value 4 years running, 62% of years imputed",True
+ITA,463,"Other vegetables, fresh n.e.c.",25,0.025917467106776348,3,0.88,682525360.0,"same value 3 years running, 88% of years imputed",True
+JAM,249,"Coconuts, in shell",31,0.2470963877177118,4,0.5806451612903226,27096580.64516129,"same value 4 years running, 58% of years imputed",True
+JAM,446,Green corn (maize),31,0.33613219095531516,4,0.8709677419354839,16419.354838709678,"same value 4 years running, 87% of years imputed",True
+JAM,507,Pomelos and grapefruits,31,0.001694035372834285,1,1.0,17717741.93548387,detrended CV < 1%,True
+JAM,789,"Sisal, raw",31,8.454433223402328e-14,31,1.0,217000.0,"detrended CV < 1%; same value 31 years running, 100% of years imputed",True
+JAM,821,"Other fibre crops, raw, n.e.c.",31,0.03850856036834198,4,1.0,98419.35483870968,"same value 4 years running, 100% of years imputed",True
+JAM,826,Unmanufactured tobacco,31,0.05543232469431942,3,0.9032258064516129,4057967.7419354836,"same value 3 years running, 90% of years imputed",True
+JPN,75,Oats,31,0.30769867522280336,4,0.5483870967741935,191322.5806451613,"same value 4 years running, 55% of years imputed",True
+JPN,79,Millet,31,0.1736120627021581,3,0.9032258064516129,97451.6129032258,"same value 3 years running, 90% of years imputed",True
+JPN,181,"Broad beans and horse beans, dry",31,0.15848467539315816,5,0.8709677419354839,47096.77419354839,"same value 5 years running, 87% of years imputed",True
+JPN,187,"Peas, dry",31,0.15935605711084186,6,0.8709677419354839,356903.22580645164,"same value 6 years running, 87% of years imputed",True
+JPN,486,Bananas,31,0.15887543307166166,3,0.8064516129032258,79064.51612903226,"same value 3 years running, 81% of years imputed",True
+KAZ,201,"Lentils, dry",31,1.0972860411418388,14,0.6774193548387096,37293371.70916339,"same value 14 years running, 68% of years imputed",True
+KAZ,459,Chicory roots,31,0.04975004247323182,9,1.0,2288102.1375307953,"same value 9 years running, 100% of years imputed",True
+KAZ,512,"Other citrus fruit, n.e.c.",24,0.24375671187122663,4,0.75,239166.66666666666,"same value 4 years running, 75% of years imputed",True
+KAZ,530,Sour cherries,24,0.3308452148047803,11,0.75,137541.66666666666,"same value 11 years running, 75% of years imputed",True
+KAZ,558,Other berries and fruits of the genus vaccinium n.e.c.,23,0.0035701564670541316,1,0.8260869565217391,21884826.086956523,detrended CV < 1%,True
+KEN,75,Oats,31,0.06057002306368167,4,1.0,617387.0967741936,"same value 4 years running, 100% of years imputed",False
+KEN,289,Sesame seed,31,0.15845602126232447,4,0.7741935483870968,11424935.483870968,"same value 4 years running, 77% of years imputed",False
+KEN,577,Dates,31,0.03217526893358409,4,1.0,1051387.0967741935,"same value 4 years running, 100% of years imputed",False
+KEN,692,"Vanilla, raw",31,0.07517768180070128,3,1.0,24935.483870967742,"same value 3 years running, 100% of years imputed",False
+KEN,698,"Cloves (whole stems), raw",31,0.1511181100695047,4,1.0,1489806.4516129033,"same value 4 years running, 100% of years imputed",False
+KEN,754,"Pyrethrum, dried flowers",31,0.39319594812983377,7,0.5806451612903226,6045677.419354838,"same value 7 years running, 58% of years imputed",False
+KGZ,221,"Almonds, in shell",31,0.08337392833378077,3,1.0,6795455.053797859,"same value 3 years running, 100% of years imputed",True
+KGZ,222,"Walnuts, in shell",31,0.09407604571882379,3,1.0,16047660.147997163,"same value 3 years running, 100% of years imputed",True
+KGZ,223,"Pistachios, in shell",25,0.1202163630159527,3,1.0,4078760.0,"same value 3 years running, 100% of years imputed",True
+KGZ,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.02110234219945335,4,1.0,5174153.6852734,"same value 4 years running, 100% of years imputed",True
+KHM,249,"Coconuts, in shell",31,0.0751468867885199,3,1.0,11396548.387096774,"same value 3 years running, 100% of years imputed",True
+KHM,254,Oil palm fruit,31,2.768008400352164e-13,22,1.0,23064129.032258064,"detrended CV < 1%; same value 22 years running, 100% of years imputed",True
+KHM,328,"Seed cotton, unginned",31,0.19326398602402645,6,0.7741935483870968,235516.12903225806,"same value 6 years running, 77% of years imputed",True
+KHM,339,"Other oil seeds, n.e.c.",31,0.6120846114244379,5,1.0,399451.6129032258,"same value 5 years running, 100% of years imputed",True
+KHM,486,Bananas,31,0.18327077710824288,3,0.7741935483870968,62110806.451612905,"same value 3 years running, 77% of years imputed",True
+KHM,490,Oranges,31,0.07053153985675323,8,0.9032258064516129,20377580.64516129,"same value 8 years running, 90% of years imputed",True
+KHM,497,Lemons and limes,31,0.037383461274736636,3,0.9354838709677419,1437354.8387096773,"same value 3 years running, 94% of years imputed",True
+KHM,507,Pomelos and grapefruits,31,0.012059653509508142,3,0.9032258064516129,1224419.3548387096,"same value 3 years running, 90% of years imputed",True
+KHM,571,"Mangoes, guavas and mangosteens",31,0.027037774594684316,3,0.8064516129032258,31780870.967741936,"same value 3 years running, 81% of years imputed",True
+KHM,574,Pineapples,31,0.02440715502532007,4,0.9032258064516129,8145645.161290322,"same value 4 years running, 90% of years imputed",True
+KHM,656,"Coffee, green",31,0.0415832307376261,3,0.8064516129032258,664612.9032258064,"same value 3 years running, 81% of years imputed",True
+KNA,137,Yams,29,0.6725116841197168,6,0.5517241379310345,11482.758620689656,"same value 6 years running, 55% of years imputed",False
+KNA,249,"Coconuts, in shell",31,0.1887284648580672,3,0.9032258064516129,327354.8387096774,"same value 3 years running, 90% of years imputed",False
+KNA,328,"Seed cotton, unginned",31,0.22156997284972274,10,0.8064516129032258,3322.5806451612902,"same value 10 years running, 81% of years imputed",False
+KNA,397,Cucumbers and gherkins,31,0.29170838448906167,5,0.7096774193548387,29903.225806451614,"same value 5 years running, 71% of years imputed",False
+KNA,426,Carrots and turnips,31,0.32742040015957674,3,0.6774193548387096,25580.645161290322,"same value 3 years running, 68% of years imputed",False
+KNA,463,"Other vegetables, fresh n.e.c.",31,0.04562280281802092,3,1.0,79290.32258064517,"same value 3 years running, 100% of years imputed",False
+KOR,71,Rye,26,0.9773441514799406,3,0.6538461538461539,2307.6923076923076,"same value 3 years running, 65% of years imputed",True
+KOR,393,Cauliflowers and broccoli,28,0.6572531539052122,6,1.0,73500.0,"same value 6 years running, 100% of years imputed",True
+KOR,512,"Other citrus fruit, n.e.c.",31,4.833528054606988e-14,31,1.0,458000.0,"detrended CV < 1%; same value 31 years running, 100% of years imputed",True
+KWT,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.15464817000058687,3,0.9354838709677419,322806.4516129032,"same value 3 years running, 94% of years imputed",False
+LAO,116,Potatoes,31,0.20611995688631388,5,0.6129032258064516,6632774.193548387,"same value 5 years running, 61% of years imputed",True
+LBN,181,"Broad beans and horse beans, dry",30,0.5837848925979164,3,0.5333333333333333,226666.66666666666,"same value 3 years running, 53% of years imputed",False
+LBN,187,"Peas, dry",31,0.0636793420696382,7,0.7419354838709677,931387.0967741936,"same value 7 years running, 74% of years imputed",False
+LBN,289,Sesame seed,29,0.12064596207400109,4,0.8275862068965517,300827.5862068966,"same value 4 years running, 83% of years imputed",False
+LBN,619,"Other fruits, n.e.c.",31,0.17572359078556438,3,0.6129032258064516,23918354.83870968,"same value 3 years running, 61% of years imputed",False
+LBN,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.11471284810340475,9,0.967741935483871,189129.03225806452,"same value 9 years running, 97% of years imputed",False
+LBR,156,Sugar cane,31,0.009329344146258536,7,1.0,11691548.387096774,"detrended CV < 1%; same value 7 years running, 100% of years imputed",False
+LBR,249,"Coconuts, in shell",31,0.09025881522810077,11,1.0,1271870.9677419355,"same value 11 years running, 100% of years imputed",False
+LBR,254,Oil palm fruit,31,0.04290134743709395,14,1.0,16692354.838709677,"same value 14 years running, 100% of years imputed",False
+LBY,15,Wheat,31,0.1366278231627969,6,0.7419354838709677,33145838.70967742,"same value 6 years running, 74% of years imputed",False
+LBY,44,Barley,31,0.11877057014400683,5,0.7096774193548387,15035709.677419355,"same value 5 years running, 71% of years imputed",False
+LBY,79,Millet,31,0.13959469402515093,11,0.7096774193548387,1806548.3870967743,"same value 11 years running, 71% of years imputed",False
+LBY,176,"Beans, dry",31,0.06242406724113342,4,0.7096774193548387,809709.6774193548,"same value 4 years running, 71% of years imputed",False
+LBY,181,"Broad beans and horse beans, dry",31,0.2096311175403119,3,0.7419354838709677,1069741.935483871,"same value 3 years running, 74% of years imputed",False
+LBY,187,"Peas, dry",31,0.03633502022885474,3,0.6774193548387096,1803580.6451612904,"same value 3 years running, 68% of years imputed",False
+LBY,191,"Chick peas, dry",31,0.2929971113039139,3,0.6129032258064516,127903.2258064516,"same value 3 years running, 61% of years imputed",False
+LBY,242,"Groundnuts, excluding shelled",31,0.08379465001220987,4,0.5483870967741935,13356161.290322581,"same value 4 years running, 55% of years imputed",False
+LBY,260,Olives,31,0.14353841766330397,3,0.6451612903225806,184219935.48387095,"same value 3 years running, 65% of years imputed",False
+LBY,358,Cabbages,31,0.022901083848374422,3,0.7419354838709677,946419.3548387097,"same value 3 years running, 74% of years imputed",False
+LBY,393,Cauliflowers and broccoli,31,0.10437057226872581,3,0.7741935483870968,2665225.806451613,"same value 3 years running, 77% of years imputed",False
+LBY,397,Cucumbers and gherkins,31,0.38483549566760206,4,0.6129032258064516,4025709.6774193547,"same value 4 years running, 61% of years imputed",False
+LBY,399,Eggplants (aubergines),31,0.514684456913041,3,0.5483870967741935,1196580.6451612904,"same value 3 years running, 55% of years imputed",False
+LBY,403,"Onions and shallots, dry (excluding dehydrated)",31,0.06903439093211884,3,0.5483870967741935,74471645.16129032,"same value 3 years running, 55% of years imputed",False
+LBY,406,Green garlic,31,0.04917400706137682,3,0.7741935483870968,2921645.1612903224,"same value 3 years running, 77% of years imputed",False
+LBY,417,"Peas, green",31,0.1640985921977612,3,0.5806451612903226,4337483.870967742,"same value 3 years running, 58% of years imputed",False
+LBY,426,Carrots and turnips,31,0.052968781817418625,3,0.7419354838709677,7681483.870967742,"same value 3 years running, 74% of years imputed",False
+LBY,560,Grapes,31,0.1146266348697691,7,0.5161290322580645,28291387.096774194,"same value 7 years running, 52% of years imputed",False
+LBY,567,Watermelons,31,0.09420648514135517,3,0.7096774193548387,53025903.22580645,"same value 3 years running, 71% of years imputed",False
+LBY,568,Cantaloupes and other melons,31,0.02724934472801441,6,0.5806451612903226,9685838.709677419,"same value 6 years running, 58% of years imputed",False
+LBY,569,Figs,31,0.20251323843009267,3,0.6451612903225806,10097870.967741935,"same value 3 years running, 65% of years imputed",False
+LBY,577,Dates,31,0.10461718641963716,3,0.7096774193548387,150854032.2580645,"same value 3 years running, 71% of years imputed",False
+LBY,826,Unmanufactured tobacco,31,0.0254364711763444,6,0.8709677419354839,3056516.129032258,"same value 6 years running, 87% of years imputed",False
+LCA,249,"Coconuts, in shell",31,0.17308524866234073,4,1.0,2238354.8387096776,"same value 4 years running, 100% of years imputed",False
+LCA,603,"Other tropical fruits, n.e.c.",31,0.009051938443006693,1,1.0,1836419.3548387096,detrended CV < 1%,False
+LCA,687,"Pepper (Piper spp.), raw",31,0.3681081893056909,3,0.8064516129032258,931161.2903225806,"same value 3 years running, 81% of years imputed",False
+LTU,181,"Broad beans and horse beans, dry",14,0.0017560064246283013,2,0.0,25150202.38567653,detrended CV < 1%,True
+LTU,292,Mustard seed,25,0.41337917385733386,9,1.0,360480.0,"same value 9 years running, 100% of years imputed",True
+LVA,339,"Other oil seeds, n.e.c.",29,0.46752715608610035,3,0.7931034482758621,525795.5335943404,"same value 3 years running, 79% of years imputed",True
+MAR,236,Soya beans,31,5.593379145116943e-13,23,0.22580645161290322,512774.1935483871,detrended CV < 1%,True
+MAR,265,Castor oil seeds,31,0.0826840059429828,12,1.0,65129.032258064515,"same value 12 years running, 100% of years imputed",True
+MAR,328,"Seed cotton, unginned",31,0.18100940966456272,6,0.6451612903225806,606032.2580645161,"same value 6 years running, 65% of years imputed",True
+MAR,372,Lettuce and chicory,31,0.006588648364921368,1,1.0,1885774.1935483871,detrended CV < 1%,True
+MAR,512,"Other citrus fruit, n.e.c.",31,0.1198281702633614,3,1.0,5790129.0322580645,"same value 3 years running, 100% of years imputed",True
+MAR,541,Other stone fruits,31,0.003031441701976691,4,1.0,1084741.935483871,"detrended CV < 1%; same value 4 years running, 100% of years imputed",True
+MAR,603,"Other tropical fruits, n.e.c.",31,0.009047436757452135,1,1.0,238354.83870967742,detrended CV < 1%,True
+MAR,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.08848430042006811,3,1.0,27941483.870967742,"same value 3 years running, 100% of years imputed",True
+MAR,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.03187123406154308,16,1.0,54398612.90322581,"same value 16 years running, 100% of years imputed",True
+MAR,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.06583904476151886,15,1.0,3615322.580645161,"same value 15 years running, 100% of years imputed",True
+MAR,754,"Pyrethrum, dried flowers",31,0.016860923196039566,15,1.0,268419.3548387097,"same value 15 years running, 100% of years imputed",True
+MDA,221,"Almonds, in shell",31,0.059467409779297084,12,1.0,3010337.2483221474,"same value 12 years running, 100% of years imputed",True
+MDA,225,"Hazelnuts, in shell",31,0.09770515666672472,4,1.0,1925219.7810200131,"same value 4 years running, 100% of years imputed",True
+MDA,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.20843383496051116,4,1.0,1952869.5717041253,"same value 4 years running, 100% of years imputed",True
+MDG,15,Wheat,31,0.2778069574292242,7,0.9354838709677419,1682258.064516129,"same value 7 years running, 94% of years imputed",False
+MDG,223,"Pistachios, in shell",31,0.28560883149883004,3,1.0,10175064.516129032,"same value 3 years running, 100% of years imputed",False
+MDG,236,Soya beans,31,0.02401562114178752,5,1.0,18032.25806451613,"same value 5 years running, 100% of years imputed",False
+MDG,249,"Coconuts, in shell",31,0.058247877195384455,5,0.5161290322580645,12496258.064516129,"same value 5 years running, 52% of years imputed",False
+MDG,254,Oil palm fruit,31,0.03300634118025459,8,1.0,2077225.8064516129,"same value 8 years running, 100% of years imputed",False
+MDG,591,Cashewapple,31,0.008898208745424869,2,1.0,19734870.967741936,detrended CV < 1%,False
+MDV,83,Sorghum,30,0.13923996389049803,3,1.0,9505.279491110436,"same value 3 years running, 100% of years imputed",False
+MDV,226,Areca nuts,31,1.9984094560230339,4,1.0,78086.10535287803,"same value 4 years running, 100% of years imputed",False
+MDV,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.11727599229331002,4,1.0,4668926.4130353695,"same value 4 years running, 100% of years imputed",False
+MDV,619,"Other fruits, n.e.c.",31,0.2326266763120435,3,1.0,1479357.6270682062,"same value 3 years running, 100% of years imputed",False
+MDV,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.12412454554161705,6,1.0,10760.179660654769,"same value 6 years running, 100% of years imputed",False
+MEX,79,Millet,28,0.576843578404982,3,0.5714285714285714,110392.85714285714,"same value 3 years running, 57% of years imputed",True
+MKD,176,"Beans, dry",31,0.16595593460818953,5,0.6451612903225806,6973225.806451613,"same value 5 years running, 65% of years imputed",True
+MKD,211,Other pulses n.e.c.,31,0.12135395774469147,12,0.8709677419354839,77516.12903225806,"same value 12 years running, 87% of years imputed",True
+MKD,289,Sesame seed,31,0.30930286295109993,3,0.9032258064516129,59516.12903225807,"same value 3 years running, 90% of years imputed",True
+MKD,550,Currants,22,0.009165099825631465,1,1.0,107363.63636363637,detrended CV < 1%,True
+MLI,399,Eggplants (aubergines),31,0.264501794462985,4,0.7419354838709677,10462838.709677419,"same value 4 years running, 74% of years imputed",True
+MLI,426,Carrots and turnips,31,0.15869074975869174,3,0.7419354838709677,2111322.580645161,"same value 3 years running, 74% of years imputed",True
+MLI,667,Tea leaves,31,0.32916555944585,3,0.7419354838709677,204225.8064516129,"same value 3 years running, 74% of years imputed",True
+MLT,260,Olives,26,1.729618711611865,3,0.8846153846153846,36402.061538461545,"same value 3 years running, 88% of years imputed",False
+MMR,108,Cereals n.e.c.,31,0.05938070936501154,3,0.6451612903225806,3751387.0967741935,"same value 3 years running, 65% of years imputed",True
+MMR,821,"Other fibre crops, raw, n.e.c.",31,0.026468701646113944,4,0.9032258064516129,65032.25806451613,"same value 4 years running, 90% of years imputed",True
+MOZ,403,"Onions and shallots, dry (excluding dehydrated)",31,0.30907295341698865,3,0.7741935483870968,42185387.09677419,"same value 3 years running, 77% of years imputed",False
+MOZ,490,Oranges,31,0.09745155478681983,3,0.8709677419354839,11278354.838709677,"same value 3 years running, 87% of years imputed",False
+MOZ,495,"Tangerines, mandarins, clementines",31,0.0810412665143528,3,1.0,173903.2258064516,"same value 3 years running, 100% of years imputed",False
+MOZ,497,Lemons and limes,31,0.09902067170706254,3,1.0,1994580.6451612904,"same value 3 years running, 100% of years imputed",False
+MOZ,507,Pomelos and grapefruits,31,0.15992578549301362,3,1.0,4507806.451612903,"same value 3 years running, 100% of years imputed",False
+MOZ,667,Tea leaves,31,0.32452177661321335,3,0.7096774193548387,32190870.967741936,"same value 3 years running, 71% of years imputed",False
+MOZ,826,Unmanufactured tobacco,31,0.2792671324985283,3,0.6129032258064516,120333903.22580644,"same value 3 years running, 61% of years imputed",False
+MRT,176,"Beans, dry",29,0.07079220918354082,3,0.8620689655172413,8042517.24137931,"same value 3 years running, 86% of years imputed",False
+MRT,195,"Cow peas, dry",31,0.07941442582765271,11,0.6451612903225806,2595225.806451613,"same value 11 years running, 65% of years imputed",False
+MRT,242,"Groundnuts, excluding shelled",31,0.29523622021672646,3,0.7096774193548387,838161.2903225806,"same value 3 years running, 71% of years imputed",False
+MRT,567,Watermelons,31,0.27217480713026715,4,0.7096774193548387,631451.6129032258,"same value 4 years running, 71% of years imputed",False
+MUS,249,"Coconuts, in shell",31,0.10679020996906077,12,0.9354838709677419,241322.5806451613,"same value 12 years running, 94% of years imputed",False
+MUS,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.022476018019648807,4,1.0,188580.64516129033,"same value 4 years running, 100% of years imputed",False
+MWI,187,"Peas, dry",27,0.17637203330272097,3,1.0,9029259.25925926,"same value 3 years running, 100% of years imputed",True
+MWI,430,Okra,31,0.0013306929898875273,1,0.8709677419354839,2157159.3925893237,detrended CV < 1%,True
+MWI,619,"Other fruits, n.e.c.",31,0.009542822920223275,1,1.0,91328528.38947745,detrended CV < 1%,True
+MWI,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.06259283133127186,3,1.0,131811.02642816651,"same value 3 years running, 100% of years imputed",True
+MYS,512,"Other citrus fruit, n.e.c.",19,0.3575992543048979,4,1.0,2571526.3157894737,"same value 4 years running, 100% of years imputed",False
+MYS,603,"Other tropical fruits, n.e.c.",31,0.14162050233586082,4,0.8064516129032258,153310548.38709676,"same value 4 years running, 81% of years imputed",False
+MYS,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.007468756491490721,1,1.0,3057645.1612903224,detrended CV < 1%,False
+NAM,242,"Groundnuts, excluding shelled",31,0.4416121484330384,3,0.9032258064516129,260419.35483870967,"same value 3 years running, 90% of years imputed",False
+NAM,687,"Pepper (Piper spp.), raw",10,0.09982230131029796,3,1.0,1924900.0,"same value 3 years running, 100% of years imputed",False
+NCL,249,"Coconuts, in shell",31,0.045407281813664185,9,1.0,2731935.4838709678,"same value 9 years running, 100% of years imputed",False
+NGA,254,Oil palm fruit,31,0.02227590769344576,3,1.0,844107354.8387097,"same value 3 years running, 100% of years imputed",True
+NGA,512,"Other citrus fruit, n.e.c.",31,0.02758761764366476,3,1.0,1482634354.8387096,"same value 3 years running, 100% of years imputed",True
+NGA,574,Pineapples,31,0.06940800377238153,4,1.0,473850354.83870965,"same value 4 years running, 100% of years imputed",True
+NIC,137,Yams,31,4.430089225832685e-14,31,0.9032258064516129,265000.0,"detrended CV < 1%; same value 31 years running, 90% of years imputed",True
+NIC,249,"Coconuts, in shell",31,0.13743698087094913,3,1.0,966064.5161290322,"same value 3 years running, 100% of years imputed",True
+NIC,254,Oil palm fruit,31,0.19528437829013282,6,0.967741935483871,16560193.548387097,"same value 6 years running, 97% of years imputed",True
+NIC,403,"Onions and shallots, dry (excluding dehydrated)",31,0.27856997725881505,3,0.6774193548387096,4941096.774193549,"same value 3 years running, 68% of years imputed",True
+NIC,574,Pineapples,31,0.017230851933870295,3,1.0,22331419.35483871,"same value 3 years running, 100% of years imputed",True
+NIC,661,Cocoa beans,31,0.12534025006969188,3,0.7419354838709677,4218354.838709678,"same value 3 years running, 74% of years imputed",True
+NIU,122,Sweet potatoes,31,0.009966124535548513,2,1.0,51612.903225806454,detrended CV < 1%,False
+NIU,249,"Coconuts, in shell",31,0.08439240642985385,8,1.0,513645.1612903226,"same value 8 years running, 100% of years imputed",False
+NIU,486,Bananas,31,0.0032620940221865973,1,1.0,28161.290322580644,detrended CV < 1%,False
+NLD,547,Raspberries,31,0.4357668879463124,3,0.8064516129032258,6483963.947787792,"same value 3 years running, 81% of years imputed",True
+NLD,558,Other berries and fruits of the genus vaccinium n.e.c.,25,0.03758535378118169,3,0.76,2051440.0,"same value 3 years running, 76% of years imputed",True
+NLD,560,Grapes,31,0.43301640222501925,6,0.6451612903225806,613045.5836114658,"same value 6 years running, 65% of years imputed",True
+NLD,568,Cantaloupes and other melons,23,0.08647170343217937,6,1.0,808739.1304347826,"same value 6 years running, 100% of years imputed",True
+NPL,221,"Almonds, in shell",26,0.19753433545252178,8,0.5384615384615384,50923.07692307692,"same value 8 years running, 54% of years imputed",True
+NRU,249,"Coconuts, in shell",31,0.02701916729572571,9,1.0,376935.48387096776,"same value 9 years running, 100% of years imputed",False
+NZL,116,Potatoes,31,0.06647170121609879,8,0.5483870967741935,122652580.64516129,"same value 8 years running, 55% of years imputed",False
+NZL,201,"Lentils, dry",31,0.4364893926429668,5,0.5483870967741935,1418451.6129032257,"same value 5 years running, 55% of years imputed",False
+NZL,222,"Walnuts, in shell",24,0.048988234628622854,4,1.0,2796166.6666666665,"same value 4 years running, 100% of years imputed",False
+NZL,270,Rape or colza seed,31,0.16454492191894535,7,0.7419354838709677,1476387.0967741935,"same value 7 years running, 74% of years imputed",False
+NZL,333,Linseed,31,0.07605688674119966,6,0.7419354838709677,724354.8387096775,"same value 6 years running, 74% of years imputed",False
+NZL,373,Spinach,31,0.16694995975725582,3,0.6774193548387096,873677.4193548387,"same value 3 years running, 68% of years imputed",False
+NZL,388,Tomatoes,31,0.20035522367518055,4,0.5806451612903226,40279838.70967742,"same value 4 years running, 58% of years imputed",False
+NZL,401,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",31,0.19065473681089315,5,0.8064516129032258,3321000.0,"same value 5 years running, 81% of years imputed",False
+NZL,420,"Broad beans and horse beans, green",31,0.11455190519559093,6,0.8064516129032258,328580.6451612903,"same value 6 years running, 81% of years imputed",False
+NZL,426,Carrots and turnips,31,0.16755901946789373,4,0.6451612903225806,19148645.16129032,"same value 4 years running, 65% of years imputed",False
+NZL,495,"Tangerines, mandarins, clementines",31,0.49340660662772245,3,0.6774193548387096,2878516.129032258,"same value 3 years running, 68% of years imputed",False
+NZL,497,Lemons and limes,31,0.0788402588074784,3,0.7419354838709677,2743225.806451613,"same value 3 years running, 74% of years imputed",False
+NZL,526,Apricots,31,0.11978932167980733,3,0.6129032258064516,3692709.6774193547,"same value 3 years running, 61% of years imputed",False
+NZL,536,Plums and sloes,31,0.09026780137162002,3,0.6129032258064516,1261258.064516129,"same value 3 years running, 61% of years imputed",False
+NZL,541,Other stone fruits,31,0.020450355297717975,5,1.0,7498967.741935484,"same value 5 years running, 100% of years imputed",False
+NZL,549,Gooseberries,31,0.47104076931334965,7,0.7741935483870968,27645.16129032258,"same value 7 years running, 77% of years imputed",False
+NZL,567,Watermelons,31,0.0686087635458242,6,0.8064516129032258,620290.3225806452,"same value 6 years running, 81% of years imputed",False
+NZL,587,Persimmons,31,0.08336111715682396,3,0.9032258064516129,848580.6451612903,"same value 3 years running, 90% of years imputed",False
+NZL,619,"Other fruits, n.e.c.",31,0.0042631186830457595,1,1.0,8485483.870967742,detrended CV < 1%,False
+NZL,677,Hop cones,31,0.06229811313398422,3,0.8064516129032258,4313935.483870967,"same value 3 years running, 81% of years imputed",False
+OMN,826,Unmanufactured tobacco,31,0.012717693841226568,3,0.6129032258064516,2716838.709677419,"same value 3 years running, 61% of years imputed",False
+PAK,197,"Pigeon peas, dry",24,0.057444059015678756,5,1.0,2791.6666666666665,"same value 5 years running, 100% of years imputed",True
+PAN,826,Unmanufactured tobacco,31,0.08977250247218119,3,0.7741935483870968,5450322.580645162,"same value 3 years running, 77% of years imputed",False
+PHL,339,"Other oil seeds, n.e.c.",31,0.019267252914172247,4,1.0,4632741.935483871,"same value 4 years running, 100% of years imputed",True
+PHL,603,"Other tropical fruits, n.e.c.",31,0.06032098849804848,4,0.8064516129032258,1840652806.451613,"same value 4 years running, 81% of years imputed",True
+PHL,800,"Agave fibres, raw, n.e.c.",31,0.055234571915847214,3,1.0,2464483.870967742,"same value 3 years running, 100% of years imputed",True
+PNG,27,Rice,31,0.03960138422935649,6,0.967741935483871,306161.29032258067,"same value 6 years running, 97% of years imputed",False
+PNG,83,Sorghum,31,0.05866326274221033,3,0.967741935483871,849709.6774193548,"same value 3 years running, 97% of years imputed",False
+PNG,125,"Cassava, fresh",31,0.030406768522006553,4,0.6774193548387096,19867064.51612903,"same value 4 years running, 68% of years imputed",False
+PNG,136,Taro,31,0.049959123047946974,3,1.0,88925580.64516129,"same value 3 years running, 100% of years imputed",False
+PNG,156,Sugar cane,31,0.0787766781107368,6,0.6774193548387096,16465645.161290323,"same value 6 years running, 68% of years imputed",False
+PNG,211,Other pulses n.e.c.,31,0.06704741109629307,5,1.0,2576354.8387096776,"same value 5 years running, 100% of years imputed",False
+PNG,242,"Groundnuts, excluding shelled",31,0.05032955573572887,5,0.967741935483871,893967.7419354839,"same value 5 years running, 97% of years imputed",False
+PNG,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.47598402211096175,3,1.0,27451.612903225807,"same value 3 years running, 100% of years imputed",False
+PNG,754,"Pyrethrum, dried flowers",31,0.032867989476044406,4,1.0,1377709.677419355,"same value 4 years running, 100% of years imputed",False
+PNG,836,Natural rubber in primary forms,31,0.12730110162519143,4,0.967741935483871,7385709.677419355,"same value 4 years running, 97% of years imputed",False
+PRI,27,Rice,10,0.007591943109758819,1,0.7,663100.0,detrended CV < 1%,False
+PRI,826,Unmanufactured tobacco,31,0.26307046789160105,13,1.0,3612.9032258064517,"same value 13 years running, 100% of years imputed",False
+PRK,71,Rye,31,0.09979787038180811,6,1.0,17169290.322580647,"same value 6 years running, 100% of years imputed",False
+PRK,75,Oats,31,0.29091492796992785,7,1.0,2693064.5161290322,"same value 7 years running, 100% of years imputed",False
+PRK,220,"Chestnuts, in shell",31,0.04248749632009402,3,1.0,17059612.903225806,"same value 3 years running, 100% of years imputed",False
+PRK,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.22111703510532524,3,1.0,28973870.967741936,"same value 3 years running, 100% of years imputed",False
+PRK,328,"Seed cotton, unginned",31,0.042895524551803024,3,1.0,32059645.16129032,"same value 3 years running, 100% of years imputed",False
+PRK,568,Cantaloupes and other melons,31,0.0530476877473454,3,0.967741935483871,37770193.548387095,"same value 3 years running, 97% of years imputed",False
+PRK,677,Hop cones,31,0.02932164022839181,4,1.0,10925548.387096774,"same value 4 years running, 100% of years imputed",False
+PRK,777,"True hemp, raw or retted",31,0.02185235018383592,5,1.0,6736064.516129033,"same value 5 years running, 100% of years imputed",False
+PRT,156,Sugar cane,25,0.034398604454567404,13,1.0,206720.0,"same value 13 years running, 100% of years imputed",True
+PRT,547,Raspberries,31,0.30182516548383703,11,0.8064516129032258,25522647.84631393,"same value 11 years running, 81% of years imputed",True
+PRT,667,Tea leaves,25,0.25084277867034516,3,0.8,165880.0,"same value 3 years running, 80% of years imputed",True
+PRY,254,Oil palm fruit,31,0.10478929574952557,5,1.0,13634258.064516129,"same value 5 years running, 100% of years imputed",True
+PYF,156,Sugar cane,31,0.03122467009741472,8,1.0,142225.8064516129,"same value 8 years running, 100% of years imputed",False
+PYF,249,"Coconuts, in shell",31,0.08106778195661708,4,0.8387096774193549,13708322.58064516,"same value 4 years running, 84% of years imputed",False
+PYF,394,"Pumpkins, squash and gourds",31,0.29058142286395483,3,0.967741935483871,40741.93548387097,"same value 3 years running, 97% of years imputed",False
+PYF,401,"Chillies and peppers, green (Capsicum spp. and Pimenta spp.)",31,0.07624710878693078,3,0.9354838709677419,120903.2258064516,"same value 3 years running, 94% of years imputed",False
+PYF,402,"Onions and shallots, green",31,0.6683550240113266,3,0.9032258064516129,17903.225806451614,"same value 3 years running, 90% of years imputed",False
+PYF,423,String beans,31,0.17756930371497984,3,0.9032258064516129,157161.29032258064,"same value 3 years running, 90% of years imputed",False
+PYF,619,"Other fruits, n.e.c.",31,0.04656127900939805,3,1.0,2337000.0,"same value 3 years running, 100% of years imputed",False
+ROU,296,Poppy seed,25,0.4428061596427872,3,0.64,2964120.0,"same value 3 years running, 64% of years imputed",True
+ROU,336,Hempseed,25,0.8515367181483362,7,0.76,192560.0,"same value 7 years running, 76% of years imputed",True
+ROU,558,Other berries and fruits of the genus vaccinium n.e.c.,31,0.4382186706715872,4,0.8064516129032258,4593037.306451613,"same value 4 years running, 81% of years imputed",True
+RUS,777,"True hemp, raw or retted",31,0.45579462495967965,10,0.6451612903225806,1199258.064516129,"same value 10 years running, 65% of years imputed",True
+RUS,782,"Kenaf, and other textile bast fibres, raw or retted",31,0.03855483793883561,3,1.0,29818548.387096774,"same value 3 years running, 100% of years imputed",True
+RWA,156,Sugar cane,31,0.1709003870911368,3,0.8064516129032258,3226967.7419354836,"same value 3 years running, 81% of years imputed",False
+RWA,572,Avocados,26,0.22522689732095366,3,0.6923076923076923,5632538.461538462,"same value 3 years running, 69% of years imputed",False
+SAU,242,"Groundnuts, excluding shelled",31,0.07596998373643324,4,0.9354838709677419,2223193.5483870967,"same value 4 years running, 94% of years imputed",True
+SCG,79,Millet,31,0.5358135367861862,3,0.7419354838709677,67419.35483870968,"same value 3 years running, 74% of years imputed",True
+SCG,296,Poppy seed,30,0.1920763432805247,5,0.6,1527133.3333333333,"same value 5 years running, 60% of years imputed",True
+SCG,399,Eggplants (aubergines),18,0.04721696764690426,4,1.0,589055.5555555555,"same value 4 years running, 100% of years imputed",True
+SCG,420,"Broad beans and horse beans, green",18,7.202515442313484e-13,18,1.0,232000.0,"detrended CV < 1%; same value 18 years running, 100% of years imputed",True
+SCG,459,Chicory roots,18,0.013500610216515368,8,1.0,2462222.222222222,"same value 8 years running, 100% of years imputed",True
+SCG,558,Other berries and fruits of the genus vaccinium n.e.c.,18,0.06640144653018445,7,1.0,6321444.444444444,"same value 7 years running, 100% of years imputed",True
+SCG,592,Kiwi fruit,16,4.558901669932515e-14,16,1.0,463000.0,"detrended CV < 1%; same value 16 years running, 100% of years imputed",True
+SCG,619,"Other fruits, n.e.c.",18,0.4501764097053621,8,1.0,9977444.444444444,"same value 8 years running, 100% of years imputed",True
+SCG,667,Tea leaves,18,2.4856420211642097e-13,18,1.0,193000.0,"detrended CV < 1%; same value 18 years running, 100% of years imputed",True
+SCG,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.26785899035180655,5,0.6129032258064516,7198193.548387097,"same value 5 years running, 61% of years imputed",True
+SDX,137,Yams,31,0.05416247738253655,4,1.0,44512709.67741936,"same value 4 years running, 100% of years imputed",True
+SDX,211,Other pulses n.e.c.,31,0.046558308198084354,3,1.0,76947000.0,"same value 3 years running, 100% of years imputed",True
+SDX,265,Castor oil seeds,31,0.0014686289708656453,18,0.0967741935483871,755483.8709677419,detrended CV < 1%,True
+SDX,339,"Other oil seeds, n.e.c.",31,0.13876893022597392,10,1.0,26482322.580645163,"same value 10 years running, 100% of years imputed",True
+SDX,414,"Other beans, green",27,0.3417212091320582,3,0.7037037037037037,324962.962962963,"same value 3 years running, 70% of years imputed",True
+SDX,568,Cantaloupes and other melons,31,0.08521118157003109,3,0.9032258064516129,23552677.419354837,"same value 3 years running, 90% of years imputed",True
+SDX,574,Pineapples,31,0.06624374439643742,5,1.0,2502612.9032258065,"same value 5 years running, 100% of years imputed",True
+SDX,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.0924617190215113,3,1.0,16189290.322580645,"same value 3 years running, 100% of years imputed",True
+SEN,156,Sugar cane,31,0.06770077348217735,3,0.8064516129032258,44556161.29032258,"same value 3 years running, 81% of years imputed",True
+SEN,249,"Coconuts, in shell",31,0.11245318412035257,9,1.0,736516.1290322581,"same value 9 years running, 100% of years imputed",True
+SEN,254,Oil palm fruit,31,0.07436772694318508,4,1.0,9110774.193548387,"same value 4 years running, 100% of years imputed",True
+SEN,571,"Mangoes, guavas and mangosteens",31,0.0757126768316063,3,0.9032258064516129,62583387.09677419,"same value 3 years running, 90% of years imputed",True
+SGP,149,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",31,0.023333059982830247,7,1.0,2548.3870967741937,"same value 7 years running, 100% of years imputed",False
+SLB,122,Sweet potatoes,31,0.015710563598241512,3,1.0,18701483.870967742,"same value 3 years running, 100% of years imputed",False
+SLB,125,"Cassava, fresh",31,0.02990752668545098,3,1.0,381258.06451612903,"same value 3 years running, 100% of years imputed",False
+SLB,137,Yams,31,0.04996829424406008,3,1.0,9102709.677419355,"same value 3 years running, 100% of years imputed",False
+SLB,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.014998508808706918,4,1.0,737741.9354838709,"same value 4 years running, 100% of years imputed",False
+SLB,254,Oil palm fruit,31,0.10565923196798693,6,0.8387096774193549,18076612.903225806,"same value 6 years running, 84% of years imputed",False
+SLB,826,Unmanufactured tobacco,31,0.030621666558640452,13,0.5806451612903226,222935.48387096773,"same value 13 years running, 58% of years imputed",False
+SLE,83,Sorghum,31,0.19703654552929303,3,0.7096774193548387,6761258.064516129,"same value 3 years running, 71% of years imputed",False
+SLE,156,Sugar cane,31,0.137828611131388,6,0.9354838709677419,3190290.3225806453,"same value 6 years running, 94% of years imputed",False
+SLE,249,"Coconuts, in shell",31,0.16139820892148274,4,0.9354838709677419,651709.6774193548,"same value 4 years running, 94% of years imputed",False
+SLE,512,"Other citrus fruit, n.e.c.",31,0.009852556182100628,1,1.0,39478806.451612905,detrended CV < 1%,False
+SLE,656,"Coffee, green",31,0.4183009400108434,3,0.9032258064516129,34627387.09677419,"same value 3 years running, 90% of years imputed",False
+SLV,403,"Onions and shallots, dry (excluding dehydrated)",31,0.3739808235538801,3,0.5161290322580645,400645.1612903226,"same value 3 years running, 52% of years imputed",True
+SLV,568,Cantaloupes and other melons,31,0.2301530441400311,3,0.6774193548387096,2514322.580645161,"same value 3 years running, 68% of years imputed",True
+SLV,826,Unmanufactured tobacco,31,0.05280091617764343,3,0.8709677419354839,3199548.3870967743,"same value 3 years running, 87% of years imputed",True
+SOM,156,Sugar cane,31,0.07402454201394362,3,0.967741935483871,9549096.774193548,"same value 3 years running, 97% of years imputed",False
+SOM,249,"Coconuts, in shell",31,0.08153953905804479,3,1.0,1803967.7419354839,"same value 3 years running, 100% of years imputed",False
+SOM,289,Sesame seed,31,0.23720239807877402,3,0.6129032258064516,29245548.387096774,"same value 3 years running, 61% of years imputed",False
+SOM,328,"Seed cotton, unginned",31,0.027237423332059838,4,1.0,6023516.129032258,"same value 4 years running, 100% of years imputed",False
+SOM,486,Bananas,31,0.06992556344349043,3,0.8387096774193549,11530677.41935484,"same value 3 years running, 84% of years imputed",False
+SOM,571,"Mangoes, guavas and mangosteens",31,0.0420752433338318,5,1.0,651548.3870967742,"same value 5 years running, 100% of years imputed",False
+STP,137,Yams,31,0.07688003029337954,3,1.0,460161.29032258067,"same value 3 years running, 100% of years imputed",False
+STP,249,"Coconuts, in shell",31,0.4126405678569376,5,1.0,3525870.9677419355,"same value 5 years running, 100% of years imputed",False
+STP,254,Oil palm fruit,31,0.09821032174041835,3,1.0,1430870.9677419355,"same value 3 years running, 100% of years imputed",False
+STP,661,Cocoa beans,31,0.1269671715530224,3,0.8387096774193549,4627645.161290322,"same value 3 years running, 84% of years imputed",False
+SUR,156,Sugar cane,31,0.1689668483697163,3,1.0,4616838.70967742,"same value 3 years running, 100% of years imputed",False
+SUR,254,Oil palm fruit,31,1.0316302778815551,9,0.967741935483871,180774.1935483871,"same value 9 years running, 97% of years imputed",False
+SUR,656,"Coffee, green",31,0.47671159258327156,3,0.7419354838709677,23806.451612903227,"same value 3 years running, 74% of years imputed",False
+SVN,221,"Almonds, in shell",23,1.9040207412090955,6,0.8695652173913043,37073.15324010685,"same value 6 years running, 87% of years imputed",True
+SVN,550,Currants,23,0.7479386982975414,3,0.6521739130434783,16577.78578252315,"same value 3 years running, 65% of years imputed",True
+SWZ,27,Rice,31,0.35784020729881844,4,0.8709677419354839,258225.8064516129,"same value 4 years running, 87% of years imputed",False
+SWZ,83,Sorghum,31,0.23620806177343695,11,0.7741935483870968,166645.16129032258,"same value 11 years running, 77% of years imputed",False
+SWZ,156,Sugar cane,31,0.0358222262714027,4,0.5806451612903226,217486000.0,"same value 4 years running, 58% of years imputed",False
+SWZ,388,Tomatoes,31,0.041207863324840006,3,0.9354838709677419,2071322.5806451612,"same value 3 years running, 94% of years imputed",False
+SYC,249,"Coconuts, in shell",31,0.08044513728371767,7,1.0,725967.7419354839,"same value 7 years running, 100% of years imputed",False
+SYC,572,Avocados,31,0.030171738361104452,4,0.967741935483871,11645.161290322581,"same value 4 years running, 97% of years imputed",False
+SYR,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",25,0.07753380045341347,9,1.0,1064120.0,"same value 9 years running, 100% of years imputed",True
+SYR,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.072153006416325,8,1.0,2657451.6129032257,"same value 8 years running, 100% of years imputed",True
+TCD,571,"Mangoes, guavas and mangosteens",31,0.0074797497247038455,1,1.0,20772761.86107531,detrended CV < 1%,True
+TCD,826,Unmanufactured tobacco,31,0.03128572929853338,4,0.8387096774193549,414807.22159469844,"same value 4 years running, 84% of years imputed",True
+TGO,249,"Coconuts, in shell",31,0.06693530952346687,7,1.0,2182322.580645161,"same value 7 years running, 100% of years imputed",True
+TGO,254,Oil palm fruit,31,0.0644591019830161,9,1.0,11654354.838709677,"same value 9 years running, 100% of years imputed",True
+TGO,702,"Nutmeg, mace, cardamoms, raw",31,0.1056238589373014,3,1.0,97612.90322580645,"same value 3 years running, 100% of years imputed",True
+TGO,826,Unmanufactured tobacco,31,0.008352159156094843,6,0.8064516129032258,4186161.290322581,"detrended CV < 1%; same value 6 years running, 81% of years imputed",True
+THA,44,Barley,31,0.06887544402877861,3,0.8064516129032258,13900967.741935484,"same value 3 years running, 81% of years imputed",True
+THA,211,Other pulses n.e.c.,31,0.05064586492692636,5,1.0,75450193.5483871,"same value 5 years running, 100% of years imputed",True
+THA,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.05021285741822217,3,1.0,46924483.87096774,"same value 3 years running, 100% of years imputed",True
+THA,310,Kapok fruit,31,0.043289021669134016,3,0.6774193548387096,5174774.193548387,"same value 3 years running, 68% of years imputed",True
+THA,328,"Seed cotton, unginned",31,0.37558490667830746,6,0.5161290322580645,19114129.032258064,"same value 6 years running, 52% of years imputed",True
+THA,512,"Other citrus fruit, n.e.c.",31,0.26458605327211454,9,1.0,7343258.064516129,"same value 9 years running, 100% of years imputed",True
+THA,619,"Other fruits, n.e.c.",31,0.1268649669715854,7,1.0,227606838.70967743,"same value 7 years running, 100% of years imputed",True
+THA,661,Cocoa beans,31,0.3192197493226775,7,0.5483870967741935,778516.1290322581,"same value 7 years running, 55% of years imputed",True
+THA,821,"Other fibre crops, raw, n.e.c.",31,0.05652790421851988,4,1.0,351419.3548387097,"same value 4 years running, 100% of years imputed",True
+TJK,221,"Almonds, in shell",31,0.058582563570421284,4,1.0,17051645.16129032,"same value 4 years running, 100% of years imputed",True
+TJK,225,"Hazelnuts, in shell",31,0.07638975620203849,8,1.0,3444483.870967742,"same value 8 years running, 100% of years imputed",True
+TJK,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.13641142589832794,8,1.0,3871193.5483870967,"same value 8 years running, 100% of years imputed",True
+TJK,414,"Other beans, green",31,0.29967250927356864,3,0.8064516129032258,3256935.4838709678,"same value 3 years running, 81% of years imputed",True
+TJK,497,Lemons and limes,31,0.19031049082484108,3,0.8709677419354839,2426903.2258064514,"same value 3 years running, 87% of years imputed",True
+TKM,221,"Almonds, in shell",31,0.08694606420880865,8,1.0,5411032.258064516,"same value 8 years running, 100% of years imputed",True
+TKM,234,"Other nuts (excluding wild edible nuts and groundnuts), in shell, n.e.c.",31,0.119033094327484,4,1.0,1648548.3870967743,"same value 4 years running, 100% of years imputed",True
+TKM,388,Tomatoes,31,0.08175156435978309,4,0.8064516129032258,127197677.41935484,"same value 4 years running, 81% of years imputed",True
+TKM,406,Green garlic,31,0.10802560803573416,6,0.8064516129032258,1493935.4838709678,"same value 6 years running, 81% of years imputed",True
+TKM,426,Carrots and turnips,31,0.07020437589603051,6,0.8064516129032258,15287516.129032258,"same value 6 years running, 81% of years imputed",True
+TKM,515,Apples,31,0.09574316310818483,3,0.8387096774193549,22566322.580645163,"same value 3 years running, 84% of years imputed",True
+TKM,526,Apricots,31,0.06769769008876796,6,0.8387096774193549,20936419.35483871,"same value 6 years running, 84% of years imputed",True
+TKM,534,Peaches and nectarines,31,0.0944983474656346,6,0.8387096774193549,12719161.290322581,"same value 6 years running, 84% of years imputed",True
+TKM,536,Plums and sloes,31,0.060536341765319086,6,0.8387096774193549,15062258.064516129,"same value 6 years running, 84% of years imputed",True
+TKM,826,Unmanufactured tobacco,31,0.09762120166085576,5,0.7419354838709677,6853967.741935484,"same value 5 years running, 74% of years imputed",True
+TLS,249,"Coconuts, in shell",31,0.2222635504383174,6,0.5806451612903226,2534870.9677419355,"same value 6 years running, 58% of years imputed",False
+TLS,486,Bananas,31,0.6622179592429795,8,0.6774193548387096,468580.6451612903,"same value 8 years running, 68% of years imputed",False
+TLS,574,Pineapples,31,2.322222920689525,7,0.7741935483870968,87064.51612903226,"same value 7 years running, 77% of years imputed",False
+TON,249,"Coconuts, in shell",31,0.1876974593491941,5,0.8709677419354839,12699741.935483871,"same value 5 years running, 87% of years imputed",False
+TON,463,"Other vegetables, fresh n.e.c.",31,0.008174277344556856,1,1.0,1712354.8387096773,detrended CV < 1%,False
+TON,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.032981252269035775,9,1.0,239161.29032258064,"same value 9 years running, 100% of years imputed",False
+TTO,137,Yams,31,0.6853340452188563,4,0.5806451612903226,13064.516129032258,"same value 4 years running, 58% of years imputed",False
+TTO,249,"Coconuts, in shell",31,0.16356352378773414,5,1.0,3190322.580645161,"same value 5 years running, 100% of years imputed",False
+TTO,490,Oranges,31,0.39226672295629783,3,1.0,1786354.8387096773,"same value 3 years running, 100% of years imputed",False
+TTO,600,Papayas,31,0.30307588364048427,12,0.6774193548387096,269967.7419354839,"same value 12 years running, 68% of years imputed",False
+TUN,75,Oats,31,0.14292368136416803,12,1.0,250838.70967741936,"same value 12 years running, 100% of years imputed",False
+TUN,83,Sorghum,31,0.10224662613717256,13,1.0,269483.87096774194,"same value 13 years running, 100% of years imputed",False
+TUN,108,Cereals n.e.c.,31,0.04695677811712974,3,1.0,8903354.838709677,"same value 3 years running, 100% of years imputed",False
+TUN,223,"Pistachios, in shell",31,0.15190264435912756,3,0.7419354838709677,13518774.193548387,"same value 3 years running, 74% of years imputed",False
+TUN,225,"Hazelnuts, in shell",31,0.022875025691375308,3,1.0,144838.70967741936,"same value 3 years running, 100% of years imputed",False
+TUN,267,Sunflower seed,31,0.06813667923221968,3,0.9032258064516129,4201032.258064516,"same value 3 years running, 90% of years imputed",False
+TUN,328,"Seed cotton, unginned",31,0.10206759819381085,28,1.0,5712612.903225807,"same value 28 years running, 100% of years imputed",False
+TUN,461,Locust beans (carobs),31,0.0215880261110926,10,1.0,270645.1612903226,"same value 10 years running, 100% of years imputed",False
+TUN,536,Plums and sloes,31,0.09604605025495759,3,0.8387096774193549,8706483.870967742,"same value 3 years running, 84% of years imputed",False
+TUN,541,Other stone fruits,31,1.3954051373593662e-13,31,1.0,18934000.0,"detrended CV < 1%; same value 31 years running, 100% of years imputed",False
+TUN,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.10794776942987347,11,1.0,18674709.677419353,"same value 11 years running, 100% of years imputed",False
+TUN,711,"Anise, badian, coriander, cumin, caraway, fennel and juniper berries, raw",31,0.06195062747163007,8,1.0,22167580.64516129,"same value 8 years running, 100% of years imputed",False
+TUN,754,"Pyrethrum, dried flowers",31,0.03939891522417178,15,1.0,252290.32258064515,"same value 15 years running, 100% of years imputed",False
+TUV,149,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",31,0.015264152944301827,3,1.0,30290.322580645163,"same value 3 years running, 100% of years imputed",False
+TUV,249,"Coconuts, in shell",31,0.08583299662892836,5,1.0,289129.03225806454,"same value 5 years running, 100% of years imputed",False
+TUV,603,"Other tropical fruits, n.e.c.",31,0.009568693681772806,1,1.0,285483.87096774194,detrended CV < 1%,False
+TWN,270,Rape or colza seed,30,2.132394775177797,4,0.7,9400.0,"same value 4 years running, 70% of years imputed",True
+TWN,789,"Sisal, raw",30,0.2774758617599288,16,1.0,1666.6666666666667,"same value 16 years running, 100% of years imputed",True
+TZA,254,Oil palm fruit,31,0.018789637788185713,8,1.0,6606870.9677419355,"same value 8 years running, 100% of years imputed",True
+TZA,512,"Other citrus fruit, n.e.c.",31,0.007790744198526158,2,1.0,17483870.967741936,detrended CV < 1%,True
+TZA,603,"Other tropical fruits, n.e.c.",31,0.009476384795327064,2,1.0,28580064.51612903,detrended CV < 1%,True
+TZA,619,"Other fruits, n.e.c.",31,0.006253009358879895,2,1.0,86124000.0,detrended CV < 1%,True
+UGA,265,Castor oil seeds,31,1.6443713685991237e-12,21,0.3225806451612903,484258.06451612903,detrended CV < 1%,False
+UGA,619,"Other fruits, n.e.c.",31,0.008711530216997792,1,1.0,21990419.35483871,detrended CV < 1%,False
+UGA,661,Cocoa beans,31,0.1455446182243371,5,0.8709677419354839,24769258.06451613,"same value 5 years running, 87% of years imputed",False
+UKR,220,"Chestnuts, in shell",24,0.1239232935619629,3,0.7083333333333334,372333.3333333333,"same value 3 years running, 71% of years imputed",True
+UKR,280,Safflower seed,19,0.34346725566629793,4,1.0,42684.21052631579,"same value 4 years running, 100% of years imputed",True
+UKR,339,"Other oil seeds, n.e.c.",30,0.1420137134208145,3,1.0,5869200.0,"same value 3 years running, 100% of years imputed",True
+UKR,777,"True hemp, raw or retted",31,0.37455300213528764,6,0.6451612903225806,494841.80639500363,"same value 6 years running, 65% of years imputed",True
+UZB,83,Sorghum,31,0.2656055914612403,5,0.7096774193548387,2934451.6129032257,"same value 5 years running, 71% of years imputed",True
+UZB,223,"Pistachios, in shell",31,0.347381261512189,4,0.8709677419354839,2132193.5483870967,"same value 4 years running, 87% of years imputed",True
+UZB,495,"Tangerines, mandarins, clementines",31,0.136370966167451,3,0.5806451612903226,412258.06451612903,"same value 3 years running, 58% of years imputed",True
+UZB,497,Lemons and limes,31,0.34086855579413,3,0.5806451612903226,1770709.677419355,"same value 3 years running, 58% of years imputed",True
+UZB,507,Pomelos and grapefruits,31,0.08141084599407065,6,0.6451612903225806,677935.4838709678,"same value 6 years running, 65% of years imputed",True
+UZB,512,"Other citrus fruit, n.e.c.",29,0.35594519823590626,6,0.6206896551724138,389689.6551724138,"same value 6 years running, 62% of years imputed",True
+UZB,550,Currants,31,0.0954570001414856,6,0.5806451612903226,2162000.0,"same value 6 years running, 58% of years imputed",True
+UZB,552,Blueberries,31,0.08633865933653656,10,0.5806451612903226,1439129.0322580645,"same value 10 years running, 58% of years imputed",True
+UZB,558,Other berries and fruits of the genus vaccinium n.e.c.,31,0.054542555001458305,10,0.5806451612903226,1659483.8709677418,"same value 10 years running, 58% of years imputed",True
+UZB,687,"Pepper (Piper spp.), raw",31,0.1271932125855406,3,1.0,1009870.9677419355,"same value 3 years running, 100% of years imputed",True
+UZB,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.26617638261184123,3,1.0,13207322.58064516,"same value 3 years running, 100% of years imputed",True
+UZB,723,"Other stimulant, spice and aromatic crops, n.e.c.",26,0.03064389148967484,3,1.0,367192.3076923077,"same value 3 years running, 100% of years imputed",True
+UZB,780,"Jute, raw or retted",31,0.5202629674303815,7,0.8709677419354839,9975451.612903226,"same value 7 years running, 87% of years imputed",True
+VCT,826,Unmanufactured tobacco,31,0.07093186426962937,3,0.9032258064516129,205806.4516129032,"same value 3 years running, 90% of years imputed",False
+VNM,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.008466714730683904,1,1.0,124100741.93548387,detrended CV < 1%,True
+VUT,486,Bananas,31,0.021026039653884644,3,1.0,5291225.806451613,"same value 3 years running, 100% of years imputed",True
+VUT,723,"Other stimulant, spice and aromatic crops, n.e.c.",29,0.03725938291860936,3,0.9655172413793104,108827.58620689655,"same value 3 years running, 97% of years imputed",True
+WSM,136,Taro,31,0.12823214615345288,3,0.9032258064516129,6286129.0322580645,"same value 3 years running, 90% of years imputed",False
+WSM,137,Yams,31,0.40954654329435847,3,0.967741935483871,793322.5806451613,"same value 3 years running, 97% of years imputed",False
+WSM,156,Sugar cane,31,0.014946163026808968,20,1.0,1000.0,"same value 20 years running, 100% of years imputed",False
+WSM,249,"Coconuts, in shell",31,0.17985623430590741,7,0.7096774193548387,20621612.903225806,"same value 7 years running, 71% of years imputed",False
+WSM,446,Green corn (maize),31,0.05596354827735984,3,1.0,11645.161290322581,"same value 3 years running, 100% of years imputed",False
+WSM,486,Bananas,31,0.04908765667921031,3,0.8709677419354839,7343677.419354838,"same value 3 years running, 87% of years imputed",False
+WSM,512,"Other citrus fruit, n.e.c.",31,0.007310235486674351,1,1.0,285064.51612903224,detrended CV < 1%,False
+WSM,656,"Coffee, green",31,0.05339855343279061,4,1.0,21903.225806451614,"same value 4 years running, 100% of years imputed",False
+WSM,687,"Pepper (Piper spp.), raw",31,0.07193820489263784,4,1.0,50806.45161290323,"same value 4 years running, 100% of years imputed",False
+WSM,723,"Other stimulant, spice and aromatic crops, n.e.c.",31,0.08104770971745737,16,1.0,92870.96774193548,"same value 16 years running, 100% of years imputed",False
+YEM,122,Sweet potatoes,31,0.06010341506242267,3,0.8709677419354839,68903.2258064516,"same value 3 years running, 87% of years imputed",True
+ZAF,459,Chicory roots,31,0.33138679464551374,3,0.9354838709677419,10516451.612903226,"same value 3 years running, 94% of years imputed",False
+ZAF,677,Hop cones,31,0.050317469783650856,3,0.967741935483871,1948806.4516129033,"same value 3 years running, 97% of years imputed",False
+ZAF,689,"Chillies and peppers, dry (Capsicum spp., Pimenta spp.), raw",31,0.048768787836297414,3,1.0,19305870.967741936,"same value 3 years running, 100% of years imputed",False
+ZWE,108,Cereals n.e.c.,31,0.029495455386362005,6,1.0,601946.4724226459,"same value 6 years running, 100% of years imputed",False
+ZWE,149,"Edible roots and tubers with high starch or inulin content, n.e.c., fresh",31,1.1549659683302353e-13,31,1.0,261968.0,"detrended CV < 1%; same value 31 years running, 100% of years imputed",False
+ZWE,339,"Other oil seeds, n.e.c.",31,0.007111874655051281,1,1.0,6522392.411822325,detrended CV < 1%,False
+ZWE,358,Cabbages,31,0.15422470909887215,4,0.967741935483871,39305711.72317804,"same value 4 years running, 97% of years imputed",False
+ZWE,667,Tea leaves,31,0.09186918705187705,3,1.0,140021073.41524714,"same value 3 years running, 100% of years imputed",False
+ZWE,692,"Vanilla, raw",31,0.1438781438012708,3,1.0,24764.944236904532,"same value 3 years running, 100% of years imputed",False

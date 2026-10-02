@@ -2,17 +2,56 @@
 
 First-iteration pipeline written from src/metrics' side; Gursahib owns this module.
 A year counts as non-imputed when at most half of that year's value comes from rows
-flagged E or I. The flat-series screen from Gursahib's prompt is not implemented here.
+flagged E or I.
+
+Flat-series screen (flat series fake stability): a crop series (production, tonnes) is listed in
+data/clean/flat_series.csv when its LOWESS-detrended CV is < 1%, or when it repeats the same value
+3+ years running AND more than half of its years are imputed. Runs in genuinely reported series are
+kept. The list is a record only: crops.parquet and the inclusion rules above are not changed by it.
 
 Run: python -m src.crops.quality
 """
 import pandas as pd
+from statsmodels.nonparametric.smoothers_lowess import lowess
 
 from ..common import paths
 from ..common.contract import load, summary, validate
 
 MIN_AREA_HA, MIN_CROPS, MIN_GOOD_YEARS = 100_000, 5, 25
 MAX_IMPUTED_VALUE_SHARE = 0.5
+FLAT_MIN_YEARS, FLAT_CV, FLAT_RUN, FLAT_IMPUTED_SHARE = 10, 0.01, 3, 0.5
+FLAT_SERIES = paths.CLEAN / "flat_series.csv"
+
+
+def max_run(v):
+    best = run = 1
+    for a, b in zip(v[:-1], v[1:]):
+        run = run + 1 if a == b else 1
+        best = max(best, run)
+    return best
+
+
+def flat_series(crops, q):
+    rows = []
+    for (iso3, code), g in crops[crops["prod_t"] > 0].sort_values("year").groupby(["iso3", "item_code"]):
+        if len(g) < FLAT_MIN_YEARS:
+            continue
+        y = g["prod_t"].to_numpy(float)
+        cv = (y - lowess(y, g["year"].to_numpy(float), frac=0.5, return_sorted=False)).std(ddof=1) / y.mean()
+        run, imp = max_run(y), g["is_imputed"].mean()
+        reasons = []
+        if cv < FLAT_CV:
+            reasons.append("detrended CV < 1%")
+        if run >= FLAT_RUN and imp > FLAT_IMPUTED_SHARE:
+            reasons.append(f"same value {run} years running, {100 * imp:.0f}% of years imputed")
+        if reasons:
+            rows.append((iso3, code, g["item"].iloc[0], len(g), cv, run, imp, g["value_const"].mean(), "; ".join(reasons)))
+    out = pd.DataFrame(rows, columns=["iso3", "item_code", "item", "n_years", "detrended_cv", "max_identical_run",
+                                      "share_years_imputed", "mean_value_const", "reason"])
+    out = out.merge(q[["iso3", "included"]].rename(columns={"included": "country_included"}), on="iso3")
+    assert not out.duplicated(["iso3", "item_code"]).any()
+    assert out["detrended_cv"].ge(0).all() and out["share_years_imputed"].between(0, 1).all()
+    return out
 
 
 def main():
@@ -44,6 +83,13 @@ def main():
     inc = q[q["included"]]
     print(summary(q, "quality"))
     print(f"included: {len(inc)}, excluded: {len(q) - len(inc)}")
+    flat = flat_series(crops, q)
+    flat.to_csv(FLAT_SERIES, index=False)
+    total_series = crops.loc[crops["prod_t"] > 0].groupby(["iso3", "item_code"]).ngroups
+    print(f"flat series listed in {FLAT_SERIES.name}: {len(flat)} of {total_series} crop series "
+          f"({flat['country_included'].sum()} in included countries; "
+          f"{100 * flat['mean_value_const'].sum() / crops.groupby(['iso3', 'item_code'])['value_const'].mean().sum():.1f}% of value)")
+    print(flat["reason"].str.split(";").str[0].str.replace(r"\d+", "N", regex=True).value_counts().to_string())
     print("exclusion reasons (a country can have several):")
     for r in ["harvested area", "fewer than 5 crops", "non-imputed years", "no crop data"]:
         print(f"  {r}: {q['reason'].str.contains(r).sum()}")

@@ -49,7 +49,7 @@ USE_DUMMY=1 python -m src.common.contract
 All scripts run from the repo root as `python -m src.<module>.<script>`.
 
 1. `src.common.make_dummy` (once, for development)
-2. `src.crops`: `download`, `countries`, `crops`, `controls`, `quality`
+2. `src.crops`: `download`, `countries`, `crops`, `controls`, `quality`, `figures`
 3. `src.climate`: `download`, `geometry`, `cropland`, `aggregate`, `events`. The MapSPAM file must be downloaded by hand (Dataverse guestbook); `download` prints the steps. `src.crops.countries` needs the Natural Earth file from `src.climate.download`.
 4. `src.metrics`: `all` (runs `run`, `stats`, `robustness`, `figures`); methods in `src/metrics/METHODS.md`
 5. `src.validation`: `hit_rate`, `case_studies`
@@ -66,3 +66,9 @@ outputs/       metrics, stats/, validation/, dummy/
 figures/{data,climate,results,validation,deck}/
 explorer/      index.html
 ```
+
+## Crop data notes (src/crops)
+
+- `data/clean/flat_series.csv` (not a contract file) lists crop series that fake stability: detrended CV < 1%, or the same value 3+ years running with more than half of the years imputed. It is a record only; `crops.parquet` and `quality.csv` are not changed by it.
+- `controls.parquet`: `irrig_share` is FAOSTAT "Land area equipped for irrigation" / "Cropland". It exceeds 1 in 112 of 6,013 country-years (mostly GUY, NZL, TKM, where irrigated pasture counts as irrigated). Values are as published, not capped.
+- `crops.parquet`: 3.9% of rows have `value_const` computed as production x item price because FAOSTAT did not publish it (1.9% of total value); the rows are listed in `data/raw/faostat/value_filled_from_price.csv`.

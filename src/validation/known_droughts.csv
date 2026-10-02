@@ -1,13 +1,13 @@
 iso3,year,event_name,source_citation
-IND,2002,India drought 2002,
-IND,2009,India drought 2009,
-USA,2012,US drought 2012,
-AUS,2006,Australia drought 2006,
-AUS,2007,Australia drought 2007,
-ETH,2015,Ethiopia drought 2015,
-KEN,2011,Horn of Africa drought 2011,
-SOM,2011,Horn of Africa drought 2011,
-FRA,2003,Europe drought and heatwave 2003,
-DEU,2018,Europe drought 2018,
-ZAF,2015,Southern Africa drought 2015,
-BRA,2015,Brazil drought 2015,
+IND,2002,India drought 2002,"India Meteorological Department (2006). The phenomenal drought of 2002 over India. MAUSAM, 57(3), 459–474. https://mausamjournal.imd.gov.in/index.php/MAUSAM/article/download/491/459/1790 (accessed 2026-10-03)"
+IND,2009,India drought 2009,"India Meteorological Department (2010). Weather in India: Monsoon Season (June to September 2009). MAUSAM, 61(3), 411–454. https://metnet.imd.gov.in/docs/mausamdocs/36131.pdf (accessed 2026-10-03)"
+USA,2012,US drought 2012,"National Oceanic and Atmospheric Administration (2013). State of the Climate in 2012. Bulletin of the American Meteorological Society, 94(8). https://www.ncei.noaa.gov/pub/data/cmb/bams-sotc/2012/2012stateoftheclimate.pdf (accessed 2026-10-03)"
+AUS,2006,Australia drought 2006,Australian Bureau of Meteorology (2007). Annual Climate Report 2006. Australian Government. https://www.bom.gov.au/climate/annual_sum/2006/index.shtml (accessed 2026-10-03)
+AUS,2007,Australia drought 2007,Australian Bureau of Meteorology (2008). Annual Climate Report 2007. Australian Government. https://www.bom.gov.au/climate/annual_sum/2007/index.shtml (accessed 2026-10-03)
+ETH,2015,Ethiopia drought 2015,Government of Ethiopia (2017). Ethiopia: Voluntary National Review on the Implementation of the Sustainable Development Goals. Federal Democratic Republic of Ethiopia. https://digitallibrary.un.org/record/3866706/files/Ethiopia.PDF (accessed 2026-10-03)
+KEN,2011,Horn of Africa drought 2011,"National Treasury and Economic Planning, Government of Kenya (2012). Kenya Post-Disaster Needs Assessment (PDNA): 2008–2011 Drought. Government of Kenya. https://libraryir.parliament.go.ke/items/347de82e-50d6-444f-80be-e2ded61dfd75/full (accessed 2026-10-03)"
+SOM,2011,Horn of Africa drought 2011,United Nations Office for the Coordination of Humanitarian Affairs (2012). Somalia CAP 2012: 2011 in Review. United Nations. https://digitallibrary.un.org/record/718123/files/full_report_104.pdf (accessed 2026-10-03)
+FRA,2003,Europe drought and heatwave 2003,Inspection générale de l’environnement et du développement durable (2005). Mission d’enquête sur le régime d’indemnisation des victimes de catastrophes naturelles. Government of France. https://igedd.documentation.developpement-durable.gouv.fr/notice?id=Affaires-0004248 (accessed 2026-10-03)
+DEU,2018,Europe drought 2018,Deutscher Wetterdienst (2019). Heat and drought – an agrometeorological review of the year 2018. German Federal Ministry of Transport and Digital Infrastructure / DWD. https://www.dwd.de/EN/ourservices/annual_reports_dwd/annual_reports_pdf/annual_report_2018.pdf (accessed 2026-10-03)
+ZAF,2015,Southern Africa drought 2015,Government of South Africa (2015). National water security. Government of South Africa. https://www.gov.za/about-government/government-programmes/national-water-security-2015 (accessed 2026-10-03)
+BRA,2015,Brazil drought 2015,"Centro Nacional de Monitoramento e Alertas de Desastres Naturais (CEMADEN) (2024). CEMADEN analisa secas recentes no Brasil e apresenta diagnóstico e projeções como subsídio para a COP-16. Ministry of Science, Technology and Innovation, Government of Brazil. https://www.gov.br/cemaden/pt-br/assuntos/noticias-cemaden/cemaden-analisa-secas-recentes-no-brasil-e-apresenta-diagnostico-e-projecoes-como-subsidio-para-a-cop-16/ (accessed 2026-10-03)"

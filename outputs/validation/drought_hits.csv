@@ -1,0 +1,13 @@
+iso3,year,event_name,source_citation,in_climate,spei12_w,spei12_unw,spei6min_w,hit_spei12_w,hit_spei12_unw,hit_spei6min_w,in_event_catalogue,hit_spei12_w_pm1,hit_spei12_unw_pm1
+IND,2002,India drought 2002,,True,-1.2071336359686404,-1.0642312167933345,-1.4454642542351037,True,True,False,True,True,True
+IND,2009,India drought 2009,,True,-0.8062421001017178,-0.870068295003461,-1.3025381183676537,False,False,False,False,False,False
+USA,2012,US drought 2012,,True,-1.4360975277344403,-0.7137808782488327,-1.4432754677218933,True,False,False,True,True,False
+AUS,2006,Australia drought 2006,,True,-1.3424260967854076,-0.22635930458895212,-1.7258288485795907,True,False,True,True,True,False
+AUS,2007,Australia drought 2007,,True,-0.7081665044503326,-0.26251604671814943,-1.2520964598602518,False,False,False,False,True,False
+ETH,2015,Ethiopia drought 2015,,True,-0.5961549279285675,-0.4457896938851744,-1.3698970730557527,False,False,False,False,False,False
+KEN,2011,Horn of Africa drought 2011,,True,-0.4737287811126156,-0.41126251581636114,-1.1003913611600666,False,False,False,False,False,False
+SOM,2011,Horn of Africa drought 2011,,True,0.2796295330445793,0.07464102502760246,-0.386470733324226,False,False,False,False,False,False
+FRA,2003,Europe drought and heatwave 2003,,True,-1.3802690077383202,-1.3808393970295698,-1.6416899136244205,True,True,True,True,True,True
+DEU,2018,Europe drought 2018,,True,-2.2140976298148884,-2.159959854560865,-2.456633521793865,True,True,True,False,True,True
+ZAF,2015,Southern Africa drought 2015,,True,-2.0018276280352083,-1.7427751797856508,-1.720535731859775,True,True,True,False,True,True
+BRA,2015,Brazil drought 2015,,True,-0.2089156453943783,-1.1867216953159405,-0.7931951524663808,False,True,False,False,False,True

@@ -1,0 +1,7 @@
+test,n_events_testable,n_hits,hit_rate,base_rate_all_country_years
+"SPEI-12 <= -1.0, cropland-weighted",12,6,0.5,0.20144832126398945
+"SPEI-12 <= -1.0, unweighted",12,5,0.4166666666666667,0.19621318373071528
+"SPEI-6 min <= -1.5, cropland-weighted",12,4,0.3333333333333333,0.304312047399605
+In event catalogue (events.csv),12,4,0.3333333333333333,0.07093482554312047
+"SPEI-12 <= -1.0 within +-1 year, weighted",12,7,0.5833333333333334,
+"SPEI-12 <= -1.0 within +-1 year, unweighted",12,5,0.4166666666666667,

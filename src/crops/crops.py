@@ -17,6 +17,9 @@ IMPUTED_FLAGS = {"E": "Estimated value", "I": "Value imputed by a receiving agen
 # Aggregate items that carry an "Area harvested" element (checked against the names below).
 AGGREGATE_ITEMS = {1717, 1720, 1723, 1726, 1729, 1732, 1735, 1738, 1804, 1841, 17530}
 PRICE_TOLERANCE = 0.02
+REPRO_TOLERANCE = 0.001
+# Record of the country-years whose value is partly computed (not a contract file).
+VALUE_COMPUTED = paths.CLEAN / "value_computed.csv"
 
 
 def item_prices(qcl_prod, qv):
@@ -72,11 +75,15 @@ def main():
     df["price"] = df["Item Code"].map(prices)
     df["value_const"] = df["value_fao"].fillna(df["prod_t"] * df["price"])
     df["computed"] = df["value_fao"].isna()
+    # The fill is only valid if production x price reproduces the values FAOSTAT does publish.
+    pub = df[df["value_fao"].notna() & df["price"].notna()]
+    repro_err = (pub["prod_t"] * pub["price"] - pub["value_fao"]).abs().sum() / pub["value_fao"].sum()
+    assert repro_err < REPRO_TOLERANCE, f"production x item price misses published values by {100 * repro_err:.3f}% of value"
+    print(f"production x item price reproduces {len(pub)} published values to within {100 * repro_err:.4f}% of their total")
 
     # Map to iso3 and sum merged entities (a merged country-year is imputed if any part is).
     amap = area_map().dropna(subset=["iso3"])
     df = df.merge(amap[["area_code", "iso3"]], left_on="Area Code", right_on="area_code", how="inner")
-    filled_iso = df.loc[df["value_fao"].isna() & df["price"].notna()].groupby("iso3")["Year"].agg(["min", "max", "size"])
     # A crop with no price makes the summed value NaN, not a partial sum.
     df["value_const"] = df["value_const"].astype(float)
     out = df.groupby(["iso3", "Year", "Item Code"], as_index=False).agg(
@@ -92,6 +99,13 @@ def main():
     out = out.sort_values(["iso3", "item_code", "year"]).reset_index(drop=True)
     # Rows of the final table whose value is (partly) production x item price rather than FAOSTAT's figure.
     comp = out[out["computed"] & out["value_const"].notna()]
+    record = out.assign(v_comp=out["value_const"].where(out["computed"], 0.0), is_comp=out["computed"] & out["value_const"].notna()) \
+        .groupby(["iso3", "year"], as_index=False).agg(n_rows=("item_code", "size"), n_computed=("is_comp", "sum"),
+                                                       value_const=("value_const", "sum"), value_computed=("v_comp", "sum"))
+    record = record[record["n_computed"] > 0]
+    record["share_value_computed"] = record["value_computed"] / record["value_const"]
+    assert not record.duplicated(["iso3", "year"]).any() and record["share_value_computed"].between(0, 1).all()
+    assert np.isclose(record["value_computed"].sum(), comp["value_const"].sum())
     out = out[["iso3", "year", "item_code", "item", "area_ha", "prod_t", "yield_t_ha", "value_const", "is_imputed"]]
 
     validate(out, "crops")
@@ -100,7 +114,7 @@ def main():
     assert "CHN" in set(out["iso3"]) and "IND" in set(out["iso3"])
     paths.CLEAN.mkdir(parents=True, exist_ok=True)
     out.to_parquet(paths.CROPS, index=False)
-    filled_iso.to_csv(paths.RAW / "faostat" / "value_filled_from_price.csv")
+    record.to_csv(VALUE_COMPUTED, index=False)
 
     print(summary(out, "crops"))
     print(f"items: {out['item_code'].nunique()} crops ({len(AGGREGATE_ITEMS)} aggregate items dropped)")
@@ -112,8 +126,8 @@ def main():
           f"(1993-2017: {100 * comp.loc[comp['year'] < 2018, 'value_const'].sum() / out.loc[~late, 'value_const'].sum():.1f}%, "
           f"2018-2023: {100 * comp.loc[comp['year'] >= 2018, 'value_const'].sum() / out.loc[late, 'value_const'].sum():.1f}%)")
     by_country = (comp.groupby("iso3")["value_const"].sum() / out.groupby("iso3")["value_const"].sum()).dropna()
-    print(f"  countries with any computed value: {len(filled_iso)} ({(by_country > 0.1).sum()} with more than 10% of their value computed); "
-          f"full list in data/raw/faostat/value_filled_from_price.csv")
+    print(f"  countries with any computed value: {record['iso3'].nunique()} ({(by_country > 0.1).sum()} with more than 10% of their value computed); "
+          f"{len(record)} country-years listed in {VALUE_COMPUTED.name}")
     print(f"  items without a price: {sorted(df.loc[df['price'].isna(), 'Item'].unique())}")
     print(f"rows imputed (flags E, I): {100 * out['is_imputed'].mean():.1f}%; "
           f"value imputed: {100 * out.loc[out['is_imputed'], 'value_const'].sum() / out['value_const'].sum():.1f}%")

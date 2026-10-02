@@ -22,6 +22,7 @@ MIN_AREA_HA, MIN_CROPS, MIN_GOOD_YEARS = 100_000, 5, 25
 MAX_IMPUTED_VALUE_SHARE = 0.5
 FLAT_MIN_YEARS, FLAT_CV, FLAT_RUN, FLAT_IMPUTED_SHARE = 10, 0.01, 3, 0.5
 FLAT_SERIES = paths.CLEAN / "flat_series.csv"
+BREAK_YEAR = 2018
 
 
 def max_run(v, years):
@@ -54,6 +55,26 @@ def flat_series(crops, q):
     assert not out.duplicated(["iso3", "item_code"]).any()
     assert out["detrended_cv"].ge(0).all() and out["share_years_imputed"].between(0, 1).all()
     return out
+
+
+def included_at(crops, max_share):
+    """Number of countries passing the three inclusion rules at a given imputed-value cut-off."""
+    g = crops[crops["value_const"].notna()]
+    by = g.assign(imp=g["value_const"] * g["is_imputed"]).groupby(["iso3", "year"])[["imp", "value_const", "area_ha"]].sum()
+    good = (by["imp"] / by["value_const"] <= max_share).groupby("iso3").sum() >= MIN_GOOD_YEARS
+    return int((good & (by["area_ha"].groupby("iso3").mean() >= MIN_AREA_HA)
+                & (g.groupby("iso3")["item_code"].nunique() >= MIN_CROPS)).sum())
+
+
+def vanished_share(crops, year=BREAK_YEAR, span=4):
+    """Per country, % of the value of the `span` years before `year` held by crops with no rows in the
+    `span` years from `year`. FAOSTAT stops reporting some minor crops for EU countries from 2018."""
+    g = crops[crops["value_const"].notna()]
+    pre, post = g[g["year"].between(year - span, year - 1)], g[g["year"].between(year, year + span - 1)]
+    still = post[["iso3", "item_code"]].drop_duplicates().assign(still=True)
+    pre = pre.merge(still, on=["iso3", "item_code"], how="left")
+    gone = pre[pre["still"].isna()].groupby("iso3")["value_const"].sum()
+    return (100 * gone / pre.groupby("iso3")["value_const"].sum()).fillna(0.0)
 
 
 def main():
@@ -95,6 +116,11 @@ def main():
     print("exclusion reasons (a country can have several):")
     for r in ["harvested area", "fewer than 5 crops", "non-imputed years", "no crop data"]:
         print(f"  {r}: {q['reason'].str.contains(r).sum()}")
+    assert included_at(crops, MAX_IMPUTED_VALUE_SHARE) == len(inc)
+    print("included at other imputed-value cut-offs: " + ", ".join(f"{int(100 * s)}% -> {included_at(crops, s)}" for s in (0.25, 0.5, 0.75)))
+    gone = vanished_share(crops).reindex(inc["iso3"]).fillna(0.0).sort_values(ascending=False)
+    print(f"included countries where crops holding > 1% of {BREAK_YEAR - 4}-{BREAK_YEAR - 1} value have no rows from {BREAK_YEAR}: "
+          f"{(gone > 1).sum()} (largest: " + ", ".join(f"{k} {v:.1f}%" for k, v in gone.head(6).items()) + ")")
     print(f"crops per included country (median): {int(inc['n_crops'].median())}")
     total = crops["value_const"].sum()
     print(f"value imputed overall: {100 * crops.loc[crops['is_imputed'], 'value_const'].sum() / total:.1f}%; "

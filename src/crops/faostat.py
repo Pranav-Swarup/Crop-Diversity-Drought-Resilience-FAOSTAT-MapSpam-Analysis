@@ -16,9 +16,10 @@ FIRST_AGGREGATE_AREA = 5000  # FAOSTAT area codes from 5000 up are regions and g
 def read(domain, element_codes):
     """Rows of one domain for the given element codes, countries only, 1993-2023 (cached as parquet)."""
     cache = FAO_DIR / f"{domain}_{'_'.join(map(str, element_codes))}.parquet"
-    if cache.exists():
+    source = FAO_DIR / f"{domain}_All_Data_(Normalized).zip"
+    if cache.exists() and cache.stat().st_mtime >= source.stat().st_mtime:  # a re-downloaded zip invalidates the cache
         return pd.read_parquet(cache)
-    with zipfile.ZipFile(FAO_DIR / f"{domain}_All_Data_(Normalized).zip") as zf:
+    with zipfile.ZipFile(source) as zf:
         chunks = []
         for ch in pd.read_csv(zf.open(f"{domain}_All_Data_(Normalized).csv"), usecols=COLS,
                               encoding="utf-8", chunksize=500_000):

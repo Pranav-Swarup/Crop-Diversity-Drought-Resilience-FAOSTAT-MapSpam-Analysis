@@ -1,18 +1,21 @@
-# Figures Index
+# Presentation Deck Index
 
-01. `01_01_weighted_vs_unweighted.png` - climate - Auto-collected figure
-02. `02_02_cropland_weights.png` - climate - Auto-collected figure
-03. `03_02_cropland_weights_lognorm.png` - climate - Auto-collected figure
-04. `04_03_event_counts_map.png` - climate - Auto-collected figure
-05. `05_01_imputed_share_map.png` - data - Auto-collected figure
-06. `06_02_example_flat_series.png` - data - Auto-collected figure
-07. `07_01_faces_2x2.png` - results - Auto-collected figure
-08. `08_02_count_vs_response.png` - results - Auto-collected figure
-09. `09_03_decomposition.png` - results - Auto-collected figure
-10. `10_04_maps.png` - results - Auto-collected figure
-11. `11_01_hit_rate.png` - validation - Auto-collected figure
-12. `12_02_case_AUS.png` - validation - Auto-collected figure
-13. `13_02_case_IND.png` - validation - Auto-collected figure
-14. `14_02_case_ISR.png` - validation - Auto-collected figure
-15. `15_02_case_TKM.png` - validation - Auto-collected figure
-16. `16_02_case_USA.png` - validation - Auto-collected figure
+| File | Owner | Description |
+|---|---|---|
+| `00_pipeline.png` | explorer | Pipeline |
+| `01_01_weighted_vs_unweighted.png` | climate | 01 Weighted Vs Unweighted |
+| `02_02_cropland_weights.png` | climate | 02 Cropland Weights |
+| `03_02_cropland_weights_lognorm.png` | climate | 02 Cropland Weights Lognorm |
+| `04_03_event_counts_map.png` | climate | 03 Event Counts Map |
+| `05_04_response_diversity_paradox.png` | climate | 04 Response Diversity Paradox |
+| `06_05_spatial_dilution_flash_droughts.png` | climate | 05 Spatial Dilution Flash Droughts |
+| `07_01_imputed_share_map.png` | data | 01 Imputed Share Map |
+| `08_02_example_flat_series.png` | data | 02 Example Flat Series |
+| `09_01_faces_2x2.png` | results | 01 Faces 2X2 |
+| `10_02_count_vs_response.png` | results | 02 Count Vs Response |
+| `11_03_decomposition.png` | results | 03 Decomposition |
+| `12_04_maps.png` | results | 04 Maps |
+| `13_01_hit_rate.png` | validation | 01 Hit Rate |
+| `14_02_case_COL.png` | validation | 02 Case Col |
+| `15_02_case_FIN.png` | validation | 02 Case Fin |
+| `16_02_case_IND.png` | validation | 02 Case Ind |

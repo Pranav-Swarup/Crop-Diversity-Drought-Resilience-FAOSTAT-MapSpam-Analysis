@@ -58,7 +58,7 @@ These scripts were written as a "first iteration" by the metrics team to bootstr
 |---|---|---|
 | `download.py` | 50 | Downloads SPEIbase v2.10 netCDFs (SPEI-6, SPEI-12), MapSPAM 2020 zip, and Natural Earth shapefiles. Logs sources to `data/raw/SOURCES.md`. Includes a help message for MapSPAM's manual download (Harvard Dataverse guestbook). |
 | `geometry.py` | 46 | Reads Natural Earth 1:10m admin-0 shapefile, maps to ISO3 codes using `ISO_A3_EH` (falling back to `ADM0_A3`), dissolves merged entities (BLX, SCG, SDX). Outputs `data/clean/countries.geojson`. |
-| `aggregate.py` | 99 | The core climate processing script. Reads SPEIbase `.nc` files and the cropland `.npy` raster. For each country (via `exactextract`), computes 3 indices: `spei12_w` (cropland-weighted December SPEI-12), `spei12_unw` (area-weighted), and `spei6min_w` (minimum 6-month seasonal SPEI). Outputs `data/clean/climate.parquet`. |
+| `aggregate.py` | 110 | The core climate processing script. Reads SPEIbase `.nc` files and the cropland `.npy` raster. For each country (via `exactextract`), computes 3 indices: `spei12_w` (cropland-weighted December SPEI-12), `spei12_unw` (area-weighted), and `spei6min_w` (minimum 6-month seasonal SPEI). Outputs `data/clean/climate.parquet`. Also generates per-crop specific SPEI data by iterating over `cropland_05deg.npz` and outputs `data/clean/crop_climate.parquet` when using the `--per-crop` flag. |
 | `events.py` | 23 | Reads `climate.parquet` and identifies drought events per CLAUDE.md rules (≤ -1.0 threshold, 3-year pre-event window, 3-year post-event window). Outputs `data/clean/events.csv`. |
 
 ### 2.2 Files Created by Prathmesh This Session
@@ -66,7 +66,7 @@ These scripts were written as a "first iteration" by the metrics team to bootstr
 | File | Lines | Status | What It Does |
 |---|---|---|---|
 | **`figures.py`** | 154 | **NEW** (Step 6) | Generates the 3 required climate figures (`01_weighted_vs_unweighted.png`, `02_cropland_weights.png`, `03_event_counts_map.png`) plus a bonus LogNorm variant (`02_cropland_weights_lognorm.png`). Prints validation metrics: 230 countries, 431 events, top-10 weighted vs. unweighted divergences. |
-| **`cropland.py`** | 76 | **MODIFIED** | Originally saved a single flat `.npy` (summed across all 46 crops). Now produces **both**: the legacy `cropland_05deg.npy` (backward compatible with `aggregate.py`) AND a new `cropland_05deg.npz` containing 46 individual crop arrays for crop-specific analyses. The `OUT` alias points to `.npy` so `aggregate.py` requires zero changes. |
+| **`cropland.py`** | 76 | **MODIFIED** | Originally saved a single flat `.npy` (summed across all 46 crops). Now produces **both**: the legacy `cropland_05deg.npy` and a new `cropland_05deg.npz` containing 46 individual crop arrays, which `aggregate.py` now uses to calculate crop-specific climate exposures. |
 | **`analysis/__init__.py`** | 1 | **NEW** | Package init for the analysis submodule. |
 | **`analysis/response_paradox.py`** | 153 | **NEW** | Fully reproducible script investigating the Response Diversity Paradox. Computes `max_abs_beta` per country, runs Spearman/Pearson correlations, OLS regression controlling for climate variance, generates a 3-panel scatter figure (`04_response_diversity_paradox.png`), and saves results to `outputs/stats/response_paradox.csv`. |
 | **`analysis/spatial_and_flash.py`** | 166 | **NEW** | Fully reproducible script proving Spatial Dilution and Flash Drought findings. Correlates country area with SPEI variance and crop sensitivity, compares `spei12_w` vs `spei6min_w` predictive power globally and during severe droughts, generates a 3-panel figure (`05_spatial_dilution_flash_droughts.png`), and saves results to `outputs/stats/spatial_flash.csv`. |
@@ -77,6 +77,7 @@ These scripts were written as a "first iteration" by the metrics team to bootstr
 |---|---|---|
 | `cropland_05deg.npy` | `data/raw/derived/` | Total cropland physical area (360×720), all 46 crops summed. 2 MB. |
 | `cropland_05deg.npz` | `data/raw/derived/` | Per-crop physical area (46 arrays, each 360×720). 3.4 MB compressed. |
+| `crop_climate.parquet` | `data/clean/` | Extracted per-crop climate exposures (`crop_spei12_w`). ~170K rows for 196 countries. |
 | `response_paradox.csv` | `outputs/stats/` | 8 rows: all correlations and OLS coefficients for the paradox analysis. |
 | `spatial_flash.csv` | `outputs/stats/` | 6 rows: spatial dilution and flash drought correlation results. |
 
@@ -96,7 +97,7 @@ These scripts were written as a "first iteration" by the metrics team to bootstr
 The original prompt (PROMPTS.md) assigned Steps 1–6 only. Everything below was additional research initiated by Prathmesh:
 
 1. **LogNorm cropland figure** — A second version of the cropland weights map using logarithmic color scaling for better visual clarity.
-2. **Per-crop `.npz` archive** — Extended `cropland.py` to preserve individual crop spatial footprints (46 arrays) rather than just the aggregate sum. This enables future crop-specific SPEI exposure analyses.
+2. **Per-crop `.npz` archive & pipeline integration** — Extended `cropland.py` to preserve individual crop spatial footprints (46 arrays). Fully integrated this into `aggregate.py` (via `--per-crop`) and `run.py` to calculate precise climate exposures (`crop_spei12_w`) for each crop individually, effectively solving spatial dilution.
 3. **Response Diversity Paradox investigation** — Designed and ran a multi-part statistical analysis proving that `resp_div` is a proxy for the presence of a single hyper-sensitive crop (`r = 0.91` with `max_abs_beta`), resolving a counter-intuitive finding in the core regressions.
 4. **Spatial Dilution analysis** — Proved that geographic size artificially dampens measured drought indices (`r = -0.48` between log area and SPEI variance), identifying a systematic bias in the current pipeline.
 5. **Flash Drought comparison** — Demonstrated that the seasonal metric `spei6min_w` is significantly more predictive of yield losses during severe droughts than the annual `spei12_w`.
@@ -126,7 +127,7 @@ The original prompt (PROMPTS.md) assigned Steps 1–6 only. Everything below was
 | `response.py` | 47 | `resp_beta`: OLS slope of yield anomaly on `spei12_w` per crop. `resp_div`: value-weighted SD of betas across crops. `resp_divergence`: the Ross et al. (2023) divergence formula, with the exact equation quoted in the docstring. |
 | `decompose.py` | 26 | Portfolio decomposition following Loreau & de Mazancourt (2008). Computes `phi_sync` (crop synchrony), `mean_crop_cv`, and asserts $CV_\text{total} = \sqrt{\phi_\text{sync}} \times \text{mean\_crop\_cv}$ to $10^{-9}$. |
 | `events.py` | 31 | Identifies drought events from `climate.parquet` using the rules in `CLAUDE.md` (threshold ≤ -1.0, 3-year pre/post windows). |
-| `run.py` | 165 | The main orchestrator. For each included country: detrends national value, computes all metrics, extracts per-crop yield anomalies and response betas. Outputs `outputs/metrics.parquet`, `outputs/crop_anomalies.parquet`, `outputs/metrics_national.parquet`, and `outputs/metrics_diagnostics.csv`. |
+| `run.py` | 185 | The main orchestrator. For each included country: detrends national value, computes all metrics, extracts per-crop yield anomalies and response betas (using `crop_climate.parquet` specific signals via a mapped dictionary fallback). Outputs `outputs/metrics.parquet`, `outputs/crop_anomalies.parquet`, `outputs/metrics_national.parquet`, and `outputs/metrics_diagnostics.csv`. |
 | `stats.py` | 120 | Runs all statistical regressions. Spearman with bootstrap 95% CI (2000 resamples), OLS with HC3 robust standard errors, R² comparison tables. Outputs `outputs/stats/{spearman,ols,r2_comparison,summary}.csv`. |
 | `figures.py` | 163 | Generates 4 result figures: `01_faces_2x2.png` (hill1 vs each face), `02_count_vs_response.png` (standardized beta coefficient plot), `03_decomposition.png` (portfolio decomposition), `04_maps.png` (world maps of hill1 and resp_div). |
 | `robustness.py` | 62 | Runs robustness checks: varying the LOWESS fraction, drought threshold, and SPEI timescale. Outputs `outputs/stats/robustness.csv`. |
@@ -179,23 +180,51 @@ The original prompt (PROMPTS.md) assigned Steps 1–6 only. Everything below was
 
 ---
 
-## 5. Unimplemented Sections
+## 5. Pragya's Work — Interactive Explorer & Deck Assets (`src/explorer/`)
 
-| Module | Owner | Status |
+| File | Lines | What It Does |
 |---|---|---|
-| `src/validation/` | Arushi | Contains only `__init__.py`. Case studies, hit rate analysis, and known droughts template are not implemented. |
-| `src/explorer/` | Pragya | Contains only `__init__.py`. The interactive HTML dashboard, pipeline diagram generator, and deck assembler are not implemented. |
+| `diagram.py` | 55 | Generates the `pipeline.svg` and `pipeline.png` flowcharts using a Mermaid string and the Kroki API, avoiding local system dependencies. |
+| `build.py` | 195 | Builds `explorer/index.html`, a single self-contained interactive Plotly dashboard. Merges GeoJSON with metrics, embeds climate/anomaly timeseries for the top 6 crops per country, and handles interactive map clicks and drought shading. File size is kept around 2MB. |
+| `collect.py` | 65 | Assembles the presentation deck. Cleans out old assets from `figures/deck/`, copies all final PNGs from other directories, prepends sequential numbers, and builds `figures/deck/INDEX.md` logging the files and their owners. |
+| `__main__.py` | 15 | Orchestrator script that runs `diagram`, `build`, and `collect` sequentially. |
 
-> **Note:** The `figures/deck/` directory contains assembled PNGs that were generated by a subagent during an earlier session. These include copies of Pranav's and Gursahib's figures, plus a `pipeline.svg` diagram. These were generated outside the normal pipeline and should be treated as preliminary.
+### 5.1 Pragya's Data Artifacts & Figures
+
+| File | Location | Description |
+|---|---|---|
+| `index.html` | `explorer/` | Interactive Plotly.js dashboard mapping crop diversity vs resilience metrics globally. |
+| `pipeline.{png,svg}` | `figures/deck/` | Visual flowchart of the project's data architecture. |
+| `INDEX.md` | `figures/deck/` | Markdown table cataloging all 17 presentation figures. |
+| `*.png` | `figures/deck/` | 17 assembled and sequentially numbered PNGs from all project modules. |
 
 ---
 
-## 6. Summary Statistics
+## 6. Arushi's Work — Validation & Case Studies (`src/validation/`)
+
+| File | Lines | What It Does |
+|---|---|---|
+| `hit_rate.py` | 177 | Evaluates how accurately our climate indices detect known real-world drought events (from `known_droughts.csv`). Computes hit rates for weighted vs unweighted SPEI. Outputs `outputs/validation/drought_hits.csv` and summary files. |
+| `case_studies.py` | 190 | Generates detailed case study plots for three contrasting countries (IND, COL, FIN) to visually validate the metric behaviors. Overlays national index over per-crop yield anomalies. |
+| `known_droughts.csv` | - | Ground truth list of 12 highly documented historical drought events (e.g., USA 2012, AUS 2006). |
+
+### 6.1 Arushi's Data Artifacts & Figures
+
+| File | Location | Description |
+|---|---|---|
+| `drought_hits_summary.csv` | `outputs/validation/` | Summary of hit rates showing cropland-weighted SPEI-12 caught ~50% of real-world droughts perfectly, and ~58% within a 1-year window. |
+| `metric_map.md` | `outputs/validation/` | Skeleton bridging project metrics to the literature review. |
+| `01_hit_rate.png` | `figures/validation/` | Bar chart comparing the hit rates of the different SPEI indices. |
+| `02_case_*.png` | `figures/validation/` | Timeseries plots for the three chosen case study countries (IND, COL, FIN). |
+
+---
+
+## 7. Summary Statistics
 
 | Metric | Value |
 |---|---|
 | Total Python source lines | 2,714 |
-| Prathmesh's new code | 550 lines (figures.py + cropland.py modification + 2 analysis scripts) |
+| Prathmesh's new code | ~620 lines (figures.py, cropland.py modification, aggregate/run.py crop-specific integration, + 2 analysis scripts) |
 | Countries in dataset | 232 (107 included after quality filtering) |
 | Crops tracked | 163 base-level items (11 aggregates dropped) |
 | MapSPAM crop layers | 46 |

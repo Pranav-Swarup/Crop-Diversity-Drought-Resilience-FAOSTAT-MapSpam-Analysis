@@ -17,14 +17,40 @@ from .events import DROUGHT_THR
 YEARS = np.arange(YEAR_MIN, YEAR_MAX + 1)
 
 
-def country_metrics(g, spei, event_years, frac=FRAC, thr=DROUGHT_THR):
+FAOSTAT_TO_MAPSPAM = {
+    "Wheat": "WHEA", "Rice": "RICE", "Maize (corn)": "MAIZ", "Barley": "BARL",
+    "Millet": "PMIL", "Sorghum": "SORG", "Potatoes": "POTS", "Sweet potatoes": "SWPO",
+    "Yams": "YAMS", "Cassava, fresh": "CASS", "Beans, dry": "BEAN", "Chick peas, dry": "CHIC",
+    "Cow peas, dry": "COWP", "Pigeon peas, dry": "PIGE", "Lentils, dry": "LENT",
+    "Soya beans": "SOYB", "Groundnuts, excluding shelled": "GROU", "Coconuts, in shell": "CNUT",
+    "Rape or colza seed": "CANO", "Sesame seed": "SESA", "Sunflower seed": "SUNF",
+    "Sugar cane": "SUGS", "Sugar beet": "SUGB", "Seed cotton, unginned": "COTT",
+    "Coffee, green": "ACOF", "Cocoa beans": "COCO", "Tea leaves": "TEAS", "Unmanufactured tobacco": "TOBA",
+    "Bananas": "BANA", "Plantains and cooking bananas": "PLNT",
+    "Oats": "OCRS", "Rye": "OCRS", "Triticale": "OCRS", "Mixed grain": "OCRS", "Quinoa": "OCRS", "Cereals n.e.c.": "OCRS",
+    "Taro": "OROO", "Yautia": "OROO", "Edible roots and tubers with high starch or inulin content, n.e.c., fresh": "OROO",
+    "Broad beans and horse beans, dry": "OPUL", "Peas, dry": "OPUL", "Lupins": "OPUL", "Other pulses n.e.c.": "OPUL",
+    "Mustard seed": "OOIL", "Linseed": "OOIL", "Poppy seed": "OOIL", "Jute, raw or retted": "OFIB",
+    "Apples": "TEMF", "Pears": "TEMF", "Peaches and nectarines": "TEMF", "Plums and sloes": "TEMF", "Cherries": "TEMF", "Apricots": "TEMF", "Other stone fruits": "TEMF", "Grapes": "TEMF", "Strawberries": "TEMF", "Raspberries": "TEMF", "Blueberries": "TEMF", "Currants": "TEMF", "Other berries and fruits of the genus vaccinium n.e.c.": "TEMF", "Persimmons": "TEMF", "Kiwi fruit": "TEMF",
+    "Mangoes, guavas and mangosteens": "TROF", "Papayas": "TROF", "Pineapples": "TROF", "Dates": "TROF", "Avocados": "TROF", "Areca nuts": "TROF", "Figs": "TROF", "Other tropical fruits, n.e.c.": "TROF",
+    "Oranges": "TROF", "Tangerines, mandarins, clementines": "TROF", "Lemons and limes": "TROF", "Pomelos and grapefruits": "TROF", "Other citrus fruit, n.e.c.": "TROF",
+    "Tomatoes": "VEGE", "Onions and shallots, dry (excluding dehydrated)": "VEGE", "Onions and shallots, green": "VEGE", "Green garlic": "VEGE", "Leeks and other alliaceous vegetables": "VEGE", "Cabbages": "VEGE", "Cauliflowers and broccoli": "VEGE", "Lettuce and chicory": "VEGE", "Spinach": "VEGE", "Artichokes": "VEGE", "Asparagus": "VEGE", "Cucumbers and gherkins": "VEGE", "Eggplants (aubergines)": "VEGE", "Chillies and peppers, green (Capsicum spp. and Pimenta spp.)": "VEGE", "Pumpkins, squash and gourds": "VEGE", "Green corn (maize)": "VEGE", "Peas, green": "VEGE", "String beans": "VEGE", "Broad beans and horse beans, green": "VEGE", "Carrots and turnips": "VEGE", "Okra": "VEGE", "Watermelons": "VEGE", "Cantaloupes and other melons": "VEGE", "Other vegetables, fresh n.e.c.": "VEGE",
+}
+
+def country_metrics(g, spei, c_spei_df, event_years, frac=FRAC, thr=DROUGHT_THR):
     """All metrics for one country.
 
     g: that country's rows of crops.parquet. spei: Series year -> spei12_w.
+    c_spei_df: DataFrame of per-crop climate weights.
     event_years: drought event years. Returns (metrics dict, national df, anomalies df, diagnostics dict).
     """
     spei = spei.reindex(YEARS)
     g = g[g["value_const"].notna()]
+    
+    if not c_spei_df.empty:
+        c_spei_pivot = c_spei_df.pivot(index="year", columns="mapspam_crop", values="crop_spei12_w")
+    else:
+        c_spei_pivot = pd.DataFrame()
 
     # National value index.
     nat = detrend(g.groupby("year")["value_const"].sum().reindex(YEARS).to_numpy(), YEARS, frac)
@@ -53,11 +79,21 @@ def country_metrics(g, spei, event_years, frac=FRAC, thr=DROUGHT_THR):
         if share[code] < response.MIN_SHARE or len(c) < response.MIN_YEARS:
             continue
         d = detrend(c["yield_t_ha"].to_numpy(), c["year"].to_numpy(), frac)
-        beta = response.resp_beta(d["anom"], spei.reindex(c["year"]).to_numpy())
+        
+        item_name = c["item"].iloc[0]
+        mapspam = FAOSTAT_TO_MAPSPAM.get(item_name, "REST")
+        
+        if not c_spei_pivot.empty and mapspam in c_spei_pivot.columns:
+            crop_spei = c_spei_pivot[mapspam].reindex(c["year"])
+            crop_spei = crop_spei.fillna(spei.reindex(c["year"]))
+        else:
+            crop_spei = spei.reindex(c["year"])
+            
+        beta = response.resp_beta(d["anom"], crop_spei.to_numpy())
         if not np.isfinite(beta):
             continue
         anoms.append(pd.DataFrame({
-            "year": c["year"].to_numpy(), "item": c["item"].iloc[0], "yield_anom": d["anom"].to_numpy(),
+            "year": c["year"].to_numpy(), "item": item_name, "yield_anom": d["anom"].to_numpy(),
             "value_share": float(share[code]), "resp_beta": beta,
         }).dropna(subset=["yield_anom"]))
     anoms = pd.concat(anoms, ignore_index=True) if anoms else pd.DataFrame(
@@ -89,15 +125,17 @@ def country_metrics(g, spei, event_years, frac=FRAC, thr=DROUGHT_THR):
     return m, nat, anoms, diag
 
 
-def compute(crops, climate, events, included, frac=FRAC, thr=DROUGHT_THR):
+def compute(crops, climate, crop_climate, events, included, frac=FRAC, thr=DROUGHT_THR):
     """Metrics for every country in `included`. Returns dict of DataFrames:
     metrics, crop_anomalies, national, diagnostics."""
     metrics, national, anomalies, diagnostics = [], [], [], []
     spei_by = {k: v.set_index("year")["spei12_w"] for k, v in climate.groupby("iso3")}
+    crop_spei_by = {k: v for k, v in crop_climate.groupby("iso3")}
     events_by = events.groupby("iso3")["year"].apply(list).to_dict()
     for iso3, g in crops[crops["iso3"].isin(included)].groupby("iso3", sort=True):
         spei = spei_by.get(iso3, pd.Series(dtype=float))
-        m, nat, an, diag = country_metrics(g, spei, events_by.get(iso3, []), frac, thr)
+        c_spei_df = crop_spei_by.get(iso3, pd.DataFrame(columns=["year", "mapspam_crop", "crop_spei12_w"]))
+        m, nat, an, diag = country_metrics(g, spei, c_spei_df, events_by.get(iso3, []), frac, thr)
         metrics.append({"iso3": iso3, **m})
         diagnostics.append({"iso3": iso3, **diag})
         national.append(nat.assign(iso3=iso3))
@@ -119,20 +157,30 @@ def load_inputs():
     """Contract inputs. If climate.parquet / events.csv do not exist yet, the climate-dependent
     metrics come out as NaN and a warning is printed."""
     crops, quality = load("crops"), load("quality")
+    
+    crop_climate_path = paths.CLEAN / "crop_climate.parquet"
+    if paths.USE_DUMMY:
+        crop_climate_path = paths.CLEAN_DUMMY / "crop_climate.parquet"
+        
     if paths.CLIMATE.exists() and paths.EVENTS.exists():
         climate, events = load("climate"), load("events")
+        if crop_climate_path.exists():
+            crop_climate = pd.read_parquet(crop_climate_path)
+        else:
+            crop_climate = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int), "mapspam_crop": pd.Series(dtype=str), "crop_spei12_w": pd.Series(dtype=float)})
     else:
         print("WARNING: climate.parquet / events.csv not found. resistance, recovery, vuln_drought, "
               "resp_div and resp_divergence will be missing.")
         climate = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int), "spei12_w": pd.Series(dtype=float)})
         events = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int)})
+        crop_climate = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int), "mapspam_crop": pd.Series(dtype=str), "crop_spei12_w": pd.Series(dtype=float)})
     included = quality.loc[quality["included"], "iso3"].tolist()
-    return crops, climate, events, included
+    return crops, climate, crop_climate, events, included
 
 
 def main():
-    crops, climate, events, included = load_inputs()
-    out = compute(crops, climate, events, included)
+    crops, climate, crop_climate, events, included = load_inputs()
+    out = compute(crops, climate, crop_climate, events, included)
     metrics, anomalies, national, diag = out["metrics"], out["crop_anomalies"], out["national"], out["diagnostics"]
 
     validate(metrics, "metrics")

@@ -1,0 +1,740 @@
+dist_code,dist_name,state_code,state_name,boundary_base,n_years,first_year,stable,split_flag,split_detail,core
+1,Anantnag,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.82,False
+2,Budgam,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+3,Baramulla,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.66,False
+4,Doda,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.53,False
+5,Jammu,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+6,Kargil,37,Ladakh,"DES 2022-23 codes, unapportioned",21,1998,False,False,,False
+7,Kathua,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+8,Kupwara,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",21,1998,False,False,,False
+9,Leh Ladakh,37,Ladakh,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+10,Poonch,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+11,Pulwama,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+12,Rajouri,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+13,Srinagar,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.18,False
+14,Udhampur,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.82,False
+15,Bilaspur,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+16,Chamba,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+17,Hamirpur,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+18,Kangra,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+19,Kinnaur,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+20,Kullu,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+21,Lahaul And Spiti,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+22,Mandi,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+23,Shimla,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+24,Sirmaur,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+25,Solan,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+26,Una,2,Himachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+27,Amritsar,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,True,2006:0.53;2007:0.62,False
+28,Bathinda,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+29,Faridkot,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+30,Fatehgarh Sahib,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+31,Ferozepur,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,True,2011:0.64,False
+32,Gurdaspur,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+33,Hoshiarpur,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+34,Jalandhar,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+35,Kapurthala,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+36,Ludhiana,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+37,Mansa,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+38,Moga,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+39,Sri Muktsar Sahib,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+40,Shahid Bhagat Singh Nagar,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+41,Patiala,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+42,Rupnagar,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,True,2006:0.72;2007:0.79,False
+43,Sangrur,3,Punjab,"DES 2022-23 codes, unapportioned",25,1998,True,True,2006:0.84;2007:0.72;2021:0.82,False
+44,Chandigarh,4,Chandigarh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+45,Almora,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+46,Bageshwar,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+47,Chamoli,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+48,Champawat,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+49,Dehradun,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+50,Haridwar,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+51,Nainital,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+52,Pauri Garhwal,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+53,Pithoragarh,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+54,Rudraprayag,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+55,Tehri Garhwal,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+56,Udham Singh Nagar,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+57,Uttarkashi,5,Uttarakhand,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+58,Ambala,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+59,Bhiwani,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+60,Faridabad,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.80;2008:0.31,False
+61,Fatehabad,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+62,Gurugram,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.43,False
+63,Hisar,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+64,Jhajjar,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+65,Jind,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+66,Kaithal,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+67,Karnal,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+68,Kurukshetra,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+69,Mahendragarh,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+70,Panchkula,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+71,Panipat,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+72,Rewari,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+73,Rohtak,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+74,Sirsa,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+75,Sonipat,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+76,Yamunanagar,6,Haryana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+86,Ajmer,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.84,False
+87,Alwar,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+88,Banswara,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+89,Baran,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+90,Barmer,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+91,Bharatpur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+92,Bhilwara,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+93,Bikaner,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+94,Bundi,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+95,Chittorgarh,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+96,Churu,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.64,False
+97,Dausa,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+98,Dholpur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+99,Dungarpur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+100,Ganganagar,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+101,Hanumangarh,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.78,False
+102,Jaipur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+103,Jaisalmer,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+104,Jalore,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+105,Jhalawar,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+106,Jhunjhunu,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+107,Jodhpur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+108,Karauli,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+109,Kota,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+110,Nagaur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+111,Pali,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+112,Rajsamand,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+113,Sawai Madhopur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+114,Sikar,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+115,Sirohi,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+116,Tonk,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+117,Udaipur,8,Rajasthan,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+118,Agra,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+119,Aligarh,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+120,Prayagraj,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+121,Ambedkar Nagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+122,Auraiya,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+123,Azamgarh,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+124,Baghpat,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+125,Bahraich,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+126,Ballia,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+127,Balrampur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+128,Banda,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+129,Bara Banki,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+130,Bareilly,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+131,Basti,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+132,Bijnor,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+133,Budaun,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+134,Bulandshahr,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+135,Chandauli,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+136,Chitrakoot,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+137,Deoria,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+138,Etah,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2009:0.55;2010:0.66,False
+139,Etawah,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+140,Ayodhya,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+141,Farrukhabad,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+142,Fatehpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+143,Firozabad,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+144,Gautam Buddha Nagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2009:0.84;2012:0.85,False
+145,Ghaziabad,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2010:0.80;2012:0.33,False
+146,Ghazipur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+147,Gonda,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+148,Gorakhpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+149,Hamirpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+150,Hardoi,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+151,Jalaun,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+152,Jaunpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+153,Jhansi,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+154,Amroha,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+155,Kannauj,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+156,Kanpur Dehat,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+157,Kanpur Nagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+158,Kaushambi,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+159,Kheri,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+160,Kushinagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+161,Lalitpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+162,Lucknow,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+163,Hathras,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+164,Mahrajganj,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+165,Mahoba,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+166,Mainpuri,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+167,Mathura,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+168,Mau,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+169,Meerut,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+170,Mirzapur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+171,Moradabad,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2010:0.84;2012:0.57,False
+172,Muzaffarnagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2012:0.64,False
+173,Pilibhit,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+174,Pratapgarh,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+175,Rae Bareli,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2009:0.81;2010:0.71,False
+176,Rampur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+177,Saharanpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+178,Sant Kabir Nagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+179,Bhadohi,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+180,Shahjahanpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+181,Shrawasti,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+182,Siddharthnagar,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+183,Sitapur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+184,Sonbhadra,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+185,Sultanpur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2009:0.74;2010:0.63;2012:0.84,False
+186,Unnao,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+187,Varanasi,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+188,Araria,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+189,Aurangabad,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+190,Banka,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+191,Begusarai,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+192,Bhagalpur,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+193,Bhojpur,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+194,Buxar,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+195,Darbhanga,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+196,Gaya,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.79,False
+197,Gopalganj,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+198,Jamui,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+199,Jehanabad,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.56,False
+200,Kaimur (Bhabua),10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+201,Katihar,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+202,Khagaria,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+203,Kishanganj,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+204,Lakhisarai,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+205,Madhepura,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+206,Madhubani,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+207,Munger,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+208,Muzaffarpur,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+209,Nalanda,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+210,Nawada,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.78,False
+211,Pashchim Champaran,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+212,Patna,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+213,Purbi Champaran,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+214,Purnia,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+215,Rohtas,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+216,Saharsa,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+217,Samastipur,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+218,Saran,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+219,Sheikhpura,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+220,Sheohar,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+221,Sitamarhi,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.82,False
+222,Siwan,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+223,Supaul,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+224,Vaishali,10,Bihar,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+225,Gangtok,11,Sikkim,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.81;2022:0.46,False
+226,Mangan,11,Sikkim,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+227,Namchi,11,Sikkim,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+228,Gyalshing,11,Sikkim,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.54,False
+229,Changlang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+230,Dibang Valley,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2002:0.20,False
+231,East Kameng,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.80;2019:0.72,False
+232,East Siang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.79;2015:0.69,False
+233,Kurung Kumey,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",21,2002,False,True,2013:0.36;2014:0.69,False
+234,Lohit,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2004:0.72;2013:0.78;2014:0.56;2015:0.38,False
+235,Lower Dibang Valley,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",21,2002,False,False,,False
+236,Lower Subansiri,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.75;2019:0.81,False
+237,Papum Pare,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+238,Tawang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2004:0.84,False
+239,Tirap,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2013:0.55;2014:0.74,False
+240,Upper Siang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+241,Upper Subansiri,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2002:0.59;2004:0.63;2018:0.84,False
+242,West Kameng,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+243,West Siang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.77;2015:0.71;2018:0.39;2019:0.36,False
+244,Dimapur,13,Nagaland,"DES 2022-23 codes, unapportioned",23,2000,False,True,2021:0.52;2022:0.16,False
+245,Kohima,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,True,2000:0.54;2022:0.69,False
+246,Mokokchung,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+247,Mon,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+248,Phek,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+249,Tuensang,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.85;2022:0.54,False
+250,Wokha,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+251,Zunheboto,13,Nagaland,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+252,Bishnupur,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+253,Chandel,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+254,Churachandpur,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+255,Imphal East,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+256,Imphal West,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+257,Senapati,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+258,Tamenglong,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+259,Thoubal,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+260,Ukhrul,14,Manipur,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+261,Aizawl,15,Mizoram,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.50;2004:0.65,False
+262,Champhai,15,Mizoram,"DES 2022-23 codes, unapportioned",25,1998,True,True,2020:0.72,False
+263,Kolasib,15,Mizoram,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.74,False
+264,Lawngtlai,15,Mizoram,"DES 2022-23 codes, unapportioned",19,2004,False,False,,False
+265,Lunglei,15,Mizoram,"DES 2022-23 codes, unapportioned",25,1998,True,True,2020:0.71,False
+266,Mamit,15,Mizoram,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+267,Siaha,15,Mizoram,"DES 2022-23 codes, unapportioned",20,2003,False,True,2004:0.67,False
+268,Serchhip,15,Mizoram,"DES 2022-23 codes, unapportioned",19,2004,False,False,,False
+269,Dhalai,16,Tripura,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+270,North Tripura,16,Tripura,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+271,South Tripura,16,Tripura,"DES 2022-23 codes, unapportioned",25,1998,True,True,2012:0.84,False
+272,West Tripura,16,Tripura,"DES 2022-23 codes, unapportioned",25,1998,True,True,2012:0.41,False
+273,East Garo Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,True,2013:0.81,False
+274,East Khasi Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+275,West Jaintia Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",10,2013,False,False,,False
+276,Ri Bhoi,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+277,South Garo Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+278,West Garo Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+279,West Khasi Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+280,Barpeta,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.73,False
+281,Bongaigaon,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.70,False
+282,Cachar,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+283,Darrang,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.40,False
+284,Dhemaji,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+285,Dhubri,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.78,False
+286,Dibrugarh,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.73,False
+287,Goalpara,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+288,Golaghat,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+289,Hailakandi,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+290,Jorhat,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.77,False
+291,Kamrup,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.72,False
+292,Karbi Anglong,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.77,False
+293,Sribhumi,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+294,Kokrajhar,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+295,Lakhimpur,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+296,Marigaon,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+297,Nagaon,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.81;2019:0.79,False
+298,Nalbari,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.58,False
+299,Dima Hasao,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+300,Sivasagar,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.77,False
+301,Sonitpur,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.70,False
+302,Tinsukia,18,Assam,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+303,North 24 Parganas,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+304,South 24 Parganas,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+305,Bankura,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+306,Purba Bardhaman,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+307,Birbhum,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+308,Cooch Behar,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+309,Darjeeling,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.69,False
+310,Dakshin Dinajpur,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+311,Uttar Dinajpur,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+312,Hooghly,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+313,Howrah,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+314,Jalpaiguri,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.60,False
+316,Malda,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+317,Purba Medinipur,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+318,Paschim Medinipur,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.82,False
+319,Murshidabad,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+320,Nadia,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+321,Purulia,19,West Bengal,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+322,Bokaro,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2003:0.70,False
+323,Chatra,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2003:0.83,False
+324,Deoghar,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2003:0.76,False
+325,Dhanbad,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2008:0.78,False
+326,Dumka,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+327,East Singhbum,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+328,Garhwa,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+329,Giridih,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+330,Godda,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+331,Gumla,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+332,Hazaribagh,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2003:0.84;2008:0.63,False
+333,Jamtara,20,Jharkhand,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+334,Koderma,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+335,Latehar,20,Jharkhand,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+336,Lohardaga,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2008:0.76,False
+337,Pakur,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2008:0.85,False
+338,Palamu,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2003:0.83,False
+339,Ranchi,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+340,Sahebganj,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,True,2008:0.75,False
+341,Saraikela Kharsawan,20,Jharkhand,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+342,Simdega,20,Jharkhand,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+343,West Singhbhum,20,Jharkhand,"DES 2022-23 codes, unapportioned",23,1998,False,False,,False
+344,Angul,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+345,Balangir,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+346,Balasore,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+347,Bargarh,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+348,Bhadrak,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+349,Boudh,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+350,Cuttack,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+351,Deogarh,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+352,Dhenkanal,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+353,Gajapati,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+354,Ganjam,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+355,Jagatsinghapur,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+356,Jajpur,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+357,Jharsuguda,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+358,Kalahandi,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+359,Kandhamal,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+360,Kendrapara,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+361,Keonjhar,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+362,Khordha,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+363,Koraput,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+364,Malkangiri,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+365,Mayurbhanj,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+366,Nabarangpur,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+367,Nayagarh,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+368,Nuapada,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+369,Puri,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+370,Rayagada,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+371,Sambalpur,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+372,Sonepur,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+373,Sundargarh,21,Odisha,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+374,Bastar,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2011:0.57,False
+375,Bilaspur,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2011:0.61;2019:0.79,False
+376,Dakshin Bastar Dantewada,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2005:0.75;2006:0.65;2011:0.53,False
+377,Dhamtari,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+378,Durg,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2011:0.24,False
+379,Janjgir-Champa,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2000:0.84;2022:0.57,False
+380,Jashpur,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+381,Uttar Bastar Kanker,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+382,Kabeerdham,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",24,1998,False,False,,False
+383,Korba,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+384,Korea,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.53,False
+385,Mahasamund,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+386,Raigarh,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",23,2000,False,True,2022:0.69,False
+387,Raipur,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2011:0.33,False
+388,Rajnandgaon,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.48,False
+389,Surguja,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2011:0.34,False
+390,Anuppur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",21,2002,False,False,,False
+391,Ashoknagar,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+392,Balaghat,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+393,Barwani,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+394,Betul,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+395,Bhind,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+396,Bhopal,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+397,Burhanpur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",20,2003,False,True,2019:0.78,False
+398,Chhatarpur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2013:0.82,False
+399,Chhindwara,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+400,Damoh,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+401,Datia,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+402,Dewas,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+403,Dhar,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+404,Dindori,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+405,Khandwa (East Nimar),23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.67;2013:0.83,False
+406,Guna,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2002:0.64;2003:0.53,False
+407,Gwalior,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+408,Harda,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+409,Narmadapuram,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+410,Indore,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.84,False
+411,Jabalpur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+412,Jhabua,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.48,False
+413,Katni,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+414,Khargone (West Nimar),23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.84,False
+415,Mandla,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+416,Mandsaur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+417,Morena,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+418,Narsimhapur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+419,Neemuch,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.80,False
+420,Panna,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+421,Raisen,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+422,Rajgarh,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+423,Ratlam,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+424,Rewa,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+425,Sagar,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2013:0.83,False
+426,Satna,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+427,Sehore,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+428,Seoni,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+429,Shahdol,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2002:0.65;2003:0.48,False
+430,Shajapur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2013:0.60,False
+431,Sheopur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+432,Shivpuri,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+433,Sidhi,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.50,False
+434,Tikamgarh,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+435,Ujjain,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+436,Umaria,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.62,False
+437,Vidisha,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+438,Ahmedabad,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+439,Amreli,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+440,Anand,24,Gujarat,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+441,Banas Kantha,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.84,False
+442,Bharuch,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.78,False
+443,Bhavnagar,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+444,Dangs,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+445,Dahod,24,Gujarat,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+446,Gandhinagar,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+447,Jamnagar,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.71,False
+448,Junagadh,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.71,False
+449,Kachchh,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.80,False
+450,Kheda,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.74,False
+451,Mahesana,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.52,False
+452,Narmada,24,Gujarat,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+453,Navsari,24,Gujarat,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+454,Panch Mahals,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.68;2014:0.65,False
+455,Patan,24,Gujarat,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+456,Porbandar,24,Gujarat,"DES 2022-23 codes, unapportioned",20,2003,False,False,,False
+457,Rajkot,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.77,False
+458,Sabar Kantha,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.56,False
+459,Surat,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.75,False
+460,Surendranagar,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+461,Vadodara,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2014:0.53,False
+462,Valsad,24,Gujarat,"DES 2022-23 codes, unapportioned",25,1998,True,True,2003:0.49,False
+463,Daman,38,The Dadra And Nagar Haveli And Daman And Diu,"DES 2022-23 codes, unapportioned",9,2013,False,False,,False
+464,Diu,38,The Dadra And Nagar Haveli And Daman And Diu,"DES 2022-23 codes, unapportioned",9,2013,False,False,,False
+465,Dadra And Nagar Haveli,38,The Dadra And Nagar Haveli And Daman And Diu,"DES 2022-23 codes, unapportioned",24,1998,False,False,,False
+466,Ahilyanagar,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+467,Akola,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.51,False
+468,Amravati,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+469,Chhatrapati Sambhajinagar,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+470,Beed,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+471,Bhandara,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.47,False
+472,Buldhana,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+473,Chandrapur,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+474,Dhule,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.54,False
+475,Gadchiroli,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+476,Gondia,27,Maharashtra,"DES 2022-23 codes, unapportioned",24,1999,False,False,,False
+477,Hingoli,27,Maharashtra,"DES 2022-23 codes, unapportioned",24,1999,False,False,,False
+478,Jalgaon,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+479,Jalna,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+480,Kolhapur,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+481,Latur,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+483,Mumbai Suburban,27,Maharashtra,"DES 2022-23 codes, unapportioned",2,2016,False,False,,False
+484,Nagpur,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+485,Nanded,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+486,Nandurbar,27,Maharashtra,"DES 2022-23 codes, unapportioned",24,1999,False,False,,False
+487,Nashik,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+488,Dharashiv,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.85,False
+489,Parbhani,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.69,False
+490,Pune,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+491,Raigad,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+492,Ratnagiri,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+493,Sangli,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+494,Satara,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+495,Sindhudurg,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.84,False
+496,Solapur,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+497,Thane,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.58,False
+498,Wardha,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+499,Washim,27,Maharashtra,"DES 2022-23 codes, unapportioned",24,1999,False,False,,False
+500,Yavatmal,27,Maharashtra,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+501,Adilabad,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.59,False
+502,Ananthapuramu,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.85,False
+503,Chittoor,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.67;2022:0.53,False
+504,Y.S.R. Kadapa,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+505,East Godavari,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.56,False
+506,Guntur,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.45,False
+507,Hyderabad,36,Telangana,"DES 2022-23 codes, unapportioned",3,1998,False,False,,False
+508,Karimnagar,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.78;2018:0.65,False
+509,Khammam,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+510,Krishna,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+511,Kurnool,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+512,Mahabubnagar,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.77;2018:0.26,False
+513,Medak,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2016:0.64;2018:0.46,False
+514,Nalgonda,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+515,Sri Potti Sriramulu Nellore,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+516,Nizamabad,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+517,Prakasam,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+518,Ranga Reddy,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+519,Srikakulam,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+520,Visakhapatnam,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.55;2022:0.07,False
+521,Vizianagaram,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+522,Warangal,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.58,False
+523,West Godavari,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.85;2022:0.62,False
+524,Bagalkote,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+525,Bengaluru Urban,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.82;2022:0.81,False
+526,Bengaluru Rural,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.37,False
+527,Belagavi,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+528,Ballari,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.47,False
+529,Bidar,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+530,Vijayapura,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+531,Chamarajanagar,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+532,Chikkamagaluru,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+533,Chitradurga,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+534,Dakshina Kannada,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+535,Davanagere,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+536,Dharwad,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+537,Gadag,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+538,Kalaburagi,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2010:0.74,False
+539,Hassan,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+540,Haveri,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+541,Kodagu,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+542,Kolar,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.45;2022:0.73,False
+543,Koppal,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+544,Mandya,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+545,Mysuru,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+546,Raichur,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+547,Shivamogga,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+548,Tumakuru,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+549,Udupi,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+550,Uttara Kannada,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+551,North Goa,30,Goa,"DES 2022-23 codes, unapportioned",19,2004,False,False,,False
+552,South Goa,30,Goa,"DES 2022-23 codes, unapportioned",19,2004,False,False,,False
+554,Alappuzha,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+555,Ernakulam,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+556,Idukki,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+557,Kannur,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+558,Kasaragod,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+559,Kollam,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+560,Kottayam,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+561,Kozhikode,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+562,Malappuram,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+563,Palakkad,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+564,Pathanamthitta,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+565,Thiruvananthapuram,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+566,Thrissur,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+567,Wayanad,32,Kerala,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+568,Chennai,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",5,2018,False,True,2019:0.31;2020:0.53,False
+569,Coimbatore,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.47,False
+570,Cuddalore,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+571,Dharmapuri,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+572,Dindigul,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+573,Erode,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+574,Kancheepuram,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.77;2019:0.67;2020:0.50,False
+575,Kanniyakumari,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+576,Karur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+577,Krishnagiri,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",22,1999,False,False,,False
+578,Madurai,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.81,False
+579,Nagapattinam,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.82;2019:0.61;2020:0.43,False
+580,Namakkal,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+581,Perambalur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.51,False
+582,Pudukkottai,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+583,Ramanathapuram,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+584,Salem,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+585,Sivaganga,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+586,Thanjavur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+587,The Nilgiris,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2008:0.65;2018:0.82,False
+588,Theni,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+589,Thiruvallur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.83,False
+590,Thiruvarur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+591,Tiruchirappalli,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+592,Tirunelveli,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2019:0.66;2020:0.40,False
+593,Tiruvannamalai,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+594,Thoothukkudi,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.85,False
+595,Vellore,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.68;2019:0.49;2020:0.30,False
+596,Viluppuram,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.83;2019:0.70;2020:0.48,False
+597,Virudhunagar,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",25,1998,True,True,1999:0.81,False
+598,Karaikal,34,Puducherry,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+600,Puducherry,34,Puducherry,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True
+602,South Andamans,35,Andaman And Nicobar Islands,"DES 2022-23 codes, unapportioned",18,2002,False,False,,False
+603,Nicobars,35,Andaman And Nicobar Islands,"DES 2022-23 codes, unapportioned",20,2000,False,False,,False
+604,Nuh,6,Haryana,"DES 2022-23 codes, unapportioned",18,2005,False,True,2008:0.75,False
+605,Barnala,3,Punjab,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+606,Khunti,20,Jharkhand,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+607,Ramgarh,20,Jharkhand,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+608,S.A.S Nagar,3,Punjab,"DES 2022-23 codes, unapportioned",17,2006,False,False,,False
+609,Tarn Taran,3,Punjab,"DES 2022-23 codes, unapportioned",17,2006,False,False,,False
+610,Ariyalur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+611,Arwal,10,Bihar,"DES 2022-23 codes, unapportioned",19,2003,False,False,,False
+612,Chirang,18,Assam,"DES 2022-23 codes, unapportioned",18,2005,False,False,,False
+613,Peren,13,Nagaland,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+614,Kiphire,13,Nagaland,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+615,Longleng,13,Nagaland,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+616,Baksa,18,Assam,"DES 2022-23 codes, unapportioned",18,2005,False,False,,False
+617,Udalguri,18,Assam,"DES 2022-23 codes, unapportioned",18,2005,False,False,,False
+618,Kamrup Metro,18,Assam,"DES 2022-23 codes, unapportioned",18,2005,False,False,,False
+619,Palwal,6,Haryana,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+620,Kishtwar,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+621,Ramban,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+622,Kulgam,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+623,Bandipora,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+624,Samba,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+625,Shopian,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+626,Ganderbal,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+627,Reasi,1,Jammu And Kashmir,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+628,Anjaw,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",19,2004,False,True,2014:0.80,False
+629,Pratapgarh,8,Rajasthan,"DES 2022-23 codes, unapportioned",17,1999,False,False,,False
+630,Chikkaballapura,29,Karnataka,"DES 2022-23 codes, unapportioned",16,2007,False,True,2022:0.85,False
+631,Bengaluru South,29,Karnataka,"DES 2022-23 codes, unapportioned",16,2007,False,False,,False
+632,North And Middle Andaman,35,Andaman And Nicobar Islands,"DES 2022-23 codes, unapportioned",16,2000,False,False,,False
+633,Kasganj,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",14,2009,False,False,,False
+634,Tiruppur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+635,Yadgir,29,Karnataka,"DES 2022-23 codes, unapportioned",13,2010,False,False,,False
+636,Bijapur,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",17,2006,False,False,,False
+637,Narayanpur,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",18,2005,False,False,,False
+638,Singrauli,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+639,Alirajpur,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+640,Amethi,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",13,2010,False,False,,False
+641,Tapi,24,Gujarat,"DES 2022-23 codes, unapportioned",15,2008,False,False,,False
+642,Sukma,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+643,Kondagaon,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+644,Balodabazar-Bhatapara,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+645,Gariyaband,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+646,Balod,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+647,Mungeli,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+648,Surajpur,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+649,Balrampur-Ramanujganj,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+650,Bemetara,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+651,Fazilka,3,Punjab,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+652,Khowai,16,Tripura,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+653,Sepahijala,16,Tripura,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+654,Gomati,16,Tripura,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+655,Unakoti,16,Tripura,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+656,North Garo Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",10,2013,False,False,,False
+657,East Jaintia Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",25,1998,True,True,2013:0.43,False
+658,South West Khasi Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",10,2013,False,False,,False
+659,Sambhal,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+660,Shamli,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+661,Hapur,9,Uttar Pradesh,"DES 2022-23 codes, unapportioned",11,2012,False,False,,False
+662,Pathankot,3,Punjab,"DES 2022-23 codes, unapportioned",12,2011,False,False,,False
+663,South West Garo Hills,17,Meghalaya,"DES 2022-23 codes, unapportioned",10,2013,False,False,,False
+664,Alipurduar,19,West Bengal,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+665,Palghar,27,Maharashtra,"DES 2022-23 codes, unapportioned",10,2005,False,False,,False
+666,Longding,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",10,2013,False,False,,False
+667,Agar-Malwa,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",10,2013,False,False,,False
+668,Chhotaudepur,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+669,Mahisagar,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+672,Arvalli,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+673,Morbi,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+674,Devbhumi Dwarka,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+675,Gir Somnath,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+676,Botad,24,Gujarat,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+677,Kra Daadi,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",8,2015,False,False,,False
+678,Namsai,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",9,2014,False,False,,False
+679,Siang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",8,2015,False,False,,False
+680,Nirmal,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+681,Jagitial,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+682,Peddapalli,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+683,Rajanna Sircilla,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+684,Mancherial,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+685,Kamareddy,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+686,Hanumakonda,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+687,Jayashankar Bhupalapally,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,True,2018:0.61,False
+688,Mahabubabad,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+689,Jangoan,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+690,Bhadradri Kothagudem,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+691,Sangareddy,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+692,Siddipet,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+693,Wanaparthy,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+694,Nagarkurnool,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+695,Jogulamba Gadwal,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+696,Suryapet,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+697,Yadadri Bhuvanagiri,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+698,Vikarabad,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+699,Kumuram Bheem Asifabad,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+700,Medchal Malkajgiri,36,Telangana,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+701,Charkhi Dadri,6,Haryana,"DES 2022-23 codes, unapportioned",7,2014,False,False,,False
+702,Kalimpong,19,West Bengal,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+703,Jhargram,19,West Bengal,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+704,Paschim Bardhaman,19,West Bengal,"DES 2022-23 codes, unapportioned",7,2016,False,False,,False
+705,Biswanath,18,Assam,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+706,Majuli,18,Assam,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+707,South Salmara Mancachar,18,Assam,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+708,Charaideo,18,Assam,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+709,Hojai,18,Assam,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+710,West Karbi Anglong,18,Assam,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+718,Kamle,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",5,2018,False,False,,False
+719,Lower Siang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",5,2018,False,False,,False
+720,Mulugu,36,Telangana,"DES 2022-23 codes, unapportioned",5,2018,False,False,,False
+721,Narayanpet,36,Telangana,"DES 2022-23 codes, unapportioned",5,2018,False,False,,False
+722,Niwari,23,Madhya Pradesh,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+723,Pakke Kessang,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+724,Leparada,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+725,Shi Yomi,12,Arunachal Pradesh,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+726,Hnahthial,15,Mizoram,"DES 2022-23 codes, unapportioned",3,2020,False,False,,False
+727,Saitual,15,Mizoram,"DES 2022-23 codes, unapportioned",3,2020,False,False,,False
+728,Khawzawl,15,Mizoram,"DES 2022-23 codes, unapportioned",3,2020,False,False,,False
+729,Kallakurichi,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+730,Chengalpattu,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+731,Ranipet,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+732,Tirupathur,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+733,Tenkasi,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+734,Gaurela-Pendra-Marwahi,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",4,2019,False,False,,False
+735,Mayiladuthurai,33,Tamil Nadu,"DES 2022-23 codes, unapportioned",3,2020,False,False,,False
+736,Noklak,13,Nagaland,"DES 2022-23 codes, unapportioned",2,2021,False,False,,False
+737,Malerkotla,3,Punjab,"DES 2022-23 codes, unapportioned",2,2021,False,False,,False
+738,Vijayanagara,29,Karnataka,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+741,Pakyong,11,Sikkim,"DES 2022-23 codes, unapportioned",2,2021,False,False,,False
+742,Soreng,11,Sikkim,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+743,Parvathipuram Manyam,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+744,Anakapalli,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+745,Alluri Sitharama Raju,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+746,Kakinada,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+747,Dr. B.R. Ambedkar Konaseema,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+748,Eluru,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+749,Ntr,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+750,Bapatla,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+751,Palnadu,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+752,Tirupati,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+753,Annamayya,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2021,False,False,,False
+754,Sri Sathya Sai,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+755,Nandyal,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+757,Tseminyu,13,Nagaland,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+758,Chumoukedima,13,Nagaland,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+759,Khairagarh-Chhuikhadan-Gandai,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+760,Manendragarh-Chirmiri-Bharatpur(M C B),22,Chhattisgarh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+761,Mohla-Manpur-Ambagarh Chouki,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+762,Sakti,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+763,Sarangarh-Bilaigarh,22,Chhattisgarh,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+764,Niuland,13,Nagaland,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False
+765,Shamator,13,Nagaland,"DES 2022-23 codes, unapportioned",1,2022,False,False,,False

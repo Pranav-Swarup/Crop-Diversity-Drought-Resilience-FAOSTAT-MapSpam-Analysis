@@ -13,3 +13,4 @@ plotly
 matplotlib
 requests
 pytest
+xlrd>=2.0.1

@@ -1,0 +1,13 @@
+model,bin,n_district_years,n_high_diversity_tercile
+core,moderate,541,173
+core,severe,232,53
+core,extreme,117,19
+core_allstable,moderate,721,214
+core_allstable,severe,331,63
+core_allstable,extreme,160,25
+ext5,moderate,300,96
+ext5,severe,103,30
+ext5,extreme,52,8
+ext5_allstable,moderate,505,157
+ext5_allstable,severe,185,42
+ext5_allstable,extreme,87,7

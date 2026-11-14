@@ -55,6 +55,26 @@ All scripts run from the repo root as `python -m src.<module>.<script>`.
 5. `src.validation`: `hit_rate`, `case_studies`
 6. `src.explorer`: `build`, `diagram`, `collect`
 
+### Phase 2 extensions
+
+Definitions and the data contract are in CLAUDE.md, "Phase 2 extensions". Run after steps 1–6:
+
+1. `src.crops`: `download` (adds FAOSTAT Food Balances, SUA and Producer Prices), `trade`, `prices`, `calories`
+2. `src.climate`: `wet_events`, `download_cru`, `heat` (`heat` needs the gridded files from `src.climate.cropland`; CRU TS v4.10 downloads without a login)
+3. `src.metrics`: `wet`, `heat`, `panel`, `oos`, `portfolio`, `calorie_faces` (`panel` and `portfolio` take about 2 minutes each)
+4. `src.crops`: `buffers` (needs `outputs/metrics.parquet` and `outputs/crop_anomalies.parquet`)
+5. `src.explorer`: `build`, `collect`
+
+### Phase 3
+
+Definitions and the data contract are in CLAUDE.md, "Phase 3". Run after phase 2:
+
+1. `src.climate`: `mapspam_area`, `exposure_pre`, `download_calendar`, `exposure_season` (need the gridded raw files)
+2. `src.metrics`: `exposure_diversity`, `severity` (`severity` takes about 12 minutes)
+3. `src.crops`: `download_trade_matrix` (420 MB), `trade_matrix`, `supply_diversity`
+
+Tests: `python -m pytest src/metrics`.
+
 ## Layout
 
 ```

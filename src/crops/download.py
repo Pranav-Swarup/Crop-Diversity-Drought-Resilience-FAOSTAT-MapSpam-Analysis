@@ -1,4 +1,4 @@
-"""Download FAOSTAT bulk files (QCL, QV, RL) and World Bank WDI indicators.
+"""Download FAOSTAT bulk files (QCL, QV, RL, FBS, FBSH, SUA, Prices) and World Bank WDI indicators.
 
 Run: python -m src.crops.download
 """
@@ -15,6 +15,13 @@ FAO_FILES = {
     "FAOSTAT QCL (Crops and livestock products)": "Production_Crops_Livestock_E_All_Data_(Normalized).zip",
     "FAOSTAT QV (Value of Agricultural Production)": "Value_of_Production_E_All_Data_(Normalized).zip",
     "FAOSTAT RL (Land Use)": "Inputs_LandUse_E_All_Data_(Normalized).zip",
+}
+# Phase 2 extensions: trade (food balances, SUA) and producer prices.
+FAO_FILES_EXT = {
+    "FAOSTAT FBS (Food Balances, 2010-)": "FoodBalanceSheets_E_All_Data_(Normalized).zip",
+    "FAOSTAT FBSH (Food Balances, -2013, old methodology)": "FoodBalanceSheetsHistoric_E_All_Data_(Normalized).zip",
+    "FAOSTAT SUA (Supply Utilization Accounts, 2010-)": "SUA_Crops_Livestock_E_All_Data_(Normalized).zip",
+    "FAOSTAT PP (Producer Prices)": "Prices_E_All_Data_(Normalized).zip",
 }
 WDI_INDICATORS = {
     "NY.GDP.PCAP.KD": "GDP per capita (constant 2015 US$)",
@@ -44,13 +51,13 @@ def download_wdi(indicator):
 
 
 def main():
-    for name, fname in FAO_FILES.items():
+    for name, fname in {**FAO_FILES, **FAO_FILES_EXT}.items():
         download(name, FAO_BASE + fname, FAO_DIR / fname)
     for indicator in WDI_INDICATORS:
         download_wdi(indicator)
-    for fname in FAO_FILES.values():
+    for fname in [*FAO_FILES.values(), *FAO_FILES_EXT.values()]:
         assert (FAO_DIR / fname).stat().st_size > 1e6, fname
-    print(f"\nFAOSTAT files: {len(FAO_FILES)}, WDI indicators: {len(WDI_INDICATORS)}")
+    print(f"\nFAOSTAT files: {len(FAO_FILES) + len(FAO_FILES_EXT)}, WDI indicators: {len(WDI_INDICATORS)}")
 
 
 if __name__ == "__main__":

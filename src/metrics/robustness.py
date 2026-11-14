@@ -17,7 +17,7 @@ MAX_IMPUTED_SHARE = 0.10
 
 
 def main():
-    crops, climate, events, included = load_inputs()
+    crops, climate, crop_climate, events, included = load_inputs()
     has_climate = len(climate) > 0
 
     variants = {"baseline": {}}
@@ -30,7 +30,7 @@ def main():
     base = None
     for name, kw in variants.items():
         ev = kw.pop("events", events)
-        table = analysis_table(compute(crops, climate, ev, included, **kw)["metrics"])
+        table = analysis_table(compute(crops, climate, crop_climate, ev, included, **kw)["metrics"])
         if name == "baseline":
             base = table
         rows.append(spearman_table(table).assign(variant=name, n_countries=len(table)))

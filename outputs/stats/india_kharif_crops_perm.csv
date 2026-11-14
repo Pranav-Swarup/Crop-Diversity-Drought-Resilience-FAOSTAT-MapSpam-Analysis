@@ -1,0 +1,4 @@
+model,term,t_obs,p_perm_t,n_perm
+kharif_crops_spei4,extreme_z,0.6818434515986249,0.486,499
+kharif_crops_spei12,extreme_z,-1.1628045112609324,0.382,499
+kharif_strict_spei4,extreme_z,-0.4035130265336097,0.642,499

@@ -6,6 +6,8 @@ Same method as src.climate.aggregate, on the matched district polygons (src.indi
   spei12_w    the same weighted by MapSPAM cropland (the design's drought variable). Only computed if
               data/raw/derived/cropland_05deg.npy exists (needs the manual MapSPAM download, then src.climate.cropland);
               otherwise the column is left empty, NOT replaced by spei12_unw.
+spei4kh_unw / spei4kh_w   kharif variant (robustness only): SPEI-4 of September (June-September rainfall and PET), same two weightings;
+              only if data/raw/spei/spei04.nc exists. Not used by the core analysis.
 Years 1993-2022 (December of year Y covers the monsoon of agricultural year Y-(Y+1)).
 
 A 0.5 degree cell (~55 km) is as large as many districts: neighbouring districts share cells, so district SPEI varies
@@ -26,21 +28,24 @@ from ..climate.download import SPEI_DIR
 
 OUT = paths.CLEAN_REAL / "india"
 YEARS = np.arange(1993, 2023)
+KHARIF_FILE = "spei04.nc"
 
 
-def load_dec_spei12():
-    ds = xr.open_dataset(SPEI_DIR / "spei12.nc")
+def load_month_spei(fname="spei12.nc", month=12):
+    """Values of one calendar month of every year 1993-2022, (years, cells), top-left origin grid like src.climate.aggregate."""
+    ds = xr.open_dataset(SPEI_DIR / fname)
     da = ds["spei"].sel(time=slice("1993-01-01", "2022-12-31")).sortby("lat", ascending=False).sortby("lon")
     assert da.shape[1:] == (360, 720), da.shape
     assert np.isclose(float(da.lat[0]), 89.75) and np.isclose(float(da.lon[0]), -179.75)
     assert len(da.time) == 12 * len(YEARS)
-    dec = da.isel(time=slice(11, None, 12))
-    assert list(dec.time.dt.month.values) == [12] * len(YEARS) and list(dec.time.dt.year.values) == list(YEARS)
+    dec = da.isel(time=slice(month - 1, None, 12))
+    assert list(dec.time.dt.month.values) == [month] * len(YEARS) and list(dec.time.dt.year.values) == list(YEARS)
     return da, dec.values.reshape(len(YEARS), -1)
 
 
 def main():
-    da, dec = load_dec_spei12()
+    da, dec = load_month_spei()
+    kh = load_month_spei(KHARIF_FILE, 9)[1] if (SPEI_DIR / KHARIF_FILE).exists() else None   # kharif: SPEI-4 of September = June-September
     template = da.isel(time=0).rio.write_crs(4326).rio.set_spatial_dims(x_dim="lon", y_dim="lat")
     gdf = gpd.read_file(OUT / "districts.geojson").rename(columns={"dist_code": "iso3"})   # coverage_fractions keys on iso3
     cover = coverage_fractions(gdf, template)
@@ -57,8 +62,13 @@ def main():
         w = np.full(len(YEARS), np.nan)
         if crop is not None and (crop[cells] * frac).sum() > 0:
             w, _ = weighted_mean(dec[:, cells], crop[cells] * frac)
-        rows.append(pd.DataFrame({"dist_code": code, "year": YEARS, "spei12_unw": unw, "spei12_w": w, "n_cells": len(cells),
-                                  "valid_share": cov}))
+        r = pd.DataFrame({"dist_code": code, "year": YEARS, "spei12_unw": unw, "spei12_w": w, "n_cells": len(cells), "valid_share": cov})
+        if kh is not None:                                   # same weights as the December SPEI-12 columns
+            r["spei4kh_unw"], _ = weighted_mean(kh[:, cells], coslat[cells] * frac)
+            r["spei4kh_w"] = np.nan
+            if crop is not None and (crop[cells] * frac).sum() > 0:
+                r["spei4kh_w"], _ = weighted_mean(kh[:, cells], crop[cells] * frac)
+        rows.append(r)
     out = pd.concat(rows, ignore_index=True).astype({"year": int})
 
     assert not out.duplicated(["dist_code", "year"]).any()

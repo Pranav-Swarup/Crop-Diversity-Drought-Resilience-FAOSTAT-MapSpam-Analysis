@@ -42,13 +42,16 @@ def spei_variable(clim):
     return "spei12_w" if clim.spei12_w.notna().any() else "spei12_unw"
 
 
-def build(window):
-    """window: 'core' (DES 1997-2022) or 'ext5' (mirror 1993-2015). Returns dict of frames and settings."""
+def build(window, col=None):
+    """window: 'core' (DES 1998-2022), 'kharif' (monsoon-season rows only) or 'ext5' (mirror 1993-2015). Returns dict of frames and settings."""
     clim = pd.read_parquet(IN / "climate.parquet")
-    col = spei_variable(clim)
-    if window == "core":
-        crops, years = pd.read_parquet(IN / "crops.parquet"), list(YEARS_CORE)
-        dist = pd.read_csv(IN / "districts.csv", dtype={"dist_code": str})
+    col = col or spei_variable(clim)
+    if window in ("core", "kharif"):                     # kharif: monsoon-season rows only (src.india.kharif_crops), same 1998-2022 window
+        f = "" if window == "core" else "_kharif"
+        crops, years = pd.read_parquet(IN / f"crops{f}.parquet"), list(YEARS_CORE)
+        dist = pd.read_csv(IN / f"districts{f}.csv", dtype={"dist_code": str})
+        if window == "kharif":
+            dist = dist.merge(pd.read_csv(IN / "districts.csv", dtype={"dist_code": str})[["dist_code", "state_name"]], on="dist_code", how="left")
     else:
         crops, years = pd.read_parquet(IN / "crops_ext5.parquet"), list(range(1993, 2016))
         dist = pd.read_csv(IN / "districts_ext5.csv", dtype={"dist_code": str})
@@ -104,12 +107,16 @@ def severity_frame(d):
 
 def fe_basis(d):
     D = np.column_stack([pd.get_dummies(d[FE[0]], dtype=float).to_numpy(), pd.get_dummies(d[FE[1]], drop_first=True, dtype=float).to_numpy()])
-    q, _ = np.linalg.qr(D)
-    return q
+    # District dummies and state-year dummies are collinear (districts nest in states), so D is rank deficient: a plain QR would
+    # return arbitrary extra directions and over-project. The SVD basis keeps only the directions that really span D.
+    u, sv, _ = np.linalg.svd(D, full_matrices=False)
+    return u[:, sv > sv[0] * 1e-10]
 
 
 def fast_t(q, y, X, groups, k_fe, j):
-    """Cluster-robust (CR1, as fe_fit) t-statistic of column j. y, X are raw; q is the FE basis."""
+    """Cluster-robust t-statistic of column j. y, X are raw; q is the FE basis. Same coefficients and sandwich as fe_fit; the
+    small-sample factor also counts the district dummies (k_fe), so t differs from fe_fit's by a constant. The factor is the same for
+    the observed and the permuted statistics, so p_perm_t does not depend on it."""
     r = np.column_stack([y, X])
     r = r - q @ (q.T @ r)
     yt, xt = r[:, 0], r[:, 1:]
@@ -215,11 +222,27 @@ def faces_table(m, label):
     return pd.DataFrame(rows)
 
 
+# All-India June-September rainfall departure from the long period average (LPA), as stated by each source. None is an IMD
+# end-of-season report (not readable when checked): the sources disagree by 1-3 points for 2002 and 2009 and are secondary.
+DOCUMENTED = {
+    2002: (-19, "Aijaz (2013), Observer Research Foundation, 'Monsoon Variability and Agricultural Drought Management in India' (Down To Earth 2018, citing MoSPI Envi Stats India 2018: -21)",
+           "https://www.orfonline.org/research/monsoon-variability-and-agricultural-drought-management-in-india"),
+    2009: (-22, "Reserve Bank of India Bulletin, 11 May 2015, 'Monsoon and Indian Agriculture - Conjoined or Decoupled?' (ORF also -22; Down To Earth citing MoSPI: -21)",
+           "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx?Id=15564"),
+    2014: (-12, "Reserve Bank of India Bulletin, 11 May 2015 (Down To Earth citing MoSPI: -12)",
+           "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx?Id=15564"),
+    2015: (-14, "Minister of State for Earth Sciences, written Lok Sabha reply, 'about 86% of LPA', as reproduced by DeshGujarat 9 Dec 2015 (Down To Earth citing MoSPI: -14)",
+           "https://www.deshgujarat.com/2015/12/09/rainfall-was-deficient-during-south-west-monsoon-as-predicted/"),
+}
+
+
 def validation_table(clim, years, col):
-    doc = [2002, 2009, 2014, 2015]          # years with documented deficient all-India monsoon rainfall; citation to be added by the validation owner
     c = clim[clim.year.between(years[0], years[-1])]
     g = c.groupby("year")[col].agg(share_drought=lambda s: (s <= -1).mean(), mean_spei="mean").reset_index()
-    g["documented_drought_year"] = g.year.isin(doc)
+    g["documented_drought_year"] = g.year.isin(DOCUMENTED)
+    g["monsoon_departure_lpa_pct"] = g.year.map({k: v[0] for k, v in DOCUMENTED.items()})
+    g["source"] = g.year.map({k: v[1] for k, v in DOCUMENTED.items()})
+    g["url"] = g.year.map({k: v[2] for k, v in DOCUMENTED.items()})
     return g
 
 

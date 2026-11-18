@@ -56,9 +56,29 @@ TRADE_PARTNERS_MIRROR = CLEAN / "trade_partners_mirror.parquet"
 EXPOSURE_DIVERSITY = OUT / "exposure_diversity.parquet"
 SUPPLY_DIVERSITY = OUT / "supply_diversity.parquet"
 
+# Phase 4 (docs/phase4-design.md, src/india/): Indian district panel.
+INDIA_CLEAN = CLEAN_REAL / "india"
+INDIA_OUT = OUT_REAL / "india"
+INDIA_DISTRICTS = INDIA_CLEAN / "districts.csv"
+INDIA_DISTRICTS_EXT5 = INDIA_CLEAN / "districts_ext5.csv"
+INDIA_DISTRICT_MATCH = INDIA_CLEAN / "district_match.csv"
+INDIA_GEOJSON = INDIA_CLEAN / "districts.geojson"
+INDIA_CROPS = INDIA_CLEAN / "crops.parquet"
+INDIA_CROPS_EXT5 = INDIA_CLEAN / "crops_ext5.parquet"
+INDIA_CLIMATE = INDIA_CLEAN / "climate.parquet"
+INDIA_CONTROLS = INDIA_CLEAN / "mirror_controls.parquet"
+INDIA_METRICS = INDIA_OUT / "metrics.parquet"
+INDIA_METRICS_EXT5 = INDIA_OUT / "metrics_ext5.parquet"
+INDIA_PANEL = INDIA_OUT / "panel.parquet"
+INDIA_PANEL_EXT5 = INDIA_OUT / "panel_ext5.parquet"
+INDIA_CROP_ANOMALIES = INDIA_OUT / "crop_anomalies.parquet"
+INDIA_DROPPED = INDIA_OUT / "dropped_districts.csv"
+INDIA_DROUGHT_YEARS = VALIDATION_DIR / "india_drought_years.csv"
+
 
 def fig_dir(owner):
     """figures/<owner>/, or figures/<owner>/dummy/ under USE_DUMMY so dummy plots never sit beside real ones."""
     d = FIGURES / owner / "dummy" if USE_DUMMY else FIGURES / owner
     d.mkdir(parents=True, exist_ok=True)
     return d
+

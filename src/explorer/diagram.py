@@ -10,13 +10,13 @@ graph TD
     classDef data fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
     classDef output fill:#fff3e0,stroke:#f57c00,stroke-width:2px
 
-    subgraph Raw Sources
+    subgraph Global Sources
         F[FAOSTAT]:::source
         S[SPEIbase]:::source
         M[MapSPAM]:::source
-        W[WDI]:::source
+        W[WDI & CRU]:::source
     end
-    
+
     subgraph Cleaning Pipelines
         F --> C1[crops.py]:::process
         W --> C1
@@ -24,22 +24,34 @@ graph TD
         M --> C3[cropland.py]:::process
         C3 --> C2
     end
-    
+
     subgraph Data Contracts
         C1 --> T1[(crops.parquet)]:::data
         C2 --> T2[(climate.parquet)]:::data
         C1 --> T3[(controls.parquet)]:::data
     end
-    
+
+    subgraph Phase 4 India Districts
+        D1[DES District APY]:::source --> IC[india/clean.py & geo.py]:::process
+        D2[ICRISAT Mirror]:::source --> IC
+        D3[geoBoundaries ADM2]:::source --> IC
+        S --> ICL[india/climate.py]:::process
+        C3 --> ICL
+        IC --> IP[india/panel.py]:::process
+        ICL --> IP
+    end
+
     subgraph Analysis
-        T1 --> ME[Metrics Engine]:::process
+        T1 --> ME[Metrics & Panel Engine]:::process
         T2 --> ME
         T3 --> ME
     end
-    
+
     subgraph Outputs
         ME --> R[Results & Figures]:::output
+        IP --> R
         ME --> E[Interactive Explorer]:::output
+        IP --> E
     end
 """
 
@@ -58,13 +70,19 @@ def generate_diagram():
     # We want SVG and PNG
     for fmt in ["svg", "png"]:
         url = f"https://kroki.io/mermaid/{fmt}/{encoded}"
-        response = requests.get(url)
-        response.raise_for_status()
-        
         out_path = deck_dir / f"pipeline.{fmt}"
-        with open(out_path, "wb") as f:
-            f.write(response.content)
-        print(f"Saved {out_path.name} to {deck_dir}")
+        try:
+            response = requests.get(url, timeout=15)
+            response.raise_for_status()
+            with open(out_path, "wb") as f:
+                f.write(response.content)
+            print(f"Saved {out_path.name} to {deck_dir}")
+        except requests.RequestException as exc:
+            if out_path.exists():
+                print(f"Warning: Kroki request failed ({exc}); keeping existing {out_path.name}")
+            else:
+                raise
 
 if __name__ == "__main__":
     generate_diagram()
+

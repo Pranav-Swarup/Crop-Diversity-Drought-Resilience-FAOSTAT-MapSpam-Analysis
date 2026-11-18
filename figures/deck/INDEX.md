@@ -13,16 +13,22 @@
 | `08_02_example_flat_series.png` | data | 02 Example Flat Series |
 | `09_03_import_dependency.png` | data | 03 Import Dependency |
 | `10_04_price_response.png` | data | 04 Price Response |
-| `11_01_faces_2x2.png` | results | 01 Faces 2X2 |
-| `12_02_count_vs_response.png` | results | 02 Count Vs Response |
-| `13_03_decomposition.png` | results | 03 Decomposition |
-| `14_04_maps.png` | results | 04 Maps |
-| `15_05_panel_interaction.png` | results | 05 Panel Interaction |
-| `16_06_portfolio_frontier.png` | results | 06 Portfolio Frontier |
-| `17_07_wet_vs_dry.png` | results | 07 Wet Vs Dry |
-| `18_08_oos_prediction.png` | results | 08 Oos Prediction |
-| `19_09_kcal_vs_value.png` | results | 09 Kcal Vs Value |
-| `20_01_hit_rate.png` | validation | 01 Hit Rate |
-| `21_02_case_COL.png` | validation | 02 Case Col |
-| `22_02_case_FIN.png` | validation | 02 Case Fin |
-| `23_02_case_IND.png` | validation | 02 Case Ind |
+| `11_05_supply_diversity.png` | data | 05 Supply Diversity |
+| `12_01_faces_2x2.png` | results | 01 Faces 2X2 |
+| `13_02_count_vs_response.png` | results | 02 Count Vs Response |
+| `14_03_decomposition.png` | results | 03 Decomposition |
+| `15_04_maps.png` | results | 04 Maps |
+| `16_05_panel_interaction.png` | results | 05 Panel Interaction |
+| `17_06_portfolio_frontier.png` | results | 06 Portfolio Frontier |
+| `18_07_wet_vs_dry.png` | results | 07 Wet Vs Dry |
+| `19_08_oos_prediction.png` | results | 08 Oos Prediction |
+| `20_09_kcal_vs_value.png` | results | 09 Kcal Vs Value |
+| `21_10_heat_compound.png` | results | 10 Heat Compound |
+| `22_11_exposure_diversity.png` | results | 11 Exposure Diversity |
+| `23_12_severity.png` | results | 12 Severity |
+| `24_01_hit_rate.png` | validation | 01 Hit Rate |
+| `25_02_case_COL.png` | validation | 02 Case Col |
+| `26_02_case_FIN.png` | validation | 02 Case Fin |
+| `27_02_case_IND.png` | validation | 02 Case Ind |
+| `28_01_panel_interaction.png` | india | 01 Panel Interaction |
+| `29_02_severity.png` | india | 02 Severity |

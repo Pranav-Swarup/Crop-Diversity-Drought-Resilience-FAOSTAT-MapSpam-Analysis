@@ -20,7 +20,7 @@ def collect_figures():
     if index_file.exists():
         index_file.unlink()
         
-    source_dirs = ["climate", "data", "results", "validation"]
+    source_dirs = ["climate", "data", "results", "validation", "india"]
     collected = []
     
     for d in source_dirs:

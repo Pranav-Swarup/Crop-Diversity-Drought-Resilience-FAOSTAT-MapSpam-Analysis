@@ -6,7 +6,7 @@ labelled by their START year (1998..2022): the monsoon of year Y falls inside th
 Rules (all proposals, none validated by the team yet):
 - Season: if a "Total" row exists for (year, district, crop) use it, else sum the season rows (Total = sum of seasons in 99.9% of cases).
 - Fixed crop list: crops reported nationally in all 25 years, minus catch-all "Other ..." crops. Keeps crop coverage constant over time.
-- A missing row means "not grown or not reported"; it is NOT filled. Diversity treats it as zero area; yield and value anomalies leave it NaN.
+- A missing row means "not grown or not reported"; it is NOT filled. Diversity uses crops with reported areas throughout the corresponding window.
 - Value: prod_t x one constant price per crop = FAOSTAT India value_const / prod_t (an exact constant per item, 2014-16 intl $/t;
   data/clean/crops.parquet). Crops with no clean FAOSTAT counterpart get no price and are left out of the value index only.
 - Stable district: has data in all 25 years. split_flag: the state gained a new district code in year t and the district's mean
@@ -47,7 +47,11 @@ def load_prices():
     i["p"] = i.value_const / i.prod_t
     g = i.groupby("item_code").p.agg(["min", "max", "median"])
     assert ((g["max"] / g["min"]) < 1.001).all(), "FAOSTAT India value_const / prod_t is not constant per item"
-    return g["median"]
+    prices = g["median"].copy()
+    # Milled rice tonnes are valued at a paddy-equivalent price. NABARD, Water
+    # Productivity Mapping of Major Indian Crops, table 8, uses 0.67 t rice/t paddy.
+    prices.loc[27] /= 0.67
+    return prices
 
 
 def season_rule(df):
@@ -135,10 +139,10 @@ def main():
     assert implausible.mean() < 0.01, "too many implausible yields: check the source"
     crops["yield_t_ha"] = crops.prod_t / crops.area_ha
     crops["_med"] = med
-    crops["price_usd_t"] = crops.crop.map(price)
-    crops["value_const"] = crops.prod_t * crops.price_usd_t
+    crops["price_intl_dollars_t"] = crops.crop.map(price)
+    crops["value_const"] = crops.prod_t * crops.price_intl_dollars_t
     crops["is_missing"] = crops.prod_t.isna()
-    crops = crops[["dist_code", "year", "crop", "area_ha", "prod_t", "yield_t_ha", "price_usd_t", "value_const",
+    crops = crops[["dist_code", "year", "crop", "area_ha", "prod_t", "yield_t_ha", "price_intl_dollars_t", "value_const",
                    "is_missing", "n_rows", "rule", "_med"]].sort_values(["dist_code", "year", "crop"]).reset_index(drop=True)
 
     # ---- assertions
@@ -165,8 +169,6 @@ def main():
     for crop in ("Rice", "Wheat"):
         assert 0.8 < cr.loc[crop, "area_ratio_DES_over_FAO"] < 1.2, f"{crop}: DES area differs from FAOSTAT India by >20%"
     assert 0.8 < cr.loc["Wheat", "prod_ratio_DES_over_FAO"] < 1.2, "Wheat: DES production differs from FAOSTAT India by >20%"
-    # Rice production is ~0.6 of FAOSTAT's while area matches: DES reports milled rice, FAOSTAT paddy. Kept as published, not rescaled;
-    # the constant FAOSTAT paddy price therefore under-weights rice in the value index (its anomalies are unaffected).
     print(f"NOTE rice: production ratio {cr.loc['Rice', 'prod_ratio_DES_over_FAO']:.2f} with area ratio {cr.loc['Rice', 'area_ratio_DES_over_FAO']:.2f} (milled vs paddy).")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)

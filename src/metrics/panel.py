@@ -67,7 +67,7 @@ from ..common.contract import load
 from . import figures as figs
 from . import response
 from . import run as metrics_run
-from .data import analysis_table, source_line
+from .data import analysis_table
 from .diversity import hill1
 
 FE_FILE = "panel_fe.csv"

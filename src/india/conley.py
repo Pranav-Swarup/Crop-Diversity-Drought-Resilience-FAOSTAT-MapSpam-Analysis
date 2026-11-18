@@ -84,11 +84,11 @@ def fit_conley(d, cent, cutoffs=CUTOFFS, lag=LAG):
     return pd.Series(beta, index=TERMS), out, len(codes), n, D
 
 
-def rows_from(model, beta, cov, G, n, note):
+def rows_from(model, beta, cov, G, n, note, n_districts=None):
     se = np.sqrt(np.diag(cov))
     tcrit = st.t.ppf(0.975, G - 1)
     return [{"model": model, "term": t, "beta": b, "se": s, "ci_lo": b - tcrit * s, "ci_hi": b + tcrit * s,
-             "p": 2 * st.t.sf(abs(b / s), G - 1), "n_obs": n, "n_districts": G, "note": note} for t, b, s in zip(TERMS, beta, se)]
+             "p": 2 * st.t.sf(abs(b / s), G - 1), "n_obs": n, "n_districts": G if n_districts is None else n_districts, "n_clusters": G if n_districts is not None else None, "note": note} for t, b, s in zip(TERMS, beta, se)]
 
 
 def main():
@@ -101,7 +101,7 @@ def main():
         for cl in ("dist_code", "state_name"):
             f = P.fe_fit(d, "anom", TERMS, cluster=cl, fe=P.FE)
             rows += rows_from(f"{window}:cluster_{cl.split('_')[0]}", f["params"].to_numpy(), f["cov"].to_numpy(),
-                              f["n_clusters"], f["nobs"], f"CR1 clustered by {cl}")
+                              f["n_clusters"], f["nobs"], f"CR1 clustered by {cl}", d.dist_code.nunique())
         beta, covs, G, n, D = fit_conley(d, cent)
         f = P.fe_fit(d, "anom", TERMS, cluster="dist_code", fe=P.FE)
         assert np.allclose(beta.to_numpy(), f["params"].to_numpy(), atol=1e-8), "Conley and fe_fit disagree on the coefficients"

@@ -30,6 +30,8 @@ The team left these three choices to the crop-data owner. They are not in CLAUDE
 
 ## controls.parquet
 
+The November analysis uses GDP per capita and fertilizer consumption from the WDI release dated 11 November 2026. The downloader verifies the two checked-in CSVs by SHA-256 before copying them into the raw directory. [WDI snapshot](../../data/sources/wdi/2026-11-11) · [Download code](download.py)
+
 - `irrig_share` is FAOSTAT "Land area equipped for irrigation" / "Cropland". It exceeds 1 in 112 country-years (GUY and TKM in every year, NZL in 22 years from 2001, six others in 1 to 11 years). The cause is not confirmed. Values are as published, not capped.
 - For a merged entity `irrig_share` is given only when both items come from the same members. FAOSTAT has no irrigation series for Luxembourg, so `BLX` is missing in 2000-2023.
 - `gdp_pc` and `fert_kg_ha` are missing for `BLX`, `SCG`, `SDX` and `TWN` (no WDI series).

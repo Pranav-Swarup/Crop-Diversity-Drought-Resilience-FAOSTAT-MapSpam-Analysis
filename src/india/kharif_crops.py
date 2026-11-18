@@ -46,10 +46,10 @@ def build_table(raw, seasons):
     prices = load_prices()
     price = {k: float(prices[v]) for k, v in PRICE_ITEM.items() if v in prices.index}
     crops["yield_t_ha"] = crops.prod_t / crops.area_ha
-    crops["price_usd_t"] = crops.crop.map(price)
-    crops["value_const"] = crops.prod_t * crops.price_usd_t
+    crops["price_intl_dollars_t"] = crops.crop.map(price)
+    crops["value_const"] = crops.prod_t * crops.price_intl_dollars_t
     crops["is_missing"] = crops.prod_t.isna()
-    crops = crops[["dist_code", "year", "crop", "area_ha", "prod_t", "yield_t_ha", "price_usd_t", "value_const", "is_missing"]]
+    crops = crops[["dist_code", "year", "crop", "area_ha", "prod_t", "yield_t_ha", "price_intl_dollars_t", "value_const", "is_missing"]]
     crops = crops.sort_values(["dist_code", "year", "crop"]).reset_index(drop=True)
     assert not crops.duplicated(["dist_code", "year", "crop"]).any() and crops.area_ha.gt(0).all()
     dist = pd.DataFrame({"dist_code": state_of.index.astype(int).astype(str)})
@@ -59,8 +59,8 @@ def build_table(raw, seasons):
     return crops, dist, fixed
 
 
-def fit(label, var, rows, perm_rows, n_perm):
-    data, col, years, dist = P.build("kharif", col=var)
+def fit(label, var, rows, perm_rows, n_perm, tables):
+    data, col, years, dist = P.build("kharif", col=var, tables=tables)
     D = data["core"]
     m, d = D["metrics"], P.prep(D["panel"])
     print(f"[{label}] drought variable {col}: districts selected {D['n_selected']}, usable {len(m)}, events {int(m.n_events.sum())}")
@@ -97,14 +97,9 @@ def main(n_perm=499):
         else:
             strict = (crops, dist)
     rows, perm = [], []
-    m1, d1 = fit("kharif_crops_spei4", "spei4kh_w", rows, perm, n_perm)
-    fit("kharif_crops_spei12", "spei12_w", rows, perm, n_perm)
-    # strict variant: swap the tables, run on the matching variable, restore
-    strict[0].to_parquet(OUT_DIR / "crops_kharif.parquet", index=False); strict[1].to_csv(OUT_DIR / "districts_kharif.csv", index=False)
-    try:
-        fit("kharif_strict_spei4", "spei4kh_w", rows, perm, n_perm)
-    finally:
-        prim[0].to_parquet(OUT_DIR / "crops_kharif.parquet", index=False); prim[1].to_csv(OUT_DIR / "districts_kharif.csv", index=False)
+    m1, d1 = fit("kharif_crops_spei4", "spei4kh_w", rows, perm, n_perm, prim)
+    fit("kharif_crops_spei12", "spei12_w", rows, perm, n_perm, prim)
+    fit("kharif_strict_spei4", "spei4kh_w", rows, perm, n_perm, strict)
     cols = ["model", "term", "beta", "se", "ci_lo", "ci_hi", "p", "n_obs", "n_districts", "r2_within", "note"]
     out = pd.DataFrame(rows).reindex(columns=cols)
     assert out.beta.notna().all()

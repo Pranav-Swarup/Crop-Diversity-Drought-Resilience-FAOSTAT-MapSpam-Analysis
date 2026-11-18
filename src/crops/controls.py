@@ -6,7 +6,6 @@ no series for them and a per-capita figure cannot be summed across members.
 
 Run: python -m src.crops.controls
 """
-import numpy as np
 import pandas as pd
 
 from ..common import paths

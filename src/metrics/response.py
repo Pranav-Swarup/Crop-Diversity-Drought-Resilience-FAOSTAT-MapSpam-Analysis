@@ -6,7 +6,7 @@ MIN_SHARE = 0.01     # minimum mean value share
 
 
 def resp_beta(yield_anom, spei):
-    """OLS slope of yield anomaly on spei12_w. NaN pairs are dropped; NaN if < MIN_YEARS pairs."""
+    """OLS slope of yield anomaly on the supplied SPEI series, using finite pairs."""
     a, s = np.asarray(yield_anom, dtype=float), np.asarray(spei, dtype=float)
     ok = np.isfinite(a) & np.isfinite(s)
     if ok.sum() < MIN_YEARS or np.ptp(s[ok]) == 0:

@@ -1,12 +1,14 @@
+import gzip
 import json
 import numpy as np
 import pandas as pd
 import geopandas as gpd
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 from src.common import paths
-from src.common.paths import (COUNTRIES_GEOJSON, METRICS, CROP_ANOMALIES, CLIMATE, EVENTS, SOURCES_MD, EXPLORER,
+from src.common.paths import (COUNTRIES_GEOJSON, METRICS, CROP_ANOMALIES, CLIMATE, EVENTS, EXPLORER,
                               USE_DUMMY, WET_EVENTS, METRICS_WET, TRADE)
-from src.metrics.portfolio import evaluate
+from src.explorer.results import result_tables
 from src.explorer.india_data import load_india_data
 
 MAX_SIZE_MB = 15
@@ -27,14 +29,6 @@ EXTRA_METRICS = {
 }
 
 
-def _r(x, sig=6):
-    """Round to `sig` significant digits; NaN/None -> None."""
-    if x is None:
-        return None
-    x = float(x)
-    return float(f"{x:.{sig}g}") if np.isfinite(x) else None
-
-
 def _clean(v):
     """NaN -> None for JSON."""
     if v is None:
@@ -46,41 +40,11 @@ def _clean(v):
 
 
 def load_portfolios(valid_iso3):
-    """Round portfolio_cov.json for embedding; assert rounded arrays still reproduce evaluate() at w0."""
+    """Keep the exact arrays used by the optimizer and the published frontier."""
     if not PORTFOLIO_COV.exists():
-        print(f"  Portfolio file not found ({PORTFOLIO_COV}); skipping the portfolio simulator data.")
         return {}
-    raw = json.loads(PORTFOLIO_COV.read_text(encoding="utf-8"))
-    meta, countries = raw["meta"], raw["countries"]
-    out = {}
-    for iso3, c in countries.items():
-        if iso3 not in valid_iso3:
-            continue
-        p = {
-            'items': c['items'],
-            'w0': [_r(x, 8) for x in c['w0']],
-            'lo': [_r(x, 8) for x in c['lo']],
-            'hi': [_r(x, 8) for x in c['hi']],
-            'mu': [_r(x) for x in c['mu']],
-            'cov': [[_r(x) for x in row] for row in c['cov']],
-            'beta': [_r(x) for x in c['beta']],
-            'frontier': [{'exp_value_ha': _r(f['exp_value_ha']), 'risk_sd': _r(f['risk_sd'])} for f in c['frontier']],
-        }
-        n = len(p['items'])
-        assert len(p['w0']) == len(p['mu']) == len(p['cov']) == len(p['lo']) == len(p['hi']) == len(p['beta']) == n, iso3
-        assert all(len(row) == n for row in p['cov']), iso3
-        assert abs(sum(p['w0']) - 1) < 1e-6, (iso3, sum(p['w0']))
-        # rounded embedded arrays must reproduce evaluate() on the original arrays
-        nan = lambda a: [np.nan if x is None else x for x in a]
-        ref = evaluate(nan(c['w0']), nan(c['mu']), c['cov'], nan(c['beta']))
-        got = evaluate(nan(p['w0']), nan(p['mu']), p['cov'], nan(p['beta']))
-        for k in ('exp_value_ha', 'risk_sd', 'drought_change'):
-            if np.isnan(ref[k]):
-                assert np.isnan(got[k]), (iso3, k)
-            else:
-                assert abs(got[k] - ref[k]) <= 1e-4 * max(abs(ref[k]), 1e-12), (iso3, k, got[k], ref[k])
-        out[iso3] = p
-    return out
+    portfolios = json.loads(PORTFOLIO_COV.read_text())["countries"]
+    return {iso: data for iso, data in portfolios.items() if iso in valid_iso3}
 
 # Plain (non f-string) blocks spliced into the template, so JS braces are written singly.
 PF_CSS = """
@@ -150,12 +114,12 @@ PF_HTML = """
         </div>
         <div id="india-view">
             <div class="ind-card">
-                <h3>Phase 4: Does Crop Diversity Cause Drought Resilience Within Indian Districts?</h3>
+                <h3>Phase 4: Crop diversity and drought outcomes within Indian districts</h3>
                 <div class="ind-note">
-                    Phases 1&ndash;3 compare 107 countries cross-sectionally, where crop diversity (<code>hill1</code>) is nearly time-invariant.
-                    Phase 4 tests the mechanism <strong>within Indian districts over time</strong> using 5-year lagged crop diversity (<code>hill1_tv</code>, years <em>t&minus;5..t&minus;1</em>)
+                    The national panel uses crop diversity measured over the full analysis window.
+                    Phase 4 estimates the association <strong>within Indian districts over time</strong> using 5-year lagged crop diversity (<code>hill1_tv</code>, years <em>t&minus;5..t&minus;1</em>)
                     with district (<code>&alpha;<sub>d</sub></code>) and state&times;year (<code>&lambda;<sub>s,t</sub></code>) fixed effects:<br>
-                    <code>anom<sub>d,t</sub> = &beta;&middot;spei<sub>d,t</sub> + &gamma;&middot;spei<sub>d,t</sub> &times; z(hill1_tv<sub>d,t&minus;1</sub>) + &delta;&middot;z(hill1_tv<sub>d,t&minus;1</sub>) + &alpha;<sub>d</sub> + &lambda;<sub>state&times;year</sub> + &varepsilon;<sub>d,t</sub></code>
+                    <code>anom<sub>d,t</sub> = &beta;&middot;spei<sub>d,t</sub> + &gamma;&middot;spei<sub>d,t</sub> &times; z(hill1_tv<sub>d,t</sub>) + &delta;&middot;z(hill1_tv<sub>d,t</sub>) + &alpha;<sub>d</sub> + &lambda;<sub>state&times;year</sub> + &varepsilon;<sub>d,t</sub></code>
                 </div>
                 <div id="ind-summary-wrap"></div>
             </div>
@@ -165,10 +129,10 @@ PF_HTML = """
                 <div class="ind-toolbar">
                     <label for="ind-panel-win"><strong>Window / Sample:</strong></label>
                     <select id="ind-panel-win">
-                        <option value="core">Core DES (1998&ndash;2022, 303 districts)</option>
-                        <option value="core_allstable">All Stable DES (1998&ndash;2022, 404 districts, incl. split-flagged)</option>
-                        <option value="ext5">Extended 5-Crop Mirror (1993&ndash;2015, 127 districts)</option>
-                        <option value="ext5_allstable">All Stable Extended 5-Crop (1993&ndash;2015, 221 districts)</option>
+                        <option value="core">Core DES (1998&ndash;2022)</option>
+                        <option value="core_allstable">All Stable DES (1998&ndash;2022, incl. split-flagged)</option>
+                        <option value="ext5">Extended 5-Crop Mirror (1993&ndash;2015)</option>
+                        <option value="ext5_allstable">All Stable Extended 5-Crop (1993&ndash;2015)</option>
                     </select>
                 </div>
                 <div id="ind-panel-chart" class="ind-plot"></div>
@@ -213,7 +177,7 @@ PF_HTML = """
             <div class="ind-card">
                 <h3>5. Ground-Truth Validation: Documented All-India Monsoon Drought Years</h3>
                 <div class="ind-note">
-                    District-level drought incidence (share of districts with <code>spei12_w &le; &minus;1.0</code>) against India's documented monsoon drought years (2002, 2009, 2014, 2015).
+                    District-level drought incidence (share of districts with <code>spei12_w &le; &minus;1.0</code>) against India's documented monsoon drought years with published rainfall departures.
                 </div>
                 <div id="ind-val-chart" class="ind-plot"></div>
                 <div class="ind-table-wrap"><table class="ind-table" id="ind-val-table"></table></div>
@@ -337,7 +301,7 @@ PF_JS = """
                 body.style.display = 'none';
                 empty.style.display = 'block';
                 empty.innerHTML = 'The country-level portfolio simulator uses national FAOSTAT covariance matrices (1993&ndash;2023). ' +
-                    'Switch <strong>Map Scope</strong> to <em>Global (107 Countries)</em> and click India (<code>IND</code>) or another country to simulate national crop mix reallocations, or view the <strong>Time series</strong> or <strong>Phase 4: India Results</strong> tabs.';
+                    'Switch <strong>Map Scope</strong> to <em>Global</em> and click India (<code>IND</code>) or another country to simulate national crop mix reallocations, or view the <strong>Time series</strong> or <strong>Phase 4: India Results</strong> tabs.';
                 pf = null;
                 return;
             }
@@ -388,7 +352,7 @@ PF_JS = """
         function fmtNum(v, d=4) {
             if (v === null || v === undefined || Number.isNaN(v)) return '&mdash;';
             const n = Number(v);
-            if (Math.abs(n) > 0 && Math.abs(n) < 1e-4) return n.toExponential(2);
+            if (Math.abs(n) > 0 && Math.abs(n) < 10 ** (-d)) return n.toExponential(2);
             return n.toFixed(d);
         }
 
@@ -413,7 +377,7 @@ PF_JS = """
                     `<td>${r.districts}</td>` +
                     `<td>${r.n_events} (${r.districts_with_event})</td>` +
                     `<td>${fmtNum(r.median_hill1, 2)}</td>` +
-                    `<td>${fmtNum((r.median_value_coverage || 0) * 100, 1)}%</td>` +
+                    `<td>${percent(r.median_value_coverage)}</td>` +
                     `<td>${getBeta(w + ':core', 'spei')}</td>` +
                     `<td>${getBeta(w + ':core', 'spei_z')}</td>` +
                     `<td>${getBeta(w + ':le2015_irrig', 'spei_x_irrig_lag')}</td>` +
@@ -476,10 +440,10 @@ PF_JS = """
             const bins = ['moderate_z', 'severe_z', 'extreme_z'];
             const binLabels = ['Moderate &times; z(hill1_tv)', 'Severe &times; z(hill1_tv)', 'Extreme &times; z(hill1_tv)'];
             const traces = [];
-            [['core:severity', 'Core DES (303 dist)', '#2980b9'],
-             ['core_allstable:severity', 'All Stable DES (404 dist)', '#5dade2'],
-             ['ext5:severity', 'Extended 5-Crop (127 dist)', '#d35400'],
-             ['ext5_allstable:severity', 'All Stable 5-Crop (221 dist)', '#f39c12']].forEach(([mName, label, colr]) => {
+            [['core:severity', 'Core DES', '#2980b9'],
+             ['core_allstable:severity', 'All Stable DES', '#5dade2'],
+             ['ext5:severity', 'Extended 5-Crop', '#d35400'],
+             ['ext5_allstable:severity', 'All Stable 5-Crop', '#f39c12']].forEach(([mName, label, colr]) => {
                 const sub = bins.map(b => sev.find(r => r.model === mName && r.term === b)).filter(Boolean);
                 if (sub.length === 3) {
                     traces.push({
@@ -532,7 +496,9 @@ PF_JS = """
                 {
                     x: faces,
                     y: coreRows.map(r => r.rho),
-                    name: 'India Districts — Core DES (n=303)',
+                    name: 'India Districts — Core DES',
+                    customdata: coreRows.map(r => r.n),
+                    hovertemplate: '%{x}: %{y:.4f} (n=%{customdata})<extra>%{fullData.name}</extra>',
                     type: 'bar',
                     marker: { color: '#2980b9' },
                     error_y: { type: 'data', symmetric: false, array: coreRows.map(r => r.ci_hi - r.rho), arrayminus: coreRows.map(r => r.rho - r.ci_lo) }
@@ -540,7 +506,9 @@ PF_JS = """
                 {
                     x: faces,
                     y: ext5Rows.map(r => r.rho),
-                    name: 'India Districts — Extended 5-Crop (n=127)',
+                    name: 'India Districts — Extended 5-Crop',
+                    customdata: ext5Rows.map(r => r.n),
+                    hovertemplate: '%{x}: %{y:.4f} (n=%{customdata})<extra>%{fullData.name}</extra>',
                     type: 'bar',
                     marker: { color: '#e67e22' },
                     error_y: { type: 'data', symmetric: false, array: ext5Rows.map(r => r.ci_hi - r.rho), arrayminus: ext5Rows.map(r => r.rho - r.ci_lo) }
@@ -550,7 +518,9 @@ PF_JS = """
                 traces.push({
                     x: faces,
                     y: coreRows.map(r => r.rho_national),
-                    name: 'Global National Cross-Section (n=107)',
+                    name: 'Global National Cross-Section',
+                    customdata: coreRows.map(r => r.n_national),
+                    hovertemplate: '%{x}: %{y:.4f} (n=%{customdata})<extra>%{fullData.name}</extra>',
                     type: 'bar',
                     marker: { color: '#27ae60' }
                 });
@@ -560,7 +530,7 @@ PF_JS = """
                 barmode: 'group',
                 title: { text: `Spearman Rank Correlation (&rho;) of ${pred} vs. Four Faces of Resilience`, font: { size: 14 } },
                 margin: { t: 35, b: 45, l: 60, r: 20 },
-                yaxis: { title: 'Spearman &rho;', range: [-0.75, 0.75], zeroline: true, zerolinecolor: '#666' },
+                yaxis: { title: 'Spearman &rho;', range: [-1, 1], zeroline: true, zerolinecolor: '#666' },
                 legend: { orientation: 'h', y: -0.22 }
             }, { responsive: true });
 
@@ -607,24 +577,24 @@ PF_JS = """
                 let thtml = '<thead><tr><th>Model</th><th>Term</th><th>&beta;</th><th>SE</th><th>95% CI</th><th>p-value</th><th>Clusters / Districts</th><th>Note</th></tr></thead><tbody>';
                 rows.forEach(r => {
                     thtml += `<tr><td>${r.model}</td><td><code>${r.term}</code></td><td>${fmtNum(r.beta, 4)}</td><td>${fmtNum(r.se, 4)}</td>` +
-                        `<td>[${fmtNum(r.ci_lo, 4)}, ${fmtNum(r.ci_hi, 4)}]</td><td>${fmtNum(r.p, 4)}</td><td>${r.n_districts}</td><td style="text-align:left;">${r.note || ''}</td></tr>`;
+                        `<td>[${fmtNum(r.ci_lo, 4)}, ${fmtNum(r.ci_hi, 4)}]</td><td>${fmtNum(r.p, 4)}</td><td>${r.n_clusters ?? '—'} / ${r.n_districts}</td><td style="text-align:left;">${r.note || ''}</td></tr>`;
                 });
                 thtml += '</tbody>';
                 document.getElementById('ind-rob-table').innerHTML = thtml;
             } else if (mode === 'kharif') {
                 const kh = (indiaData.stats.kharif || []).concat(indiaData.stats.kharif_crops || []);
-                const sub = kh.filter(r => r.term === 'spei' || r.term === 'spei_z' || r.term === 'extreme_z');
+                const sub = kh.filter(r => ['spei','spei_z','extreme_z'].includes(r.term)).reverse();
                 Plotly.newPlot('ind-rob-chart', [{
                     x: sub.map(r => r.beta),
-                    y: sub.map(r => `${r.model} [${r.term}]`).reverse(),
+                    y: sub.map(r => `${r.model} [${r.term}]`),
                     type: 'scatter',
                     mode: 'markers',
                     marker: { size: 8, color: '#16a085' },
                     error_x: {
                         type: 'data',
                         symmetric: false,
-                        array: sub.map(r => (r.ci_hi !== null ? r.ci_hi - r.beta : 0)).reverse(),
-                        arrayminus: sub.map(r => (r.ci_lo !== null ? r.beta - r.ci_lo : 0)).reverse()
+                        array: sub.map(r => (r.ci_hi !== null ? r.ci_hi - r.beta : 0)),
+                        arrayminus: sub.map(r => (r.ci_lo !== null ? r.beta - r.ci_lo : 0))
                     }
                 }], {
                     title: { text: 'Kharif Exposure (Sept SPEI-4) &amp; Kharif-Only Crop Models (&beta; &plusmn; 95% CI)', font: { size: 14 } },
@@ -638,6 +608,12 @@ PF_JS = """
                         `<td>${r.ci_lo !== null ? '[' + fmtNum(r.ci_lo, 4) + ', ' + fmtNum(r.ci_hi, 4) + ']' : '&mdash;'}</td>` +
                         `<td>${fmtNum(r.p, 4)}</td><td>${r.n_obs}${r.n_districts ? ' (' + r.n_districts + ')' : ''}</td></tr>`;
                 });
+                thtml += '</tbody>';
+                const permutations = [...indiaData.stats.kharif_perm, ...indiaData.stats.kharif_crops_perm];
+                thtml += '<tbody><tr><th>Permutation model</th><th>Term</th><th>Observed t</th><th>Permutation p</th><th>Draws</th></tr>';
+                for (const row of permutations) {
+                    thtml += `<tr><td>${row.model}</td><td>${row.term}</td><td>${fmtNum(row.t_obs)}</td><td>${row.p_perm_t}</td><td>${row.n_perm}</td></tr>`;
+                }
                 thtml += '</tbody>';
                 document.getElementById('ind-rob-table').innerHTML = thtml;
             } else {
@@ -671,7 +647,7 @@ PF_JS = """
             if (!indiaData || !indiaData.stats) return;
             const rows = indiaData.stats.drought_years || [];
             const yrs = rows.map(r => r.year);
-            const sharePct = rows.map(r => (r.share_drought || 0) * 100);
+            const sharePct = rows.map(r => r.share_drought == null ? null : 100 * r.share_drought);
             const barCols = rows.map(r => r.documented_drought_year ? '#c0392b' : '#95a5a6');
 
             Plotly.newPlot('ind-val-chart', [
@@ -703,8 +679,8 @@ PF_JS = """
             rows.forEach(r => {
                 const srcHtml = r.source ? (r.url ? `<a href="${r.url}" target="_blank" rel="noopener">${r.source}</a>` : r.source) : '&mdash;';
                 thtml += `<tr style="${r.documented_drought_year ? 'background:#fdf2e9;font-weight:bold;' : ''}">` +
-                    `<td>${r.year}</td><td>${r.documented_drought_year ? 'Yes' : 'No'}</td>` +
-                    `<td>${fmtNum((r.share_drought || 0) * 100, 1)}%</td><td>${fmtNum(r.mean_spei, 2)}</td>` +
+                    `<td>${r.year}</td><td>${r.documented_drought_year ? 'Documented' : 'Unclassified'}</td>` +
+                    `<td>${percent(r.share_drought)}</td><td>${fmtNum(r.mean_spei, 2)}</td>` +
                     `<td>${r.monsoon_departure_lpa_pct !== null ? fmtNum(r.monsoon_departure_lpa_pct, 0) + '%' : '&mdash;'}</td>` +
                     `<td style="text-align:left;font-weight:normal;">${srcHtml}</td></tr>`;
             });
@@ -729,6 +705,8 @@ PF_JS = """
 
         function showTab(name) {
             activeTab = name;
+            document.getElementById('tab-national').classList.toggle('active', name === 'national');
+            document.getElementById('national-view').style.display = name === 'national' ? 'block' : 'none';
             document.getElementById('tab-ts').classList.toggle('active', name === 'ts');
             document.getElementById('tab-pf').classList.toggle('active', name === 'pf');
             const tabInd = document.getElementById('tab-india');
@@ -750,6 +728,29 @@ PF_JS = """
                 Plotly.Plots.resize('bar-chart');
             }
         }
+        const tableSelect = document.getElementById('national-select');
+        const pageSize = 50;
+        let page = 0;
+        for (const key of Object.keys(nationalTables)) tableSelect.add(new Option(key.replaceAll('_',' '), key));
+        function renderNational() {
+            const {columns, rows} = nationalTables[tableSelect.value];
+            const t = document.getElementById('national-table');
+            t.replaceChildren();
+            const header = t.createTHead().insertRow();
+            for (const name of columns) header.appendChild(document.createElement('th')).textContent = name;
+            const body = t.createTBody();
+            for (const row of rows.slice(page * pageSize, (page+1) * pageSize)) {
+                const tr = body.insertRow();
+                for (const value of row) tr.insertCell().textContent = value ?? 'n/a';
+            }
+            document.getElementById('national-count').textContent = `${rows.length} rows · page ${page+1} of ${Math.max(1,Math.ceil(rows.length/pageSize))}`;
+            document.getElementById('national-prev').disabled = page === 0;
+            document.getElementById('national-next').disabled = (page+1)*pageSize >= rows.length;
+        }
+        tableSelect.onchange = () => { page = 0; renderNational(); };
+        document.getElementById('national-prev').onclick = () => { page--; renderNational(); };
+        document.getElementById('national-next').onclick = () => { page++; renderNational(); };
+        document.getElementById('tab-national').onclick = () => { showTab('national'); renderNational(); };
         document.getElementById('tab-ts').addEventListener('click', () => showTab('ts'));
         document.getElementById('tab-pf').addEventListener('click', () => showTab('pf'));
         if (document.getElementById('tab-india')) {
@@ -770,11 +771,16 @@ def build_explorer():
     events_df = pd.read_csv(EVENTS)
     gdf = gpd.read_file(COUNTRIES_GEOJSON)
     
-    try:
-        with open(SOURCES_MD, "r") as f:
-            sources_md_content = f.read()
-    except FileNotFoundError:
-        sources_md_content = "SOURCES.md not found in data/raw/"
+    assets = Path(__file__).with_name("assets")
+    plotly_js = gzip.decompress((assets / "plotly-2.32.0.min.js.gz").read_bytes()).decode()
+    notices = "\n".join((assets / name).read_text() for name in
+                        ("plotly-LICENSE.txt", "plotly.min.js.LICENSE.txt"))
+    topology = (assets / "world_110m.json").read_text()
+    sources = ("<p>This synthetic demonstration uses generated crop and climate fixtures. "
+               "Its country names are real and its numbers are simulated. The observational "
+               "results and their sources are in the main explorer.</p>" if USE_DUMMY
+               else (assets / "sources.html").read_text())
+    tables = result_tables()
 
     # Optional phase-2 inputs
     extra_values = {}   # key -> {iso3: value}
@@ -817,16 +823,6 @@ def build_explorer():
             for key, vals in extra_values.items():
                 feature['properties'][key] = vals.get(iso3)
             
-            # Format nicely for hover
-            m = metrics_dict[iso3]
-            feature['properties']['hover_text'] = (
-                f"<b>{iso3}</b><br>"
-                f"Hill1: {m.get('hill1', 0):.2f}<br>"
-                f"Resp Div: {m.get('resp_div', 0):.3f}<br>"
-                f"Stability: {m.get('stability', 0):.2f}<br>"
-                f"Events: {m.get('n_events', 0)}"
-            )
-
     # 4. Prepare timeseries data for the right panel
     print("  Preparing timeseries data...")
     ts_data = {}
@@ -843,17 +839,15 @@ def build_explorer():
         
         # Top 6 crops by mean value_share
         a_df = anom_df[anom_df['iso3'] == iso3]
-        if a_df.empty:
-            continue
             
-        crop_shares = a_df.groupby('item')['value_share'].mean().sort_values(ascending=False)
+        crop_shares = a_df.groupby('item')['value_share'].first().sort_values(ascending=False)
         top_crops = crop_shares.head(6).index.tolist()
         
         crops_data = {}
         for crop in top_crops:
             crop_df = a_df[a_df['item'] == crop].set_index('year')
             # align with global years
-            aligned = crop_df.reindex(years)['yield_anom'].fillna(0).tolist()
+            aligned = crop_df.reindex(years)['yield_anom'].tolist()
             crops_data[crop] = [_clean(v) for v in aligned]
             
         ts_data[iso3] = {
@@ -884,8 +878,10 @@ def build_explorer():
 <head>
     <meta charset="utf-8">
     <title>Crop Diversity & Drought Resilience Explorer</title>
-    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/plain" id="plotly-licenses">{notices}</script>
+    <script>{plotly_js}</script>
+    <script>window.PlotlyGeoAssets = {{topojson: {{world_110m: {topology}}}}};</script>
     <style>
         body {{ font-family: sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; height: 100vh; }}
         #header {{ background: #2c3e50; color: white; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }}
@@ -911,11 +907,23 @@ def build_explorer():
         #charts-inner {{ position: relative; width: 100%; flex: 1; box-sizing: border-box; padding: 10px; overflow-y: auto; display: flex; flex-direction: column; }}
         {PF_CSS}
         #chart-explanation {{ display: none; padding: 12px; background: #e8f4f8; border-left: 4px solid #3498db; margin-bottom: 10px; font-size: 14px; border-radius: 4px; }}
+        #map-container, #charts-container, #controls, #charts-inner {{ min-width:0; }}
+        @media (max-width: 820px) {{
+            body {{ height:auto; }}
+            #main {{ flex-direction:column; overflow:visible; }}
+            #header, #header > div, #tabs, #india-filters {{ flex-wrap:wrap; gap:6px; }}
+            #header {{ align-items:flex-start; }}
+            #map-container, #charts-container {{ flex:auto; width:100%; box-sizing:border-box; overflow:visible; }}
+            #map {{ flex:none; height:52vh; min-height:260px; }}
+            #charts-inner {{ min-height:350px; }}
+            #controls select, #india-filters select {{ max-width:100%; }}
+            .ind-card, .ind-table-wrap {{ min-width:0; overflow:auto; }}
+        }}
     </style>
 </head>
 <body>
     <div id="header">
-        <h1>Crop Diversity & Drought Resilience Explorer</h1>
+        <h1>Crop Diversity & Drought Resilience Explorer{' — Synthetic demonstration' if USE_DUMMY else ''}</h1>
         <div style="display:flex; gap:10px; align-items:center;">
             <button id="india-jump-btn" onclick="switchScope('india_core')">Explore India Districts (Phase 4) &rarr;</button>
             <button onclick="document.getElementById('about-modal').style.display='block'">About the Data</button>
@@ -928,9 +936,9 @@ def build_explorer():
                 <div id="controls">
                     <label for="scope-select" id="scope-label"><strong>Map Scope:</strong></label>
                     <select id="scope-select">
-                        <option value="global">Global (107 Countries, 1993&ndash;2023)</option>
-                        <option value="india_core">India Districts &mdash; Core DES (303 Districts, 1998&ndash;2022)</option>
-                        <option value="india_ext5">India Districts &mdash; Extended 5-Crop (127 Districts, 1993&ndash;2015)</option>
+                        <option value="global">Global ({len(included_iso3)} Countries, 1993&ndash;2023)</option>
+                        <option value="india_core">India Districts &mdash; Core DES ({len(india_data["metrics"]["core"]) if india_data else 0} Districts, 1998&ndash;2022)</option>
+                        <option value="india_ext5">India Districts &mdash; Extended 5-Crop ({len(india_data["metrics"]["ext5"]) if india_data else 0} Districts, 1993&ndash;2015)</option>
                     </select>
                     <label for="metric-select"><strong>Color Map by:</strong></label>
                     <select id="metric-select">
@@ -960,6 +968,7 @@ def build_explorer():
             <div id="tabs">
                 <button id="tab-ts" class="tab-btn active">Time series</button>
                 <button id="tab-pf" class="tab-btn">Portfolio simulator</button>
+                <button id="tab-national" class="tab-btn">Data tables</button>
                 <button id="tab-india" class="tab-btn">Phase 4: India District Results</button>
             </div>
             <div id="charts-inner">
@@ -968,12 +977,17 @@ def build_explorer():
                 <div id="chart-explanation">
                     <strong>Top Chart:</strong> Shows the yield anomalies (deviations from long-term trends) for the country's top 6 crops by value.<br>
                     <strong>Bottom Chart:</strong> Shows the Cropland-weighted SPEI-12 climate index. Negative values indicate drier conditions.<br>
-                    <strong>Red Shaded Regions:</strong> Represent verified drought events (SPEI-12 &le; -1.0) based on the project's criteria.<br>
+                    <strong>Red Shaded Regions:</strong> Mark drought events in the calculated catalogue (SPEI-12 &le; -1.0) based on the project's criteria.<br>
                     <strong>Blue Shaded Regions:</strong> Represent wet events (SPEI-12 &ge; +1.0), the mirror of the drought rule. Bars are red when SPEI-12 &le; -1.0 and dark blue when SPEI-12 &ge; +1.0.
                 </div>
                 <div id="line-chart" class="chart-wrapper" style="visibility: hidden;"></div>
                 <div id="bar-chart" class="chart-wrapper" style="visibility: hidden;"></div>
             </div>
+            <section id="national-view" style="display:none;overflow:auto;padding:12px">
+                <label>Result table <select id="national-select"></select></label>
+                <p id="national-count"></p><div class="ind-table-wrap"><table class="ind-table" id="national-table"></table></div>
+                <button id="national-prev">Previous</button> <button id="national-next">Next</button>
+            </section>
             {PF_HTML}
         </div>
     </div>
@@ -982,12 +996,13 @@ def build_explorer():
         <div class="modal-content">
             <span class="close" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
             <h2>About the Data Sources</h2>
-            <div id="about-content"></div>
+            <div id="about-content">{sources}</div>
         </div>
     </div>
 
     <script>
         // Data injected from Python
+        const nationalTables = {json.dumps(tables, separators=(",", ":"), allow_nan=False)};
         const geojsonData = {json.dumps(geojson_data)};
         const tsData = {json.dumps(ts_data)};
         const portfolioData = {json.dumps(portfolios, separators=(',', ':'))};
@@ -1004,12 +1019,11 @@ def build_explorer():
             'phi_sync': 'Synchrony'
         }};
         
-        const sourcesMdContent = {json.dumps(sources_md_content)};
-        document.getElementById('about-content').innerHTML = marked.parse(sourcesMdContent);
+
         
         const metricDescriptions = {{
             'hill1': 'The effective number of crops grown (exponent of Shannon entropy). Higher values indicate a more diverse crop portfolio.',
-            'resp_div': 'Measures how differently a country\\'s or district\\'s crops react to drought. High values often flag extreme vulnerability in a single cash crop.',
+            'resp_div': 'Measures how differently a country\\'s or district\\'s crops react to drought. This is the value-weighted spread of the estimated crop slopes.',
             'stability': 'Inverse coefficient of variation (1/CV) of the aggregate agricultural value. Higher means less year-to-year fluctuation.',
             'resistance': 'The ability to withstand a drought shock (ratio of production value during a drought year compared to pre-drought years).',
             'recovery': 'The ability to bounce back post-drought (ratio of post-drought production value compared to the drought year).',
@@ -1101,7 +1115,8 @@ def build_explorer():
                     const m = indiaData.meta[c] || {{}};
                     return `<option value="${{c}}">${{m.state}} &mdash; ${{m.name}} (#${{c}})</option>`;
                 }}).join('');
-            if (currentDistrict && mDict[currentDistrict]) distSel.value = currentDistrict;
+            if (!codes.includes(currentDistrict)) currentDistrict = null;
+            distSel.value = currentDistrict || '';
         }}
 
         function switchScope(scope) {{
@@ -1140,6 +1155,12 @@ def build_explorer():
             renderMap();
         }}
 
+        const percent = v => v == null ? 'n/a' : (100 * v).toFixed(1) + '%';
+        function mapValue(value) {{
+            if (value == null) return null;
+            return ['vulnerability','vuln_wet','vuln_drought'].includes(currentMetric) ? 100 * value : value;
+        }}
+
         function renderMap() {{
             document.getElementById('metric-description').innerText = metricDescriptions[currentMetric] || '';
             if (currentScope !== 'global' && indiaData) {{
@@ -1154,9 +1175,11 @@ def build_explorer():
             
             geojsonData.features.forEach(f => {{
                 if (f.properties && f.properties[currentMetric] !== undefined) {{
-                    zValues.push(f.properties[currentMetric]);
+                    zValues.push(mapValue(f.properties[currentMetric]));
                     isoCodes.push(f.properties.iso3);
-                    hoverTexts.push(f.properties.hover_text);
+                    const value = f.properties[currentMetric];
+                    hoverTexts.push('<b>' + f.properties.iso3 + '</b><br>' + metricNames[currentMetric] +
+                        ': ' + fmtNum(mapValue(value)));
                 }}
             }});
             
@@ -1215,14 +1238,14 @@ def build_explorer():
                 const m = mDict[code];
                 if (m && m[currentMetric] !== null && m[currentMetric] !== undefined) {{
                     distCodes.push(code);
-                    zValues.push(m[currentMetric]);
+                    zValues.push(mapValue(m[currentMetric]));
                     hoverTexts.push(
                         `<b>${{meta.name}}</b> (${{meta.state}}) [#${{code}}]<br>` +
-                        `${{metricNames[currentMetric]}}: <b>${{fmt(m[currentMetric], 3)}}</b><br>` +
+                        `${{metricNames[currentMetric]}}: <b>${{fmt(mapValue(m[currentMetric]), 3)}}</b><br>` +
                         `Hill-1: ${{fmt(m.hill1, 2)}} | Resp Div: ${{fmt(m.resp_div, 3)}}<br>` +
-                        `Stability: ${{fmt(m.stability, 2)}} | Vuln: ${{fmt(m.vulnerability, 2)}} (Drought: ${{fmt(m.vuln_drought, 2)}})<br>` +
+                        `Stability: ${{fmt(m.stability, 2)}} | Vuln: ${{percent(m.vulnerability)}} (Drought: ${{percent(m.vuln_drought)}})<br>` +
                         `Resistance: ${{fmt(m.resistance, 2)}} | Recovery: ${{fmt(m.recovery, 2)}}<br>` +
-                        `Events: ${{m.n_events}} | Balanced Crops: ${{m.n_crops_value}} (${{fmt((m.value_coverage || 0) * 100, 1)}}%)`
+                        `Events: ${{m.n_events}} | Balanced Crops: ${{m.n_crops_value}} (${{percent(m.value_coverage)}})`
                     );
                 }} else {{
                     bgCodes.push(code);
@@ -1303,13 +1326,13 @@ def build_explorer():
             let indiaBanner = '';
             if (iso3 === 'IND' && indiaData) {{
                 indiaBanner = `<div style="margin-top:6px;padding-top:6px;border-top:1px solid #bce0fd;">` +
-                    `<strong>Phase 4 Subnational Analysis Available:</strong> India has 303 core districts (1998&ndash;2022) and 127 extended 5-crop districts (1993&ndash;2015). ` +
+                    `<strong>Phase 4 Subnational Analysis Available:</strong> India has ${{Object.keys(indiaData.metrics.core).length}} core districts (1998&ndash;2022) and ${{Object.keys(indiaData.metrics.ext5).length}} extended 5-crop districts (1993&ndash;2015). ` +
                     `<button onclick="switchScope('india_core')" style="background:#2c3e50;color:#fff;border:none;padding:4px 10px;border-radius:3px;cursor:pointer;font-size:12px;">Open India District Map &rarr;</button></div>`;
             }}
             expEl.innerHTML =
                 `<strong>Top Chart:</strong> Shows the yield anomalies (deviations from long-term trends) for the country's top 6 crops by value.<br>` +
                 `<strong>Bottom Chart:</strong> Shows the Cropland-weighted SPEI-12 climate index. Negative values indicate drier conditions.<br>` +
-                `<strong>Red Shaded Regions:</strong> Represent verified drought events (SPEI-12 &le; -1.0) based on the project's criteria.<br>` +
+                `<strong>Red Shaded Regions:</strong> Mark drought events in the calculated catalogue (SPEI-12 &le; -1.0) based on the project's criteria.<br>` +
                 `<strong>Blue Shaded Regions:</strong> Represent wet events (SPEI-12 &ge; +1.0), the mirror of the drought rule. Bars are red when SPEI-12 &le; -1.0 and dark blue when SPEI-12 &ge; +1.0.` +
                 indiaBanner;
             document.getElementById('line-chart').style.visibility = 'visible';
@@ -1406,7 +1429,7 @@ def build_explorer():
             const winLabel = win === 'core' ? 'Core DES Window (1998&ndash;2022, 47 crops)' : 'Extended 5-Crop Mirror (1993&ndash;2015)';
             const cropPills = Object.keys(dts.crop_meta || {{}}).map(c => {{
                 const cm = dts.crop_meta[c];
-                return `<span class="ds-pill"><strong>${{c}}</strong>: ${{fmt((cm.share || 0) * 100, 1)}}% val, &beta;<sub>SPEI</sub>=${{fmt(cm.beta, 3)}}</span>`;
+                return `<span class="ds-pill"><strong>${{c}}</strong>: ${{percent(cm.share)}} val, &beta;<sub>SPEI</sub>=${{fmt(cm.beta, 3)}}</span>`;
             }}).join('');
             sumEl.innerHTML =
                 `<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;">` +
@@ -1417,10 +1440,10 @@ def build_explorer():
                 `<div class="ds-item"><span class="lbl">Response Diversity</span><span class="val">${{fmt(m.resp_div, 3)}}</span></div>` +
                 `<div class="ds-item"><span class="lbl">Stability (1/CV)</span><span class="val">${{fmt(m.stability, 2)}}</span></div>` +
                 `<div class="ds-item"><span class="lbl">Resistance / Recovery</span><span class="val">${{fmt(m.resistance, 2)}} / ${{fmt(m.recovery, 2)}}</span></div>` +
-                `<div class="ds-item"><span class="lbl">Vulnerability (All / Drought)</span><span class="val">${{fmt(m.vulnerability * 100, 1)}}% / ${{fmt(m.vuln_drought * 100, 1)}}%</span></div>` +
+                `<div class="ds-item"><span class="lbl">Vulnerability (All / Drought)</span><span class="val">${{percent(m.vulnerability)}} / ${{percent(m.vuln_drought)}}</span></div>` +
                 `<div class="ds-item"><span class="lbl">Synchrony (&phi;<sub>sync</sub>)</span><span class="val">${{fmt(m.phi_sync, 3)}}</span></div>` +
                 `<div class="ds-item"><span class="lbl">Events / Drought Yrs</span><span class="val">${{m.n_events}} / ${{m.n_drought_years}}</span></div>` +
-                `<div class="ds-item"><span class="lbl">Balanced Crops (Cov.)</span><span class="val">${{m.n_crops_value}} (${{fmt((m.value_coverage || 0) * 100, 1)}}%)</span></div>` +
+                `<div class="ds-item"><span class="lbl">Balanced Crops (Cov.)</span><span class="val">${{m.n_crops_value}} (${{percent(m.value_coverage)}})</span></div>` +
                 `<div class="ds-item"><span class="lbl">Mean Irrigation Share</span><span class="val">${{m.irrig_share !== null ? fmt(m.irrig_share * 100, 1) + '%' : 'n/a'}}</span></div>` +
                 `</div>` +
                 (cropPills ? `<div class="ds-crops"><strong>Top balanced crops (value share &amp; drought slope &beta;):</strong> ${{cropPills}}</div>` : '');
@@ -1430,7 +1453,7 @@ def build_explorer():
             expEl.innerHTML =
                 `<strong>Top Chart:</strong> District aggregate production anomaly (<code>anom</code>, bold dashed black line) and top balanced crop yield anomalies.<br>` +
                 `<strong>Bottom Chart:</strong> District cropland-weighted December <code>SPEI-12</code> bars, September Kharif <code>SPEI-4</code> (green dotted), and 5-year lagged time-varying diversity <code>hill1_tv</code> (right axis, purple line).<br>` +
-                `<strong>Red Shaded Regions:</strong> Verified district drought events (<code>SPEI-12 &le; -1.0</code>, first year of a run with 3 drought-free pre-years).`;
+                `<strong>Red Shaded Regions:</strong> District drought events in the calculated catalogue (<code>SPEI-12 &le; -1.0</code>, first year of a run with 3 drought-free pre-years).`;
 
             document.getElementById('line-chart').style.visibility = 'visible';
             document.getElementById('bar-chart').style.visibility = 'visible';
@@ -1536,14 +1559,12 @@ def build_explorer():
 
         document.getElementById('india-state-select').addEventListener('change', function(e) {{
             currentIndiaState = e.target.value;
-            populateIndiaDistrictDropdown();
-            renderMap();
+            switchScope(currentScope);
         }});
 
         document.getElementById('india-dist-select').addEventListener('change', function(e) {{
-            if (e.target.value) {{
-                renderDistrictCharts(e.target.value);
-            }}
+            currentDistrict = e.target.value || null;
+            switchScope(currentScope);
         }});
         
         {PF_JS_FILLED}
@@ -1569,17 +1590,24 @@ def build_explorer():
         (EXPLORER / "dummy").mkdir(exist_ok=True)
         out_file = EXPLORER / "dummy" / "index.html"
         
-    with open(out_file, "w", encoding="utf-8") as f:
-        f.write(html_template)
-        
-    size_mb = out_file.stat().st_size / (1024 * 1024)
+    content = html_template.encode("utf-8")
+    size_mb = len(content) / (1024 * 1024)
+    if size_mb >= MAX_SIZE_MB:
+        raise ValueError(f"Explorer is {size_mb:.2f} MB, limit {MAX_SIZE_MB} MB")
+    with NamedTemporaryFile(dir=out_file.parent, delete=False) as handle:
+        staged = Path(handle.name)
+    try:
+        staged.write_bytes(content)
+        staged.chmod(out_file.stat().st_mode & 0o777 if out_file.exists() else 0o644)
+        staged.replace(out_file)
+    finally:
+        staged.unlink(missing_ok=True)
     print(f"Explorer built: {out_file} ({size_mb:.2f} MB)")
     print(f"Countries included: {len(included_iso3)}")
     print(f"Countries with a portfolio: {len(portfolios)}")
     if india_data:
         print(f"Phase 4 India districts: {len(india_data['metrics']['core'])} core, {len(india_data['metrics']['ext5'])} ext5")
     print(f"Extra map layers: {list(extra_metrics) or 'none'}")
-    assert size_mb < MAX_SIZE_MB, f"explorer is {size_mb:.2f} MB, limit {MAX_SIZE_MB} MB"
 
 if __name__ == "__main__":
     build_explorer()

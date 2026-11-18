@@ -1,7 +1,8 @@
 """Crop-level drought panels for India plus one high-hill1 and one low-hill1 contrast country.
 
-  python -m src.validation.case_studies                      # prints contrast candidates, makes IND only
-  python -m src.validation.case_studies --high ISO3 --low ISO3   # makes IND + the two chosen countries
+  python -m src.validation.case_studies                        # published cases: IND, COL, FIN
+  python -m src.validation.case_studies --high ISO3 --low ISO3 # choose a different contrast pair
+  python -m src.validation.case_studies --focal-only            # IND only (also the synthetic default)
 
 Inputs (all from src/metrics/run.py): metrics.parquet, crop_anomalies.parquet, metrics_national.parquet.
 Outputs:
@@ -146,7 +147,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--high", help="ISO3 of the high-hill1 contrast country")
     ap.add_argument("--low", help="ISO3 of the low-hill1 contrast country")
+    ap.add_argument("--focal-only", action="store_true", help="Write only the focal India case")
     args = ap.parse_args()
+    if args.focal_only and (args.high or args.low):
+        ap.error("--focal-only cannot be combined with --high or --low")
+    if not any((args.high, args.low, args.focal_only, paths.USE_DUMMY)):
+        args.high, args.low = "COL", "FIN"
 
     metrics, anomalies, national = load_inputs()
     names = country_names()
@@ -161,7 +167,7 @@ def main():
         chosen.append((args.high.upper(), "high hill1"))
     if args.low:
         chosen.append((args.low.upper(), "low hill1"))
-    if not (args.high and args.low):
+    if len(chosen) == 1:
         print("\nNo contrast pair chosen yet: re-run with --high ISO3 --low ISO3 (figures made for IND only).")
     for iso3, _ in chosen:
         assert iso3 in set(metrics["iso3"]), f"{iso3} is not in metrics.parquet"

@@ -1,12 +1,13 @@
 """Phase 4 India district data loader and GeoJSON preparation for the interactive explorer.
 
 Reads data/clean/india/*, outputs/india/*, outputs/stats/india_*.csv, and outputs/validation/india_drought_years.csv.
-Simplifies district polygons and rounds numeric arrays so the single-file explorer/index.html stays compact (< 15 MB).
+Simplifies district polygons for display. Tabular and time-series values retain source precision.
 """
 import json
 import numpy as np
 import pandas as pd
 import geopandas as gpd
+from shapely import orient_polygons, set_precision, get_num_geometries
 
 from src.common import paths
 from src.metrics.events import find_events
@@ -33,7 +34,7 @@ INDIA_EXTRA_METRICS = {
     ),
     "n_events": (
         "Drought Event Count",
-        "Number of verified district drought events (first year of a run with SPEI-12 <= -1.0, preceded by 3 drought-free years).",
+        "Number of usable district drought events (first year of a run with SPEI-12 <= -1.0, preceded by 3 drought-free years).",
         "Oranges",
     ),
     "value_coverage": (
@@ -49,41 +50,24 @@ INDIA_EXTRA_METRICS = {
 }
 
 
-def _clean(v, ndigits=None):
-    """Convert NaN/inf to None and optionally round floats for compact JSON serialization."""
-    if v is None:
+def _clean(v):
+    if pd.isna(v):
         return None
     if isinstance(v, (bool, np.bool_)):
         return bool(v)
     if isinstance(v, (int, np.integer)):
         return int(v)
-    try:
-        f = float(v)
-        if not np.isfinite(f):
-            return None
-        return round(f, ndigits) if ndigits is not None else f
-    except (TypeError, ValueError):
-        return str(v) if pd.notna(v) else None
+    if isinstance(v, (float, np.floating)):
+        return float(v) if np.isfinite(v) else None
+    return v
 
 
-def _round_coords(coords, ndigits=COORD_DIGITS):
-    if not coords:
-        return coords
-    if isinstance(coords[0], (int, float)):
-        return [round(float(x), ndigits) for x in coords]
-    return [_round_coords(c, ndigits) for c in coords]
-
-
-def _records_clean(df, ndigits=6):
-    """Convert DataFrame to list of dicts with NaN -> None and floats rounded."""
-    out = []
-    for row in df.to_dict("records"):
-        out.append({k: _clean(v, ndigits if isinstance(v, (float, np.floating)) else None) for k, v in row.items()})
-    return out
+def _records_clean(df):
+    return [{k: _clean(v) for k, v in row.items()} for row in df.to_dict("records")]
 
 
 def _build_ext5_crop_anomalies(usable_ext5_codes, clim_df):
-    """Compute per-crop yield anomalies and response slopes for the 127 usable ext5 districts using src.india.metrics.one_district."""
+    """Compute per-crop yield anomalies and response slopes for the usable ext5 districts using src.india.metrics.one_district."""
     if not paths.INDIA_CROPS_EXT5.exists():
         return pd.DataFrame(columns=["dist_code", "year", "crop", "yield_anom", "value_share", "resp_beta"])
     crops_ext5 = pd.read_parquet(paths.INDIA_CROPS_EXT5)
@@ -155,10 +139,13 @@ def load_india_data():
     # 1. Simplify and round district GeoJSON
     gdf = gpd.read_file(paths.INDIA_GEOJSON)
     gdf["dist_code"] = gdf["dist_code"].astype(str)
-    gdf["geometry"] = gdf["geometry"].simplify(SIMPLIFY_TOL, preserve_topology=True)
+    simplified = gdf.geometry.simplify(SIMPLIFY_TOL, preserve_topology=True)
+    snapped = set_precision(simplified, grid_size=10 ** -COORD_DIGITS)
+    # Retain tiny islands and complete districts if snapping collapses a component.
+    keep_original = snapped.is_empty | (get_num_geometries(snapped) < get_num_geometries(simplified))
+    gdf["geometry"] = orient_polygons(snapped.where(~keep_original, simplified), exterior_cw=True)
+    assert gdf.geometry.is_valid.all() and not gdf.geometry.is_empty.any()
     geojson_data = json.loads(gdf[["dist_code", "geometry"]].to_json(drop_id=True))
-    for feat in geojson_data["features"]:
-        feat["geometry"]["coordinates"] = _round_coords(feat["geometry"]["coordinates"])
 
     # 2. Build metadata per matched district
     core_set = set(m_core_df["dist_code"])
@@ -202,8 +189,8 @@ def load_india_data():
             "split_flag": bool(r["split_flag"]),
             "core_status": c_status,
             "ext5_status": e_status,
-            "irrig_share": _clean(irrig_mean.get(code), 4),
-            "fert_kg_ha": _clean(fert_mean.get(code), 2),
+            "irrig_share": _clean(irrig_mean.get(code)),
+            "fert_kg_ha": _clean(fert_mean.get(code)),
         }
 
     # 3. Build metrics dicts for core and ext5
@@ -221,11 +208,11 @@ def load_india_data():
             d = {}
             for col in metric_cols:
                 if col in ("n_events", "n_drought_years", "n_crops_value", "n_crops_beta"):
-                    d[col] = _clean(int(row[col])) if pd.notna(row[col]) else 0
+                    d[col] = _clean(int(row[col])) if pd.notna(row[col]) else None
                 else:
-                    d[col] = _clean(row[col], 4)
-            d["irrig_share"] = _clean(irrig_mean.get(code), 4)
-            d["fert_kg_ha"] = _clean(fert_mean.get(code), 2)
+                    d[col] = _clean(row[col])
+            d["irrig_share"] = _clean(irrig_mean.get(code))
+            d["fert_kg_ha"] = _clean(fert_mean.get(code))
             metrics_by_win[win][code] = d
 
     # 4. Build district timeseries (core 1998-2022 and ext5 1993-2015)
@@ -251,13 +238,13 @@ def load_india_data():
             code = str(code)
             grp = grp.sort_values("year")
             years = grp["year"].astype(int).tolist()
-            spei = [_clean(v, 4) for v in grp["spei"].tolist()]
-            anom = [_clean(v, 4) for v in grp["anom"].tolist()]
-            hill1_tv = [_clean(v, 3) for v in grp["hill1_tv"].tolist()]
+            spei = [_clean(v) for v in grp["spei"].tolist()]
+            anom = [_clean(v) for v in grp["anom"].tolist()]
+            hill1_tv = [_clean(v) for v in grp["hill1_tv"].tolist()]
 
             c_sub = clim_by.get(code)
             if c_sub is not None and "spei4kh_w" in c_sub.columns:
-                spei_kh = [_clean(v, 4) for v in c_sub.reindex(years)["spei4kh_w"].tolist()]
+                spei_kh = [_clean(v) for v in c_sub.reindex(years)["spei4kh_w"].tolist()]
             else:
                 spei_kh = [None] * len(years)
 
@@ -268,16 +255,16 @@ def load_india_data():
             crop_meta = {}
             a_df = ca_by.get(code)
             if a_df is not None and not a_df.empty:
-                shares = a_df.groupby("crop")["value_share"].mean().sort_values(ascending=False)
+                shares = a_df.groupby("crop")["value_share"].first().sort_values(ascending=False)
                 top_crops = shares.head(6).index.tolist()
                 for crop in top_crops:
                     cdf = a_df[a_df["crop"] == crop].set_index("year")
                     aligned = cdf.reindex(years)["yield_anom"].tolist()
-                    crops_data[str(crop)] = [_clean(v, 4) for v in aligned]
+                    crops_data[str(crop)] = [_clean(v) for v in aligned]
                     beta_val = cdf["resp_beta"].iloc[0] if len(cdf) else None
                     crop_meta[str(crop)] = {
-                        "share": _clean(shares[crop], 4),
-                        "beta": _clean(beta_val, 4),
+                        "share": _clean(shares[crop]),
+                        "beta": _clean(beta_val),
                     }
 
             ts_by_win[win][code] = {
@@ -310,15 +297,12 @@ def load_india_data():
     }
     stats_data = {}
     for key, fpath in stats_files.items():
-        if fpath.exists():
-            stats_data[key] = _records_clean(pd.read_csv(fpath))
-        else:
-            stats_data[key] = []
+        stats_data[key] = _records_clean(pd.read_csv(fpath, float_precision="round_trip"))
 
     # 6. Assertions on loaded Phase 4 data
     poly_codes = {f["properties"]["dist_code"] for f in geojson_data["features"]}
-    assert len(metrics_by_win["core"]) == len(m_core_df) == 303, f"expected 303 core districts, got {len(metrics_by_win['core'])}"
-    assert len(metrics_by_win["ext5"]) == len(m_ext5_df) == 127, f"expected 127 ext5 districts, got {len(metrics_by_win['ext5'])}"
+    assert len(metrics_by_win["core"]) == len(m_core_df)
+    assert len(metrics_by_win["ext5"]) == len(m_ext5_df)
     assert set(metrics_by_win["core"]) <= poly_codes, "core districts missing from GeoJSON"
     assert set(metrics_by_win["ext5"]) <= poly_codes, "ext5 districts missing from GeoJSON"
     assert set(ts_by_win["core"]) == set(metrics_by_win["core"]), "core ts_data keys mismatch"

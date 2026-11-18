@@ -26,28 +26,28 @@ This document is the comprehensive record of the methodology, data pipelines, as
 *   **Filtering:** We strictly filter for base-level crops (those with an "Area harvested" element) and explicitly remove 11 aggregate categories (e.g., "Cereals, primary") to avoid double-counting diversity.
 *   **Yield Calculation:** Yield is manually recalculated as `Production (tonnes) / Area (hectares)`.
 *   **Value Standardization:** Because raw tonnage cannot be summed across different crops (e.g., tonnes of apples vs. tonnes of wheat), we calculate the portfolio's **Gross Production Value in constant 2014-2016 International Dollars (I$)**. Where FAOSTAT does not publish a value, we compute it as `production × item price`, where item price is recovered as the median of `value / production` across all published country-years for that item. This fill reproduces published values to within 0.01% of their total.
-*   **Imputation Tracking:** Country-years tagged with FAOSTAT flags `E` (Estimated) or `I` (Imputed) are tracked via an `is_imputed` boolean. Highly imputed or perfectly flat series are excluded from stability calculations.
+*   **Imputation tracking.** The crop table flags estimated or imputed area or production. The national inclusion screen uses the value share of flagged rows. Crop-response fitting uses non-imputed observations. The quality pipeline also lists flat series for review.
 
 ### 2.2 MapSPAM 2020 v2 (Spatial Cropland Weights)
 *   **Purpose:** To solve the problem of spatial averaging. We cannot average climate indices across entire countries (e.g., including barren deserts), so we use MapSPAM as a geospatial mask.
 *   **Pipeline:** `src/climate/cropland.py`
 *   **Processing:** We extract the global physical area (in hectares) for all technologies (`_A_` layers) across 46 crops at a 5-arcminute resolution. We downsample each crop's raster to a 0.5° grid (matching the SPEI grid) and produce two outputs:
     *   `cropland_05deg.npy` — the total cropland footprint (sum of all 46 crops), shape `(360, 720)`. Used by `aggregate.py` for country-level climate weighting.
-    *   `cropland_05deg.npz` — per-crop arrays, each `(360, 720)`. Enables future crop-specific climate exposure calculations.
+    *   `cropland_05deg.npz` — per-crop arrays, each `(360, 720)`. Supplies the crop-class exposures used for drought-response slopes.
 *   **Validation:** Global physical crop area = **1,274 Mha**; cells with cropland = **38,162** of 259,200.
 
 ### 2.3 SPEIbase v2.10 (Climate & Drought Exposure)
 *   **Index:** We use the Standardized Precipitation Evapotranspiration Index (SPEI), which measures precipitation minus potential evapotranspiration.
 *   **Pipeline:** `src/climate/aggregate.py`
 *   **Three indices computed per country-year:**
-    *   `spei12_w` — Cropland-weighted mean of December SPEI-12 (12-month running average).
+    *   `spei12_w` — Cropland-weighted mean of December SPEI-12 (standardized 12-month accumulated water balance).
     *   `spei12_unw` — Unweighted mean (by cell area only, i.e., cos-latitude weighting).
-    *   `spei6min_w` — Minimum over the 12 months of cropland-weighted SPEI-6. This captures acute seasonal "flash droughts" that annual averages mask.
+    *   `spei6min_w` — Minimum over the 12 months of cropland-weighted SPEI-6. This measures the driest six-month accumulation in each year.
 *   **Defining a Drought Event:**
     *   An index of `0` is normal. `≤ -1.0` is a moderate drought, `≤ -1.5` is severe, and `≤ -2.0` is extreme.
     *   An **Event** is defined as the first year of a consecutive run of drought years (where December `spei12_w ≤ -1.0`).
     *   To accurately measure agricultural impact, an event must be preceded by at least 3 normal (drought-free) years, and followed by 3 years inside the analysis window.
-*   **Coverage:** 230 countries covered; 431 total drought events identified.
+*   **Coverage:** The catalogue contains 431 events in 187 countries or harmonized units.
 
 ### 2.4 Control Variables
 To ensure our regressions are statistically robust, we join:
@@ -63,8 +63,8 @@ All metrics are evaluated against a detrended national value index $I_t$ (using 
 
 ### 3.1 Diversity Metrics
 *   **Crop Diversity (`hill1`):** The effective number of crops, calculated as the exponent of the Shannon entropy of the mean harvested-area shares over the time window.
-*   **Response Diversity (`resp_div`):** Value-weighted standard deviation of crop-specific drought sensitivities (OLS slopes of yield anomaly on `spei12_w`). Calculated following Ross et al. (2023).
-*   **Response Divergence (`resp_divergence`):** Unweighted divergence metric: `(max β - min β - ||max β| - |min β||) / (max β - min β)`. Equals 0 when all slopes share the same sign, 1 when they are symmetric.
+*   **Response Diversity (`resp_div`):** Value-weighted standard deviation of crop-specific drought sensitivities (OLS slopes of yield anomaly on the crop’s MapSPAM-weighted December SPEI-12).
+*   **Response Divergence (`resp_divergence`):** Ross et al. (2023) directional divergence metric: `(max β - min β - ||max β| - |min β||) / (max β - min β)`. Equals 0 when all slopes share the same sign, 1 when they are symmetric.
 
 ### 3.2 The Four Faces of Resilience (Urruty et al. 2016)
 *   **Stability:** $1 / CV$ (Coefficient of Variation) of the detrended residuals of national value.
@@ -82,133 +82,34 @@ All metrics are evaluated against a detrended national value index $I_t$ (using 
 
 *   **Spatial Stationarity:** We use the MapSPAM 2020 v2 dataset to represent the physical distribution of crops over the entire 1993-2023 window. We assume the macro-geographic footprint of a country's cropland does not drastically migrate during this period.
 *   **Constant Valuation:** The 2014-2016 constant FAOSTAT prices are assumed to hold relative value correctly across the entire window, ignoring severe market shocks that might temporarily alter a crop's value relative to others.
-*   **Detrending Validity:** We assume that LOWESS detrending perfectly captures and isolates long-term agronomic improvements (e.g., better fertilizer, GMOs) without mistakenly smoothing out the sharp climatic shocks we aim to measure.
-*   **Single National SPEI:** The current production pipeline uses a single total-cropland mask for the climate weighting. This means all crops in a country receive the same SPEI exposure. The per-crop `.npz` data is generated but not yet plumbed through `aggregate.py`. See Section 6 (Spatial Dilution) for the implications.
-    *   **Update:** The pipeline now utilizes MapSPAM's high-resolution masks to extract specific climate exposures for each of 46 distinct crops. The resilience of each crop is regressed strictly against the climate signal actually experienced by the grid cells where that specific crop is physically grown, effectively eliminating spatial dilution for large nations.
+*   LOWESS provides an estimated trend. Smoothing can absorb both long-run changes and short-run variation.
+*   Country-level events use the total cropland footprint. Crop-response slopes use the mapped crop class or a physical-area-weighted combination of classes for coffee and millet. A missing crop exposure produces a missing slope.
 
----
+## 5. National results
 
-## 5. Core Statistical Findings
+Among 101 countries with complete controls, a one-standard-deviation increase in harvested-area diversity is associated with 0.399 standard deviations higher stability (HC3 p = 0.00544) and 0.423 standard deviations lower all-year vulnerability (p = 7.69 × 10⁻⁸). The resistance and recovery models each use 96 countries. Their diversity coefficients are +0.105 (p = 0.271) and −0.238 (p = 0.144). Higher irrigation share is associated with lower all-year vulnerability (coefficient −0.205, p = 0.0470). The controls use the World Bank release of 11 November 2026. [Adjusted national estimates](outputs/stats/ols.csv)
 
-Based on the regression outputs in `outputs/stats/ols.csv` and `outputs/stats/spearman.csv`:
+The country and year fixed-effects model estimates a SPEI × standardized Hill-1 interaction of −0.007619 (p = 0.02981, 3,286 country-years, 106 countries). The outcome is the national value anomaly. The holdout analysis uses 1993–2012 for trend fitting, crop eligibility and value shares. Against the zero-anomaly baseline, median crop skill in 2013–2023 is −0.01505 across 1,269 crop tests. The training and test slopes have Spearman ρ = 0.232, and 57.1% keep their sign. Across 263 holdout drought country-years the correlation between predicted and observed national anomalies is −0.079. The evaluation uses observed holdout weather. [Panel estimates](outputs/stats/panel_fe.csv) · [Holdout results](outputs/stats/oos_summary.csv)
 
-### 5.1 Crop Diversity Increases Resilience (Central Hypothesis Confirmed)
-The effective number of crops (`hill1`) is significantly positively correlated with agricultural stability ($\beta = 0.38, p = 0.003$) and significantly decreases vulnerability during drought years ($\beta = -0.30, p = 0.002$).
+## 6. Spatial exposure and severity
 
-**Interpretation:** Countries that grow a wider variety of crops suffer significantly less production loss during droughts. This is the core finding of the project.
+Across 107 countries, country log area correlates with the variance of cropland-weighted SPEI at −0.4841 (p = 1.27 × 10⁻⁷). Its correlation with the largest absolute crop slope is +0.1853 (p = 0.0560). MapSPAM describes 2020 crop locations throughout the analysis period. In the severity model the extreme-drought × Hill-1 coefficient is +0.0420 (clustered p = 0.107). The exposure and supply results include country-level crop classes, correlated climate exposure, and domestic and imported food sources. [Spatial results](outputs/stats/spatial_flash.csv) · [Severity](outputs/stats/severity_panel.csv) · [Exposure](outputs/exposure_diversity.parquet) · [Supply](outputs/supply_diversity.parquet)
 
-### 5.2 Irrigation Mitigates Drought Shock
-The proportion of irrigated land strongly buffers drought vulnerability ($\beta = -0.32, p < 0.0001$).
+## 7. Seasonal and annual drought measures
 
-### 5.3 Diversity Does Not Affect Resistance or Recovery
-Neither `hill1` nor `resp_div` show statistically significant effects on resistance ($p = 0.33$) or recovery ($p = 0.09$). This suggests that crop diversity protects against *chronic* instability and *overall* vulnerability, but does not significantly alter a country's immediate response to a single acute drought event.
+In the 240 country-years with annual SPEI below −1.5, the correlations with national value anomaly are +0.235 for the minimum six-month SPEI and +0.172 for annual SPEI. Across all 3,317 country-years the correlations are +0.133 and +0.142, respectively. Neither comparison measures flowering-stage damage. [Seasonal and annual estimates](outputs/stats/spatial_flash.csv)
 
----
+## 8. Crop response diversity
 
-## 6. Extended Analysis: Spatial Dilution
+Across 106 countries, the weighted spread of crop drought slopes has a rank correlation of +0.513 with vulnerability and −0.472 with stability. Its Pearson correlation with the largest absolute crop slope is +0.890. These estimates describe variation across crops and countries. Identifying which crop drives a national loss would require estimating its contribution to the country's value change in that year. [Response-diversity estimates](outputs/stats/response_paradox.csv)
 
-**Script:** `src/climate/analysis/spatial_and_flash.py`
-**Outputs:** `outputs/stats/spatial_flash.csv`, `figures/climate/05_spatial_dilution_flash_droughts.png`
+## 9. Historical validation
 
-### 6.1 The Problem
-When we average SPEI across the total cropland footprint of a geographically large country, droughts in one region are diluted by normal conditions in another. This spatial dilution artificially dampens the measured climate signal.
-
-### 6.2 Evidence
-Using the 107 included countries, we correlated $\log_{10}(\text{area\_km}^2)$ against the variance of `spei12_w`:
-
-| Test | r | p | n |
-|---|---|---|---|
-| Pearson(log₁₀(area), Var(spei12_w)) | **-0.4841** | 1.27e-07 | 107 |
-| Pearson(log₁₀(area), max_abs_beta) | +0.1863 | 0.055 | 107 |
-
-### 6.3 Interpretation
-Large countries exhibit significantly dampened SPEI variance ($r = -0.48$, $p < 10^{-7}$), confirming spatial dilution. However, their crops are NOT inherently less drought-sensitive ($r = +0.19$, $p = 0.055$, not significant). This means the measured drought index is weaker in large countries, but the actual agricultural vulnerability is not. The per-crop `.npz` weights generated by `cropland.py` will enable future analyses to calculate crop-specific SPEI exposures, eliminating this bias.
-
-### 6.4 Resolution with Crop-Specific Weights
-Because we engineered the pipeline to utilize MapSPAM's precise physical distribution rasters (`crop_climate.parquet`), we now regress crop yields strictly against the specific climate signal each crop experienced, eliminating spatial dilution at the crop level.
-
-Because of this fix, the correlation between country area and agricultural drought sensitivity (`max_abs_beta`) became statistically significant ($r = +0.20$, $p < 0.05$). Large countries actually tend to have *more* drought-sensitive crop portfolios (as they cultivate a wider variety of specialized regions), a crucial signal that was completely masked when we previously relied on a single diluted national index.
-
----
-
-## 7. Extended Analysis: Flash Droughts vs Annual Droughts
-
-**Script:** `src/climate/analysis/spatial_and_flash.py`
-**Outputs:** `outputs/stats/spatial_flash.csv`, `figures/climate/05_spatial_dilution_flash_droughts.png`
-
-### 7.1 The Question
-The pipeline computes both `spei12_w` (a 12-month rolling window) and `spei6min_w` (the minimum 6-month window observed during the year). Which is a better predictor of agricultural losses?
-
-### 7.2 Evidence
-
-| Condition | spei12_w vs anom (r) | spei6min_w vs anom (r) | n |
-|---|---|---|---|
-| All years (global) | **+0.1417** | +0.1334 | 3,317 |
-| Severe droughts (spei12_w < -1.5) | +0.1724 | **+0.2346** | 240 |
-
-### 7.3 Interpretation
-During normal and mild conditions, the annual drought index `spei12_w` is a marginally better predictor ($r = 0.14$ vs $0.13$). However, **during severe drought events**, the seasonal flash drought metric `spei6min_w` is significantly more predictive ($r = 0.23$ vs $0.17$). This proves that acute seasonal moisture deficits occurring during critical phenological windows (e.g., flowering, pollination) are the true drivers of catastrophic yield shocks. Annual averages mask these short, devastating dry spells.
-
----
-
-## 8. Extended Analysis: The Response Diversity Paradox
-
-**Script:** `src/climate/analysis/response_paradox.py`
-**Outputs:** `outputs/stats/response_paradox.csv`, `figures/climate/04_response_diversity_paradox.png`
-
-### 8.1 The Paradox
-Basic portfolio theory predicts that if different crops react differently to drought (high response diversity), the overall portfolio should be more stable. Our data shows the **exact opposite**:
-
-| Test | ρ / r | p | n |
-|---|---|---|---|
-| Spearman(resp_div, vulnerability) | **+0.5177** | 1.33e-08 | 106 |
-| Spearman(resp_div, stability) | **-0.4807** | 1.83e-07 | 106 |
-
-Higher response diversity predicts *higher* vulnerability and *lower* stability.
-
-### 8.2 Resolution: The "Achilles' Heel" Mechanism
-We computed `max_abs_beta` — the maximum absolute drought sensitivity ($|\beta|$) of any single crop in a country's portfolio — and found:
-
-| Test | r | p | n |
-|---|---|---|---|
-| Pearson(resp_div, max_abs_beta) | **+0.8819** | 9.43e-36 | 106 |
-| Pearson(max_abs_beta, mean_crop_cv) | +0.2306 | 1.74e-02 | 106 |
-| Pearson(resp_div, mean_crop_cv) | +0.3350 | 4.49e-04 | 106 |
-
-**`resp_div` is almost perfectly correlated ($r = 0.88$) with the single most drought-sensitive crop.**
-
-### 8.3 Robustness Check
-Even after controlling for climate variance (`spei12_w_var`) via OLS regression:
-
-| Term | Coefficient | p |
-|---|---|---|
-| resp_div | +1.3193 | 3.19e-06 |
-| spei12_w_var | +0.1014 | 1.55e-04 |
-| R² = 0.2429 | | |
-
-The effect of `resp_div` remains highly significant.
-
-### 8.4 Interpretation
-High response divergence in agricultural data does **not** indicate a balanced, diversified portfolio of complementary drought responses. Instead, it acts as a statistical flag for extreme outliers — portfolios dominated by a single, hyper-sensitive "Achilles' heel" cash crop. When drought strikes, the catastrophic collapse of this one crop overwhelms the national value index, rendering any minor buffering from other crops irrelevant.
-
-This finding has major policy implications: simply increasing the *number* of crops (hill1) improves resilience, but encouraging crops that react wildly differently to drought does not — unless the hyper-sensitive outlier is removed or its share is capped.
-
----
-
-## 9. Validation & Ground-Truth Hit Rate
-
-To ensure our automated climate pipeline correctly identifies agricultural droughts, we validated the `spei12_w` index against a ground-truth catalogue of 12 highly documented historical drought events (e.g., USA 2012, AUS 2006, IND 2002).
-
-**Validation Findings:**
-*   **Exact Year Match:** The cropland-weighted `spei12_w <= -1.0` successfully caught 50% of the ground-truth events in the exact year they were reported.
-*   **+/- 1 Year Window:** When allowing a 1-year buffer (since agricultural reporting years sometimes differ from calendar climate years), the hit rate improved to ~58%.
-*   **Case Studies:** Detailed micro-validations were performed on India (IND), Colombia (COL), and Finland (FIN), successfully showing that the national value index visually corresponds with the severe dips in individual crop yield anomalies during shaded drought years.
-
----
+For 12 selected country events, cropland-weighted SPEI-12 detected 6 in the listed year and 7 within one year. Area-weighted SPEI-12 detected 5 in the listed year, and the stricter event catalogue contained 4. The denominators describe these selected cases. [Validation table](outputs/validation/drought_hits_summary.csv)
 
 ## 10. Figures Generated
 
-All figures are in `figures/climate/` at 300 DPI.
+The following climate figures are in `figures/climate/`. The numbered collection also includes national results, district results and validation figures. [Complete figure index](figures/deck/INDEX.md)
 
 | Figure | Description |
 |---|---|
@@ -216,26 +117,20 @@ All figures are in `figures/climate/` at 300 DPI.
 | `02_cropland_weights.png` | Global cropland heatmap (linear color scale) |
 | `02_cropland_weights_lognorm.png` | Global cropland heatmap (logarithmic color scale) |
 | `03_event_counts_map.png` | Choropleth of drought event counts per country (1993-2023) |
-| `04_response_diversity_paradox.png` | 3-panel scatterplot resolving the Response Diversity Paradox |
-| `05_spatial_dilution_flash_droughts.png` | 3-panel analysis of spatial dilution and flash drought predictive power |
+| `04_response_diversity_paradox.png` | Crop slope dispersion, vulnerability and crop volatility |
+| `05_spatial_dilution_flash_droughts.png` | 3-panel analysis of country area and seasonal versus annual drought correlations |
 
 ---
 
-## 11. Interactive Explorer, Phase 4 India District Integration & Presentation Deck
+## 11. Indian districts and the explorer
 
-To make the global and subnational findings accessible, the project includes an interactive dashboard and an auto-generated presentation deck:
+The core 1998–2022 district model uses 308 districts and 6,160 district-years after lagging the crop mix by five years. The SPEI × standardized lagged Hill-1 coefficient is +0.003390 (95% CI −0.006915 to +0.013694, p = 0.518). The five-crop 1993–2015 model uses 127 districts and 2,286 district-years. Its interaction is +0.008485 (95% CI −0.009912 to +0.026882, p = 0.363). Both intervals include zero. The core sample has 460 usable events in 274 districts. The five-crop sample has 174 in 123 districts. The model coefficients use current district matches, balanced area windows and paddy-equivalent valuation for milled rice. [District estimates](outputs/stats/india_panel.csv) · [Sample and events](outputs/stats/india_summary.csv) · [District sources and methods](src/india/README.md)
 
-*   **Interactive Explorer (`explorer/index.html`):** A standalone, zero-dependency HTML file (~4.5 MB, well below the 15 MB contract limit) using Plotly.js:
-    *   **Global Choropleth & Timeseries (Phases 1–3):** Users can dynamically toggle across diversity, resilience, wet-event, and trade dependency metrics for 107 countries, inspect synchronized crop yield anomaly and SPEI-12 time series with drought/wet event shading, and run the constrained Markowitz **Portfolio Simulator**.
-    *   **Phase 4 India District Map & Timeseries (`src/explorer/india_data.py`, `src/explorer/build.py`):** Users can switch the map scope to **India Districts — Core DES (303 Districts, 1998–2022, 47 crops)** or **India Districts — Extended 5-Crop Mirror (127 Districts, 1993–2015)** across all 690 matched geoBoundaries ADM2 district polygons. Supports filtering by Indian state, searching by district, coloring by district-level resilience faces, response divergence, drought event counts, balanced value coverage, and ICRISAT irrigation share, and inspecting district-level aggregate value anomalies (`anom`), top crop yield anomalies, December `SPEI-12`, September Kharif `SPEI-4`, and 5-year lagged time-varying diversity (`hill1_tv`).
-    *   **Phase 4 Statistical & Validation Dashboard (`#tab-india`):** Embeds interactive Plotly charts and full regression tables for the within-district panel models (`india_panel.csv`), irrigation confounder tests, drought severity bins and studentised within-state permutation inference (`india_severity.csv`, `india_severity_perm.csv`), cross-district vs. global national Spearman comparisons (`india_vs_national.csv`), Conley spatial-HAC standard errors (`india_conley.csv`), Kharif exposure and monsoon-crop checks (`india_kharif.csv`, `india_kharif_crops.csv`), leave-one-state-out stability (`india_leave_out_state.csv`), and documented all-India drought year validation (`india_drought_years.csv`).
-*   **Presentation Deck (`figures/deck/`):** The pipeline automatically aggregates the 30 final analytical figures from all submodules (`climate`, `data`, `results`, `validation`, `india`), prefixes them for sequential presentation, and generates `INDEX.md` alongside the data architecture flowchart (`pipeline.svg`, `pipeline.png`).
-
----
+The standalone explorer includes national and district maps, crop time series, portfolio simulations, model results and source tables. The real and synthetic builds carry separate labels. Missing values remain gaps in lines and appear as unavailable in tables. The map geometry is simplified for display. [Explorer](explorer/index.html) · [Numbered figures](figures/deck/INDEX.md)
 
 ## 12. Reproducibility
 
-All statistical results are reproducible via the following commands:
+The full run order and input requirements are in the [README](README.md). The following commands rebuild the climate inputs, selected analyses and explorer.
 
 ```bash
 source .venv/bin/activate
@@ -247,15 +142,17 @@ python -m src.climate.events         # → data/clean/events.csv
 python -m src.climate.figures        # → figures/climate/01-03*.png
 
 # Extended analyses (runs on committed data/clean/ and outputs/)
-python src/climate/analysis/response_paradox.py      # → outputs/stats/response_paradox.csv, figures/climate/04*.png
-python src/climate/analysis/spatial_and_flash.py      # → outputs/stats/spatial_flash.csv, figures/climate/05*.png
+python -m src.climate.analysis.response_paradox      # → outputs/stats/response_paradox.csv, figures/climate/04*.png
+python -m src.climate.analysis.spatial_and_flash      # → outputs/stats/spatial_flash.csv, figures/climate/05*.png
 
 # Phase 4 India district analysis
 python -m src.india.panel            # → outputs/india/*.parquet, outputs/stats/india_*.csv, figures/india/*.png
 python -m src.india.conley           # → outputs/stats/india_conley.csv
-python -m src.india.kharif           # → outputs/stats/india_kharif.csv
+python -m src.india.kharif
+python -m src.india.kharif_crops
 
-# Interactive Explorer & Deck Assets
+# Published case studies and the offline explorer
+python -m src.validation.case_studies --high COL --low FIN
 python -m src.explorer               # → explorer/index.html, figures/deck/*
 ```
 

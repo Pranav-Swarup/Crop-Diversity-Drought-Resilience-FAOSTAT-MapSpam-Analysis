@@ -23,7 +23,7 @@ python -m pytest src/metrics       # unit tests
 | `response.resp_beta(yield_anom, spei)` | OLS slope |
 | `response.resp_div(betas, weights)`, `response.resp_divergence(betas)` | response diversity |
 | `decompose.decompose(values, resid)` | `phi_sync, mean_crop_cv, cv_total` |
-| `run.compute(crops, climate, events, included, frac, thr)` | all output tables |
+| `run.compute(crops, climate, crop_climate, events, included, frac, thr)` | all output tables |
 | `data.analysis_table()` | metrics + region + control means, one row per country |
 
 ## Definitions
@@ -35,7 +35,7 @@ python -m pytest src/metrics       # unit tests
 - **resistance**: median over events of `I_t / mean(I_{t−3..t−1})`. **recovery**: median over events of `mean(I_{t+1..t+3}) / I_t`. A country needs at least 1 event (**default**); `n_events` is the number used.
 - **vulnerability**: share of years with `I_t < 0.9`. **vuln_drought**: the same over years with `spei12_w ≤ −1.0`.
 - **Drought event**: first year of a run of years with `spei12_w ≤ −1.0`, with 3 years before and after inside 1993–2023 and no drought year in the 3 years before.
-- **resp_beta**: per crop, yield is detrended on non-imputed years only, then `yield_anom` is regressed on `spei12_w` (OLS slope). Crops need ≥ 20 non-imputed years and ≥ 1% of the country's total value over the window.
+- **resp_beta**: per crop, yield is detrended on non-imputed years only, then `yield_anom` is regressed on cropland-weighted SPEI-12 for its MapSPAM crop class (OLS slope). Coffee and millet combine classes by country-specific physical area. An unavailable crop exposure stays missing. Crops need ≥ 20 non-imputed years and ≥ 1% of the country's total value over the window.
 - **resp_div**: `sqrt(Σ w_i (β_i − β̄)²)`, `w_i` = value share renormalised over the eligible crops, `β̄` the weighted mean.
 - **resp_divergence** (Ross et al. 2023, section 3.1): `(max β − min β − | |max β| − |min β| |) / (max β − min β)`. Unweighted. 0 when all slopes share a sign, 1 when `min β = −max β`.
 - **Portfolio decomposition**: on crops with a value in all 31 years (**default**). Per-crop residual `r_i = y_i − LOWESS_i`.
@@ -57,6 +57,10 @@ python -m pytest src/metrics       # unit tests
 | `outputs/stats/robustness.csv` | Spearman table under each variant |
 | `outputs/stats/summary.csv` | sample sizes and medians |
 | `figures/results/01..04_*.png` | the four result figures |
+
+## Holdout evaluation
+
+For the 2013–2023 evaluation, crop eligibility, value shares, regression slopes and LOWESS trends use 1993–2012. The final fitted training trend is the reference level throughout the holdout. Each evaluated country–crop pair needs at least 15 training and eight test observations with usable exposure. The national predictions use observed holdout SPEI. [Implementation](oos.py) · [Evaluation results](../../outputs/stats/oos_summary.csv)
 
 ## Statistics
 

@@ -512,8 +512,8 @@ dist_code,dist_name,state_code,state_name,boundary_base,n_years,first_year,stabl
 522,Warangal,36,Telangana,"DES 2022-23 codes, unapportioned",25,1998,True,True,2018:0.58,False,1.0,Warangal (U),76128533B34824326075805,True
 523,West Godavari,28,Andhra Pradesh,"DES 2022-23 codes, unapportioned",25,1998,True,True,2021:0.85;2022:0.62,False,1.0,West Godavari,76128533B19792346411952,True
 524,Bagalkote,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True,1.0,Bagalkot,76128533B83278580643229,True
-525,Bengaluru Urban,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.82;2022:0.81,False,1.0,Bangalore Rural,76128533B48075109668277,True
-526,Bengaluru Rural,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.37,False,1.0,Bangalore,76128533B76927648517269,True
+525,Bengaluru Urban,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.82;2022:0.81,False,1.0,Bangalore,76128533B76927648517269,True
+526,Bengaluru Rural,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2007:0.37,False,1.0,Bangalore Rural,76128533B48075109668277,True
 527,Belagavi,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True,1.0,Belgaum,76128533B74319098136622,True
 528,Ballari,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,True,2022:0.47,False,1.0,Bellary,76128533B92621859299479,True
 529,Bidar,29,Karnataka,"DES 2022-23 codes, unapportioned",25,1998,True,False,,True,1.0,Bidar,76128533B9794868259401,True

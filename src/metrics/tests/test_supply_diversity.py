@@ -1,7 +1,6 @@
 """Unit tests for the supply-source diversity. Run: python -m pytest src/metrics/tests/test_supply_diversity.py"""
 import numpy as np
 import pandas as pd
-import pytest
 
 from src.crops.supply_diversity import complete_spei, country_supply, domestic_share, partner_weights
 

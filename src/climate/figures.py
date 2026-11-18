@@ -7,7 +7,6 @@ import pandas as pd
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-from matplotlib.colors import Normalize
 
 from ..common import paths
 
@@ -130,7 +129,7 @@ def plot_event_counts(events, geojson_path, out_dir):
 
 def main():
     setup_plot_style()
-    out_dir = paths.FIGURES / "climate"
+    out_dir = paths.fig_dir("climate")
     out_dir.mkdir(parents=True, exist_ok=True)
     
     climate = pd.read_parquet(paths.CLIMATE)

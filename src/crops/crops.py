@@ -5,7 +5,6 @@ First-iteration pipeline written from src/metrics' side; Gursahib owns this modu
 Run: python -m src.crops.crops
 """
 import numpy as np
-import pandas as pd
 
 from ..common import paths
 from ..common.contract import summary, validate

@@ -23,6 +23,8 @@ MIN_SCORE = 0.82
 # Known renames since the 2021 polygons (DES 2022-23 name -> geoBoundaries name). Only unambiguous one-to-one renames; a district
 # that was split or merged (e.g. Purba Bardhaman vs the undivided Barddhaman polygon) is NOT aliased and stays unmatched.
 ALIASES = {
+    "Bengaluru Urban": "Bangalore", "Bengaluru Rural": "Bangalore Rural",
+    "Bangalore (Urban)": "Bangalore", "Bangalore (Rural)": "Bangalore Rural",
     "Y.S.R. Kadapa": "Kadapa(YSR)", "Dangs": "The Dangs", "Gurugram": "Gurgaon", "Belagavi": "Belgaum", "Vijayapura": "Bijapur",
     "Kalaburagi": "Gulbarga", "Narmadapuram": "Hoshangabad", "Ahilyanagar": "Ahmadnagar", "Chhatrapati Sambhajinagar": "Aurangabad",
     "Dharashiv": "Osmanabad", "Raigad": "Raigarh", "Balasore": "Baleshwar", "Sonepur": "Subarnapur", "Sri Muktsar Sahib": "Muktsar",
@@ -36,7 +38,7 @@ ALIASES = {
 def norm(s):
     s = unicodedata.normalize("NFKD", str(s)).encode("ascii", "ignore").decode().lower()
     s = re.sub(r"\(.*?\)|[^a-z ]", " ", s)
-    s = re.sub(r"\b(district|dist|zila|city|urban|rural)\b", " ", s)
+    s = re.sub(r"\b(district|dist|zila|city)\b", " ", s)
     # common transliteration variants
     s = s.replace("w", "v").replace("ph", "f").replace("kh", "k").replace("gh", "g").replace("dh", "d").replace("bh", "b")
     s = re.sub(r"(.)\1", r"\1", s)               # double letters
@@ -62,7 +64,8 @@ def load_polygons():
     # points on a state border / sea fall outside every state polygon: nearest state
     miss = g2.st.isna()
     if miss.any():
-        near = gpd.sjoin_nearest(pts[miss].drop(columns=["st", "index_right"], errors="ignore"), g1[["st", "geometry"]], how="left")
+        near = gpd.sjoin_nearest(pts.loc[miss].drop(columns=["st", "index_right"], errors="ignore").to_crs("EPSG:7755"),
+                                 g1[["st", "geometry"]].to_crs("EPSG:7755"), how="left")
         g2.loc[miss, "st"] = near.groupby(near.index).st.first()
     g2["nm"] = g2.shapeName.map(norm)
     assert g2.st.notna().all()

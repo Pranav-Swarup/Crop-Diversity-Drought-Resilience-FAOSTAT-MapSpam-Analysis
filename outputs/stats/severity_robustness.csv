@@ -1,47 +1,47 @@
 check,model,term,statistic,value,label,n_obs,n_countries
 permutation,bins_hill1,moderate_x_hill1,p_perm,0.07496251874062969,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_hill1,moderate_x_hill1,p_perm_t,0.1054472763618191,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_hill1,moderate_x_hill1,observed,0.01244375542445285,estimate,3317,107
-permutation,bins_hill1,moderate_x_hill1,observed_t,1.7459510957495754,clustered t,3317,107
+permutation,bins_hill1,moderate_x_hill1,observed,0.012443755424452854,estimate,3317,107
+permutation,bins_hill1,moderate_x_hill1,observed_t,1.7459510957495743,clustered t,3317,107
 permutation,bins_hill1,severe_x_hill1,p_perm,0.6146926536731634,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_hill1,severe_x_hill1,p_perm_t,0.711144427786107,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_hill1,severe_x_hill1,observed,0.005724841367708936,estimate,3317,107
-permutation,bins_hill1,severe_x_hill1,observed_t,0.3945463637763832,clustered t,3317,107
+permutation,bins_hill1,severe_x_hill1,observed,0.005724841367708943,estimate,3317,107
+permutation,bins_hill1,severe_x_hill1,observed_t,0.3945463637763834,clustered t,3317,107
 permutation,bins_hill1,extreme_x_hill1,p_perm,0.02048975512243878,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_hill1,extreme_x_hill1,p_perm_t,0.16491754122938532,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_hill1,extreme_x_hill1,observed,0.04199613145743636,estimate,3317,107
-permutation,bins_hill1,extreme_x_hill1,observed_t,1.6269313758731636,clustered t,3317,107
+permutation,bins_hill1,extreme_x_hill1,observed,0.041996131457436345,estimate,3317,107
+permutation,bins_hill1,extreme_x_hill1,observed_t,1.6269313758731632,clustered t,3317,107
 permutation,bins_hill1,severe_minus_moderate_x_hill1,p_perm,0.5427286356821589,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_hill1,severe_minus_moderate_x_hill1,p_perm_t,0.6676661669165417,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_hill1,severe_minus_moderate_x_hill1,observed,-0.0067189140567439146,estimate,3317,107
-permutation,bins_hill1,severe_minus_moderate_x_hill1,observed_t,-0.49707683009611386,clustered t,3317,107
+permutation,bins_hill1,severe_minus_moderate_x_hill1,observed,-0.006718914056743911,estimate,3317,107
+permutation,bins_hill1,severe_minus_moderate_x_hill1,observed_t,-0.4970768300961135,clustered t,3317,107
 permutation,bins_hill1,extreme_minus_moderate_x_hill1,p_perm,0.09645177411294353,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_hill1,extreme_minus_moderate_x_hill1,p_perm_t,0.29185407296351823,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_hill1,extreme_minus_moderate_x_hill1,observed,0.02955237603298351,estimate,3317,107
-permutation,bins_hill1,extreme_minus_moderate_x_hill1,observed_t,1.1899480968464216,clustered t,3317,107
+permutation,bins_hill1,extreme_minus_moderate_x_hill1,observed,0.02955237603298349,estimate,3317,107
+permutation,bins_hill1,extreme_minus_moderate_x_hill1,observed_t,1.189948096846421,clustered t,3317,107
 permutation,bins_pooled_hill1,moderate_x_hill1,p_perm,0.08045977011494253,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_pooled_hill1,moderate_x_hill1,p_perm_t,0.11794102948525736,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_pooled_hill1,moderate_x_hill1,observed,0.012174651452200187,estimate,3317,107
-permutation,bins_pooled_hill1,moderate_x_hill1,observed_t,1.6967758892691418,clustered t,3317,107
+permutation,bins_pooled_hill1,moderate_x_hill1,observed,0.012174651452200199,estimate,3317,107
+permutation,bins_pooled_hill1,moderate_x_hill1,observed_t,1.696775889269142,clustered t,3317,107
 permutation,bins_pooled_hill1,sev_plus_x_hill1,p_perm,0.22038980509745126,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_pooled_hill1,sev_plus_x_hill1,p_perm_t,0.4497751124437781,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_pooled_hill1,sev_plus_x_hill1,observed,0.013449583527174081,estimate,3317,107
-permutation,bins_pooled_hill1,sev_plus_x_hill1,observed_t,0.8368895125157176,clustered t,3317,107
+permutation,bins_pooled_hill1,sev_plus_x_hill1,observed,0.013449583527174106,estimate,3317,107
+permutation,bins_pooled_hill1,sev_plus_x_hill1,observed_t,0.836889512515719,clustered t,3317,107
 permutation,bins_pooled_hill1,sev_plus_minus_moderate_x_hill1,p_perm,0.9055472263868066,"2000 permutations of hill1 across countries, seed 20240611; statistic = estimate",3317,107
 permutation,bins_pooled_hill1,sev_plus_minus_moderate_x_hill1,p_perm_t,0.9405297351324338,"2000 permutations of hill1 across countries, seed 20240611; statistic = clustered t",3317,107
-permutation,bins_pooled_hill1,sev_plus_minus_moderate_x_hill1,observed,0.0012749320749738946,estimate,3317,107
-permutation,bins_pooled_hill1,sev_plus_minus_moderate_x_hill1,observed_t,0.08388399679837269,clustered t,3317,107
-loco,bins_hill1,extreme_x_hill1,min,0.03071468926439017,MNG,3317,107
-loco,bins_hill1,extreme_x_hill1,max,0.06541764802817518,ARE,3317,107
-loco,bins_hill1,extreme_x_hill1,most_influential,0.06541764802817518,ARE,3317,107
-loco,bins_hill1,extreme_x_hill1,full_sample,0.04199613145743636,,3317,107
-loyo,bins_hill1,extreme_x_hill1,min,0.026993821094692234,2017,3317,107
-loyo,bins_hill1,extreme_x_hill1,max,0.06147211390352796,2021,3317,107
-loyo,bins_hill1,extreme_x_hill1,most_influential,0.06147211390352796,2021,3317,107
-loyo,bins_hill1,extreme_x_hill1,full_sample,0.04199613145743636,,3317,107
+permutation,bins_pooled_hill1,sev_plus_minus_moderate_x_hill1,observed,0.0012749320749739067,estimate,3317,107
+permutation,bins_pooled_hill1,sev_plus_minus_moderate_x_hill1,observed_t,0.0838839967983735,clustered t,3317,107
+loco,bins_hill1,extreme_x_hill1,min,0.03071468926439016,MNG,3317,107
+loco,bins_hill1,extreme_x_hill1,max,0.06541764802817521,ARE,3317,107
+loco,bins_hill1,extreme_x_hill1,most_influential,0.06541764802817521,ARE,3317,107
+loco,bins_hill1,extreme_x_hill1,full_sample,0.041996131457436345,,3317,107
+loyo,bins_hill1,extreme_x_hill1,min,0.026993821094692276,2017,3317,107
+loyo,bins_hill1,extreme_x_hill1,max,0.06147211390352795,2021,3317,107
+loyo,bins_hill1,extreme_x_hill1,most_influential,0.06147211390352795,2021,3317,107
+loyo,bins_hill1,extreme_x_hill1,full_sample,0.041996131457436345,,3317,107
 wild_bootstrap,bins_hill1,extreme_x_hill1,p_wcr,0.16481648164816481,"9999 Rademacher draws by country, seed 20240611",3317,107
-wild_bootstrap,bins_hill1,extreme_x_hill1,ci_lo,-0.013210740720064097,"9999 Rademacher draws by country, seed 20240611",3317,107
-wild_bootstrap,bins_hill1,extreme_x_hill1,ci_hi,0.09784458735324217,"9999 Rademacher draws by country, seed 20240611",3317,107
-pooled_cutoff,bins_pooled_hill1,sev_plus_x_hill1,beta,0.013449583527174081,sev_plus = spei12_w <= -1.5,3317,107
-pooled_cutoff,bins_pooled_hill1,sev_plus_x_hill1,se,0.01607091895170748,sev_plus = spei12_w <= -1.5,3317,107
-pooled_cutoff,bins_pooled_hill1,sev_plus_x_hill1,p,0.4045374800151947,sev_plus = spei12_w <= -1.5,3317,107
+wild_bootstrap,bins_hill1,extreme_x_hill1,ci_lo,-0.013210740720063827,"9999 Rademacher draws by country, seed 20240611",3317,107
+wild_bootstrap,bins_hill1,extreme_x_hill1,ci_hi,0.0978445873532421,"9999 Rademacher draws by country, seed 20240611",3317,107
+pooled_cutoff,bins_pooled_hill1,sev_plus_x_hill1,beta,0.013449583527174106,sev_plus = spei12_w <= -1.5,3317,107
+pooled_cutoff,bins_pooled_hill1,sev_plus_x_hill1,se,0.016070918951707484,sev_plus = spei12_w <= -1.5,3317,107
+pooled_cutoff,bins_pooled_hill1,sev_plus_x_hill1,p,0.40453748001519385,sev_plus = spei12_w <= -1.5,3317,107

@@ -42,14 +42,18 @@ def spei_variable(clim):
     return "spei12_w" if clim.spei12_w.notna().any() else "spei12_unw"
 
 
-def build(window, col=None):
+def build(window, col=None, tables=None):
     """window: 'core' (DES 1998-2022), 'kharif' (monsoon-season rows only) or 'ext5' (mirror 1993-2015). Returns dict of frames and settings."""
     clim = pd.read_parquet(IN / "climate.parquet")
     col = col or spei_variable(clim)
     if window in ("core", "kharif"):                     # kharif: monsoon-season rows only (src.india.kharif_crops), same 1998-2022 window
         f = "" if window == "core" else "_kharif"
-        crops, years = pd.read_parquet(IN / f"crops{f}.parquet"), list(YEARS_CORE)
-        dist = pd.read_csv(IN / f"districts{f}.csv", dtype={"dist_code": str})
+        years = list(YEARS_CORE)
+        if tables is None:
+            crops = pd.read_parquet(IN / f"crops{f}.parquet")
+            dist = pd.read_csv(IN / f"districts{f}.csv", dtype={"dist_code": str})
+        else:
+            crops, dist = tables
         if window == "kharif":
             dist = dist.merge(pd.read_csv(IN / "districts.csv", dtype={"dist_code": str})[["dist_code", "state_name"]], on="dist_code", how="left")
     else:
@@ -180,7 +184,7 @@ def panel_models(d, label):
     r, _ = fit_rows(f"{label}:dry_wet", d, ["dry", "wet", "dry_z", "wet_z", "z"]); rows += r
     r, _ = fit_rows(f"{label}:even_years", d[d.year % 2 == 0], ["spei", "spei_z", "z"]); rows += r
     r, _ = fit_rows(f"{label}:cluster_state", d, ["spei", "spei_z", "z"], cluster="state_name",
-                    note="clustered by state: spatial-correlation check (Conley errors not implemented)"); rows += r
+                    note="clustered by state: spatial-correlation check (Conley estimates in india_conley.csv)"); rows += r
     # leave-one-state-out
     loso = []
     for s in sorted(d.state_name.unique()):
@@ -222,24 +226,21 @@ def faces_table(m, label):
     return pd.DataFrame(rows)
 
 
-# All-India June-September rainfall departure from the long period average (LPA), as stated by each source. None is an IMD
-# end-of-season report (not readable when checked): the sources disagree by 1-3 points for 2002 and 2009 and are secondary.
+# Verified positive examples. Membership is not an exhaustive classification of all years.
+IMD_2004 = "https://mausamjournal.imd.gov.in/index.php/MAUSAM/article/view/1199"
 DOCUMENTED = {
-    2002: (-19, "Aijaz (2013), Observer Research Foundation, 'Monsoon Variability and Agricultural Drought Management in India' (Down To Earth 2018, citing MoSPI Envi Stats India 2018: -21)",
-           "https://www.orfonline.org/research/monsoon-variability-and-agricultural-drought-management-in-india"),
-    2009: (-22, "Reserve Bank of India Bulletin, 11 May 2015, 'Monsoon and Indian Agriculture - Conjoined or Decoupled?' (ORF also -22; Down To Earth citing MoSPI: -21)",
-           "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx?Id=15564"),
-    2014: (-12, "Reserve Bank of India Bulletin, 11 May 2015 (Down To Earth citing MoSPI: -12)",
-           "https://www.rbi.org.in/scripts/BS_ViewBulletin.aspx?Id=15564"),
-    2015: (-14, "Minister of State for Earth Sciences, written Lok Sabha reply, 'about 86% of LPA', as reproduced by DeshGujarat 9 Dec 2015 (Down To Earth citing MoSPI: -14)",
-           "https://www.deshgujarat.com/2015/12/09/rainfall-was-deficient-during-south-west-monsoon-as-predicted/"),
+    2002: (-19, "India Meteorological Department, MAUSAM 58(2)", IMD_2004),
+    2004: (-13, "India Meteorological Department, MAUSAM 58(2)", IMD_2004),
+    2009: (-22, "India Meteorological Department, 2009 monsoon report", "https://metnet.imd.gov.in/docs/mausamdocs/36131.pdf"),
+    2014: (-12, "Ministry of Earth Sciences, Rajya Sabha reply", "https://www.moes.gov.in/sites/default/files/RS_US_2732_13_08_2015.pdf"),
+    2015: (-14, "Ministry of Earth Sciences, Lok Sabha reply", "https://moes.gov.in/sites/default/files/LS_US_1632_9122015.pdf"),
 }
 
 
 def validation_table(clim, years, col):
     c = clim[clim.year.between(years[0], years[-1])]
-    g = c.groupby("year")[col].agg(share_drought=lambda s: (s <= -1).mean(), mean_spei="mean").reset_index()
-    g["documented_drought_year"] = g.year.isin(DOCUMENTED)
+    g = c.groupby("year")[col].agg(share_drought=lambda s: s.dropna().le(-1).mean(), mean_spei="mean").reset_index()
+    g["documented_drought_year"] = g.year.map(dict.fromkeys(DOCUMENTED, True)).astype("boolean")
     g["monsoon_departure_lpa_pct"] = g.year.map({k: v[0] for k, v in DOCUMENTED.items()})
     g["source"] = g.year.map({k: v[1] for k, v in DOCUMENTED.items()})
     g["url"] = g.year.map({k: v[2] for k, v in DOCUMENTED.items()})
@@ -299,7 +300,6 @@ def main():
     print(f"drought variable: {col}")
 
     panel_rows, loso, sev_rows, sev_counts, faces, perm_rows, fig_rows, summ = [], [], [], [], [], [], {}, []
-    core_frames = None
     for window in ("core", "ext5"):
         data, _, years, dist = build(window)
         for sample in ("core", "stable"):

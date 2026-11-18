@@ -66,3 +66,28 @@ def test_full_window_slope_equals_resp_beta():
                               "resp_beta": response.resp_beta(a["yield_anom"], a["spei"])})
     n, diff = oos.full_window_check(a, anomalies)
     assert n == 1 and diff < 1e-9
+
+
+def test_holdout_cannot_change_fitted_trend_or_training_anomalies():
+    years = np.arange(1993, 2024)
+    values = 30.0 + np.arange(len(years)) * 0.4 + np.sin(years)
+    original = oos.training_anomaly(values, years)
+    holdout = years > oos.TRAIN[1]
+    values[holdout] *= 3
+    changed = oos.training_anomaly(values, years)
+    np.testing.assert_array_equal(original[~holdout], changed[~holdout])
+    np.testing.assert_allclose(changed[holdout] + 1, 3 * (original[holdout] + 1))
+
+
+def test_merged_crop_exposure_requires_every_positive_area_component():
+    from src.metrics.crop_classes import COFFEE, class_label
+    from src.metrics.run import add_merged_exposures, crop_exposure
+
+    areas = pd.DataFrame({"iso3": ["A", "A"], "mapspam_crop": COFFEE, "area_ha": [1e6, 1.0]})
+    climate = pd.DataFrame({"iso3": ["A", "A", "A"], "mapspam_crop": [*COFFEE, COFFEE[0]],
+                            "year": [2000, 2000, 2001], "crop_spei12_w": [0.1, 0.9, 0.3]})
+    merged = add_merged_exposures(climate, areas)
+    pair = merged.loc[merged.mapspam_crop.eq(class_label(COFFEE))].set_index("year")
+    assert pair.loc[2000, "crop_spei12_w"] == pytest.approx((0.1 * 1e6 + 0.9) / (1e6 + 1))
+    assert pd.isna(pair.loc[2001, "crop_spei12_w"])
+    assert crop_exposure(-1, pd.DataFrame({"REST": [1.2]}, index=[2001]), [2001]).isna().all()

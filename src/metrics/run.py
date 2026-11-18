@@ -12,30 +12,37 @@ from . import decompose as dec
 from . import faces, response
 from .detrend import FRAC, detrend, lowess_trend
 from .diversity import hill1
+from .crop_classes import ITEMS, class_label
 from .events import DROUGHT_THR
 
 YEARS = np.arange(YEAR_MIN, YEAR_MAX + 1)
 
 
-FAOSTAT_TO_MAPSPAM = {
-    "Wheat": "WHEA", "Rice": "RICE", "Maize (corn)": "MAIZ", "Barley": "BARL",
-    "Millet": "PMIL", "Sorghum": "SORG", "Potatoes": "POTS", "Sweet potatoes": "SWPO",
-    "Yams": "YAMS", "Cassava, fresh": "CASS", "Beans, dry": "BEAN", "Chick peas, dry": "CHIC",
-    "Cow peas, dry": "COWP", "Pigeon peas, dry": "PIGE", "Lentils, dry": "LENT",
-    "Soya beans": "SOYB", "Groundnuts, excluding shelled": "GROU", "Coconuts, in shell": "CNUT",
-    "Rape or colza seed": "CANO", "Sesame seed": "SESA", "Sunflower seed": "SUNF",
-    "Sugar cane": "SUGS", "Sugar beet": "SUGB", "Seed cotton, unginned": "COTT",
-    "Coffee, green": "ACOF", "Cocoa beans": "COCO", "Tea leaves": "TEAS", "Unmanufactured tobacco": "TOBA",
-    "Bananas": "BANA", "Plantains and cooking bananas": "PLNT",
-    "Oats": "OCRS", "Rye": "OCRS", "Triticale": "OCRS", "Mixed grain": "OCRS", "Quinoa": "OCRS", "Cereals n.e.c.": "OCRS",
-    "Taro": "OROO", "Yautia": "OROO", "Edible roots and tubers with high starch or inulin content, n.e.c., fresh": "OROO",
-    "Broad beans and horse beans, dry": "OPUL", "Peas, dry": "OPUL", "Lupins": "OPUL", "Other pulses n.e.c.": "OPUL",
-    "Mustard seed": "OOIL", "Linseed": "OOIL", "Poppy seed": "OOIL", "Jute, raw or retted": "OFIB",
-    "Apples": "TEMF", "Pears": "TEMF", "Peaches and nectarines": "TEMF", "Plums and sloes": "TEMF", "Cherries": "TEMF", "Apricots": "TEMF", "Other stone fruits": "TEMF", "Grapes": "TEMF", "Strawberries": "TEMF", "Raspberries": "TEMF", "Blueberries": "TEMF", "Currants": "TEMF", "Other berries and fruits of the genus vaccinium n.e.c.": "TEMF", "Persimmons": "TEMF", "Kiwi fruit": "TEMF",
-    "Mangoes, guavas and mangosteens": "TROF", "Papayas": "TROF", "Pineapples": "TROF", "Dates": "TROF", "Avocados": "TROF", "Areca nuts": "TROF", "Figs": "TROF", "Other tropical fruits, n.e.c.": "TROF",
-    "Oranges": "TROF", "Tangerines, mandarins, clementines": "TROF", "Lemons and limes": "TROF", "Pomelos and grapefruits": "TROF", "Other citrus fruit, n.e.c.": "TROF",
-    "Tomatoes": "VEGE", "Onions and shallots, dry (excluding dehydrated)": "VEGE", "Onions and shallots, green": "VEGE", "Green garlic": "VEGE", "Leeks and other alliaceous vegetables": "VEGE", "Cabbages": "VEGE", "Cauliflowers and broccoli": "VEGE", "Lettuce and chicory": "VEGE", "Spinach": "VEGE", "Artichokes": "VEGE", "Asparagus": "VEGE", "Cucumbers and gherkins": "VEGE", "Eggplants (aubergines)": "VEGE", "Chillies and peppers, green (Capsicum spp. and Pimenta spp.)": "VEGE", "Pumpkins, squash and gourds": "VEGE", "Green corn (maize)": "VEGE", "Peas, green": "VEGE", "String beans": "VEGE", "Broad beans and horse beans, green": "VEGE", "Carrots and turnips": "VEGE", "Okra": "VEGE", "Watermelons": "VEGE", "Cantaloupes and other melons": "VEGE", "Other vegetables, fresh n.e.c.": "VEGE",
-}
+def crop_exposure(code, climate, years):
+    """Use the FAOSTAT item ID and observed MapSPAM footprint. Missing exposure stays missing."""
+    if code in ITEMS:
+        label = class_label(ITEMS[code][1])
+        if label in climate:
+            return climate[label].reindex(years)
+    return pd.Series(np.nan, index=years, dtype=float)
+
+
+def add_merged_exposures(climate, areas):
+    """Combine coffee and millet masks by physical area in each country."""
+    merged = []
+    for members in sorted({codes for _, codes in ITEMS.values() if len(codes) > 1}):
+        weights = areas.loc[areas.mapspam_crop.isin(members) & areas.area_ha.gt(0)]
+        if weights.empty:
+            continue
+        obs = climate.merge(weights[["iso3", "mapspam_crop", "area_ha"]], on=["iso3", "mapspam_crop"], validate="many_to_one")
+        weighted = (obs.crop_spei12_w * obs.area_ha).groupby([obs.iso3, obs.year]).sum(min_count=1)
+        observed = obs.groupby(["iso3", "year"]).crop_spei12_w.count()
+        required = weights.groupby("iso3").mapspam_crop.nunique().reindex(weighted.index, level="iso3")
+        total = weights.groupby("iso3").area_ha.sum().reindex(weighted.index, level="iso3")
+        value = (weighted / total).where(observed.eq(required))
+        merged.append(value.rename("crop_spei12_w").reset_index().assign(mapspam_crop=class_label(members)))
+    return pd.concat([climate, *merged], ignore_index=True)
+
 
 def country_metrics(g, spei, c_spei_df, event_years, frac=FRAC, thr=DROUGHT_THR):
     """All metrics for one country.
@@ -81,14 +88,7 @@ def country_metrics(g, spei, c_spei_df, event_years, frac=FRAC, thr=DROUGHT_THR)
         d = detrend(c["yield_t_ha"].to_numpy(), c["year"].to_numpy(), frac)
         
         item_name = c["item"].iloc[0]
-        mapspam = FAOSTAT_TO_MAPSPAM.get(item_name, "REST")
-        
-        if not c_spei_pivot.empty and mapspam in c_spei_pivot.columns:
-            crop_spei = c_spei_pivot[mapspam].reindex(c["year"])
-            crop_spei = crop_spei.fillna(spei.reindex(c["year"]))
-        else:
-            crop_spei = spei.reindex(c["year"])
-            
+        crop_spei = crop_exposure(code, c_spei_pivot, c["year"])
         beta = response.resp_beta(d["anom"], crop_spei.to_numpy())
         if not np.isfinite(beta):
             continue
@@ -174,6 +174,8 @@ def load_inputs():
         climate = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int), "spei12_w": pd.Series(dtype=float)})
         events = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int)})
         crop_climate = pd.DataFrame({"iso3": pd.Series(dtype=str), "year": pd.Series(dtype=int), "mapspam_crop": pd.Series(dtype=str), "crop_spei12_w": pd.Series(dtype=float)})
+    if paths.MAPSPAM_AREA.exists() and not crop_climate.empty:
+        crop_climate = add_merged_exposures(crop_climate, pd.read_parquet(paths.MAPSPAM_AREA))
     included = quality.loc[quality["included"], "iso3"].tolist()
     return crops, climate, crop_climate, events, included
 

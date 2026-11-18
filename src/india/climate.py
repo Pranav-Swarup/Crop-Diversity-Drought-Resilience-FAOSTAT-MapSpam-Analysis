@@ -3,18 +3,15 @@
 Same method as src.climate.aggregate, on the matched district polygons (src.india.geo) instead of countries:
   spei12_unw  December SPEI-12, mean over the 0.5 degree cells touching the district, weighted by the cell area inside it
               (coverage fraction x cos latitude). Always computed.
-  spei12_w    the same weighted by MapSPAM cropland (the design's drought variable). Only computed if
-              data/raw/derived/cropland_05deg.npy exists (needs the manual MapSPAM download, then src.climate.cropland);
-              otherwise the column is left empty, NOT replaced by spei12_unw.
-spei4kh_unw / spei4kh_w   kharif variant (robustness only): SPEI-4 of September (June-September rainfall and PET), same two weightings;
-              only if data/raw/spei/spei04.nc exists. Not used by the core analysis.
-Years 1993-2022 (December of year Y covers the monsoon of agricultural year Y-(Y+1)).
-
-A 0.5 degree cell (~55 km) is as large as many districts: neighbouring districts share cells, so district SPEI varies
-little within a state-year. `n_cells` and the printed within-state spread document this.
+  spei12_w    December SPEI-12 weighted by MapSPAM crop area.
+  spei4kh_w   September SPEI-4 weighted by MapSPAM crop area.
+Both climate inputs and the cropland mask are required to produce the complete district table.
 
 Run: python -m src.india.climate
 """
+from pathlib import Path
+from tempfile import NamedTemporaryFile
+
 import geopandas as gpd
 import numpy as np
 import pandas as pd
@@ -45,36 +42,40 @@ def load_month_spei(fname="spei12.nc", month=12):
 
 def main():
     da, dec = load_month_spei()
-    kh = load_month_spei(KHARIF_FILE, 9)[1] if (SPEI_DIR / KHARIF_FILE).exists() else None   # kharif: SPEI-4 of September = June-September
+    kh = load_month_spei(KHARIF_FILE, 9)[1]   # kharif: SPEI-4 of September = June-September
     template = da.isel(time=0).rio.write_crs(4326).rio.set_spatial_dims(x_dim="lon", y_dim="lat")
     gdf = gpd.read_file(OUT / "districts.geojson").rename(columns={"dist_code": "iso3"})   # coverage_fractions keys on iso3
     cover = coverage_fractions(gdf, template)
     coslat = np.repeat(np.cos(np.deg2rad(da.lat.values)), 720)
-    crop = np.load(cropland.OUT).ravel() if cropland.OUT.exists() else None
-    if crop is None:
-        print("NOTE: cropland raster missing: spei12_w NOT computed (MapSPAM is a manual download; see src.climate.download)")
-
+    crop = np.load(cropland.OUT).ravel()
     rows = []
     for code, (cells, frac) in sorted(cover.items()):
         if len(cells) == 0:
             continue
         unw, cov = weighted_mean(dec[:, cells], coslat[cells] * frac)
         w = np.full(len(YEARS), np.nan)
-        if crop is not None and (crop[cells] * frac).sum() > 0:
+        if (crop[cells] * frac).sum() > 0:
             w, _ = weighted_mean(dec[:, cells], crop[cells] * frac)
         r = pd.DataFrame({"dist_code": code, "year": YEARS, "spei12_unw": unw, "spei12_w": w, "n_cells": len(cells), "valid_share": cov})
-        if kh is not None:                                   # same weights as the December SPEI-12 columns
-            r["spei4kh_unw"], _ = weighted_mean(kh[:, cells], coslat[cells] * frac)
-            r["spei4kh_w"] = np.nan
-            if crop is not None and (crop[cells] * frac).sum() > 0:
-                r["spei4kh_w"], _ = weighted_mean(kh[:, cells], crop[cells] * frac)
+        r["spei4kh_unw"], _ = weighted_mean(kh[:, cells], coslat[cells] * frac)
+        r["spei4kh_w"] = np.nan
+        if (crop[cells] * frac).sum() > 0:
+            r["spei4kh_w"], _ = weighted_mean(kh[:, cells], crop[cells] * frac)
         rows.append(r)
     out = pd.concat(rows, ignore_index=True).astype({"year": int})
 
     assert not out.duplicated(["dist_code", "year"]).any()
     assert out.spei12_unw.abs().max() < 10 and out.year.between(1993, 2022).all()
     assert set(out.dist_code) <= set(gdf.iso3)
-    out.to_parquet(OUT / "climate.parquet", index=False)
+    with NamedTemporaryFile(dir=OUT, suffix=".parquet", delete=False) as tmp:
+        staged = Path(tmp.name)
+    try:
+        out.to_parquet(staged, index=False)
+        dest = OUT / "climate.parquet"
+        staged.chmod(dest.stat().st_mode & 0o777 if dest.exists() else 0o644)
+        staged.replace(dest)
+    finally:
+        staged.unlink(missing_ok=True)
 
     d = pd.read_csv(OUT / "districts.csv", dtype={"dist_code": str}).set_index("dist_code")
     out["state"] = out.dist_code.map(d.state_name)

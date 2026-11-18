@@ -4,55 +4,28 @@ import requests
 from src.common.paths import FIGURES, USE_DUMMY
 
 MERMAID_CODE = """
-graph TD
+graph LR
     classDef source fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
     classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
     classDef data fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
     classDef output fill:#fff3e0,stroke:#f57c00,stroke-width:2px
 
-    subgraph Global Sources
-        F[FAOSTAT]:::source
-        S[SPEIbase]:::source
-        M[MapSPAM]:::source
-        W[WDI & CRU]:::source
-    end
-
-    subgraph Cleaning Pipelines
-        F --> C1[crops.py]:::process
-        W --> C1
-        S --> C2[aggregate.py]:::process
-        M --> C3[cropland.py]:::process
-        C3 --> C2
-    end
-
-    subgraph Data Contracts
-        C1 --> T1[(crops.parquet)]:::data
-        C2 --> T2[(climate.parquet)]:::data
-        C1 --> T3[(controls.parquet)]:::data
-    end
-
-    subgraph Phase 4 India Districts
-        D1[DES District APY]:::source --> IC[india/clean.py & geo.py]:::process
-        D2[ICRISAT Mirror]:::source --> IC
-        D3[geoBoundaries ADM2]:::source --> IC
-        S --> ICL[india/climate.py]:::process
-        C3 --> ICL
-        IC --> IP[india/panel.py]:::process
-        ICL --> IP
-    end
-
-    subgraph Analysis
-        T1 --> ME[Metrics & Panel Engine]:::process
-        T2 --> ME
-        T3 --> ME
-    end
-
-    subgraph Outputs
-        ME --> R[Results & Figures]:::output
-        IP --> R
-        ME --> E[Interactive Explorer]:::output
-        IP --> E
-    end
+    F["FAOSTAT crop, land, food and trade data<br/>WDI national controls"]:::source --> C["National crop values, control variables,<br/>trade flows and calories"]:::data
+    H["CRU temperature<br/>GGCMI crop calendars"]:::source --> G["National heat and seasonal exposure"]:::data
+    S["SPEIbase and<br/>MapSPAM crop areas"]:::source --> G
+    S --> GS["Country and crop-specific drought"]:::data
+    C --> N["National metrics and models<br/>1993–2023"]:::process
+    G --> N
+    GS --> N
+    S --> X["District climate<br/>and geographic matches"]:::data
+    P["geoBoundaries districts"]:::source --> X
+    A["DES area and production"]:::source --> V["District metrics and models<br/>1998–2022 core and 1993–2015 five-crop"]:::process
+    B["Five-crop ICRISAT mirror<br/>and irrigation controls"]:::source --> V
+    X --> V
+    N --> R[Model tables and figures]:::output
+    V --> R
+    N --> E[Standalone explorer]:::output
+    V --> E
 """
 
 def generate_diagram():

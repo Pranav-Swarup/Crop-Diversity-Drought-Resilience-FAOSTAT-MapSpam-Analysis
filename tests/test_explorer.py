@@ -4,7 +4,6 @@ Run: python -m pytest tests/test_explorer.py
 """
 import json
 import re
-import numpy as np
 import pandas as pd
 import pytest
 
@@ -22,10 +21,10 @@ def test_india_payload_structure_and_counts(india_payload):
     assert india_payload is not None
     assert set(india_payload.keys()) == {"geojson", "meta", "metrics", "ts", "stats", "extra_metrics"}
     assert len(india_payload["geojson"]["features"]) == 690
-    assert len(india_payload["metrics"]["core"]) == 303
-    assert len(india_payload["metrics"]["ext5"]) == 127
-    assert len(india_payload["ts"]["core"]) == 303
-    assert len(india_payload["ts"]["ext5"]) == 127
+    assert len(india_payload["metrics"]["core"]) == len(pd.read_parquet(paths.INDIA_METRICS))
+    assert len(india_payload["metrics"]["ext5"]) == len(pd.read_parquet(paths.INDIA_METRICS_EXT5))
+    assert len(india_payload["ts"]["core"]) == len(pd.read_parquet(paths.INDIA_METRICS))
+    assert len(india_payload["ts"]["ext5"]) == len(pd.read_parquet(paths.INDIA_METRICS_EXT5))
 
 
 def test_india_metrics_match_parquet(india_payload):
@@ -34,7 +33,7 @@ def test_india_metrics_match_parquet(india_payload):
     for code, row in m_core.iterrows():
         got = india_payload["metrics"]["core"][code]
         for col in ("hill1", "stability", "vulnerability", "phi_sync"):
-            assert got[col] == pytest.approx(float(row[col]), abs=1e-4)
+            assert got[col] == float(row[col])
         assert got["n_events"] == int(row["n_events"])
 
     m_ext5 = pd.read_parquet(paths.INDIA_METRICS_EXT5).set_index("dist_code")
@@ -42,7 +41,7 @@ def test_india_metrics_match_parquet(india_payload):
     for code, row in m_ext5.iterrows():
         got = india_payload["metrics"]["ext5"][code]
         for col in ("hill1", "stability", "vulnerability", "phi_sync"):
-            assert got[col] == pytest.approx(float(row[col]), abs=1e-4)
+            assert got[col] == float(row[col])
 
 
 def test_india_timeseries_alignment_and_strict_json(india_payload):
@@ -75,7 +74,7 @@ def test_india_stats_tables_embedded(india_payload):
     assert len(stats["kharif_crops"]) == len(pd.read_csv(paths.STATS_DIR / "india_kharif_crops.csv")) == 54
     assert len(stats["leave_out_state"]) == len(pd.read_csv(paths.STATS_DIR / "india_leave_out_state.csv")) == 80
     doc_years = [r["year"] for r in stats["drought_years"] if r["documented_drought_year"]]
-    assert set(doc_years) == {2002, 2009, 2014, 2015}
+    assert set(doc_years) == {2002, 2004, 2009, 2014, 2015}
 
 
 def test_built_explorer_html_contains_phase4_elements():
@@ -103,5 +102,40 @@ def test_built_explorer_html_contains_phase4_elements():
     m = re.search(r"const indiaData = (\{.*?\});\n", content)
     assert m is not None, "indiaData assignment not found in explorer/index.html"
     parsed = json.loads(m.group(1))
-    assert len(parsed["metrics"]["core"]) == 303
-    assert len(parsed["metrics"]["ext5"]) == 127
+    assert len(parsed["metrics"]["core"]) == len(pd.read_parquet(paths.INDIA_METRICS))
+    assert len(parsed["metrics"]["ext5"]) == len(pd.read_parquet(paths.INDIA_METRICS_EXT5))
+
+
+def test_embedded_result_tables_preserve_source_cells():
+    html = (paths.EXPLORER / "index.html").read_text()
+    tables = json.loads(re.search(r"^\s*const nationalTables = (.*);$", html, re.M)[1])
+    sources = [*paths.STATS_DIR.glob("*.csv"), *paths.VALIDATION_DIR.glob("*.csv"),
+               paths.OUT / "exposure_diversity.parquet", paths.OUT / "supply_diversity.parquet"]
+    assert set(tables) == {source.stem for source in sources}
+    for source in sources:
+        frame = (pd.read_csv(source, float_precision="round_trip") if source.suffix == ".csv"
+                 else pd.read_parquet(source))
+        assert tables[source.stem]["columns"] == frame.columns.tolist()
+        assert tables[source.stem]["rows"] == frame.astype(object).where(frame.notna(), None).values.tolist()
+
+
+def test_national_chart_values_preserve_source_gaps():
+    html = (paths.EXPLORER / "index.html").read_text()
+    series = json.loads(re.search(r"^\s*const tsData = (.*);$", html, re.M)[1])
+    anomalies = pd.read_parquet(paths.CROP_ANOMALIES).set_index(["iso3", "item", "year"]).sort_index()
+    for iso, country in series.items():
+        for crop, shown in country["crops"].items():
+            actual = anomalies.loc[(iso, crop), "yield_anom"].reindex(country["years"])
+            assert shown == actual.astype(object).where(actual.notna(), None).tolist(), (iso, crop)
+
+
+def test_embedded_district_geometry_is_valid_and_clockwise(india_payload):
+    from shapely.geometry import shape
+
+    for feature in india_payload["geojson"]["features"]:
+        geom = shape(feature["geometry"])
+        assert geom.is_valid and not geom.is_empty
+        polygons = geom.geoms if geom.geom_type == "MultiPolygon" else [geom]
+        for polygon in polygons:
+            assert not polygon.exterior.is_ccw
+            assert all(ring.is_ccw for ring in polygon.interiors)

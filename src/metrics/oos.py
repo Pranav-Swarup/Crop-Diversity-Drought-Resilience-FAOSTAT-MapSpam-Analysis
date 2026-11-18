@@ -15,15 +15,9 @@ and evaluated on TEST (2013-2023).
   oos_summary.csv    quantity / value rows
   figures/results/08_oos_prediction.png
 
-Yield anomalies and per-crop SPEI are built as in src.metrics.run.country_metrics (non-imputed years
-with positive yield, LOWESS detrend of yield_t_ha with frac FRAC, MapSPAM crop SPEI from
-crop_climate.parquet with fallback to the country spei12_w). The trend is fitted on the full
-1993-2023 series (the project's fixed detrending choice), so the trend uses both periods and only
-the response slope is out-of-sample.
-
-MIN_TRAIN_YEARS = 15 instead of the usual response.MIN_YEARS = 20: a 20-year training window cannot
-meet the 20-non-imputed-year rule. MIN_TEST_YEARS = 8. Crops need value share >= response.MIN_SHARE.
-Fitted on all years, the slopes equal resp_beta in crop_anomalies.parquet (checked in main()).
+Trends, crop selection and value weights use the training period. Holdout yields and
+national values are compared with the last fitted training-period LOWESS level.
+Predictions are conditional on observed holdout SPEI and on the reporting-quality sample.
 
 Run: python -m src.metrics.oos        (USE_DUMMY=1 for dummy inputs)
 """
@@ -34,7 +28,7 @@ from ..common import paths
 from ..common.contract import YEAR_MAX, YEAR_MIN
 from . import response
 from .detrend import FRAC, MIN_POINTS, detrend
-from .run import FAOSTAT_TO_MAPSPAM, YEARS, load_inputs
+from .run import crop_exposure, YEARS, load_inputs
 from .stats import spearman_boot
 
 TRAIN = (1993, 2012)
@@ -45,28 +39,40 @@ MIN_SHARE = response.MIN_SHARE
 SERIES_COLS = ["iso3", "item", "year", "yield_anom", "spei", "value_share"]
 
 
+def training_anomaly(values, years, frac=FRAC):
+    """Fit the trend on training observations and freeze its last level throughout holdout."""
+    y = np.asarray(values, dtype=float)
+    train = np.asarray(years) <= TRAIN[1]
+    result = np.full(len(y), np.nan)
+    if np.isfinite(y[train]).sum() >= MIN_POINTS:
+        fit = detrend(y[train], np.asarray(years)[train], frac)
+        result[train] = fit["anom"]
+        levels = fit.loc[fit["trend"].gt(0), "trend"]
+        if len(levels):
+            result[~train] = y[~train] / levels.iloc[-1] - 1
+    return result
+
+
 def country_series(iso3, g, spei, c_spei_df, frac=FRAC):
     """Per-crop yield anomaly and crop SPEI pairs for one country (long DataFrame, SERIES_COLS),
-    built as in run.country_metrics. g: crops rows; spei: Series year -> spei12_w."""
+    with crop shares, eligibility and trends estimated from the training period."""
     spei = spei.reindex(YEARS)
     g = g[g["value_const"].notna()]
     pivot = (c_spei_df.pivot(index="year", columns="mapspam_crop", values="crop_spei12_w")
              if not c_spei_df.empty else pd.DataFrame())
-    share = g.groupby("item_code")["value_const"].sum() / g["value_const"].sum()
+    train_value = g.loc[g.year.between(*TRAIN)].groupby("item_code").value_const.sum()
+    share = train_value / train_value.sum()
     out = []
     for code, c in g.groupby("item_code"):
         c = c[~c["is_imputed"] & np.isfinite(c["yield_t_ha"]) & (c["yield_t_ha"] > 0)]
-        if share[code] < MIN_SHARE or len(c) < MIN_POINTS:
+        c = c.sort_values("year")
+        if share.get(code, 0) < MIN_SHARE or c.year.between(*TRAIN).sum() < MIN_TRAIN_YEARS:
             continue
-        d = detrend(c["yield_t_ha"].to_numpy(), c["year"].to_numpy(), frac)
+        anomaly = training_anomaly(c.yield_t_ha, c.year, frac)
         item = c["item"].iloc[0]
-        mapspam = FAOSTAT_TO_MAPSPAM.get(item, "REST")
-        if not pivot.empty and mapspam in pivot.columns:
-            crop_spei = pivot[mapspam].reindex(c["year"]).fillna(spei.reindex(c["year"]))
-        else:
-            crop_spei = spei.reindex(c["year"])
+        crop_spei = crop_exposure(code, pivot, c.year)
         out.append(pd.DataFrame({"iso3": iso3, "item": item, "year": c["year"].to_numpy(),
-                                 "yield_anom": d["anom"].to_numpy(), "spei": crop_spei.to_numpy(),
+                                 "yield_anom": anomaly, "spei": crop_spei.to_numpy(),
                                  "value_share": float(share[code])}))
     return pd.concat(out, ignore_index=True) if out else pd.DataFrame(columns=SERIES_COLS)
 
@@ -222,15 +228,15 @@ def main():
     crops, climate, crop_climate, events, included = load_inputs()
     series = build_series(crops, climate, crop_climate, included)
     national = pd.read_parquet(paths.NATIONAL)
-    anomalies = pd.read_parquet(paths.CROP_ANOMALIES)
+    national = national.sort_values(["iso3", "year"])
+    for _, group in national.groupby("iso3"):
+        national.loc[group.index, "anom"] = training_anomaly(group.value_const, group.year)
 
     slopes = train_slopes(series)
     crop = crop_table(series, slopes)
     nat = national_table(series, slopes, national)
     summ = summary_table(crop, nat, slopes, national)
 
-    n_cmp, max_diff = full_window_check(series, anomalies)
-    assert n_cmp > 0 and max_diff < 1e-9, (n_cmp, max_diff)
     assert not crop.duplicated(["iso3", "item"]).any()
     assert not nat.duplicated(["iso3", "year"]).any()
     assert nat["year"].between(*TEST).all()
@@ -244,8 +250,7 @@ def main():
     summ.to_csv(paths.STATS_DIR / "oos_summary.csv", index=False)
     fig_oos(crop, nat, nat["iso3"].nunique())
 
-    print(f"train {TRAIN}, test {TEST}; crops with train slope: {len(slopes)}; full-window check: "
-          f"{n_cmp} crops, max abs diff {max_diff:.2e}")
+    print(f"train {TRAIN}, test {TEST}, crops with training slopes: {len(slopes)}")
     for r in summ.itertuples():
         print(f"  {r.quantity:<52} {r.value:.4g}")
 

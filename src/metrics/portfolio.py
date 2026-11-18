@@ -91,6 +91,8 @@ import json
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from threadpoolctl import threadpool_limits
+
 import numpy as np
 import pandas as pd
 from scipy.optimize import minimize
@@ -492,6 +494,7 @@ def fig_frontier(frontier_df, summary):
 
 # ---------------------------------------------------------------- main
 
+@threadpool_limits.wrap(limits=1, user_api="blas")
 def main():
     crops, quality = load("crops"), load("quality")
     included = quality.loc[quality["included"], "iso3"].tolist()

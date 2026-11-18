@@ -6,8 +6,7 @@ src.metrics (detrend, faces, diversity, response, decompose, events): nothing is
 
 Value index = sum of value_const over the crops that have a price and a complete series in that district ("balanced" crops).
 A crop reported only in some years would make the sum jump when it enters or leaves; such crops are left out of the value
-index (and reported as `value_coverage`), never filled. Diversity (hill1, hill1_tv) uses every crop in the table, with a
-missing row counted as zero area.
+index (and reported as `value_coverage`), never filled. Diversity (hill1, hill1_tv) uses crops with reported area throughout the corresponding full or lagged window.
 """
 import numpy as np
 import pandas as pd
@@ -24,7 +23,7 @@ MIN_CROPS_VALUE = 3      # at least this many balanced crops
 
 
 def area_matrix(g, years):
-    return g.pivot_table(index="crop", columns="year", values="area_ha", aggfunc="sum").reindex(columns=years).fillna(0.0)
+    return g.pivot_table(index="crop", columns="year", values="area_ha", aggfunc="sum").reindex(columns=years)
 
 
 def hill1_tv(A, years, window):
@@ -32,7 +31,7 @@ def hill1_tv(A, years, window):
     out = {}
     for t in years:
         cols = [y for y in range(t - window, t)]
-        out[t] = hill1(A[cols].sum(axis=1).to_numpy()) if cols[0] >= years[0] else np.nan
+        out[t] = hill1(A[cols].sum(axis=1, min_count=window).dropna().to_numpy()) if cols[0] >= years[0] else np.nan
     return pd.Series(out)
 
 
@@ -75,7 +74,7 @@ def one_district(g, clim, years, events):
     resid = np.column_stack([bal.loc[c].to_numpy() - lowess_trend(bal.loc[c].to_numpy(), x=yrs) for c in bal.index])
     dec = decompose(bal.T.to_numpy(), resid)
 
-    m = {"dist_code": g.dist_code.iloc[0], "hill1": hill1(A.mean(axis=1).to_numpy()), "stability": stability(total, d["resid"].to_numpy()),
+    m = {"dist_code": g.dist_code.iloc[0], "hill1": hill1(A.dropna().mean(axis=1).to_numpy()), "stability": stability(total, d["resid"].to_numpy()),
          "resistance": resistance(index, ev), "recovery": recovery(index, ev), "vulnerability": vulnerability(index),
          "vuln_drought": vulnerability(index, drought_years), "n_events": n_usable_events(index, ev),
          "n_drought_years": int(len(drought_years)), "resp_div": resp_div(b, w), "resp_divergence": resp_divergence(b),

@@ -14,8 +14,7 @@ mapping below is built from the class names (dedicated classes) and the SPAM gro
   crops, TEMF temperate fruit, TROF tropical fruit, CITR citrus, VEGE vegetables, REST rest of crops.
 Items whose class is a judgement call are in UNSURE (item_code -> reason).
 
-This replaces FAOSTAT_TO_MAPSPAM in src/metrics/run.py for the exposure-diversity analysis only (that dict
-uses six codes that are not SPAM 2020 classes and leaves 58 items unmapped); run.py is not changed.
+The national drought-response and exposure-diversity analyses share this crosswalk.
 """
 import pandas as pd
 

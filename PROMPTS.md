@@ -1,5 +1,7 @@
 # Claude Code prompts, one per person
 
+These are the original task assignments. The current implementation, build order and November verification are documented in the [README](README.md) and [project metadata](metadata.md#november-2026-verification).
+
 Put `CLAUDE.md` at the repo root first; Claude Code reads it automatically. Paste your prompt into Claude Code from the repo root. Start in plan mode (review the plan before it writes code).
 
 ---

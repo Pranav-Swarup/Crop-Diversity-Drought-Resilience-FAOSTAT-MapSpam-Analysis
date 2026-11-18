@@ -40,11 +40,11 @@ def test_hill1_tv_equal_shares_is_number_of_crops():
     assert np.allclose(h.dropna().to_numpy(), 4.0)
 
 
-def test_area_matrix_missing_row_counts_as_zero():
+def test_area_matrix_preserves_unreported_area():
     g = crop_table()
     g = g[~((g.crop == "a") & (g.year == 2005))]
     A = metrics.area_matrix(g, YEARS)
-    assert A.loc["a", 2005] == 0.0 and A.shape == (4, len(YEARS))
+    assert pd.isna(A.loc["a", 2005]) and A.shape == (4, len(YEARS))
 
 
 # ---- value index rules ---------------------------------------------------
@@ -176,7 +176,7 @@ def test_conley_se_grows_with_spatial_dependence():
     dshock = rng.normal(size=(G // 6, T))                    # plus a shock shared by clusters of 6 nearby districts, not absorbed
     nb = dshock[d.dist_code.str[1:].astype(int) // 6 % (G // 6), d.year - 1998]
     d["z"] = rng.normal(size=len(d)); d["spei"] = nb + rng.normal(0, .3, len(d)); d["spei_z"] = d.spei * d.z
-    d["anom"] = 0.3 * nb + rng.normal(0, .1, len(d))         # the outcome moves with the same local shock
+    d["anom"] = shock + 0.3 * nb + rng.normal(0, .1, len(d))         # the outcome moves with the same local shock
     cluster_id = np.arange(G) // 6 % (G // 6)
     cent = pd.DataFrame({"lon": 80.0 + cluster_id * 5 + rng.normal(0, .05, G), "lat": np.full(G, 20.0)}, index=[f"d{g}" for g in range(G)])
     _, covs, *_ = conley.fit_conley(d, cent, cutoffs=(1, 50), lag=0)
@@ -193,6 +193,6 @@ def test_validation_table_documented_years_have_sources():
     clim = pd.DataFrame({"dist_code": ["x"] * len(YEARS), "year": YEARS, "spei12_w": -1.5})
     t = panel.validation_table(clim, YEARS, "spei12_w")
     doc = t[t.documented_drought_year]
-    assert set(doc.year) == {2002, 2009, 2014, 2015}
+    assert set(doc.year) == {2002, 2004, 2009, 2014, 2015}
     assert doc.url.str.startswith("https://").all() and doc.monsoon_departure_lpa_pct.lt(0).all()
-    assert t[~t.documented_drought_year].url.isna().all() and (t.share_drought == 1).all()
+    assert t[t.documented_drought_year.isna()].url.isna().all() and (t.share_drought == 1).all()

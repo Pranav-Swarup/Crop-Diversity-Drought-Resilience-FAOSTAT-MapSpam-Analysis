@@ -9,11 +9,9 @@ measure, not a kharif-only crop analysis (a crop-season split would need season-
 
 Run: python -m src.india.kharif
 """
-import numpy as np
 import pandas as pd
 
 from ..common import paths
-from ..metrics.panel import coef_rows
 from . import panel as P
 
 VAR = "spei4kh_w"

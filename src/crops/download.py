@@ -2,8 +2,8 @@
 
 Run: python -m src.crops.download
 """
-import pandas as pd
-import requests
+import hashlib
+import shutil
 
 from ..common import paths
 from ..common.sources import download, log_source
@@ -31,22 +31,18 @@ WDI_INDICATORS = {
 
 def download_wdi(indicator):
     url = f"https://api.worldbank.org/v2/country/all/indicator/{indicator}?format=json&date=1993:2023&per_page=20000"
-    r = requests.get(url, timeout=120)
-    r.raise_for_status()
-    meta, rows = r.json()
-    assert meta["pages"] == 1, f"{indicator}: response is paginated ({meta['pages']} pages)"
-    df = pd.DataFrame({
-        "iso3": [x["countryiso3code"] for x in rows],
-        "country": [x["country"]["value"] for x in rows],
-        "year": [int(x["date"]) for x in rows],
-        "value": [x["value"] for x in rows],
-    })
-    assert len(df) > 5000, f"{indicator}: only {len(df)} rows returned"
-    dest = WDI_DIR / f"{indicator}.csv"
+    snapshot = paths.ROOT / "data" / "sources" / "wdi" / "2026-11-11" / f"{indicator}.csv"
+    hashes = {
+        "AG.CON.FERT.ZS": "3cfd12e6fd6c4e7f8958e7859f3dd0f639f88fefba0baf21b7554a6bede0163b",
+        "NY.GDP.PCAP.KD": "8ce8686b04f7318e7308edbb385f94887d9534d2f77f792aaac5660d0404649a",
+    }
+    if hashlib.sha256(snapshot.read_bytes()).hexdigest() != hashes[indicator]:
+        raise ValueError(f"Unexpected WDI snapshot contents for {indicator}")
+    dest = WDI_DIR / snapshot.name
     dest.parent.mkdir(parents=True, exist_ok=True)
-    df.to_csv(dest, index=False)
+    shutil.copyfile(snapshot, dest)
     log_source(f"World Bank WDI {indicator}", url, dest,
-               note=f"{WDI_INDICATORS[indicator]}; API last updated {meta.get('lastupdated')}")
+               note=f"{WDI_INDICATORS[indicator]}, API release 2026-11-11")
     return dest
 
 

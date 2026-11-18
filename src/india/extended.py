@@ -54,8 +54,8 @@ def main():
         d = m[["mcode", "year", f"{col} AREA (1000 ha)", f"{col} PRODUCTION (1000 tons)"]].copy()
         d.columns = ["mcode", "year", "area_k", "prod_k"]
         d = d[d.area_k > 0]
-        d["crop"], d["price_usd_t"] = name, float(prices[item])
-        d["area_ha"], d["prod_t"] = d.area_k * 1000, d.prod_k * 1000
+        d["crop"], d["price_intl_dollars_t"] = name, float(prices[item])
+        d["area_ha"], d["prod_t"] = d.area_k * 1000, d.prod_k.where(d.prod_k >= 0) * 1000
         rows.append(d.drop(columns=["area_k", "prod_k"]))
     c = pd.concat(rows)
     c = c[c.year.between(YEARS[0], YEARS[-1])]
@@ -63,7 +63,7 @@ def main():
     y0 = c.prod_t / c.area_ha
     c.loc[y0 > 10 * y0.groupby(c.crop).transform("median"), "prod_t"] = np.nan
     c["yield_t_ha"] = c.prod_t / c.area_ha
-    c["value_const"] = c.prod_t * c.price_usd_t
+    c["value_const"] = c.prod_t * c.price_intl_dollars_t
     c["is_missing"] = c.prod_t.isna()
 
     # stability and split flags on the 1993-2015 window (same rules as the core)
@@ -79,7 +79,7 @@ def main():
     dist["core"] = dist.stable & ~dist.split_flag & dist.dist_code.notna()
     dist = dist.dropna(subset=["dist_code"])
     c["dist_code"] = c.mcode.map(code_of)
-    c = c.dropna(subset=["dist_code"])[["dist_code", "year", "crop", "area_ha", "prod_t", "yield_t_ha", "price_usd_t", "value_const", "is_missing"]]
+    c = c.dropna(subset=["dist_code"])[["dist_code", "year", "crop", "area_ha", "prod_t", "yield_t_ha", "price_intl_dollars_t", "value_const", "is_missing"]]
     c = c.sort_values(["dist_code", "year", "crop"]).reset_index(drop=True)
     assert not c.duplicated(["dist_code", "year", "crop"]).any() and c.year.between(1993, 2015).all()
 
@@ -89,16 +89,17 @@ def main():
         k.loc[k[col] < 0, col] = np.nan                       # -1 = missing code
     k["irrig_share"] = k["GROSS IRRIGATED AREA (1000 ha)"] / k["GROSS CROPPED AREA (1000 ha)"].where(k["GROSS CROPPED AREA (1000 ha)"] > 0)
     k["fert_kg_ha"] = k["TOTAL FERTILISER CONSUMPTION (tons)"] * 1000 / (k["GROSS CROPPED AREA (1000 ha)"].where(k["GROSS CROPPED AREA (1000 ha)"] > 0) * 1000)
+    k["irrig_share"] = k.irrig_share.where(k.irrig_share.between(0, 1))
     k["dist_code"] = k.mcode.map(code_of)
     k = k.dropna(subset=["dist_code"])[["dist_code", "year", "irrig_share", "fert_kg_ha"]]
     k = k[k.year.between(1993, 2015)].reset_index(drop=True)
-    assert k.irrig_share.dropna().between(0, 5).all()
+    assert k.irrig_share.dropna().between(0, 1).all()
 
     # mirror vs DES where both exist (rice)
     cd = pd.read_parquet(OUT / "crops.parquet")
     r = cd[cd.crop == "Rice"].merge(c[c.crop == "Rice"], on=["dist_code", "year"], suffixes=("_des", "_mir"))
     ra, rp = r.area_ha_des / r.area_ha_mir, r.prod_t_des / r.prod_t_mir
-    print(f"rice, DES vs mirror (same polygon, 1997-2015, {len(r)} district-years): area ratio median {ra.median():.2f} "
+    print(f"rice, DES vs mirror (same polygon, {r.year.min()}-{r.year.max()}, {len(r)} district-years): area ratio median {ra.median():.2f} "
           f"(within 5%: {(abs(ra - 1) < .05).mean():.0%}); production ratio median {rp.median():.2f}")
 
     dist.to_csv(OUT / "districts_ext5.csv", index=False)

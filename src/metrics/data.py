@@ -1,6 +1,5 @@
 """Country-level analysis table: metrics + region + window means of the controls."""
 import numpy as np
-import pandas as pd
 
 from ..common import paths
 from ..common.contract import load

@@ -1,6 +1,6 @@
 # Phase 4 design: does crop diversity cause drought resilience? Evidence from Indian districts
 
-Status: **proposal for team discussion**. Nothing here changes "Fixed analysis choices", "Metric definitions" or the phase 1–3 data contracts in `CLAUDE.md`. Every point marked **[team]** needs team agreement before work starts. No code exists yet.
+This is the original Phase 4 proposal. The district pipeline shipped in November 2026. It uses the DES core sample and a separate five-crop ICRISAT mirror sample. The methods note records the adopted sources, periods, boundary matching and remaining limitations. [Implemented methods](../src/india/README.md) · [District results](../outputs/stats/india_panel.csv)
 
 ## 1. Why this phase
 

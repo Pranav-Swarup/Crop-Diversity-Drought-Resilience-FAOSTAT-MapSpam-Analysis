@@ -10,16 +10,9 @@ def collect_figures():
         
     deck_dir.mkdir(parents=True, exist_ok=True)
     
-    # Clean old numbered pngs
-    for f in deck_dir.glob("*.png"):
-        if f.name.startswith("pipeline"):
-            continue
-        f.unlink()
-    
+    old_assets = set(deck_dir.glob("[0-9][0-9]_*.png"))
     index_file = deck_dir / "INDEX.md"
-    if index_file.exists():
-        index_file.unlink()
-        
+
     source_dirs = ["climate", "data", "results", "validation", "india"]
     collected = []
     
@@ -39,7 +32,7 @@ def collect_figures():
             })
             
     # Add pipeline
-    pipeline_png = deck_dir / "pipeline.png"
+    pipeline_png = FIGURES / "deck" / "pipeline.png"
     if pipeline_png.exists():
         collected.insert(0, {
             "owner": "explorer",
@@ -60,12 +53,16 @@ def collect_figures():
             
         dest = deck_dir / new_name
         
+        old_assets.discard(dest)
         if item["orig_path"] != dest:
             shutil.copy2(item["orig_path"], dest)
             
         desc = item["orig_name"].replace(".png", "").replace("_", " ").title()
         index_lines.append(f"| `{new_name}` | {item['owner']} | {desc} |")
         
+    for stale in old_assets:
+        stale.unlink()
+
     with open(index_file, "w") as f:
         f.write("\n".join(index_lines) + "\n")
         

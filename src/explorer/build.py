@@ -110,6 +110,18 @@ PF_CSS = """
         .ds-item span.val { font-weight: bold; color: #2c3e50; font-size: 13px; }
         .ds-crops { margin-top: 6px; font-size: 12px; color: #444; }
         .ds-pill { display: inline-block; background: #eef4f7; border: 1px solid #d0dfe6; border-radius: 10px; padding: 1px 8px; margin: 2px 4px 2px 0; }
+        #india-view { display: none; flex: 1; padding: 12px; overflow-y: auto; background: #fafafa; font-size: 14px; }
+        .ind-card { background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 14px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+        .ind-card h3 { margin: 0 0 8px 0; font-size: 16px; color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 6px; }
+        .ind-note { font-size: 13px; color: #444; line-height: 1.5; margin-bottom: 10px; }
+        .ind-table-wrap { max-height: 280px; overflow-y: auto; border: 1px solid #eee; margin-top: 8px; }
+        .ind-table { border-collapse: collapse; width: 100%; font-size: 12.5px; background: #fff; }
+        .ind-table th, .ind-table td { border: 1px solid #e0e0e0; padding: 5px 8px; text-align: right; }
+        .ind-table th { background: #f4f6f7; position: sticky; top: 0; z-index: 2; color: #2c3e50; }
+        .ind-table th:first-child, .ind-table td:first-child, .ind-table th:nth-child(2), .ind-table td:nth-child(2) { text-align: left; }
+        .ind-plot { height: 320px; width: 100%; border: 1px solid #f0f0f0; border-radius: 4px; margin-top: 6px; }
+        .ind-toolbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 8px; font-size: 13px; }
+        .ind-toolbar select { padding: 5px 8px; font-size: 13px; border: 1px solid #bdc3c7; border-radius: 4px; }
 """
 
 PF_HTML = """
@@ -134,6 +146,77 @@ PF_HTML = """
                     compared with a year with SPEI-12 = 0, from each crop's drought response slope; it is shown as n/a if any crop with a
                     non-zero share has no slope.
                 </div>
+            </div>
+        </div>
+        <div id="india-view">
+            <div class="ind-card">
+                <h3>Phase 4: Does Crop Diversity Cause Drought Resilience Within Indian Districts?</h3>
+                <div class="ind-note">
+                    Phases 1&ndash;3 compare 107 countries cross-sectionally, where crop diversity (<code>hill1</code>) is nearly time-invariant.
+                    Phase 4 tests the mechanism <strong>within Indian districts over time</strong> using 5-year lagged crop diversity (<code>hill1_tv</code>, years <em>t&minus;5..t&minus;1</em>)
+                    with district (<code>&alpha;<sub>d</sub></code>) and state&times;year (<code>&lambda;<sub>s,t</sub></code>) fixed effects:<br>
+                    <code>anom<sub>d,t</sub> = &beta;&middot;spei<sub>d,t</sub> + &gamma;&middot;spei<sub>d,t</sub> &times; z(hill1_tv<sub>d,t&minus;1</sub>) + &delta;&middot;z(hill1_tv<sub>d,t&minus;1</sub>) + &alpha;<sub>d</sub> + &lambda;<sub>state&times;year</sub> + &varepsilon;<sub>d,t</sub></code>
+                </div>
+                <div id="ind-summary-wrap"></div>
+            </div>
+
+            <div class="ind-card">
+                <h3>1. District Panel Regressions &amp; Irrigation Confounder Test</h3>
+                <div class="ind-toolbar">
+                    <label for="ind-panel-win"><strong>Window / Sample:</strong></label>
+                    <select id="ind-panel-win">
+                        <option value="core">Core DES (1998&ndash;2022, 303 districts)</option>
+                        <option value="core_allstable">All Stable DES (1998&ndash;2022, 404 districts, incl. split-flagged)</option>
+                        <option value="ext5">Extended 5-Crop Mirror (1993&ndash;2015, 127 districts)</option>
+                        <option value="ext5_allstable">All Stable Extended 5-Crop (1993&ndash;2015, 221 districts)</option>
+                    </select>
+                </div>
+                <div id="ind-panel-chart" class="ind-plot"></div>
+                <div class="ind-table-wrap"><table class="ind-table" id="ind-panel-table"></table></div>
+            </div>
+
+            <div class="ind-card">
+                <h3>2. Drought Severity Bins &amp; Within-State Studentised Permutation</h3>
+                <div class="ind-note" id="ind-perm-note"></div>
+                <div id="ind-sev-chart" class="ind-plot"></div>
+                <div class="ind-table-wrap"><table class="ind-table" id="ind-sev-table"></table></div>
+            </div>
+
+            <div class="ind-card">
+                <h3>3. Four Faces of Resilience: Indian Districts vs. Global National Cross-Section</h3>
+                <div class="ind-toolbar">
+                    <label for="ind-face-pred"><strong>Predictor:</strong></label>
+                    <select id="ind-face-pred">
+                        <option value="hill1">Crop Diversity (hill1)</option>
+                        <option value="resp_div">Response Diversity (resp_div)</option>
+                        <option value="resp_divergence">Response Divergence (resp_divergence)</option>
+                    </select>
+                </div>
+                <div id="ind-faces-chart" class="ind-plot"></div>
+                <div class="ind-table-wrap"><table class="ind-table" id="ind-faces-table"></table></div>
+            </div>
+
+            <div class="ind-card">
+                <h3>4. Robustness: Spatial-HAC (Conley), Kharif Monsoon Exposure &amp; Crops, Leave-One-State-Out</h3>
+                <div class="ind-toolbar">
+                    <label for="ind-rob-view"><strong>Robustness Check:</strong></label>
+                    <select id="ind-rob-view">
+                        <option value="conley">Conley Spatial-HAC Standard Errors (100, 200, 400 km)</option>
+                        <option value="kharif">Kharif Monsoon SPEI-4 (Sept) &amp; Kharif-Only Crop Tables</option>
+                        <option value="loso">Leave-One-State-Out Sensitivity (spei &times; z(hill1_tv))</option>
+                    </select>
+                </div>
+                <div id="ind-rob-chart" class="ind-plot"></div>
+                <div class="ind-table-wrap"><table class="ind-table" id="ind-rob-table"></table></div>
+            </div>
+
+            <div class="ind-card">
+                <h3>5. Ground-Truth Validation: Documented All-India Monsoon Drought Years</h3>
+                <div class="ind-note">
+                    District-level drought incidence (share of districts with <code>spei12_w &le; &minus;1.0</code>) against India's documented monsoon drought years (2002, 2009, 2014, 2015).
+                </div>
+                <div id="ind-val-chart" class="ind-plot"></div>
+                <div class="ind-table-wrap"><table class="ind-table" id="ind-val-table"></table></div>
             </div>
         </div>
 """
@@ -196,6 +279,7 @@ PF_JS = """
 
         let pf = null;   // state of the displayed portfolio
         let activeTab = 'ts';
+        let indiaResultsRendered = false;
 
         function signed(v, d, unit) { return (v >= 0 ? '+' : '') + v.toFixed(d) + unit; }
 
@@ -253,7 +337,7 @@ PF_JS = """
                 body.style.display = 'none';
                 empty.style.display = 'block';
                 empty.innerHTML = 'The country-level portfolio simulator uses national FAOSTAT covariance matrices (1993&ndash;2023). ' +
-                    'Switch <strong>Map Scope</strong> to <em>Global (107 Countries)</em> and click India (<code>IND</code>) or another country to simulate national crop mix reallocations, or view the <strong>Time series</strong> tab for district-level trajectories.';
+                    'Switch <strong>Map Scope</strong> to <em>Global (107 Countries)</em> and click India (<code>IND</code>) or another country to simulate national crop mix reallocations, or view the <strong>Time series</strong> or <strong>Phase 4: India Results</strong> tabs.';
                 pf = null;
                 return;
             }
@@ -300,14 +384,367 @@ PF_JS = """
             pfUpdateOutputs(false);
         });
 
+        // ---------------- Phase 4 India Statistical Results Tab ----------------
+        function fmtNum(v, d=4) {
+            if (v === null || v === undefined || Number.isNaN(v)) return '&mdash;';
+            const n = Number(v);
+            if (Math.abs(n) > 0 && Math.abs(n) < 1e-4) return n.toExponential(2);
+            return n.toFixed(d);
+        }
+
+        function renderIndiaSummary() {
+            if (!indiaData || !indiaData.stats) return;
+            const sRows = indiaData.stats.summary || [];
+            const pRows = indiaData.stats.panel || [];
+            const getBeta = (m, t) => {
+                const r = pRows.find(x => x.model === m && x.term === t);
+                return r ? `${fmtNum(r.beta, 4)} (p=${fmtNum(r.p, 3)})` : '&mdash;';
+            };
+            let html = '<table class="ind-table"><thead><tr>' +
+                '<th>Window</th><th>Years</th><th>Usable Districts</th><th>Drought Events (Dist w/ Event)</th>' +
+                '<th>Median Hill-1</th><th>Median Value Coverage</th><th>Core &beta;<sub>SPEI</sub></th>' +
+                '<th>Core &gamma;<sub>SPEI&times;z(hill1_tv)</sub></th><th>Irrigation &beta;<sub>SPEI&times;z(irrig_lag)</sub></th>' +
+                '</tr></thead><tbody>';
+            sRows.forEach(r => {
+                const w = r.window;
+                html += `<tr>` +
+                    `<td><strong>${w === 'core' ? 'Core DES (47 crops)' : 'Extended Mirror (5 crops)'}</strong></td>` +
+                    `<td>${r.years}</td>` +
+                    `<td>${r.districts}</td>` +
+                    `<td>${r.n_events} (${r.districts_with_event})</td>` +
+                    `<td>${fmtNum(r.median_hill1, 2)}</td>` +
+                    `<td>${fmtNum((r.median_value_coverage || 0) * 100, 1)}%</td>` +
+                    `<td>${getBeta(w + ':core', 'spei')}</td>` +
+                    `<td>${getBeta(w + ':core', 'spei_z')}</td>` +
+                    `<td>${getBeta(w + ':le2015_irrig', 'spei_x_irrig_lag')}</td>` +
+                    `</tr>`;
+            });
+            html += '</tbody></table>';
+            document.getElementById('ind-summary-wrap').innerHTML = html;
+        }
+
+        function renderIndiaPanelSection() {
+            if (!indiaData || !indiaData.stats) return;
+            const winPrefix = document.getElementById('ind-panel-win').value;
+            const rows = (indiaData.stats.panel || []).filter(r => r.model.startsWith(winPrefix + ':'));
+            const focusRows = rows.filter(r => ['spei', 'spei_z', 'spei_z3', 'dry', 'dry_z', 'spei_x_irrig_lag', 'spei_x_fert_lag'].includes(r.term));
+            const yLabels = focusRows.map(r => `${r.model.replace(winPrefix + ':', '')} [${r.term}]`).reverse();
+            const betas = focusRows.map(r => r.beta).reverse();
+            const errHi = focusRows.map(r => r.ci_hi - r.beta).reverse();
+            const errLo = focusRows.map(r => r.beta - r.ci_lo).reverse();
+            const colors = focusRows.map(r => r.term.includes('irrig') ? '#2980b9' : (r.term.includes('z') ? '#e67e22' : '#2c3e50')).reverse();
+
+            Plotly.newPlot('ind-panel-chart', [{
+                x: betas,
+                y: yLabels,
+                type: 'scatter',
+                mode: 'markers',
+                marker: { size: 9, color: colors },
+                error_x: { type: 'data', symmetric: false, array: errHi, arrayminus: errLo, color: '#555', thickness: 1.5, width: 4 },
+                hovertemplate: '<b>%{y}</b><br>&beta; = %{x:.4f}<extra></extra>'
+            }], {
+                title: { text: `Panel Coefficients &amp; 95% CIs (${winPrefix})`, font: { size: 14 } },
+                margin: { t: 35, b: 40, l: 175, r: 20 },
+                xaxis: { title: 'Coefficient (&beta;, share of trend per unit)', zeroline: true, zerolinecolor: '#c0392b', zerolinewidth: 1.5 },
+                yaxis: { automargin: true }
+            }, { responsive: true });
+
+            let thtml = '<thead><tr><th>Model</th><th>Term</th><th>&beta;</th><th>SE</th><th>95% CI</th><th>p-value</th><th>Obs (Districts)</th><th>R&sup2; within</th><th>Note</th></tr></thead><tbody>';
+            rows.forEach(r => {
+                thtml += `<tr><td>${r.model}</td><td><code>${r.term}</code></td><td>${fmtNum(r.beta, 4)}</td><td>${fmtNum(r.se, 4)}</td>` +
+                    `<td>[${fmtNum(r.ci_lo, 4)}, ${fmtNum(r.ci_hi, 4)}]</td><td>${fmtNum(r.p, 4)}</td>` +
+                    `<td>${r.n_obs} (${r.n_districts})</td><td>${fmtNum(r.r2_within, 4)}</td><td style="text-align:left;">${r.note || ''}</td></tr>`;
+            });
+            thtml += '</tbody>';
+            document.getElementById('ind-panel-table').innerHTML = thtml;
+        }
+
+        function renderIndiaSeveritySection() {
+            if (!indiaData || !indiaData.stats) return;
+            const sev = indiaData.stats.severity || [];
+            const cnts = indiaData.stats.severity_counts || [];
+            const perms = indiaData.stats.severity_perm || [];
+
+            const permText = perms.map(p =>
+                `<strong>${p.model}</strong> extreme &times; diversity (<code>${p.term}</code>): <em>t</em><sub>obs</sub> = ${fmtNum(p.t_obs, 2)}, ` +
+                `studentised within-state permutation <strong>p<sub>perm_t</sub> = ${fmtNum(p.p_perm_t, 3)}</strong> (${p.n_perm} permutations)`
+            ).join(' &nbsp;|&nbsp; ');
+            document.getElementById('ind-perm-note').innerHTML =
+                `Drought severity bins: <code>moderate</code> (&minus;1.5 &lt; SPEI &le; &minus;1.0), <code>severe</code> (&minus;2.0 &lt; SPEI &le; &minus;1.5), <code>extreme</code> (SPEI &le; &minus;2.0).<br>` +
+                permText;
+
+            const bins = ['moderate_z', 'severe_z', 'extreme_z'];
+            const binLabels = ['Moderate &times; z(hill1_tv)', 'Severe &times; z(hill1_tv)', 'Extreme &times; z(hill1_tv)'];
+            const traces = [];
+            [['core:severity', 'Core DES (303 dist)', '#2980b9'],
+             ['core_allstable:severity', 'All Stable DES (404 dist)', '#5dade2'],
+             ['ext5:severity', 'Extended 5-Crop (127 dist)', '#d35400'],
+             ['ext5_allstable:severity', 'All Stable 5-Crop (221 dist)', '#f39c12']].forEach(([mName, label, colr]) => {
+                const sub = bins.map(b => sev.find(r => r.model === mName && r.term === b)).filter(Boolean);
+                if (sub.length === 3) {
+                    traces.push({
+                        x: binLabels,
+                        y: sub.map(r => r.beta),
+                        name: label,
+                        type: 'bar',
+                        marker: { color: colr },
+                        error_y: {
+                            type: 'data',
+                            symmetric: false,
+                            array: sub.map(r => r.ci_hi - r.beta),
+                            arrayminus: sub.map(r => r.beta - r.ci_lo)
+                        }
+                    });
+                }
+            });
+
+            Plotly.newPlot('ind-sev-chart', traces, {
+                barmode: 'group',
+                title: { text: 'Diversity &times; Drought Severity Bin Coefficients (&plusmn; 95% CI)', font: { size: 14 } },
+                margin: { t: 35, b: 45, l: 60, r: 20 },
+                yaxis: { title: 'Change in anomaly per SD of diversity', zeroline: true, zerolinecolor: '#666' },
+                legend: { orientation: 'h', y: -0.22 }
+            }, { responsive: true });
+
+            const cntMap = {};
+            cnts.forEach(c => { cntMap[c.model + ':' + c.bin] = `${c.n_district_years} (top tercile: ${c.n_high_diversity_tercile})`; });
+            let thtml = '<thead><tr><th>Model</th><th>Term</th><th>&beta;</th><th>SE</th><th>95% CI</th><th>p-value</th><th>Bin Dist-Years (High Div Tercile)</th></tr></thead><tbody>';
+            sev.forEach(r => {
+                const w = r.model.split(':')[0];
+                const baseBin = r.term.replace('_z', '');
+                const cInfo = cntMap[w + ':' + baseBin] || '&mdash;';
+                thtml += `<tr><td>${r.model}</td><td><code>${r.term}</code></td><td>${fmtNum(r.beta, 4)}</td><td>${fmtNum(r.se, 4)}</td>` +
+                    `<td>[${fmtNum(r.ci_lo, 4)}, ${fmtNum(r.ci_hi, 4)}]</td><td>${fmtNum(r.p, 4)}</td><td>${cInfo}</td></tr>`;
+            });
+            thtml += '</tbody>';
+            document.getElementById('ind-sev-table').innerHTML = thtml;
+        }
+
+        function renderIndiaFacesSection() {
+            if (!indiaData || !indiaData.stats) return;
+            const pred = document.getElementById('ind-face-pred').value;
+            const rows = (indiaData.stats.vs_national || []).filter(r => r.predictor === pred);
+            const coreRows = rows.filter(r => r.window === 'core');
+            const ext5Rows = rows.filter(r => r.window === 'ext5');
+            const faces = coreRows.map(r => r.face);
+
+            const traces = [
+                {
+                    x: faces,
+                    y: coreRows.map(r => r.rho),
+                    name: 'India Districts — Core DES (n=303)',
+                    type: 'bar',
+                    marker: { color: '#2980b9' },
+                    error_y: { type: 'data', symmetric: false, array: coreRows.map(r => r.ci_hi - r.rho), arrayminus: coreRows.map(r => r.rho - r.ci_lo) }
+                },
+                {
+                    x: faces,
+                    y: ext5Rows.map(r => r.rho),
+                    name: 'India Districts — Extended 5-Crop (n=127)',
+                    type: 'bar',
+                    marker: { color: '#e67e22' },
+                    error_y: { type: 'data', symmetric: false, array: ext5Rows.map(r => r.ci_hi - r.rho), arrayminus: ext5Rows.map(r => r.rho - r.ci_lo) }
+                }
+            ];
+            if (coreRows.some(r => r.rho_national !== null)) {
+                traces.push({
+                    x: faces,
+                    y: coreRows.map(r => r.rho_national),
+                    name: 'Global National Cross-Section (n=107)',
+                    type: 'bar',
+                    marker: { color: '#27ae60' }
+                });
+            }
+
+            Plotly.newPlot('ind-faces-chart', traces, {
+                barmode: 'group',
+                title: { text: `Spearman Rank Correlation (&rho;) of ${pred} vs. Four Faces of Resilience`, font: { size: 14 } },
+                margin: { t: 35, b: 45, l: 60, r: 20 },
+                yaxis: { title: 'Spearman &rho;', range: [-0.75, 0.75], zeroline: true, zerolinecolor: '#666' },
+                legend: { orientation: 'h', y: -0.22 }
+            }, { responsive: true });
+
+            let thtml = '<thead><tr><th>Window</th><th>Face</th><th>Predictor</th><th>India &rho;</th><th>India 95% CI</th><th>India p</th><th>India n</th><th>National &rho;</th><th>National p</th><th>National n</th></tr></thead><tbody>';
+            rows.forEach(r => {
+                thtml += `<tr><td>${r.window}</td><td><strong>${r.face}</strong></td><td><code>${r.predictor}</code></td>` +
+                    `<td>${fmtNum(r.rho, 3)}</td><td>[${fmtNum(r.ci_lo, 3)}, ${fmtNum(r.ci_hi, 3)}]</td><td>${fmtNum(r.p, 4)}</td><td>${r.n}</td>` +
+                    `<td>${fmtNum(r.rho_national, 3)}</td><td>${fmtNum(r.p_national, 4)}</td><td>${r.n_national !== null ? r.n_national : '&mdash;'}</td></tr>`;
+            });
+            thtml += '</tbody>';
+            document.getElementById('ind-faces-table').innerHTML = thtml;
+        }
+
+        function renderIndiaRobustnessSection() {
+            if (!indiaData || !indiaData.stats) return;
+            const mode = document.getElementById('ind-rob-view').value;
+            if (mode === 'conley') {
+                const rows = indiaData.stats.conley || [];
+                const speiZ = rows.filter(r => r.term === 'spei_z');
+                const spei = rows.filter(r => r.term === 'spei');
+                Plotly.newPlot('ind-rob-chart', [
+                    {
+                        x: spei.map(r => r.model),
+                        y: spei.map(r => r.se),
+                        name: 'SE of spei',
+                        type: 'bar',
+                        marker: { color: '#2c3e50' }
+                    },
+                    {
+                        x: speiZ.map(r => r.model),
+                        y: speiZ.map(r => r.se),
+                        name: 'SE of spei &times; z(hill1_tv)',
+                        type: 'bar',
+                        marker: { color: '#e67e22' }
+                    }
+                ], {
+                    barmode: 'group',
+                    title: { text: 'Standard Error Comparison: District CR1, State CR1, and Conley Spatial-HAC (100, 200, 400 km)', font: { size: 14 } },
+                    margin: { t: 35, b: 65, l: 60, r: 20 },
+                    yaxis: { title: 'Standard Error (SE)' },
+                    legend: { orientation: 'h', y: -0.3 }
+                }, { responsive: true });
+
+                let thtml = '<thead><tr><th>Model</th><th>Term</th><th>&beta;</th><th>SE</th><th>95% CI</th><th>p-value</th><th>Clusters / Districts</th><th>Note</th></tr></thead><tbody>';
+                rows.forEach(r => {
+                    thtml += `<tr><td>${r.model}</td><td><code>${r.term}</code></td><td>${fmtNum(r.beta, 4)}</td><td>${fmtNum(r.se, 4)}</td>` +
+                        `<td>[${fmtNum(r.ci_lo, 4)}, ${fmtNum(r.ci_hi, 4)}]</td><td>${fmtNum(r.p, 4)}</td><td>${r.n_districts}</td><td style="text-align:left;">${r.note || ''}</td></tr>`;
+                });
+                thtml += '</tbody>';
+                document.getElementById('ind-rob-table').innerHTML = thtml;
+            } else if (mode === 'kharif') {
+                const kh = (indiaData.stats.kharif || []).concat(indiaData.stats.kharif_crops || []);
+                const sub = kh.filter(r => r.term === 'spei' || r.term === 'spei_z' || r.term === 'extreme_z');
+                Plotly.newPlot('ind-rob-chart', [{
+                    x: sub.map(r => r.beta),
+                    y: sub.map(r => `${r.model} [${r.term}]`).reverse(),
+                    type: 'scatter',
+                    mode: 'markers',
+                    marker: { size: 8, color: '#16a085' },
+                    error_x: {
+                        type: 'data',
+                        symmetric: false,
+                        array: sub.map(r => (r.ci_hi !== null ? r.ci_hi - r.beta : 0)).reverse(),
+                        arrayminus: sub.map(r => (r.ci_lo !== null ? r.beta - r.ci_lo : 0)).reverse()
+                    }
+                }], {
+                    title: { text: 'Kharif Exposure (Sept SPEI-4) &amp; Kharif-Only Crop Models (&beta; &plusmn; 95% CI)', font: { size: 14 } },
+                    margin: { t: 35, b: 40, l: 220, r: 20 },
+                    xaxis: { title: 'Coefficient (&beta;)', zeroline: true, zerolinecolor: '#c0392b' }
+                }, { responsive: true });
+
+                let thtml = '<thead><tr><th>Model</th><th>Term</th><th>&beta; / &rho;</th><th>SE</th><th>95% CI</th><th>p-value</th><th>Obs (Districts)</th></tr></thead><tbody>';
+                kh.forEach(r => {
+                    thtml += `<tr><td>${r.model}</td><td><code>${r.term}</code></td><td>${fmtNum(r.beta, 4)}</td><td>${fmtNum(r.se, 4)}</td>` +
+                        `<td>${r.ci_lo !== null ? '[' + fmtNum(r.ci_lo, 4) + ', ' + fmtNum(r.ci_hi, 4) + ']' : '&mdash;'}</td>` +
+                        `<td>${fmtNum(r.p, 4)}</td><td>${r.n_obs}${r.n_districts ? ' (' + r.n_districts + ')' : ''}</td></tr>`;
+                });
+                thtml += '</tbody>';
+                document.getElementById('ind-rob-table').innerHTML = thtml;
+            } else {
+                const loso = (indiaData.stats.leave_out_state || []).filter(r => r.model === 'core:leave_out_state');
+                Plotly.newPlot('ind-rob-chart', [{
+                    x: loso.map(r => r.dropped_state),
+                    y: loso.map(r => r.beta_spei_z),
+                    type: 'scatter',
+                    mode: 'markers',
+                    name: 'spei &times; z(hill1_tv)',
+                    marker: { size: 8, color: '#8e44ad' },
+                    error_y: { type: 'data', array: loso.map(r => 1.96 * r.se), color: '#8e44ad' }
+                }], {
+                    title: { text: 'Leave-One-State-Out Stability of spei &times; z(hill1_tv) (Core DES, &plusmn;1.96 SE)', font: { size: 14 } },
+                    margin: { t: 35, b: 85, l: 60, r: 20 },
+                    xaxis: { tickangle: -35 },
+                    yaxis: { title: '&beta; (spei &times; z(hill1_tv))', zeroline: true, zerolinecolor: '#666' }
+                }, { responsive: true });
+
+                let thtml = '<thead><tr><th>Model</th><th>Dropped State</th><th>&beta; (spei_z)</th><th>SE</th><th>p-value</th><th>Obs</th><th>Districts</th></tr></thead><tbody>';
+                (indiaData.stats.leave_out_state || []).forEach(r => {
+                    thtml += `<tr><td>${r.model}</td><td><strong>${r.dropped_state}</strong></td><td>${fmtNum(r.beta_spei_z, 4)}</td>` +
+                        `<td>${fmtNum(r.se, 4)}</td><td>${fmtNum(r.p, 4)}</td><td>${r.n_obs}</td><td>${r.n_districts}</td></tr>`;
+                });
+                thtml += '</tbody>';
+                document.getElementById('ind-rob-table').innerHTML = thtml;
+            }
+        }
+
+        function renderIndiaValidationSection() {
+            if (!indiaData || !indiaData.stats) return;
+            const rows = indiaData.stats.drought_years || [];
+            const yrs = rows.map(r => r.year);
+            const sharePct = rows.map(r => (r.share_drought || 0) * 100);
+            const barCols = rows.map(r => r.documented_drought_year ? '#c0392b' : '#95a5a6');
+
+            Plotly.newPlot('ind-val-chart', [
+                {
+                    x: yrs,
+                    y: sharePct,
+                    type: 'bar',
+                    name: 'Districts in Drought (SPEI-12 <= -1.0, %)',
+                    marker: { color: barCols }
+                },
+                {
+                    x: yrs,
+                    y: rows.map(r => r.mean_spei),
+                    yaxis: 'y2',
+                    type: 'scatter',
+                    mode: 'lines+markers',
+                    name: 'All-India Mean District SPEI-12',
+                    line: { color: '#2c3e50', width: 2 }
+                }
+            ], {
+                title: { text: 'Share of Indian Districts in Drought vs. Documented Monsoon Drought Years (Red Bars)', font: { size: 14 } },
+                margin: { t: 35, b: 45, l: 55, r: 55 },
+                yaxis: { title: 'Districts with SPEI-12 <= -1.0 (%)' },
+                yaxis2: { title: 'Mean SPEI-12', overlaying: 'y', side: 'right', showgrid: false, zeroline: true },
+                legend: { orientation: 'h', y: -0.22 }
+            }, { responsive: true });
+
+            let thtml = '<thead><tr><th>Year</th><th>Documented Drought</th><th>Districts in Drought (%)</th><th>Mean District SPEI-12</th><th>Monsoon Departure (% LPA)</th><th>Citation / Source</th></tr></thead><tbody>';
+            rows.forEach(r => {
+                const srcHtml = r.source ? (r.url ? `<a href="${r.url}" target="_blank" rel="noopener">${r.source}</a>` : r.source) : '&mdash;';
+                thtml += `<tr style="${r.documented_drought_year ? 'background:#fdf2e9;font-weight:bold;' : ''}">` +
+                    `<td>${r.year}</td><td>${r.documented_drought_year ? 'Yes' : 'No'}</td>` +
+                    `<td>${fmtNum((r.share_drought || 0) * 100, 1)}%</td><td>${fmtNum(r.mean_spei, 2)}</td>` +
+                    `<td>${r.monsoon_departure_lpa_pct !== null ? fmtNum(r.monsoon_departure_lpa_pct, 0) + '%' : '&mdash;'}</td>` +
+                    `<td style="text-align:left;font-weight:normal;">${srcHtml}</td></tr>`;
+            });
+            thtml += '</tbody>';
+            document.getElementById('ind-val-table').innerHTML = thtml;
+        }
+
+        function renderIndiaResultsTab() {
+            if (!indiaData || !indiaData.stats) return;
+            renderIndiaSummary();
+            renderIndiaPanelSection();
+            renderIndiaSeveritySection();
+            renderIndiaFacesSection();
+            renderIndiaRobustnessSection();
+            renderIndiaValidationSection();
+            indiaResultsRendered = true;
+        }
+
+        document.getElementById('ind-panel-win').addEventListener('change', renderIndiaPanelSection);
+        document.getElementById('ind-face-pred').addEventListener('change', renderIndiaFacesSection);
+        document.getElementById('ind-rob-view').addEventListener('change', renderIndiaRobustnessSection);
+
         function showTab(name) {
             activeTab = name;
             document.getElementById('tab-ts').classList.toggle('active', name === 'ts');
             document.getElementById('tab-pf').classList.toggle('active', name === 'pf');
+            const tabInd = document.getElementById('tab-india');
+            if (tabInd) tabInd.classList.toggle('active', name === 'india');
             document.getElementById('charts-inner').style.display = name === 'ts' ? 'flex' : 'none';
             document.getElementById('pf-view').style.display = name === 'pf' ? 'block' : 'none';
+            document.getElementById('india-view').style.display = name === 'india' ? 'block' : 'none';
             if (name === 'pf') {
                 renderPortfolio();
+            } else if (name === 'india') {
+                if (!indiaResultsRendered) renderIndiaResultsTab();
+                else {
+                    ['ind-panel-chart', 'ind-sev-chart', 'ind-faces-chart', 'ind-rob-chart', 'ind-val-chart'].forEach(id => {
+                        Plotly.Plots.resize(id);
+                    });
+                }
             } else if (name === 'ts' && (currentCountry || currentDistrict)) {
                 Plotly.Plots.resize('line-chart');
                 Plotly.Plots.resize('bar-chart');
@@ -315,6 +752,10 @@ PF_JS = """
         }
         document.getElementById('tab-ts').addEventListener('click', () => showTab('ts'));
         document.getElementById('tab-pf').addEventListener('click', () => showTab('pf'));
+        if (document.getElementById('tab-india')) {
+            document.getElementById('tab-india').addEventListener('click', () => showTab('india'));
+            if (!indiaData) document.getElementById('tab-india').style.display = 'none';
+        }
 """
 
 
@@ -519,6 +960,7 @@ def build_explorer():
             <div id="tabs">
                 <button id="tab-ts" class="tab-btn active">Time series</button>
                 <button id="tab-pf" class="tab-btn">Portfolio simulator</button>
+                <button id="tab-india" class="tab-btn">Phase 4: India District Results</button>
             </div>
             <div id="charts-inner">
                 <div id="instruction" class="instruction-overlay">Click a country on the map to view timeseries</div>

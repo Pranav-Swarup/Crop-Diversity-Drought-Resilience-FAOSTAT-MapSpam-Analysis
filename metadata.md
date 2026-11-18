@@ -184,19 +184,21 @@ The original prompt (PROMPTS.md) assigned Steps 1–6 only. Everything below was
 
 | File | Lines | What It Does |
 |---|---|---|
-| `diagram.py` | 55 | Generates the `pipeline.svg` and `pipeline.png` flowcharts using a Mermaid string and the Kroki API, avoiding local system dependencies. |
-| `build.py` | 195 | Builds `explorer/index.html`, a single self-contained interactive Plotly dashboard. Merges GeoJSON with metrics, embeds climate/anomaly timeseries for the top 6 crops per country, and handles interactive map clicks and drought shading. File size is kept around 2MB. |
-| `collect.py` | 65 | Assembles the presentation deck. Cleans out old assets from `figures/deck/`, copies all final PNGs from other directories, prepends sequential numbers, and builds `figures/deck/INDEX.md` logging the files and their owners. |
-| `__main__.py` | 15 | Orchestrator script that runs `diagram`, `build`, and `collect` sequentially. |
+| `india_data.py` | 260 | Loads, simplifies, rounds, and validates all Phase 4 Indian district datasets (`data/clean/india/*`, `outputs/india/*`, `outputs/stats/india_*.csv`, and `outputs/validation/india_drought_years.csv`) for embedding in the interactive explorer. |
+| `diagram.py` | 83 | Generates the `pipeline.svg` and `pipeline.png` flowcharts (covering Phases 1–4) using a Mermaid string and the Kroki API, with graceful offline fallback. |
+| `build.py` | 1,180 | Builds `explorer/index.html`, a single self-contained interactive Plotly dashboard combining the Global 107-country explorer, thePortfolio Simulator, the Phase 4 India District choropleth map & district timeseries (`core` 303 districts and `ext5` 127 districts across 690 polygons), and the interactive Phase 4 statistical results & validation tab. |
+| `collect.py` | 76 | Assembles the presentation deck. Cleans out old assets from `figures/deck/`, copies all final PNGs from `climate`, `data`, `results`, `validation`, and `india`, prepends sequential numbers, and builds `figures/deck/INDEX.md`. |
+| `__main__.py` | 17 | Orchestrator script that runs `diagram`, `build`, and `collect` sequentially. |
 
 ### 5.1 Pragya's Data Artifacts & Figures
 
 | File | Location | Description |
 |---|---|---|
-| `index.html` | `explorer/` | Interactive Plotly.js dashboard mapping crop diversity vs resilience metrics globally. |
-| `pipeline.{png,svg}` | `figures/deck/` | Visual flowchart of the project's data architecture. |
-| `INDEX.md` | `figures/deck/` | Markdown table cataloging all 17 presentation figures. |
-| `*.png` | `figures/deck/` | 17 assembled and sequentially numbered PNGs from all project modules. |
+| `index.html` | `explorer/` | Interactive Plotly.js dashboard mapping global countries (Phases 1–3) and Indian districts (Phase 4) with timeseries, portfolio simulator, and econometric results tabs. |
+| `pipeline.{png,svg}` | `figures/deck/` | Visual flowchart of the project's global and Phase 4 India district data architecture. |
+| `INDEX.md` | `figures/deck/` | Markdown table cataloging all 30 presentation figures across all project modules. |
+| `*.png` | `figures/deck/` | 30 assembled and sequentially numbered PNGs from `explorer`, `climate`, `data`, `results`, `validation`, and `india`. |
+
 
 ---
 

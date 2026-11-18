@@ -73,16 +73,24 @@ Definitions and the data contract are in CLAUDE.md, "Phase 3". Run after phase 2
 2. `src.metrics`: `exposure_diversity`, `severity` (`severity` takes about 12 minutes)
 3. `src.crops`: `download_trade_matrix` (420 MB), `trade_matrix`, `supply_diversity`
 
-Tests: `python -m pytest src/metrics`.
+### Phase 4 (Indian districts)
+
+Design and run order are in [docs/phase4-design.md](docs/phase4-design.md) and [src/india/README.md](src/india/README.md):
+
+1. `src.india`: `download_docs`, `download`, `download_apy`, `download_geo`, `clean`, `geo`, `climate`, `extended`, `panel`, `conley`, `kharif`, `kharif_crops`
+2. `src.explorer`: `build`, `diagram`, `collect` (embeds Phase 4 Indian district map, district timeseries, and statistical tables into `explorer/index.html` and collects `figures/india/` into `figures/deck/`)
+
+Tests: `python -m pytest`.
 
 ## Layout
 
 ```
-src/{common,crops,climate,metrics,validation,explorer}/
+src/{common,crops,climate,metrics,validation,india,explorer}/
 data/raw/      downloads, gitignored; sources logged in data/raw/SOURCES.md
-data/clean/    contract inputs
+data/clean/    contract inputs (including data/clean/india/)
 data/dummy/    synthetic contract inputs
-outputs/       metrics, stats/, validation/, dummy/
-figures/{data,climate,results,validation,deck}/
+outputs/       metrics, india/, stats/, validation/, dummy/
+figures/{data,climate,results,validation,india,deck}/
 explorer/      index.html
 ```
+

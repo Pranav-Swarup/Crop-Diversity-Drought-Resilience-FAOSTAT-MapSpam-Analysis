@@ -221,12 +221,15 @@ All figures are in `figures/climate/` at 300 DPI.
 
 ---
 
-## 11. Interactive Explorer & Presentation Deck
+## 11. Interactive Explorer, Phase 4 India District Integration & Presentation Deck
 
-To make the findings accessible, the project includes an interactive dashboard and an auto-generated presentation deck:
+To make the global and subnational findings accessible, the project includes an interactive dashboard and an auto-generated presentation deck:
 
-*   **Interactive Explorer (`explorer/index.html`):** A standalone, zero-dependency HTML file using Plotly.js. It features a global choropleth map where users can dynamically toggle between the different diversity and resilience metrics (e.g., hill1, stability, vulnerability). Clicking on any country loads a synchronized timeseries of its top 6 crop yield anomalies and cropland-weighted SPEI-12, visually shading known drought events to easily inspect the micro-dynamics of the shocks.
-*   **Presentation Deck (`figures/deck/`):** The pipeline automatically aggregates the final analytical figures from all submodules (`climate`, `data`, `results`, `validation`), prefixes them for sequential presentation, and generates an `INDEX.md` alongside a data architecture flowchart (`pipeline.svg`).
+*   **Interactive Explorer (`explorer/index.html`):** A standalone, zero-dependency HTML file (~4.5 MB, well below the 15 MB contract limit) using Plotly.js:
+    *   **Global Choropleth & Timeseries (Phases 1–3):** Users can dynamically toggle across diversity, resilience, wet-event, and trade dependency metrics for 107 countries, inspect synchronized crop yield anomaly and SPEI-12 time series with drought/wet event shading, and run the constrained Markowitz **Portfolio Simulator**.
+    *   **Phase 4 India District Map & Timeseries (`src/explorer/india_data.py`, `src/explorer/build.py`):** Users can switch the map scope to **India Districts — Core DES (303 Districts, 1998–2022, 47 crops)** or **India Districts — Extended 5-Crop Mirror (127 Districts, 1993–2015)** across all 690 matched geoBoundaries ADM2 district polygons. Supports filtering by Indian state, searching by district, coloring by district-level resilience faces, response divergence, drought event counts, balanced value coverage, and ICRISAT irrigation share, and inspecting district-level aggregate value anomalies (`anom`), top crop yield anomalies, December `SPEI-12`, September Kharif `SPEI-4`, and 5-year lagged time-varying diversity (`hill1_tv`).
+    *   **Phase 4 Statistical & Validation Dashboard (`#tab-india`):** Embeds interactive Plotly charts and full regression tables for the within-district panel models (`india_panel.csv`), irrigation confounder tests, drought severity bins and studentised within-state permutation inference (`india_severity.csv`, `india_severity_perm.csv`), cross-district vs. global national Spearman comparisons (`india_vs_national.csv`), Conley spatial-HAC standard errors (`india_conley.csv`), Kharif exposure and monsoon-crop checks (`india_kharif.csv`, `india_kharif_crops.csv`), leave-one-state-out stability (`india_leave_out_state.csv`), and documented all-India drought year validation (`india_drought_years.csv`).
+*   **Presentation Deck (`figures/deck/`):** The pipeline automatically aggregates the 30 final analytical figures from all submodules (`climate`, `data`, `results`, `validation`, `india`), prefixes them for sequential presentation, and generates `INDEX.md` alongside the data architecture flowchart (`pipeline.svg`, `pipeline.png`).
 
 ---
 
@@ -247,8 +250,14 @@ python -m src.climate.figures        # → figures/climate/01-03*.png
 python src/climate/analysis/response_paradox.py      # → outputs/stats/response_paradox.csv, figures/climate/04*.png
 python src/climate/analysis/spatial_and_flash.py      # → outputs/stats/spatial_flash.csv, figures/climate/05*.png
 
+# Phase 4 India district analysis
+python -m src.india.panel            # → outputs/india/*.parquet, outputs/stats/india_*.csv, figures/india/*.png
+python -m src.india.conley           # → outputs/stats/india_conley.csv
+python -m src.india.kharif           # → outputs/stats/india_kharif.csv
+
 # Interactive Explorer & Deck Assets
 python -m src.explorer               # → explorer/index.html, figures/deck/*
 ```
 
 All statistical outputs are saved as CSVs in `outputs/stats/` for inspection and further analysis.
+

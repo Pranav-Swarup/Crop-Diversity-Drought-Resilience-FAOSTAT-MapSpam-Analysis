@@ -1,0 +1,50 @@
+{
+  "apy": {
+    "file": "apy.json",
+    "source_url": "http://data.icrisat.org/dldAPI/apportioned/area-production-yield",
+    "captures": [
+      "20250216094951",
+      "20230516123017"
+    ],
+    "sha256": "e06d26c9062c5b9221fd0ac58892ece50d00207118d1f4de073ef2d54e0248e9"
+  },
+  "prices": {
+    "file": "fhp.json",
+    "source_url": "http://data.icrisat.org/dldAPI/apportioned/farm-harvest-prices",
+    "captures": [
+      "20230516144535",
+      "20230311180914"
+    ],
+    "sha256": "bbb4d051b46d00f4ba84489aa8ddf3b352ac1e64ef4a88a5e1b453975006e9bb"
+  },
+  "irrigation": {
+    "file": "irrig.json",
+    "source_url": "http://data.icrisat.org/dldAPI/apportioned/cropwise-irrigated-area",
+    "captures": [
+      "20230516144523",
+      "20230311180851"
+    ],
+    "sha256": "3bc9b9a9eac6a1bcfb648e65aaebff14c8109f147155cccf5822080dd88dc60b"
+  },
+  "geography": {
+    "file": "boundaries.geojson",
+    "source_url": "http://data.icrisat.org/dld/src/dld-apportioned.min.json",
+    "captures": [
+      "20230309185155"
+    ],
+    "sha256": "ffe53736102c2619dd3474c567df2b5a3bca0010be19d2ed7f5c94be9eaffa01"
+  },
+  "world_bank": {
+    "file": "worldbank_409_1152.zip",
+    "source_url": "https://reproducibility.worldbank.org/catalog/409/download/1152",
+    "doi": "10.60572/a89v-rt49",
+    "sha256": "f9ff83879f0065a7563aedccdb4590fa224eb1c75519cc725c35a9ae5f5d18cd"
+  },
+  "des_irrigation": {
+    "file": "des_cropwise_irrigation.csv",
+    "source_url": "https://ckandev.indiadataportal.com/dataset/8742251a-5ca1-483d-936a-f68306663cc9/resource/0fb99c18-a1f7-46f0-b40d-ddffca021319/download/crop-wise-irrigated-area.csv",
+    "catalogue": "https://ckandev.indiadataportal.com/api/3/action/resource_show?id=0fb99c18-a1f7-46f0-b40d-ddffca021319",
+    "upstream": "https://data.desagri.gov.in/weblus/lus-grand-query-report",
+    "sha256": "1c10ddcd1f56f4ef3734b841b95d5a9b6c014acc549fa587c19df1d330003c48"
+  }
+}

@@ -1,0 +1,312 @@
+state_code,district_code,state_name,district_name,dist_code,state_key,name_key,history_change,ambiguous_name,old_code,intersection_over_union,exact_geometry,included
+14,1,Chhattisgarh,Durg,14/1,chhattisgarh,durg,True,False,,,False,False
+14,2,Chhattisgarh,Bastar,14/2,chhattisgarh,bastar,True,False,,,False,False
+14,3,Chhattisgarh,Raipur,14/3,chhattisgarh,raipur,True,False,,,False,False
+14,4,Chhattisgarh,Bilaspur,14/4,chhattisgarh,bilaspur,True,False,,,False,False
+14,5,Chhattisgarh,Raigarh,14/5,chhattisgarh,raigarh,True,False,,,False,False
+14,6,Chhattisgarh,Surguja,14/6,chhattisgarh,surguja,True,False,,,False,False
+6,7,Madhya Pradesh,Jabalpur,6/7,madhyapradesh,jabalpur,True,False,411,0.3312735335111326,False,False
+6,8,Madhya Pradesh,Balaghat,6/8,madhyapradesh,balaghat,False,False,392,0.5538459845565513,False,False
+6,9,Madhya Pradesh,Chhindwara,6/9,madhyapradesh,chhindwara,False,False,399,0.6437739935601855,False,False
+6,10,Madhya Pradesh,Narsinghpur,6/10,madhyapradesh,narsinghpur,False,False,,,False,False
+6,11,Madhya Pradesh,Seoni / Shivani,6/11,madhyapradesh,seonishivani,False,False,,,False,False
+6,12,Madhya Pradesh,Mandla,6/12,madhyapradesh,mandla,True,False,415,0.3778518711926095,False,False
+6,13,Madhya Pradesh,Sagar,6/13,madhyapradesh,sagar,False,False,,,False,False
+6,14,Madhya Pradesh,Damoh,6/14,madhyapradesh,damoh,False,False,400,0.619090126818846,False,False
+6,15,Madhya Pradesh,Tikamgarh,6/15,madhyapradesh,tikamgarh,False,False,434,0.47741835874498806,False,False
+6,16,Madhya Pradesh,Chhatarpur,6/16,madhyapradesh,chhatarpur,False,False,,,False,False
+6,17,Madhya Pradesh,Panna,6/17,madhyapradesh,panna,False,False,420,0.6363811276590933,False,False
+6,18,Madhya Pradesh,Rewa,6/18,madhyapradesh,rewa,False,False,424,0.6952978988829255,False,False
+6,19,Madhya Pradesh,Sidhi,6/19,madhyapradesh,sidhi,True,False,,,False,False
+6,20,Madhya Pradesh,Satna,6/20,madhyapradesh,satna,False,False,426,0.696272998914602,False,False
+6,21,Madhya Pradesh,Shahdol,6/21,madhyapradesh,shahdol,True,False,,,False,False
+6,22,Madhya Pradesh,Gwalior,6/22,madhyapradesh,gwalior,False,False,407,0.5568559927273484,False,False
+6,23,Madhya Pradesh,Shivpuri,6/23,madhyapradesh,shivpuri,False,False,432,0.6724165676921117,False,False
+6,24,Madhya Pradesh,Guna,6/24,madhyapradesh,guna,True,False,,,False,False
+6,25,Madhya Pradesh,Datia,6/25,madhyapradesh,datia,False,False,401,0.4667414439850052,False,False
+6,26,Madhya Pradesh,Morena,6/26,madhyapradesh,morena,True,False,417,0.2788870811391612,False,False
+6,27,Madhya Pradesh,Bhind,6/27,madhyapradesh,bhind,False,False,395,0.6517152133766315,False,False
+6,28,Madhya Pradesh,Indore,6/28,madhyapradesh,indore,False,False,,,False,False
+6,29,Madhya Pradesh,Ratlam,6/29,madhyapradesh,ratlam,False,False,423,0.5895869383938497,False,False
+6,30,Madhya Pradesh,Ujjain,6/30,madhyapradesh,ujjain,False,False,435,0.6124481564004625,False,False
+6,31,Madhya Pradesh,Mandsaur,6/31,madhyapradesh,mandsaur,True,False,416,0.4553636197876677,False,False
+6,32,Madhya Pradesh,Dewas,6/32,madhyapradesh,dewas,False,False,402,0.661180247462713,False,False
+6,33,Madhya Pradesh,Dhar,6/33,madhyapradesh,dhar,False,False,403,0.765967410295934,False,False
+6,34,Madhya Pradesh,Jhabua,6/34,madhyapradesh,jhabua,True,False,,,False,False
+6,35,Madhya Pradesh,Khargone / West Nimar,6/35,madhyapradesh,khargonewestnimar,True,False,,,False,False
+6,36,Madhya Pradesh,Khandwa / East Nimar,6/36,madhyapradesh,khandwaeastnimar,True,False,,,False,False
+6,37,Madhya Pradesh,Sehore,6/37,madhyapradesh,sehore,True,False,427,0.4113280860762524,False,False
+6,38,Madhya Pradesh,Raisen,6/38,madhyapradesh,raisen,False,False,421,0.6272309440975833,False,False
+6,39,Madhya Pradesh,Vidisha,6/39,madhyapradesh,vidisha,False,False,437,0.6557464538302674,False,False
+6,40,Madhya Pradesh,Betul,6/40,madhyapradesh,betul,False,False,394,0.6165603092547789,False,False
+6,41,Madhya Pradesh,Rajgarh,6/41,madhyapradesh,rajgarh,False,False,422,0.6686808379343584,False,False
+6,42,Madhya Pradesh,Shajapur,6/42,madhyapradesh,shajapur,True,False,,,False,False
+6,43,Madhya Pradesh,Hoshangabad,6/43,madhyapradesh,hoshangabad,True,False,,,False,False
+1,44,Andhra Pradesh,Srikakulam,1/44,andhrapradesh,srikakulam,True,False,519,0.5467241810833595,False,False
+1,45,Andhra Pradesh,Visakhapatnam,1/45,andhrapradesh,visakhapatnam,True,False,,,False,False
+1,46,Andhra Pradesh,East Godavari,1/46,andhrapradesh,eastgodavari,False,False,,,False,False
+1,47,Andhra Pradesh,West Godavari,1/47,andhrapradesh,westgodavari,False,False,,,False,False
+1,48,Andhra Pradesh,Krishna,1/48,andhrapradesh,krishna,False,False,510,0.8937116744132159,False,True
+1,49,Andhra Pradesh,Guntur,1/49,andhrapradesh,guntur,True,False,,,False,False
+1,50,Andhra Pradesh,S.P.S. Nellore,1/50,andhrapradesh,spsnellore,True,False,,,False,False
+1,51,Andhra Pradesh,Kurnool,1/51,andhrapradesh,kurnool,True,False,511,0.7066246013404271,False,False
+1,52,Andhra Pradesh,Ananthapur,1/52,andhrapradesh,ananthapur,False,False,,,False,False
+1,53,Andhra Pradesh,Kadapa YSR,1/53,andhrapradesh,kadapaysr,False,False,,,False,False
+1,54,Andhra Pradesh,Chittoor,1/54,andhrapradesh,chittoor,False,False,,,False,False
+20,55,Telangana,Hyderabad,20/55,telangana,hyderabad,True,False,,,False,False
+20,56,Telangana,Nizamabad,20/56,telangana,nizamabad,True,False,516,0.46305048017294875,False,False
+20,57,Telangana,Medak,20/57,telangana,medak,True,False,,,False,False
+20,58,Telangana,Mahabubnagar,20/58,telangana,mahabubnagar,True,False,,,False,False
+20,59,Telangana,Nalgonda,20/59,telangana,nalgonda,True,False,514,0.49301606489370986,False,False
+20,60,Telangana,Warangal,20/60,telangana,warangal,True,False,,,False,False
+20,61,Telangana,Khammam,20/61,telangana,khammam,True,False,509,0.22806155559239244,False,False
+20,62,Telangana,Karimnagar,20/62,telangana,karimnagar,True,False,,,False,False
+20,63,Telangana,Adilabad,20/63,telangana,adilabad,True,False,,,False,False
+5,64,Karnataka,Bangalore,5/64,karnataka,bangalore,True,False,,,False,False
+5,65,Karnataka,Kolar,5/65,karnataka,kolar,True,False,,,False,False
+5,66,Karnataka,Tumkur,5/66,karnataka,tumkur,False,False,,,False,False
+5,67,Karnataka,Mysore,5/67,karnataka,mysore,True,False,,,False,False
+5,68,Karnataka,Mandya,5/68,karnataka,mandya,False,False,544,0.7105931288050881,False,False
+5,69,Karnataka,Hassan,5/69,karnataka,hassan,False,False,539,0.6839043690803984,False,False
+5,70,Karnataka,Shimoge,5/70,karnataka,shimoge,False,False,,,False,False
+5,71,Karnataka,Chickmagalur,5/71,karnataka,chickmagalur,False,False,,,False,False
+5,72,Karnataka,Chitradurga,5/72,karnataka,chitradurga,True,False,533,0.6396877886816728,False,False
+5,73,Karnataka,Bellary,5/73,karnataka,bellary,False,False,,,False,False
+5,74,Karnataka,Dharwad,5/74,karnataka,dharwad,True,False,536,0.23074846624644071,False,False
+5,75,Karnataka,Belgaum,5/75,karnataka,belgaum,False,False,,,False,False
+5,76,Karnataka,Bijapur / Vijayapura,5/76,karnataka,bijapurvijayapura,True,False,,,False,False
+5,77,Karnataka,Bidar,5/77,karnataka,bidar,False,False,529,0.6775934275832778,False,False
+5,78,Karnataka,Raichur,5/78,karnataka,raichur,True,False,546,0.5102858968224142,False,False
+5,79,Karnataka,Gulbarga / Kalaburagi,5/79,karnataka,gulbargakalaburagi,True,False,,,False,False
+5,80,Karnataka,Dakshina Kannada,5/80,karnataka,dakshinakannada,True,False,534,0.51625825131055,False,False
+5,81,Karnataka,Uttara Kannada,5/81,karnataka,uttarakannada,False,False,550,0.789998083391411,False,False
+5,82,Karnataka,Kodagu / Coorg,5/82,karnataka,kodagucoorg,False,False,,,False,False
+11,83,Tamil Nadu,Chengalpattu MGR / Kanchipuram,11/83,tamilnadu,chengalpattumgrkanchipuram,True,False,,,False,False
+11,84,Tamil Nadu,South Arcot / Cuddalore,11/84,tamilnadu,southarcotcuddalore,True,False,,,False,False
+11,85,Tamil Nadu,North Arcot / Vellore,11/85,tamilnadu,northarcotvellore,True,False,,,False,False
+11,86,Tamil Nadu,Salem,11/86,tamilnadu,salem,True,False,584,0.2910249473174598,False,False
+11,87,Tamil Nadu,Coimbatore,11/87,tamilnadu,coimbatore,True,False,,,False,False
+11,88,Tamil Nadu,Tiruchirapalli / Trichy,11/88,tamilnadu,tiruchirapallitrichy,True,False,,,False,False
+11,89,Tamil Nadu,Thanjavur,11/89,tamilnadu,thanjavur,True,False,586,0.349938059082566,False,False
+11,90,Tamil Nadu,Madurai,11/90,tamilnadu,madurai,True,False,,,False,False
+11,91,Tamil Nadu,Ramananthapuram,11/91,tamilnadu,ramananthapuram,True,False,,,False,False
+11,92,Tamil Nadu,Thirunelveli,11/92,tamilnadu,thirunelveli,True,False,,,False,False
+11,93,Tamil Nadu,The Nilgiris,11/93,tamilnadu,thenilgiris,False,False,,,False,False
+11,94,Tamil Nadu,Kanyakumari,11/94,tamilnadu,kanyakumari,False,False,,,False,False
+7,95,Maharashtra,Bombay ,7/95,maharashtra,bombay,True,False,,,False,False
+7,96,Maharashtra,Thane,7/96,maharashtra,thane,True,False,,,False,False
+7,97,Maharashtra,Raigad,7/97,maharashtra,raigad,False,False,491,0.75878294256431,False,False
+7,98,Maharashtra,Ratnagiri,7/98,maharashtra,ratnagiri,True,False,492,0.5701765911452666,False,False
+7,99,Maharashtra,Nasik,7/99,maharashtra,nasik,False,False,,,False,False
+7,100,Maharashtra,Dhule,7/100,maharashtra,dhule,True,False,,,False,False
+7,101,Maharashtra,Jalgaon,7/101,maharashtra,jalgaon,False,False,478,0.7515062420621521,False,False
+7,102,Maharashtra,Ahmednagar,7/102,maharashtra,ahmednagar,False,False,,,False,False
+7,103,Maharashtra,Pune,7/103,maharashtra,pune,False,False,490,0.8542884869293056,False,True
+7,104,Maharashtra,Satara,7/104,maharashtra,satara,False,False,494,0.8512652616993829,False,True
+7,105,Maharashtra,Sangli,7/105,maharashtra,sangli,False,False,493,0.7597331043056423,False,False
+7,106,Maharashtra,Solapur,7/106,maharashtra,solapur,False,False,496,0.8150968393522501,False,True
+7,107,Maharashtra,Kolhapur,7/107,maharashtra,kolhapur,False,False,480,0.673926971759458,False,False
+7,108,Maharashtra,Aurangabad,7/108,maharashtra,aurangabad,True,False,,,False,False
+7,109,Maharashtra,Parbhani,7/109,maharashtra,parbhani,True,False,,,False,False
+7,110,Maharashtra,Beed,7/110,maharashtra,beed,False,False,470,0.8000213884701141,False,True
+7,111,Maharashtra,Nanded,7/111,maharashtra,nanded,False,False,485,0.5445271271962603,False,False
+7,112,Maharashtra,Osmanabad,7/112,maharashtra,osmanabad,True,False,,,False,False
+7,113,Maharashtra,Buldhana,7/113,maharashtra,buldhana,False,False,472,0.6575175765569008,False,False
+7,114,Maharashtra,Akola,7/114,maharashtra,akola,True,False,,,False,False
+7,115,Maharashtra,Amarawati,7/115,maharashtra,amarawati,False,False,,,False,False
+7,116,Maharashtra,Yeotmal,7/116,maharashtra,yeotmal,False,False,,,False,False
+7,117,Maharashtra,Wardha,7/117,maharashtra,wardha,False,False,498,0.5884084475034856,False,False
+7,118,Maharashtra,Nagpur,7/118,maharashtra,nagpur,False,False,484,0.5994000103363568,False,False
+7,119,Maharashtra,Bhandara,7/119,maharashtra,bhandara,True,False,,,False,False
+7,120,Maharashtra,Chandrapur,7/120,maharashtra,chandrapur,True,False,473,0.2783841585174468,False,False
+3,121,Gujarat,Ahmedabad,3/121,gujarat,ahmedabad,True,False,438,0.6455916091439807,False,False
+3,122,Gujarat,Amreli,3/122,gujarat,amreli,False,False,439,0.6755889428890389,False,False
+3,123,Gujarat,Banaskantha,3/123,gujarat,banaskantha,False,False,,,False,False
+3,124,Gujarat,Bharuch,3/124,gujarat,bharuch,True,False,,,False,False
+3,125,Gujarat,Vadodara / Baroda,3/125,gujarat,vadodarabaroda,True,False,,,False,False
+3,126,Gujarat,Bhavnagar,3/126,gujarat,bhavnagar,True,False,443,0.6509127673356716,False,False
+3,127,Gujarat,Valsad,3/127,gujarat,valsad,True,False,,,False,False
+3,128,Gujarat,Dangs,3/128,gujarat,dangs,False,False,444,0.6858278019035042,False,False
+3,129,Gujarat,Jamnagar,3/129,gujarat,jamnagar,True,False,,,False,False
+3,130,Gujarat,Junagadh,3/130,gujarat,junagadh,True,False,,,False,False
+3,131,Gujarat,Kheda,3/131,gujarat,kheda,True,False,,,False,False
+3,132,Gujarat,Kutch,3/132,gujarat,kutch,False,False,,,False,False
+3,133,Gujarat,Mehsana,3/133,gujarat,mehsana,True,False,,,False,False
+3,134,Gujarat,Panchmahal,3/134,gujarat,panchmahal,True,False,,,False,False
+3,135,Gujarat,Rajkot,3/135,gujarat,rajkot,True,False,,,False,False
+3,136,Gujarat,Sabarkantha,3/136,gujarat,sabarkantha,True,False,,,False,False
+3,137,Gujarat,Surat,3/137,gujarat,surat,True,False,,,False,False
+3,138,Gujarat,Surendranagar,3/138,gujarat,surendranagar,True,False,460,0.7448885893909523,False,False
+10,139,Rajasthan,Ajmer,10/139,rajasthan,ajmer,False,False,,,False,False
+10,140,Rajasthan,Alwar,10/140,rajasthan,alwar,False,False,87,0.6957357384304542,False,False
+10,141,Rajasthan,Banswara,10/141,rajasthan,banswara,True,False,88,0.6123447029122738,False,False
+10,142,Rajasthan,Barmer,10/142,rajasthan,barmer,False,False,90,0.8556404909163404,False,True
+10,143,Rajasthan,Bharatpur,10/143,rajasthan,bharatpur,True,False,91,0.44220295039578283,False,False
+10,144,Rajasthan,Bhilwara,10/144,rajasthan,bhilwara,False,False,92,0.6494526762615649,False,False
+10,145,Rajasthan,Bikaner,10/145,rajasthan,bikaner,False,False,93,0.7900987902819238,False,False
+10,146,Rajasthan,Bundi,10/146,rajasthan,bundi,False,False,94,0.6006698671188052,False,False
+10,147,Rajasthan,Chittorgarh,10/147,rajasthan,chittorgarh,True,False,95,0.38806274636461585,False,False
+10,148,Rajasthan,Churu,10/148,rajasthan,churu,False,False,,,False,False
+10,149,Rajasthan,Dungarpur,10/149,rajasthan,dungarpur,False,False,99,0.6189877949000255,False,False
+10,150,Rajasthan,Ganganagar,10/150,rajasthan,ganganagar,True,False,100,0.42588305643985264,False,False
+10,151,Rajasthan,Jaipur,10/151,rajasthan,jaipur,True,False,102,0.545867041823126,False,False
+10,152,Rajasthan,Jaisalmer,10/152,rajasthan,jaisalmer,False,False,103,0.8884162045395247,False,True
+10,153,Rajasthan,Jalore,10/153,rajasthan,jalore,False,False,104,0.6603418379060852,False,False
+10,154,Rajasthan,Jhalawar,10/154,rajasthan,jhalawar,False,False,105,0.5328488216578062,False,False
+10,155,Rajasthan,Jhunjhunu,10/155,rajasthan,jhunjhunu,False,False,106,0.6517009198325833,False,False
+10,156,Rajasthan,Jodhpur,10/156,rajasthan,jodhpur,False,False,107,0.7529479852388246,False,False
+10,157,Rajasthan,Kota,10/157,rajasthan,kota,True,False,109,0.28949395348898666,False,False
+10,158,Rajasthan,Nagaur,10/158,rajasthan,nagaur,False,False,110,0.7491117283883633,False,False
+10,159,Rajasthan,Pali,10/159,rajasthan,pali,False,False,111,0.6058584574007634,False,False
+10,160,Rajasthan,Swami Madhopur,10/160,rajasthan,swamimadhopur,True,False,,,False,False
+10,161,Rajasthan,Sikar,10/161,rajasthan,sikar,False,False,114,0.5618688553945301,False,False
+10,162,Rajasthan,Sirohi,10/162,rajasthan,sirohi,False,False,115,0.5554954731865447,False,False
+10,163,Rajasthan,Tonk,10/163,rajasthan,tonk,False,False,116,0.6445884529431075,False,False
+10,164,Rajasthan,Udaipur,10/164,rajasthan,udaipur,True,False,117,0.5146002827939248,False,False
+9,165,Punjab,Gurdaspur,9/165,punjab,gurdaspur,True,False,32,0.5347883686400371,False,False
+9,166,Punjab,Amritsar,9/166,punjab,amritsar,True,False,,,False,False
+9,167,Punjab,Kapurthala,9/167,punjab,kapurthala,False,False,35,0.24193128106556308,False,False
+9,168,Punjab,Jalandhar,9/168,punjab,jalandhar,True,False,34,0.38575336227198487,False,False
+9,169,Punjab,Hoshiarpur,9/169,punjab,hoshiarpur,True,False,33,0.6270740068994521,False,False
+9,170,Punjab,Roopnagar / Ropar,9/170,punjab,roopnagarropar,True,False,,,False,False
+9,171,Punjab,Ludhiana,9/171,punjab,ludhiana,True,False,36,0.5576066698750988,False,False
+9,172,Punjab,Ferozpur,9/172,punjab,ferozpur,True,False,,,False,False
+9,174,Punjab,Bhatinda,9/174,punjab,bhatinda,True,False,,,False,False
+9,175,Punjab,Sangrur,9/175,punjab,sangrur,True,False,,,False,False
+9,176,Punjab,Patiala,9/176,punjab,patiala,True,False,41,0.45029499033929554,False,False
+4,177,Haryana,Hissar,4/177,haryana,hissar,True,False,,,False,False
+4,180,Haryana,Gurgaon,4/180,haryana,gurgaon,True,False,,,False,False
+4,181,Haryana,Jind,4/181,haryana,jind,True,False,65,0.4582439303748015,False,False
+4,182,Haryana,Mahendragarh / Narnaul,4/182,haryana,mahendragarhnarnaul,True,False,,,False,False
+4,183,Haryana,Ambala,4/183,haryana,ambala,True,False,58,0.26265342154818955,False,False
+4,184,Haryana,Karnal,4/184,haryana,karnal,True,False,67,0.30102366563959415,False,False
+4,186,Haryana,Rohtak,4/186,haryana,rohtak,True,False,73,0.18226033046941806,False,False
+12,189,Uttar Pradesh,Saharanpur,12/189,uttarpradesh,saharanpur,True,False,177,0.4886226013001165,False,False
+12,190,Uttar Pradesh,Muzaffarnagar,12/190,uttarpradesh,muzaffarnagar,True,False,,,False,False
+12,191,Uttar Pradesh,Meerut,12/191,uttarpradesh,meerut,True,False,169,0.4206602062253257,False,False
+12,192,Uttar Pradesh,Buland Shahar,12/192,uttarpradesh,bulandshahar,True,False,,,False,False
+12,194,Uttar Pradesh,Aligarh,12/194,uttarpradesh,aligarh,True,False,119,0.5123337784627461,False,False
+12,195,Uttar Pradesh,Mathura,12/195,uttarpradesh,mathura,False,False,167,0.5952838692105348,False,False
+12,196,Uttar Pradesh,Agra,12/196,uttarpradesh,agra,True,False,118,0.48277212574029854,False,False
+12,197,Uttar Pradesh,Mainpuri,12/197,uttarpradesh,mainpuri,True,False,166,0.5883697852646185,False,False
+12,198,Uttar Pradesh,Etah,12/198,uttarpradesh,etah,True,False,,,False,False
+12,199,Uttar Pradesh,Bareilly,12/199,uttarpradesh,bareilly,False,False,130,0.8822801223907651,False,True
+12,200,Uttar Pradesh,Budaun,12/200,uttarpradesh,budaun,True,False,133,0.7218619542492614,False,False
+12,201,Uttar Pradesh,Moradabad,12/201,uttarpradesh,moradabad,True,False,,,False,False
+12,202,Uttar Pradesh,Shahjahanpur,12/202,uttarpradesh,shahjahanpur,False,False,180,0.7824423399920067,False,False
+12,203,Uttar Pradesh,Pilibhit,12/203,uttarpradesh,pilibhit,False,False,173,0.8102234524885176,False,True
+12,204,Uttar Pradesh,Rampur,12/204,uttarpradesh,rampur,False,False,176,0.8095653340627461,False,True
+12,205,Uttar Pradesh,Bijnor,12/205,uttarpradesh,bijnor,False,False,132,0.8163935661385759,False,True
+12,206,Uttar Pradesh,Farrukhabad,12/206,uttarpradesh,farrukhabad,True,False,141,0.40650906780068996,False,False
+12,207,Uttar Pradesh,Etawah,12/207,uttarpradesh,etawah,True,False,139,0.39329384348701396,False,False
+12,208,Uttar Pradesh,Kanpur,12/208,uttarpradesh,kanpur,True,False,,,False,False
+12,209,Uttar Pradesh,Fatehpur,12/209,uttarpradesh,fatehpur,False,False,142,0.7275981189346662,False,False
+12,210,Uttar Pradesh,Allahabad,12/210,uttarpradesh,allahabad,True,False,,,False,False
+12,211,Uttar Pradesh,Jhansi,12/211,uttarpradesh,jhansi,True,False,153,0.3044380364174693,False,False
+12,213,Uttar Pradesh,Jalaun,12/213,uttarpradesh,jalaun,False,False,151,0.7208729234783482,False,False
+12,214,Uttar Pradesh,Hamirpur,12/214,uttarpradesh,hamirpur,True,False,149,0.4309853585292941,False,False
+12,215,Uttar Pradesh,Banda,12/215,uttarpradesh,banda,True,False,128,0.3978180760928467,False,False
+12,216,Uttar Pradesh,Varanasi,12/216,uttarpradesh,varanasi,True,False,187,0.21171880766106227,False,False
+12,217,Uttar Pradesh,Mirzpur,12/217,uttarpradesh,mirzpur,True,False,,,False,False
+12,218,Uttar Pradesh,Jaunpur,12/218,uttarpradesh,jaunpur,False,False,152,0.5907383247577426,False,False
+12,219,Uttar Pradesh,Ghazipur,12/219,uttarpradesh,ghazipur,False,False,146,0.445206102938549,False,False
+12,220,Uttar Pradesh,Ballia,12/220,uttarpradesh,ballia,False,False,126,0.2194669946277044,False,False
+12,221,Uttar Pradesh,Gorakhpur,12/221,uttarpradesh,gorakhpur,True,False,148,0.3205648900154917,False,False
+12,222,Uttar Pradesh,Deoria,12/222,uttarpradesh,deoria,True,False,137,0.24610064914320692,False,False
+12,223,Uttar Pradesh,Basti,12/223,uttarpradesh,basti,True,False,131,0.3298633975277901,False,False
+12,224,Uttar Pradesh,Azamgarh,12/224,uttarpradesh,azamgarh,True,False,123,0.5096943732339461,False,False
+12,225,Uttar Pradesh,Lucknow,12/225,uttarpradesh,lucknow,False,False,162,0.6694744837924403,False,False
+12,226,Uttar Pradesh,Unnao,12/226,uttarpradesh,unnao,False,False,186,0.7384652184112096,False,False
+12,227,Uttar Pradesh,Rae-Bareily,12/227,uttarpradesh,raebareily,True,False,,,False,False
+12,228,Uttar Pradesh,Sitapur,12/228,uttarpradesh,sitapur,False,False,183,0.8714276174194872,False,True
+12,229,Uttar Pradesh,Hardoi,12/229,uttarpradesh,hardoi,False,False,150,0.8195787883570851,False,True
+12,230,Uttar Pradesh,Kheri,12/230,uttarpradesh,kheri,False,False,159,0.905790068789204,False,True
+12,231,Uttar Pradesh,Faizabad,12/231,uttarpradesh,faizabad,True,False,,,False,False
+12,232,Uttar Pradesh,Gonda,12/232,uttarpradesh,gonda,True,False,147,0.4712267200970223,False,False
+12,233,Uttar Pradesh,Bahraich,12/233,uttarpradesh,bahraich,True,False,125,0.6712556891749615,False,False
+12,234,Uttar Pradesh,Sultanpur,12/234,uttarpradesh,sultanpur,True,False,,,False,False
+12,235,Uttar Pradesh,Pratapgarh,12/235,uttarpradesh,pratapgarh,False,False,174,0.6486173142833399,False,False
+12,236,Uttar Pradesh,Barabanki,12/236,uttarpradesh,barabanki,False,False,129,0.6793897317956016,False,False
+16,237,Uttarakhand,Nainital,16/237,uttarakhand,nainital,True,False,51,0.500025127434234,False,False
+16,238,Uttarakhand,Almorah,16/238,uttarakhand,almorah,True,False,,,False,False
+16,239,Uttarakhand,Pithorgarh,16/239,uttarakhand,pithorgarh,True,False,,,False,False
+16,240,Uttarakhand,Chamoli,16/240,uttarakhand,chamoli,True,False,47,0.714556829156065,False,False
+16,241,Uttarakhand,Uttar Kashi,16/241,uttarakhand,uttarkashi,False,False,57,0.8473520013006448,False,True
+16,242,Uttarakhand,Tehri Garhwal,16/242,uttarakhand,tehrigarhwal,False,False,55,0.7579885759459274,False,False
+16,243,Uttarakhand,Garhwal,16/243,uttarakhand,garhwal,False,False,,,False,False
+16,244,Uttarakhand,Dehradun,16/244,uttarakhand,dehradun,False,False,49,0.7686336611964998,False,False
+17,601,Assam,Cachar,17/601,assam,cachar,True,False,282,0.4670339816572052,False,False
+17,602,Assam,Darrang,17/602,assam,darrang,True,False,,,False,False
+17,603,Assam,Dibrugarh,17/603,assam,dibrugarh,True,False,,,False,False
+17,604,Assam,Goalpara,17/604,assam,goalpara,True,False,287,0.21712512910618006,False,False
+17,605,Assam,Kamrup,17/605,assam,kamrup,True,False,,,False,False
+17,606,Assam,Karbi Anglong,17/606,assam,karbianglong,True,False,,,False,False
+17,607,Assam,Lakhimpur,17/607,assam,lakhimpur,True,False,295,0.26742649371428756,False,False
+17,608,Assam,North Cachar Hil / Dima hasao,17/608,assam,northcacharhildimahasao,False,False,,,False,False
+17,609,Assam,Nagaon,17/609,assam,nagaon,True,False,,,False,False
+17,610,Assam,Sibsagar,17/610,assam,sibsagar,True,False,,,False,False
+18,626,Himachal Pradesh,Bilashpur,18/626,himachalpradesh,bilashpur,False,False,,,False,False
+18,627,Himachal Pradesh,Chamba,18/627,himachalpradesh,chamba,False,False,16,0.7515172335110513,False,False
+18,629,Himachal Pradesh,Kangra,18/629,himachalpradesh,kangra,True,False,18,0.5149381622778758,False,False
+18,630,Himachal Pradesh,Kinnaur,18/630,himachalpradesh,kinnaur,False,False,19,0.8730503604398612,False,True
+18,631,Himachal Pradesh,Kullu,18/631,himachalpradesh,kullu,False,False,20,0.836113126439802,False,True
+18,632,Himachal Pradesh,Lahul & Spiti,18/632,himachalpradesh,lahulspiti,False,False,,,False,False
+18,633,Himachal Pradesh,Solan,18/633,himachalpradesh,solan,False,False,25,0.5644933516526548,False,False
+18,634,Himachal Pradesh,Mandi,18/634,himachalpradesh,mandi,False,False,22,0.7510353469947875,False,False
+18,635,Himachal Pradesh,Shimla,18/635,himachalpradesh,shimla,False,False,23,0.7630562331683426,False,False
+18,636,Himachal Pradesh,Sirmaur,18/636,himachalpradesh,sirmaur,False,False,24,0.7419398795284912,False,False
+19,651,Kerala,Alappuzha,19/651,kerala,alappuzha,False,False,554,0.7056922477460918,False,False
+19,652,Kerala,Kannur,19/652,kerala,kannur,True,False,557,0.46041725367623243,False,False
+19,653,Kerala,Eranakulam,19/653,kerala,eranakulam,True,False,,,False,False
+19,655,Kerala,Kottayam,19/655,kerala,kottayam,True,False,560,0.33246671734912636,False,False
+19,656,Kerala,Kozhikode,19/656,kerala,kozhikode,True,False,561,0.6484538595009295,False,False
+19,657,Kerala,Malappuram,19/657,kerala,malappuram,False,False,562,0.875232916422812,False,True
+19,658,Kerala,Palakkad,19/658,kerala,palakkad,False,False,563,0.8521384969914253,False,True
+19,659,Kerala,Kollam,19/659,kerala,kollam,True,False,559,0.4596760731080758,False,False
+19,660,Kerala,Thrissur,19/660,kerala,thrissur,False,False,566,0.89058819315188,False,True
+19,661,Kerala,Thiruvananthapuram,19/661,kerala,thiruvananthapuram,False,False,565,0.9244747905102666,False,True
+8,701,Orissa,Balasore,8/701,odisha,balasore,True,False,346,0.5311454678942429,False,False
+8,702,Orissa,Bolangir,8/702,odisha,bolangir,True,False,,,False,False
+8,703,Orissa,Cuttack,8/703,odisha,cuttack,True,False,350,0.3191471346589544,False,False
+8,704,Orissa,Dhenkanal,8/704,odisha,dhenkanal,True,False,352,0.3893496492550708,False,False
+8,705,Orissa,Ganjam,8/705,odisha,ganjam,True,False,354,0.6447337206644236,False,False
+8,706,Orissa,Kalahandi,8/706,odisha,kalahandi,True,False,358,0.6322933029412229,False,False
+8,707,Orissa,Keonjhar,8/707,odisha,keonjhar,False,False,361,0.8814529431625284,False,True
+8,708,Orissa,Koraput,8/708,odisha,koraput,True,False,363,0.2819644953943345,False,False
+8,709,Orissa,Mayurbhanja,8/709,odisha,mayurbhanja,False,False,,,False,False
+8,710,Orissa,Phulbani ( Kandhamal ),8/710,odisha,phulbanikandhamal,True,False,,,False,False
+8,711,Orissa,Puri,8/711,odisha,puri,True,False,369,0.33334260016488054,False,False
+8,712,Orissa,Sambalpur,8/712,odisha,sambalpur,True,False,371,0.41442489423472284,False,False
+8,713,Orissa,Sundargarh,8/713,odisha,sundargarh,False,False,373,0.736606103124516,False,False
+13,800,West Bengal,24 Parganas,13/800,westbengal,24parganas,True,False,,,False,False
+13,803,West Bengal,Nadia,13/803,westbengal,nadia,False,False,320,0.7895247186986438,False,False
+13,804,West Bengal,Murshidabad,13/804,westbengal,murshidabad,False,False,319,0.806725168521178,False,True
+13,805,West Bengal,Burdwan,13/805,westbengal,burdwan,True,False,,,False,False
+13,806,West Bengal,Birbhum,13/806,westbengal,birbhum,False,False,307,0.7564245419691402,False,False
+13,807,West Bengal,Bankura,13/807,westbengal,bankura,False,False,305,0.8182020519497297,False,True
+13,810,West Bengal,Hooghly,13/810,westbengal,hooghly,False,False,312,0.7518188238828,False,False
+13,811,West Bengal,Howrah,13/811,westbengal,howrah,False,False,313,0.7329972792089989,False,False
+13,812,West Bengal,Jalpaiguri,13/812,westbengal,jalpaiguri,True,False,,,False,False
+13,813,West Bengal,Darjeeling,13/813,westbengal,darjeeling,True,False,,,False,False
+13,814,West Bengal,Malda,13/814,westbengal,malda,False,False,316,0.8149001004246047,False,True
+13,816,West Bengal,Cooch Behar,13/816,westbengal,coochbehar,False,False,308,0.8872090845241698,False,True
+13,817,West Bengal,Purulia,13/817,westbengal,purulia,False,False,321,0.8396959787562465,False,True
+13,818,West Bengal,Midnapur,13/818,westbengal,midnapur,True,False,,,False,False
+13,822,West Bengal,West Dinajpur,13/822,westbengal,westdinajpur,True,False,,,False,False
+2,901,Bihar,Champaran,2/901,bihar,champaran,True,False,,,False,False
+2,902,Bihar,Muzaffarpur,2/902,bihar,muzaffarpur,True,False,208,0.3821695223763314,False,False
+2,903,Bihar,Darbhanga,2/903,bihar,darbhanga,True,False,195,0.26176251430665853,False,False
+2,904,Bihar,Saharsa,2/904,bihar,saharsa,True,False,216,0.2549149064198241,False,False
+2,905,Bihar,Purnea,2/905,bihar,purnea,True,False,,,False,False
+2,906,Bihar,Saran,2/906,bihar,saran,True,False,218,0.29753061450245144,False,False
+2,907,Bihar,Patna,2/907,bihar,patna,True,False,212,0.5252636404517024,False,False
+2,908,Bihar,Mungair,2/908,bihar,mungair,True,False,,,False,False
+2,909,Bihar,Bhagalpur,2/909,bihar,bhagalpur,True,False,192,0.32028982614945867,False,False
+15,910,Jharkhand,Santhal Paragana / Dumka,15/910,jharkhand,santhalparaganadumka,True,False,,,False,False
+2,911,Bihar,Shahabad (now part of Bhojpur district),2/911,bihar,shahabadnowpartofbhojpurdistrict,True,False,,,False,False
+2,912,Bihar,Gaya,2/912,bihar,gaya,True,False,,,False,False
+15,913,Jharkhand,Hazaribagh,15/913,jharkhand,hazaribagh,True,False,,,False,False
+15,914,Jharkhand,Dhanbad,15/914,jharkhand,dhanbad,True,False,,,False,False
+15,915,Jharkhand,Palamau,15/915,jharkhand,palamau,True,False,,,False,False
+15,916,Jharkhand,Ranchi,15/916,jharkhand,ranchi,True,False,,,False,False
+15,917,Jharkhand,Singhbhum,15/917,jharkhand,singhbhum,True,False,,,False,False

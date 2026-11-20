@@ -1,0 +1,1318 @@
+iso3,mapspam_crop,status,observed_weeks
+AFG,BARL,observed,1625
+AFG,BEAN,observed,1625
+AFG,COTT,observed,1625
+AFG,GROU,observed,1625
+AFG,MAIZ,observed,1625
+AFG,MILL,observed,1625
+AFG,PMIL,observed,1625
+AFG,POTA,observed,1625
+AFG,RAPE,observed,1625
+AFG,RICE,observed,1625
+AFG,SORG,observed,1625
+AFG,SOYB,no valid VCI,0
+AFG,SUGB,observed,1625
+AFG,SUGC,observed,1625
+AFG,SUNF,observed,1625
+AFG,WHEA,observed,1625
+AGO,BARL,no valid VCI,0
+AGO,BEAN,observed,1625
+AGO,CASS,observed,1625
+AGO,COTT,observed,1625
+AGO,GROU,observed,1625
+AGO,MAIZ,observed,1625
+AGO,PMIL,observed,1625
+AGO,POTA,observed,1625
+AGO,RICE,observed,1625
+AGO,SORG,observed,1625
+AGO,SOYB,observed,1625
+AGO,SUGC,observed,1625
+AGO,SUNF,observed,1625
+AGO,WHEA,observed,1625
+ALB,BARL,observed,1625
+ALB,BEAN,observed,1625
+ALB,COTT,observed,1625
+ALB,MAIZ,observed,1625
+ALB,PMIL,no valid VCI,0
+ALB,POTA,observed,1625
+ALB,RAPE,observed,1625
+ALB,RICE,observed,1625
+ALB,SORG,no valid VCI,0
+ALB,SOYB,observed,1625
+ALB,SUGB,observed,1625
+ALB,SUNF,observed,1625
+ALB,WHEA,observed,1625
+ARE,BARL,observed,1625
+ARE,MAIZ,observed,1625
+ARE,POTA,observed,1625
+ARE,SORG,observed,1625
+ARE,SUGC,observed,1625
+ARE,WHEA,observed,1625
+ARG,BARL,observed,1625
+ARG,BEAN,observed,1625
+ARG,CASS,observed,1625
+ARG,COTT,observed,1625
+ARG,GROU,observed,1625
+ARG,MAIZ,observed,1625
+ARG,MILL,observed,1625
+ARG,POTA,observed,1625
+ARG,RAPE,observed,1625
+ARG,RICE,observed,1625
+ARG,SORG,observed,1625
+ARG,SOYB,observed,1625
+ARG,SUGB,observed,1611
+ARG,SUGC,observed,1625
+ARG,SUNF,observed,1625
+ARG,WHEA,observed,1625
+ARM,BARL,observed,1625
+ARM,BEAN,observed,1625
+ARM,COTT,no valid VCI,0
+ARM,GROU,observed,1625
+ARM,MAIZ,observed,1625
+ARM,MILL,observed,1625
+ARM,PMIL,no valid VCI,0
+ARM,POTA,observed,1625
+ARM,RAPE,observed,1625
+ARM,RICE,observed,1625
+ARM,SORG,no valid VCI,0
+ARM,SOYB,no valid VCI,0
+ARM,SUGB,observed,1625
+ARM,SUNF,observed,1625
+ARM,WHEA,observed,1625
+AUS,BARL,observed,1625
+AUS,BEAN,observed,1625
+AUS,CASS,no valid VCI,0
+AUS,COTT,observed,1625
+AUS,GROU,observed,1625
+AUS,MAIZ,observed,1625
+AUS,MILL,observed,1625
+AUS,POTA,observed,1625
+AUS,RAPE,observed,1625
+AUS,RICE,observed,1625
+AUS,SORG,observed,1625
+AUS,SOYB,observed,1625
+AUS,SUGC,observed,1625
+AUS,SUNF,observed,1625
+AUS,WHEA,observed,1625
+AUT,BARL,observed,1625
+AUT,MAIZ,observed,1625
+AUT,POTA,observed,1625
+AUT,RAPE,observed,1625
+AUT,SORG,observed,1625
+AUT,SOYB,observed,1625
+AUT,SUGB,observed,1625
+AUT,SUNF,observed,1625
+AUT,WHEA,observed,1625
+AZE,BARL,observed,1625
+AZE,BEAN,observed,1625
+AZE,COTT,observed,1625
+AZE,GROU,observed,1625
+AZE,MAIZ,observed,1625
+AZE,MILL,observed,1625
+AZE,PMIL,observed,1625
+AZE,POTA,observed,1625
+AZE,RAPE,observed,1625
+AZE,RICE,observed,1625
+AZE,SORG,no valid VCI,0
+AZE,SOYB,observed,1625
+AZE,SUGB,observed,1625
+AZE,SUNF,observed,1625
+AZE,WHEA,observed,1625
+BEN,BEAN,observed,1625
+BEN,CASS,observed,1625
+BEN,COTT,observed,1625
+BEN,GROU,observed,1625
+BEN,MAIZ,observed,1625
+BEN,MILL,observed,1625
+BEN,PMIL,observed,1625
+BEN,POTA,observed,1625
+BEN,RICE,observed,1625
+BEN,SORG,observed,1625
+BEN,SOYB,observed,1625
+BEN,SUGC,observed,1625
+BEN,WHEA,no valid VCI,0
+BFA,BEAN,observed,1625
+BFA,CASS,observed,1625
+BFA,COTT,observed,1625
+BFA,GROU,observed,1625
+BFA,MAIZ,observed,1625
+BFA,MILL,observed,1625
+BFA,PMIL,observed,1625
+BFA,POTA,observed,1625
+BFA,RICE,observed,1625
+BFA,SORG,observed,1625
+BFA,SOYB,observed,1625
+BFA,SUGC,observed,1625
+BFA,WHEA,observed,1625
+BGD,BARL,observed,1625
+BGD,BEAN,observed,1625
+BGD,CASS,observed,1625
+BGD,COTT,observed,1625
+BGD,GROU,observed,1625
+BGD,MAIZ,observed,1625
+BGD,MILL,observed,1625
+BGD,PMIL,no valid VCI,0
+BGD,POTA,observed,1625
+BGD,RAPE,observed,1625
+BGD,RICE,observed,1625
+BGD,SORG,observed,1625
+BGD,SOYB,observed,1625
+BGD,SUGC,observed,1625
+BGD,SUNF,observed,1625
+BGD,WHEA,observed,1625
+BGR,BARL,observed,1625
+BGR,BEAN,observed,1625
+BGR,COTT,observed,1625
+BGR,GROU,observed,1625
+BGR,MAIZ,observed,1625
+BGR,MILL,observed,1625
+BGR,PMIL,observed,1625
+BGR,POTA,observed,1625
+BGR,RAPE,observed,1625
+BGR,RICE,observed,1625
+BGR,SORG,observed,1625
+BGR,SOYB,observed,1625
+BGR,SUGB,observed,1625
+BGR,SUNF,observed,1625
+BGR,WHEA,observed,1625
+BIH,BARL,observed,1625
+BIH,BEAN,observed,1625
+BIH,MAIZ,observed,1625
+BIH,MILL,no valid VCI,0
+BIH,POTA,observed,1625
+BIH,RAPE,observed,1625
+BIH,SORG,observed,1625
+BIH,SOYB,observed,1625
+BIH,SUGB,no valid VCI,0
+BIH,SUNF,observed,1625
+BIH,WHEA,observed,1625
+BLR,BARL,observed,1625
+BLR,BEAN,observed,1625
+BLR,MAIZ,observed,1625
+BLR,MILL,observed,1625
+BLR,PMIL,observed,1625
+BLR,POTA,observed,1625
+BLR,RAPE,observed,1625
+BLR,RICE,no valid VCI,0
+BLR,SORG,observed,1625
+BLR,SOYB,observed,1625
+BLR,SUGB,observed,1625
+BLR,SUNF,observed,1625
+BLR,WHEA,observed,1625
+BLX,BARL,outside official menu,0
+BLX,MAIZ,outside official menu,0
+BLX,POTA,outside official menu,0
+BLX,RAPE,outside official menu,0
+BLX,SORG,outside official menu,0
+BLX,SOYB,outside official menu,0
+BLX,SUGB,outside official menu,0
+BLX,SUNF,outside official menu,0
+BLX,WHEA,outside official menu,0
+BOL,BARL,observed,1625
+BOL,BEAN,observed,1625
+BOL,CASS,observed,1625
+BOL,COTT,observed,1625
+BOL,GROU,observed,1625
+BOL,MAIZ,observed,1625
+BOL,MILL,no valid VCI,0
+BOL,POTA,observed,1625
+BOL,RAPE,observed,1625
+BOL,RICE,observed,1625
+BOL,SORG,observed,1625
+BOL,SOYB,observed,1625
+BOL,SUGC,observed,1625
+BOL,SUNF,observed,1625
+BOL,WHEA,observed,1625
+BRA,BARL,observed,1625
+BRA,BEAN,observed,1625
+BRA,CASS,observed,1625
+BRA,COTT,observed,1625
+BRA,GROU,observed,1625
+BRA,MAIZ,observed,1625
+BRA,POTA,observed,1625
+BRA,RAPE,observed,1625
+BRA,RICE,observed,1625
+BRA,SORG,observed,1625
+BRA,SOYB,observed,1625
+BRA,SUGC,observed,1625
+BRA,SUNF,observed,1625
+BRA,WHEA,observed,1625
+CAN,BARL,observed,1625
+CAN,BEAN,observed,1625
+CAN,MAIZ,observed,1625
+CAN,POTA,observed,1625
+CAN,RAPE,observed,1625
+CAN,SORG,no valid VCI,0
+CAN,SOYB,observed,1625
+CAN,SUGB,observed,1625
+CAN,SUNF,observed,1625
+CAN,WHEA,observed,1625
+CHE,BARL,observed,1625
+CHE,MAIZ,observed,1625
+CHE,PMIL,no valid VCI,0
+CHE,POTA,observed,1625
+CHE,RAPE,observed,1625
+CHE,RICE,observed,1625
+CHE,SORG,observed,1625
+CHE,SOYB,observed,1625
+CHE,SUGB,observed,1625
+CHE,SUNF,observed,1625
+CHE,WHEA,observed,1625
+CHN,BARL,observed,1625
+CHN,BEAN,observed,1625
+CHN,CASS,observed,1625
+CHN,COTT,observed,1625
+CHN,GROU,observed,1625
+CHN,MAIZ,observed,1625
+CHN,MILL,observed,1625
+CHN,PMIL,observed,1625
+CHN,POTA,observed,1625
+CHN,RAPE,observed,1625
+CHN,RICE,observed,1625
+CHN,SORG,observed,1625
+CHN,SOYB,observed,1625
+CHN,SUGB,observed,1625
+CHN,SUGC,observed,1625
+CHN,SUNF,observed,1625
+CHN,WHEA,observed,1625
+COL,BARL,observed,1625
+COL,BEAN,observed,1625
+COL,CASS,observed,1625
+COL,COTT,observed,1625
+COL,GROU,observed,1625
+COL,MAIZ,observed,1625
+COL,POTA,observed,1625
+COL,RICE,observed,1625
+COL,SORG,observed,1625
+COL,SOYB,observed,1625
+COL,SUGB,observed,1625
+COL,SUGC,observed,1625
+COL,SUNF,no valid VCI,0
+COL,WHEA,observed,1625
+CRI,BEAN,observed,1625
+CRI,CASS,observed,1625
+CRI,COTT,observed,1625
+CRI,GROU,observed,1625
+CRI,MAIZ,observed,1625
+CRI,POTA,observed,1625
+CRI,RICE,observed,1625
+CRI,SORG,observed,1625
+CRI,SOYB,observed,1625
+CRI,SUGC,observed,1625
+CUB,BEAN,observed,1625
+CUB,CASS,observed,1625
+CUB,GROU,observed,1625
+CUB,MAIZ,observed,1625
+CUB,POTA,observed,1625
+CUB,RICE,observed,1625
+CUB,SORG,no valid VCI,0
+CUB,SOYB,no valid VCI,0
+CUB,SUGC,observed,1625
+CZE,BARL,observed,1625
+CZE,MAIZ,observed,1625
+CZE,POTA,observed,1625
+CZE,RAPE,observed,1625
+CZE,SORG,observed,1625
+CZE,SOYB,observed,1625
+CZE,SUGB,observed,1625
+CZE,SUNF,observed,1625
+CZE,WHEA,observed,1625
+DEU,BARL,observed,1625
+DEU,MAIZ,observed,1625
+DEU,PMIL,observed,1625
+DEU,POTA,observed,1625
+DEU,RAPE,observed,1625
+DEU,SORG,observed,1625
+DEU,SOYB,observed,1625
+DEU,SUGB,observed,1625
+DEU,SUNF,observed,1625
+DEU,WHEA,observed,1625
+DNK,BARL,observed,1625
+DNK,MAIZ,observed,1625
+DNK,POTA,observed,1625
+DNK,RAPE,observed,1625
+DNK,SUGB,observed,1625
+DNK,WHEA,observed,1625
+DOM,BEAN,observed,1625
+DOM,CASS,observed,1625
+DOM,COTT,observed,1625
+DOM,GROU,observed,1625
+DOM,MAIZ,observed,1625
+DOM,POTA,observed,1625
+DOM,RICE,observed,1625
+DOM,SORG,observed,1625
+DOM,SUGC,observed,1625
+DZA,BARL,observed,1625
+DZA,BEAN,observed,1625
+DZA,COTT,observed,1625
+DZA,GROU,observed,1625
+DZA,MAIZ,observed,1625
+DZA,PMIL,no valid VCI,0
+DZA,POTA,observed,1625
+DZA,RAPE,observed,1625
+DZA,RICE,no valid VCI,0
+DZA,SORG,observed,1625
+DZA,SOYB,no valid VCI,0
+DZA,SUGB,no valid VCI,0
+DZA,SUGC,no valid VCI,0
+DZA,SUNF,observed,1625
+DZA,WHEA,observed,1625
+ECU,BARL,observed,1625
+ECU,BEAN,observed,1625
+ECU,CASS,observed,1625
+ECU,COTT,observed,1625
+ECU,GROU,observed,1625
+ECU,MAIZ,observed,1625
+ECU,POTA,observed,1625
+ECU,RICE,observed,1625
+ECU,SORG,observed,1625
+ECU,SOYB,observed,1625
+ECU,SUGB,observed,1625
+ECU,SUGC,observed,1625
+ECU,SUNF,observed,1625
+ECU,WHEA,observed,1625
+EGY,BARL,observed,1625
+EGY,BEAN,observed,1625
+EGY,COTT,observed,1625
+EGY,GROU,observed,1625
+EGY,MAIZ,observed,1625
+EGY,PMIL,no valid VCI,0
+EGY,POTA,observed,1625
+EGY,RICE,observed,1625
+EGY,SORG,observed,1625
+EGY,SOYB,observed,1625
+EGY,SUGB,observed,1625
+EGY,SUGC,observed,1625
+EGY,SUNF,observed,1625
+EGY,WHEA,observed,1625
+ESP,BARL,observed,1625
+ESP,BEAN,observed,1625
+ESP,COTT,observed,1625
+ESP,GROU,observed,1625
+ESP,MAIZ,observed,1625
+ESP,PMIL,no valid VCI,0
+ESP,POTA,observed,1625
+ESP,RAPE,observed,1625
+ESP,RICE,observed,1625
+ESP,SORG,observed,1625
+ESP,SOYB,observed,1625
+ESP,SUGB,observed,1625
+ESP,SUGC,no valid VCI,0
+ESP,SUNF,observed,1625
+ESP,WHEA,observed,1625
+EST,BARL,observed,1623
+EST,MAIZ,no valid VCI,0
+EST,POTA,observed,1623
+EST,RAPE,observed,1623
+EST,SORG,no valid VCI,0
+EST,SUNF,no valid VCI,0
+EST,WHEA,observed,1623
+ETH,BARL,observed,1625
+ETH,BEAN,observed,1625
+ETH,CASS,observed,1625
+ETH,COTT,observed,1625
+ETH,GROU,observed,1625
+ETH,MAIZ,observed,1625
+ETH,MILL,observed,1625
+ETH,PMIL,observed,1625
+ETH,POTA,observed,1625
+ETH,RAPE,observed,1625
+ETH,RICE,observed,1625
+ETH,SORG,observed,1625
+ETH,SOYB,observed,1625
+ETH,SUGC,observed,1625
+ETH,SUNF,observed,1625
+ETH,WHEA,observed,1625
+FIN,BARL,observed,1621
+FIN,POTA,observed,1621
+FIN,RAPE,observed,1621
+FIN,SUGB,observed,1621
+FIN,WHEA,observed,1621
+FJI,CASS,outside official menu,0
+FJI,GROU,outside official menu,0
+FJI,MAIZ,outside official menu,0
+FJI,RICE,outside official menu,0
+FJI,SORG,outside official menu,0
+FJI,SUGC,outside official menu,0
+FRA,BARL,observed,1625
+FRA,BEAN,observed,1625
+FRA,CASS,no valid VCI,0
+FRA,COTT,no valid VCI,0
+FRA,MAIZ,observed,1625
+FRA,POTA,observed,1625
+FRA,RAPE,observed,1625
+FRA,RICE,observed,1625
+FRA,SORG,observed,1625
+FRA,SOYB,observed,1625
+FRA,SUGB,observed,1625
+FRA,SUGC,no valid VCI,0
+FRA,SUNF,observed,1625
+FRA,WHEA,observed,1625
+GBR,BARL,observed,1625
+GBR,POTA,observed,1625
+GBR,RAPE,observed,1625
+GBR,SUGB,observed,1625
+GBR,WHEA,observed,1625
+GHA,BEAN,observed,1625
+GHA,CASS,observed,1625
+GHA,COTT,observed,1625
+GHA,GROU,observed,1625
+GHA,MAIZ,observed,1625
+GHA,MILL,observed,1625
+GHA,PMIL,observed,1625
+GHA,POTA,no valid VCI,0
+GHA,RICE,observed,1625
+GHA,SORG,observed,1625
+GHA,SOYB,observed,1625
+GHA,SUGC,observed,1625
+GMB,CASS,observed,1625
+GMB,COTT,observed,1625
+GMB,GROU,observed,1625
+GMB,MAIZ,observed,1625
+GMB,PMIL,observed,1625
+GMB,POTA,no valid VCI,0
+GMB,RICE,observed,1625
+GMB,SORG,observed,1625
+GRC,BARL,observed,1625
+GRC,BEAN,observed,1625
+GRC,COTT,observed,1625
+GRC,GROU,observed,1625
+GRC,MAIZ,observed,1625
+GRC,MILL,observed,1625
+GRC,PMIL,no valid VCI,0
+GRC,POTA,observed,1625
+GRC,RAPE,observed,1625
+GRC,RICE,observed,1625
+GRC,SORG,observed,1625
+GRC,SOYB,observed,1625
+GRC,SUGB,observed,1625
+GRC,SUNF,observed,1625
+GRC,WHEA,observed,1625
+GTM,BEAN,observed,1625
+GTM,CASS,observed,1625
+GTM,COTT,observed,1625
+GTM,GROU,observed,1625
+GTM,MAIZ,observed,1625
+GTM,POTA,observed,1625
+GTM,RICE,observed,1625
+GTM,SORG,observed,1625
+GTM,SOYB,observed,1625
+GTM,SUGC,observed,1625
+GTM,WHEA,observed,1625
+GUY,BEAN,observed,1625
+GUY,CASS,observed,1625
+GUY,GROU,observed,1625
+GUY,MAIZ,observed,1625
+GUY,RICE,observed,1625
+GUY,SORG,no valid VCI,0
+GUY,SOYB,observed,1625
+GUY,SUGB,no valid VCI,0
+GUY,SUGC,observed,1625
+HRV,BARL,observed,1625
+HRV,BEAN,observed,1625
+HRV,MAIZ,observed,1625
+HRV,MILL,observed,1625
+HRV,POTA,observed,1625
+HRV,RAPE,observed,1625
+HRV,RICE,no valid VCI,0
+HRV,SORG,observed,1625
+HRV,SOYB,observed,1625
+HRV,SUGB,observed,1625
+HRV,SUNF,observed,1625
+HRV,WHEA,observed,1625
+HUN,BARL,observed,1625
+HUN,BEAN,observed,1625
+HUN,MAIZ,observed,1625
+HUN,MILL,observed,1625
+HUN,POTA,observed,1625
+HUN,RAPE,observed,1625
+HUN,RICE,observed,1625
+HUN,SORG,observed,1625
+HUN,SOYB,observed,1625
+HUN,SUGB,observed,1625
+HUN,SUNF,observed,1625
+HUN,WHEA,observed,1625
+IND,BARL,observed,1625
+IND,BEAN,observed,1625
+IND,CASS,observed,1625
+IND,COTT,observed,1625
+IND,GROU,observed,1625
+IND,MAIZ,observed,1625
+IND,MILL,observed,1625
+IND,PMIL,observed,1625
+IND,POTA,observed,1625
+IND,RAPE,observed,1625
+IND,RICE,observed,1625
+IND,SORG,observed,1625
+IND,SOYB,observed,1625
+IND,SUGB,no valid VCI,0
+IND,SUGC,observed,1625
+IND,SUNF,observed,1625
+IND,WHEA,observed,1625
+IRL,BARL,observed,1625
+IRL,POTA,observed,1625
+IRL,RAPE,observed,1625
+IRL,SUGB,no valid VCI,0
+IRL,WHEA,observed,1625
+IRN,BARL,observed,1625
+IRN,BEAN,observed,1625
+IRN,COTT,observed,1625
+IRN,GROU,observed,1625
+IRN,MAIZ,observed,1625
+IRN,MILL,observed,1625
+IRN,PMIL,no valid VCI,0
+IRN,POTA,observed,1625
+IRN,RAPE,observed,1625
+IRN,RICE,observed,1625
+IRN,SORG,observed,1625
+IRN,SOYB,observed,1625
+IRN,SUGB,observed,1625
+IRN,SUGC,observed,1625
+IRN,SUNF,observed,1625
+IRN,WHEA,observed,1625
+ISR,BARL,observed,1625
+ISR,BEAN,observed,1625
+ISR,COTT,observed,1625
+ISR,GROU,observed,1625
+ISR,MAIZ,observed,1625
+ISR,MILL,observed,1625
+ISR,POTA,observed,1625
+ISR,RICE,no valid VCI,0
+ISR,SORG,observed,1625
+ISR,SUGB,observed,1625
+ISR,SUGC,no valid VCI,0
+ISR,SUNF,observed,1625
+ISR,WHEA,observed,1625
+ITA,BARL,observed,1625
+ITA,MAIZ,observed,1625
+ITA,POTA,observed,1625
+ITA,RAPE,observed,1625
+ITA,RICE,observed,1625
+ITA,SORG,observed,1625
+ITA,SOYB,observed,1625
+ITA,SUGB,observed,1625
+ITA,SUNF,observed,1625
+ITA,WHEA,observed,1625
+JAM,BEAN,observed,1625
+JAM,CASS,observed,1625
+JAM,GROU,observed,1625
+JAM,MAIZ,observed,1625
+JAM,POTA,observed,1625
+JAM,SUGC,observed,1625
+JOR,BARL,observed,1625
+JOR,BEAN,no valid VCI,0
+JOR,COTT,no valid VCI,0
+JOR,GROU,no valid VCI,0
+JOR,MAIZ,observed,1625
+JOR,MILL,observed,1625
+JOR,POTA,observed,1625
+JOR,RICE,no valid VCI,0
+JOR,SORG,observed,1625
+JOR,SUGB,no valid VCI,0
+JOR,SUGC,no valid VCI,0
+JOR,SUNF,no valid VCI,0
+JOR,WHEA,observed,1625
+JPN,BARL,observed,1625
+JPN,BEAN,observed,1625
+JPN,GROU,observed,1625
+JPN,MAIZ,observed,1625
+JPN,MILL,observed,1625
+JPN,POTA,observed,1625
+JPN,RAPE,observed,1625
+JPN,RICE,observed,1625
+JPN,SOYB,observed,1625
+JPN,SUGB,observed,1625
+JPN,SUGC,observed,1625
+JPN,WHEA,observed,1625
+KAZ,BARL,observed,1625
+KAZ,BEAN,observed,1625
+KAZ,COTT,observed,1625
+KAZ,GROU,observed,1625
+KAZ,MAIZ,observed,1625
+KAZ,MILL,observed,1625
+KAZ,POTA,observed,1625
+KAZ,RAPE,observed,1625
+KAZ,RICE,observed,1625
+KAZ,SORG,observed,1625
+KAZ,SOYB,observed,1625
+KAZ,SUGB,observed,1625
+KAZ,SUNF,observed,1625
+KAZ,WHEA,observed,1625
+KGZ,BARL,observed,1625
+KGZ,BEAN,observed,1625
+KGZ,COTT,observed,1625
+KGZ,GROU,observed,1625
+KGZ,MAIZ,observed,1625
+KGZ,MILL,observed,1625
+KGZ,POTA,observed,1625
+KGZ,RAPE,observed,1625
+KGZ,RICE,observed,1625
+KGZ,SORG,observed,1625
+KGZ,SOYB,observed,1625
+KGZ,SUGB,observed,1625
+KGZ,SUNF,observed,1625
+KGZ,WHEA,observed,1625
+KHM,BARL,no valid VCI,0
+KHM,BEAN,observed,1625
+KHM,CASS,observed,1625
+KHM,COTT,observed,1625
+KHM,GROU,observed,1625
+KHM,MAIZ,observed,1625
+KHM,MILL,observed,1625
+KHM,POTA,no valid VCI,0
+KHM,RICE,observed,1625
+KHM,SORG,observed,1625
+KHM,SOYB,observed,1625
+KHM,SUGC,observed,1625
+KHM,SUNF,no valid VCI,0
+KOR,BARL,observed,1625
+KOR,BEAN,observed,1625
+KOR,COTT,no valid VCI,0
+KOR,GROU,observed,1625
+KOR,MAIZ,observed,1625
+KOR,MILL,observed,1625
+KOR,POTA,observed,1625
+KOR,RAPE,observed,1625
+KOR,RICE,observed,1625
+KOR,SORG,observed,1625
+KOR,SOYB,observed,1625
+KOR,WHEA,observed,1625
+LAO,BARL,observed,1625
+LAO,BEAN,observed,1625
+LAO,CASS,observed,1625
+LAO,COTT,observed,1625
+LAO,GROU,observed,1625
+LAO,MAIZ,observed,1625
+LAO,MILL,observed,1625
+LAO,POTA,observed,1625
+LAO,RAPE,observed,1625
+LAO,RICE,observed,1625
+LAO,SORG,observed,1625
+LAO,SOYB,observed,1625
+LAO,SUGC,observed,1625
+LAO,SUNF,observed,1625
+LAO,WHEA,observed,1625
+LTU,BARL,observed,1625
+LTU,BEAN,observed,1625
+LTU,MAIZ,observed,1625
+LTU,POTA,observed,1625
+LTU,RAPE,observed,1625
+LTU,SORG,no valid VCI,0
+LTU,SOYB,no valid VCI,0
+LTU,SUGB,observed,1625
+LTU,SUNF,observed,1625
+LTU,WHEA,observed,1625
+LVA,BARL,observed,1625
+LVA,BEAN,observed,1625
+LVA,MAIZ,observed,1625
+LVA,POTA,observed,1625
+LVA,RAPE,observed,1625
+LVA,SORG,no valid VCI,0
+LVA,SOYB,no valid VCI,0
+LVA,SUGB,observed,1625
+LVA,SUNF,observed,1625
+LVA,WHEA,observed,1625
+MAR,BARL,observed,1625
+MAR,BEAN,observed,1625
+MAR,COTT,observed,1625
+MAR,GROU,observed,1625
+MAR,MAIZ,observed,1625
+MAR,PMIL,observed,1625
+MAR,POTA,observed,1625
+MAR,RAPE,observed,1625
+MAR,RICE,observed,1625
+MAR,SORG,observed,1625
+MAR,SOYB,observed,1625
+MAR,SUGB,observed,1625
+MAR,SUGC,observed,1625
+MAR,SUNF,observed,1625
+MAR,WHEA,observed,1625
+MDA,BARL,observed,1625
+MDA,BEAN,observed,1625
+MDA,MAIZ,observed,1625
+MDA,MILL,observed,1625
+MDA,POTA,observed,1625
+MDA,RAPE,observed,1625
+MDA,RICE,observed,1625
+MDA,SORG,observed,1625
+MDA,SOYB,observed,1625
+MDA,SUGB,observed,1625
+MDA,SUNF,observed,1625
+MDA,WHEA,observed,1625
+MEX,BARL,observed,1625
+MEX,BEAN,observed,1625
+MEX,CASS,observed,1625
+MEX,COTT,observed,1625
+MEX,GROU,observed,1625
+MEX,MAIZ,observed,1625
+MEX,PMIL,observed,1625
+MEX,POTA,observed,1625
+MEX,RAPE,observed,1625
+MEX,RICE,observed,1625
+MEX,SORG,observed,1625
+MEX,SOYB,observed,1625
+MEX,SUGB,observed,1625
+MEX,SUGC,observed,1625
+MEX,SUNF,observed,1625
+MEX,WHEA,observed,1625
+MKD,BARL,observed,1625
+MKD,BEAN,observed,1625
+MKD,COTT,observed,1625
+MKD,MAIZ,observed,1625
+MKD,MILL,no valid VCI,0
+MKD,PMIL,observed,1625
+MKD,POTA,observed,1625
+MKD,RAPE,observed,1625
+MKD,RICE,observed,1625
+MKD,SORG,observed,1625
+MKD,SOYB,observed,1625
+MKD,SUGB,observed,1625
+MKD,SUNF,observed,1625
+MKD,WHEA,observed,1625
+MLI,BARL,no valid VCI,0
+MLI,BEAN,observed,1625
+MLI,CASS,observed,1625
+MLI,COTT,observed,1625
+MLI,GROU,observed,1625
+MLI,MAIZ,observed,1625
+MLI,PMIL,observed,1625
+MLI,POTA,observed,1625
+MLI,RICE,observed,1625
+MLI,SORG,observed,1625
+MLI,SOYB,observed,1625
+MLI,SUGB,no valid VCI,0
+MLI,SUGC,observed,1625
+MLI,WHEA,observed,1625
+MMR,BARL,observed,1625
+MMR,BEAN,observed,1625
+MMR,CASS,observed,1625
+MMR,COTT,observed,1625
+MMR,GROU,observed,1625
+MMR,MAIZ,observed,1625
+MMR,MILL,observed,1625
+MMR,PMIL,observed,1625
+MMR,POTA,observed,1625
+MMR,RAPE,observed,1625
+MMR,RICE,observed,1625
+MMR,SORG,observed,1625
+MMR,SOYB,observed,1625
+MMR,SUGC,observed,1625
+MMR,SUNF,observed,1625
+MMR,WHEA,observed,1625
+MNG,BARL,observed,1625
+MNG,BEAN,observed,1625
+MNG,COTT,no valid VCI,0
+MNG,GROU,observed,1625
+MNG,MAIZ,observed,1625
+MNG,MILL,no valid VCI,0
+MNG,POTA,observed,1625
+MNG,RAPE,observed,1625
+MNG,SORG,observed,1625
+MNG,SOYB,no valid VCI,0
+MNG,SUGB,observed,1625
+MNG,SUNF,observed,1625
+MNG,WHEA,observed,1625
+MWI,BARL,no valid VCI,0
+MWI,BEAN,observed,1625
+MWI,CASS,observed,1625
+MWI,COTT,observed,1625
+MWI,GROU,observed,1625
+MWI,MAIZ,observed,1625
+MWI,MILL,observed,1625
+MWI,PMIL,observed,1625
+MWI,POTA,observed,1625
+MWI,RICE,observed,1625
+MWI,SORG,observed,1625
+MWI,SOYB,observed,1625
+MWI,SUGC,observed,1625
+MWI,SUNF,observed,1625
+MWI,WHEA,observed,1625
+NER,BEAN,observed,1625
+NER,CASS,observed,1625
+NER,COTT,observed,1625
+NER,GROU,observed,1625
+NER,MAIZ,observed,1625
+NER,MILL,observed,1625
+NER,PMIL,observed,1625
+NER,POTA,observed,1625
+NER,RICE,observed,1625
+NER,SORG,observed,1625
+NER,SOYB,observed,1625
+NER,SUGC,observed,1625
+NER,WHEA,observed,1625
+NGA,BEAN,observed,1625
+NGA,CASS,observed,1625
+NGA,COTT,observed,1625
+NGA,GROU,observed,1625
+NGA,MAIZ,observed,1625
+NGA,MILL,observed,1625
+NGA,PMIL,observed,1625
+NGA,POTA,observed,1625
+NGA,RICE,observed,1625
+NGA,SORG,observed,1625
+NGA,SOYB,observed,1625
+NGA,SUGC,observed,1625
+NGA,WHEA,observed,1625
+NIC,BEAN,observed,1625
+NIC,CASS,observed,1625
+NIC,COTT,observed,1625
+NIC,GROU,observed,1625
+NIC,MAIZ,observed,1625
+NIC,POTA,observed,1625
+NIC,RICE,observed,1625
+NIC,SORG,observed,1625
+NIC,SOYB,observed,1625
+NIC,SUGC,observed,1625
+NIC,WHEA,no valid VCI,0
+NLD,BARL,observed,1625
+NLD,COTT,no valid VCI,0
+NLD,GROU,no valid VCI,0
+NLD,MAIZ,observed,1625
+NLD,POTA,observed,1625
+NLD,RAPE,observed,1625
+NLD,SOYB,no valid VCI,0
+NLD,SUGB,observed,1625
+NLD,SUNF,no valid VCI,0
+NLD,WHEA,observed,1625
+NOR,BARL,observed,1622
+NOR,POTA,observed,1622
+NOR,RAPE,observed,1622
+NOR,SUGB,observed,1620
+NOR,WHEA,observed,1622
+NPL,BARL,observed,1625
+NPL,BEAN,observed,1625
+NPL,COTT,observed,1625
+NPL,GROU,observed,1625
+NPL,MAIZ,observed,1625
+NPL,MILL,observed,1625
+NPL,PMIL,observed,1625
+NPL,POTA,observed,1625
+NPL,RAPE,observed,1625
+NPL,RICE,observed,1625
+NPL,SORG,observed,1625
+NPL,SOYB,observed,1625
+NPL,SUGC,observed,1625
+NPL,SUNF,observed,1625
+NPL,WHEA,observed,1625
+PAK,BARL,observed,1625
+PAK,BEAN,observed,1625
+PAK,CASS,no valid VCI,0
+PAK,COTT,observed,1625
+PAK,GROU,observed,1625
+PAK,MAIZ,observed,1625
+PAK,MILL,observed,1625
+PAK,PMIL,observed,1625
+PAK,POTA,observed,1625
+PAK,RAPE,observed,1625
+PAK,RICE,observed,1625
+PAK,SORG,observed,1625
+PAK,SOYB,observed,1625
+PAK,SUGB,observed,1625
+PAK,SUGC,observed,1625
+PAK,SUNF,observed,1625
+PAK,WHEA,observed,1625
+PER,BARL,observed,1625
+PER,BEAN,observed,1625
+PER,CASS,observed,1625
+PER,COTT,observed,1625
+PER,GROU,observed,1625
+PER,MAIZ,observed,1625
+PER,POTA,observed,1625
+PER,RICE,observed,1625
+PER,SORG,observed,1625
+PER,SOYB,observed,1625
+PER,SUGB,no valid VCI,0
+PER,SUGC,observed,1625
+PER,SUNF,no valid VCI,0
+PER,WHEA,observed,1625
+PHL,BEAN,observed,1625
+PHL,CASS,observed,1625
+PHL,COTT,observed,1625
+PHL,GROU,observed,1625
+PHL,MAIZ,observed,1625
+PHL,POTA,observed,1625
+PHL,RICE,observed,1625
+PHL,SORG,no valid VCI,0
+PHL,SOYB,no valid VCI,0
+PHL,SUGC,observed,1625
+POL,BARL,observed,1625
+POL,BEAN,observed,1625
+POL,MAIZ,observed,1625
+POL,MILL,observed,1625
+POL,POTA,observed,1625
+POL,RAPE,observed,1625
+POL,RICE,observed,1625
+POL,SORG,observed,1625
+POL,SOYB,observed,1625
+POL,SUGB,observed,1625
+POL,SUNF,observed,1625
+POL,WHEA,observed,1625
+PRT,BARL,observed,1625
+PRT,COTT,observed,1625
+PRT,MAIZ,observed,1625
+PRT,POTA,observed,1625
+PRT,RAPE,observed,1625
+PRT,RICE,observed,1625
+PRT,SORG,observed,1625
+PRT,SOYB,observed,1625
+PRT,SUGB,observed,1625
+PRT,SUNF,observed,1625
+PRT,WHEA,observed,1625
+PRY,BARL,no valid VCI,0
+PRY,BEAN,observed,1625
+PRY,CASS,observed,1625
+PRY,COTT,observed,1625
+PRY,GROU,observed,1625
+PRY,MAIZ,observed,1625
+PRY,MILL,no valid VCI,0
+PRY,POTA,observed,1625
+PRY,RAPE,observed,1625
+PRY,RICE,observed,1625
+PRY,SORG,observed,1625
+PRY,SOYB,observed,1625
+PRY,SUGC,observed,1625
+PRY,SUNF,observed,1625
+PRY,WHEA,observed,1625
+ROU,BARL,observed,1625
+ROU,BEAN,observed,1625
+ROU,MAIZ,observed,1625
+ROU,MILL,observed,1625
+ROU,POTA,observed,1625
+ROU,RAPE,observed,1625
+ROU,RICE,observed,1625
+ROU,SORG,observed,1625
+ROU,SOYB,observed,1625
+ROU,SUGB,observed,1625
+ROU,SUNF,observed,1625
+ROU,WHEA,observed,1625
+RUS,BARL,observed,1625
+RUS,BEAN,observed,1625
+RUS,COTT,no valid VCI,0
+RUS,GROU,observed,1625
+RUS,MAIZ,observed,1625
+RUS,MILL,observed,1625
+RUS,PMIL,observed,1625
+RUS,POTA,observed,1625
+RUS,RAPE,observed,1625
+RUS,RICE,observed,1625
+RUS,SORG,observed,1625
+RUS,SOYB,observed,1625
+RUS,SUGB,observed,1625
+RUS,SUNF,observed,1625
+RUS,WHEA,observed,1625
+SAU,BARL,observed,1625
+SAU,BEAN,observed,1625
+SAU,COTT,observed,1625
+SAU,GROU,observed,1625
+SAU,MAIZ,observed,1625
+SAU,MILL,observed,1625
+SAU,POTA,observed,1625
+SAU,RICE,no valid VCI,0
+SAU,SORG,observed,1625
+SAU,SUGB,no valid VCI,0
+SAU,WHEA,observed,1625
+SCG,BARL,outside official menu,0
+SCG,BEAN,outside official menu,0
+SCG,COTT,outside official menu,0
+SCG,MAIZ,outside official menu,0
+SCG,MILL,outside official menu,0
+SCG,PMIL,outside official menu,0
+SCG,POTA,outside official menu,0
+SCG,RAPE,outside official menu,0
+SCG,RICE,outside official menu,0
+SCG,SORG,outside official menu,0
+SCG,SOYB,outside official menu,0
+SCG,SUGB,outside official menu,0
+SCG,SUNF,outside official menu,0
+SCG,WHEA,outside official menu,0
+SDX,BARL,outside official menu,0
+SDX,BEAN,outside official menu,0
+SDX,CASS,outside official menu,0
+SDX,COTT,outside official menu,0
+SDX,GROU,outside official menu,0
+SDX,MAIZ,outside official menu,0
+SDX,MILL,outside official menu,0
+SDX,PMIL,outside official menu,0
+SDX,POTA,outside official menu,0
+SDX,RAPE,outside official menu,0
+SDX,RICE,outside official menu,0
+SDX,SORG,outside official menu,0
+SDX,SOYB,outside official menu,0
+SDX,SUGB,outside official menu,0
+SDX,SUGC,outside official menu,0
+SDX,SUNF,outside official menu,0
+SDX,WHEA,outside official menu,0
+SEN,BARL,no valid VCI,0
+SEN,BEAN,no valid VCI,0
+SEN,CASS,observed,1625
+SEN,COTT,observed,1625
+SEN,GROU,observed,1625
+SEN,MAIZ,observed,1625
+SEN,PMIL,observed,1625
+SEN,POTA,observed,1625
+SEN,RICE,observed,1625
+SEN,SORG,observed,1625
+SEN,SOYB,no valid VCI,0
+SEN,SUGC,observed,1625
+SEN,WHEA,no valid VCI,0
+SLV,BEAN,observed,1625
+SLV,CASS,observed,1625
+SLV,COTT,observed,1625
+SLV,GROU,observed,1625
+SLV,MAIZ,observed,1625
+SLV,POTA,observed,1625
+SLV,RICE,observed,1625
+SLV,SORG,observed,1625
+SLV,SOYB,observed,1625
+SLV,SUGC,observed,1625
+SLV,WHEA,no valid VCI,0
+SVK,BARL,observed,1625
+SVK,BEAN,observed,1625
+SVK,MAIZ,observed,1625
+SVK,MILL,observed,1625
+SVK,POTA,observed,1625
+SVK,RAPE,observed,1625
+SVK,RICE,observed,1625
+SVK,SORG,observed,1625
+SVK,SOYB,observed,1625
+SVK,SUGB,observed,1625
+SVK,SUNF,observed,1625
+SVK,WHEA,observed,1625
+SVN,BARL,observed,1625
+SVN,MAIZ,observed,1625
+SVN,POTA,observed,1625
+SVN,RAPE,observed,1625
+SVN,RICE,no valid VCI,0
+SVN,SORG,observed,1625
+SVN,SOYB,observed,1625
+SVN,SUGB,observed,1625
+SVN,SUNF,observed,1625
+SVN,WHEA,observed,1625
+SWE,BARL,observed,1625
+SWE,MAIZ,observed,1622
+SWE,POTA,observed,1625
+SWE,RAPE,observed,1625
+SWE,SUGB,observed,1625
+SWE,WHEA,observed,1625
+SYR,BARL,observed,1625
+SYR,BEAN,observed,1625
+SYR,COTT,observed,1625
+SYR,GROU,observed,1625
+SYR,MAIZ,observed,1625
+SYR,MILL,observed,1625
+SYR,POTA,observed,1625
+SYR,RICE,observed,1625
+SYR,SORG,observed,1625
+SYR,SOYB,observed,1625
+SYR,SUGB,observed,1625
+SYR,SUNF,observed,1625
+SYR,WHEA,observed,1625
+TCD,BEAN,observed,1625
+TCD,CASS,observed,1625
+TCD,COTT,observed,1625
+TCD,GROU,observed,1625
+TCD,MAIZ,observed,1625
+TCD,PMIL,observed,1625
+TCD,POTA,observed,1625
+TCD,RICE,observed,1625
+TCD,SORG,observed,1625
+TCD,SOYB,observed,1625
+TCD,SUGC,observed,1625
+TCD,SUNF,no valid VCI,0
+TCD,WHEA,observed,1625
+TGO,BEAN,observed,1625
+TGO,CASS,observed,1625
+TGO,COTT,observed,1625
+TGO,GROU,observed,1625
+TGO,MAIZ,observed,1625
+TGO,MILL,observed,1625
+TGO,PMIL,observed,1625
+TGO,POTA,no valid VCI,0
+TGO,RICE,observed,1625
+TGO,SORG,observed,1625
+TGO,SOYB,observed,1625
+TGO,SUGC,observed,1625
+THA,BARL,observed,1625
+THA,BEAN,observed,1625
+THA,CASS,observed,1625
+THA,COTT,observed,1625
+THA,GROU,observed,1625
+THA,MAIZ,observed,1625
+THA,MILL,observed,1625
+THA,POTA,observed,1625
+THA,RAPE,observed,1625
+THA,RICE,observed,1625
+THA,SORG,observed,1625
+THA,SOYB,observed,1625
+THA,SUGC,observed,1625
+THA,SUNF,observed,1625
+THA,WHEA,observed,1625
+TJK,BARL,observed,1625
+TJK,BEAN,observed,1625
+TJK,COTT,observed,1625
+TJK,GROU,observed,1625
+TJK,MAIZ,observed,1625
+TJK,MILL,observed,1625
+TJK,POTA,observed,1625
+TJK,RAPE,observed,1625
+TJK,RICE,observed,1625
+TJK,SORG,observed,1625
+TJK,SOYB,observed,1625
+TJK,SUGB,observed,1625
+TJK,SUNF,observed,1625
+TJK,WHEA,observed,1625
+TKM,BARL,observed,1625
+TKM,BEAN,observed,1625
+TKM,COTT,observed,1625
+TKM,GROU,observed,1625
+TKM,MAIZ,observed,1625
+TKM,MILL,observed,1625
+TKM,POTA,observed,1625
+TKM,RAPE,observed,1625
+TKM,RICE,observed,1625
+TKM,SORG,observed,1625
+TKM,SOYB,observed,1625
+TKM,SUGB,observed,1625
+TKM,SUGC,observed,1625
+TKM,SUNF,observed,1625
+TKM,WHEA,observed,1625
+TUR,BARL,observed,1625
+TUR,BEAN,observed,1625
+TUR,COTT,observed,1625
+TUR,GROU,observed,1625
+TUR,MAIZ,observed,1625
+TUR,MILL,observed,1625
+TUR,POTA,observed,1625
+TUR,RAPE,observed,1625
+TUR,RICE,observed,1625
+TUR,SORG,observed,1625
+TUR,SOYB,observed,1625
+TUR,SUGB,observed,1625
+TUR,SUNF,observed,1625
+TUR,WHEA,observed,1625
+TWN,BEAN,observed,1625
+TWN,CASS,no valid VCI,0
+TWN,COTT,no valid VCI,0
+TWN,GROU,observed,1625
+TWN,MAIZ,observed,1625
+TWN,PMIL,observed,1625
+TWN,POTA,observed,1625
+TWN,RAPE,no valid VCI,0
+TWN,RICE,observed,1625
+TWN,SORG,observed,1625
+TWN,SOYB,observed,1625
+TWN,SUGC,observed,1625
+TWN,SUNF,no valid VCI,0
+TWN,WHEA,observed,1625
+TZA,BARL,observed,1625
+TZA,BEAN,observed,1625
+TZA,CASS,observed,1625
+TZA,COTT,observed,1625
+TZA,GROU,observed,1625
+TZA,MAIZ,observed,1625
+TZA,MILL,observed,1625
+TZA,PMIL,observed,1625
+TZA,POTA,observed,1625
+TZA,RICE,observed,1625
+TZA,SORG,observed,1625
+TZA,SOYB,observed,1625
+TZA,SUGC,observed,1625
+TZA,SUNF,observed,1625
+TZA,WHEA,observed,1625
+UKR,BARL,observed,1625
+UKR,BEAN,observed,1625
+UKR,MAIZ,observed,1625
+UKR,MILL,observed,1625
+UKR,PMIL,observed,1625
+UKR,POTA,observed,1625
+UKR,RAPE,observed,1625
+UKR,RICE,observed,1625
+UKR,SORG,observed,1625
+UKR,SOYB,observed,1625
+UKR,SUGB,observed,1625
+UKR,SUNF,observed,1625
+UKR,WHEA,observed,1625
+URY,BARL,observed,1625
+URY,BEAN,observed,1625
+URY,CASS,no valid VCI,0
+URY,GROU,observed,1625
+URY,MAIZ,observed,1625
+URY,MILL,no valid VCI,0
+URY,POTA,observed,1625
+URY,RAPE,observed,1625
+URY,RICE,observed,1625
+URY,SORG,observed,1625
+URY,SOYB,observed,1625
+URY,SUGC,observed,1625
+URY,SUNF,observed,1625
+URY,WHEA,observed,1625
+USA,BARL,observed,1625
+USA,BEAN,observed,1625
+USA,COTT,observed,1625
+USA,GROU,observed,1625
+USA,MAIZ,observed,1625
+USA,PMIL,no valid VCI,0
+USA,POTA,observed,1625
+USA,RAPE,observed,1625
+USA,RICE,observed,1625
+USA,SORG,observed,1625
+USA,SOYB,observed,1625
+USA,SUGB,observed,1625
+USA,SUGC,observed,1625
+USA,SUNF,observed,1625
+USA,WHEA,observed,1625
+UZB,BARL,observed,1625
+UZB,BEAN,observed,1625
+UZB,COTT,observed,1625
+UZB,GROU,observed,1625
+UZB,MAIZ,observed,1625
+UZB,MILL,observed,1625
+UZB,POTA,observed,1625
+UZB,RAPE,observed,1625
+UZB,RICE,observed,1625
+UZB,SORG,observed,1625
+UZB,SOYB,observed,1625
+UZB,SUGB,observed,1625
+UZB,SUNF,observed,1625
+UZB,WHEA,observed,1625
+VEN,BEAN,observed,1625
+VEN,CASS,observed,1625
+VEN,COTT,observed,1625
+VEN,GROU,observed,1625
+VEN,MAIZ,observed,1625
+VEN,POTA,observed,1625
+VEN,RICE,observed,1625
+VEN,SORG,observed,1625
+VEN,SOYB,observed,1625
+VEN,SUGB,observed,1625
+VEN,SUGC,observed,1625
+VEN,SUNF,observed,1625
+VEN,WHEA,observed,1625
+VNM,BARL,no valid VCI,0
+VNM,BEAN,observed,1625
+VNM,CASS,observed,1625
+VNM,COTT,observed,1625
+VNM,GROU,observed,1625
+VNM,MAIZ,observed,1625
+VNM,MILL,observed,1625
+VNM,POTA,observed,1625
+VNM,RAPE,observed,1625
+VNM,RICE,observed,1625
+VNM,SORG,no valid VCI,0
+VNM,SOYB,observed,1625
+VNM,SUGC,observed,1625
+VNM,SUNF,no valid VCI,0
+VNM,WHEA,no valid VCI,0
+VUT,GROU,outside official menu,0
+VUT,MAIZ,outside official menu,0
+YEM,BARL,observed,1625
+YEM,BEAN,observed,1625
+YEM,COTT,observed,1625
+YEM,GROU,no valid VCI,0
+YEM,MAIZ,observed,1625
+YEM,MILL,observed,1625
+YEM,POTA,observed,1625
+YEM,RICE,no valid VCI,0
+YEM,SORG,observed,1625
+YEM,SUGC,no valid VCI,0
+YEM,WHEA,observed,1625

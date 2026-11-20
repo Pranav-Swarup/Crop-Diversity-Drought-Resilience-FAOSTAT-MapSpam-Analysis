@@ -1,0 +1,26 @@
+minimum_overlap,aligned_districts,source,measure,observed_pairs,positive_pairs,within_tolerance
+0.8,27,DES land use / India Data Portal,irrigated area (ha),2344,2252,2130
+0.8,27,Presented DES,crop area (ha),6041,6041,5086
+0.8,27,Presented DES,production (t),5397,5391,4502
+0.8,27,Presented five crops,crop area (ha),2265,2265,2264
+0.8,27,Presented five crops,production (t),1825,1809,1808
+0.85,15,DES land use / India Data Portal,irrigated area (ha),1385,1322,1227
+0.85,15,Presented DES,crop area (ha),2955,2955,2462
+0.85,15,Presented DES,production (t),2587,2584,2141
+0.85,15,Presented five crops,crop area (ha),1136,1136,1135
+0.85,15,Presented five crops,production (t),922,920,920
+0.9,2,DES land use / India Data Portal,irrigated area (ha),185,184,180
+0.9,2,Presented DES,crop area (ha),308,308,220
+0.9,2,Presented DES,production (t),274,274,201
+0.9,2,Presented five crops,crop area (ha),143,143,143
+0.9,2,Presented five crops,production (t),116,116,116
+0.95,0,DES land use / India Data Portal,irrigated area (ha),0,0,0
+0.95,0,Presented DES,crop area (ha),0,0,0
+0.95,0,Presented DES,production (t),0,0,0
+0.95,0,Presented five crops,crop area (ha),0,0,0
+0.95,0,Presented five crops,production (t),0,0,0
+1.0,0,DES land use / India Data Portal,irrigated area (ha),0,0,0
+1.0,0,Presented DES,crop area (ha),0,0,0
+1.0,0,Presented DES,production (t),0,0,0
+1.0,0,Presented five crops,crop area (ha),0,0,0
+1.0,0,Presented five crops,production (t),0,0,0

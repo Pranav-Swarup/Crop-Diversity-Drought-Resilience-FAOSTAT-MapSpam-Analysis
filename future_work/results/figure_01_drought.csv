@@ -1,0 +1,5 @@
+measure,label,n_country_years,n_countries,n_drought,n_events,newly_dry,no_longer_dry,output_difference_pct_trend,lo_pct,hi_pct
+spei12_w,"Presented December, all crops",3317,107,626,232,0,0,-4.413786661720899,-5.72670904239669,-3.1008642810451104
+december12,"December, matched crops",3317,107,622,232,15,19,-4.29625143967725,-5.60137944977337,-2.99112342958114
+harvest6,Six months to harvest,3317,107,525,210,118,219,-5.2606905450128,-6.57170149631258,-3.9496795937130096
+season,Planting to harvest,3317,107,524,214,129,231,-5.48306428770041,-6.78256752508949,-4.18356105031134

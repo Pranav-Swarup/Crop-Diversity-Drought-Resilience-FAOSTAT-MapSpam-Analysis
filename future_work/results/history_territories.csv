@@ -1,0 +1,211 @@
+Area Code,Area,iso3,mapped,first,last
+1,Armenia,ARM,True,1992,2023
+2,Afghanistan,AFG,True,1961,2023
+3,Albania,ALB,True,1961,2023
+4,Algeria,DZA,True,1961,2023
+7,Angola,AGO,True,1961,2023
+8,Antigua and Barbuda,ATG,True,1961,2023
+9,Argentina,ARG,True,1961,2023
+10,Australia,AUS,True,1961,2023
+11,Austria,AUT,True,1961,2023
+12,Bahamas,BHS,True,1961,2023
+13,Bahrain,BHR,True,1961,2023
+14,Barbados,BRB,True,1961,2023
+15,Belgium-Luxembourg,BLX,True,1961,1999
+16,Bangladesh,BGD,True,1961,2023
+18,Bhutan,BTN,True,1961,2023
+19,Bolivia (Plurinational State of),BOL,True,1961,2023
+20,Botswana,BWA,True,1961,2023
+21,Brazil,BRA,True,1961,2023
+23,Belize,BLZ,True,1961,2023
+25,Solomon Islands,SLB,True,1961,2023
+26,Brunei Darussalam,BRN,True,1961,2023
+27,Bulgaria,BGR,True,1961,2023
+28,Myanmar,MMR,True,1961,2023
+29,Burundi,BDI,True,1961,2023
+32,Cameroon,CMR,True,1961,2023
+33,Canada,CAN,True,1961,2023
+35,Cabo Verde,CPV,True,1961,2023
+37,Central African Republic,CAF,True,1961,2023
+38,Sri Lanka,LKA,True,1961,2023
+39,Chad,TCD,True,1961,2023
+40,Chile,CHL,True,1961,2023
+41,"China, mainland",CHN,True,1961,2023
+44,Colombia,COL,True,1961,2023
+45,Comoros,COM,True,1961,2023
+46,Congo,COG,True,1961,2023
+47,Cook Islands,COK,True,1961,2023
+48,Costa Rica,CRI,True,1961,2023
+49,Cuba,CUB,True,1961,2023
+50,Cyprus,CYP,True,1961,2023
+51,Czechoslovakia,,False,1961,1992
+52,Azerbaijan,AZE,True,1992,2023
+53,Benin,BEN,True,1961,2023
+54,Denmark,DNK,True,1961,2023
+55,Dominica,DMA,True,1961,2023
+56,Dominican Republic,DOM,True,1961,2023
+57,Belarus,BLR,True,1992,2023
+58,Ecuador,ECU,True,1961,2023
+59,Egypt,EGY,True,1961,2023
+60,El Salvador,SLV,True,1961,2023
+61,Equatorial Guinea,GNQ,True,1961,2023
+62,Ethiopia PDR,,False,1961,1992
+63,Estonia,EST,True,1992,2023
+64,Faroe Islands,FRO,True,1961,2023
+66,Fiji,FJI,True,1961,2023
+67,Finland,FIN,True,1961,2023
+68,France,FRA,True,1961,2023
+69,French Guiana,,False,1961,2006
+70,French Polynesia,PYF,True,1961,2023
+72,Djibouti,DJI,True,1961,2023
+73,Georgia,GEO,True,1992,2023
+74,Gabon,GAB,True,1961,2023
+75,Gambia,GMB,True,1961,2023
+79,Germany,DEU,True,1961,2023
+80,Bosnia and Herzegovina,BIH,True,1992,2023
+81,Ghana,GHA,True,1961,2023
+83,Kiribati,KIR,True,1961,2023
+84,Greece,GRC,True,1961,2023
+86,Grenada,GRD,True,1961,2023
+87,Guadeloupe,,False,1961,2006
+89,Guatemala,GTM,True,1961,2023
+90,Guinea,GIN,True,1961,2023
+91,Guyana,GUY,True,1961,2023
+93,Haiti,HTI,True,1961,2023
+95,Honduras,HND,True,1961,2023
+96,"China, Hong Kong SAR",HKG,True,1961,2023
+97,Hungary,HUN,True,1961,2023
+98,Croatia,HRV,True,1992,2023
+99,Iceland,ISL,True,1961,2023
+100,India,IND,True,1961,2023
+101,Indonesia,IDN,True,1961,2023
+102,Iran (Islamic Republic of),IRN,True,1961,2023
+103,Iraq,IRQ,True,1961,2023
+104,Ireland,IRL,True,1961,2023
+105,Israel,ISR,True,1961,2023
+106,Italy,ITA,True,1961,2023
+107,Côte d'Ivoire,CIV,True,1961,2023
+108,Kazakhstan,KAZ,True,1992,2023
+109,Jamaica,JAM,True,1961,2023
+110,Japan,JPN,True,1961,2023
+112,Jordan,JOR,True,1961,2023
+113,Kyrgyzstan,KGZ,True,1992,2023
+114,Kenya,KEN,True,1961,2023
+115,Cambodia,KHM,True,1961,2023
+116,Democratic People's Republic of Korea,PRK,True,1961,2023
+117,Republic of Korea,KOR,True,1961,2023
+118,Kuwait,KWT,True,1961,2023
+119,Latvia,LVA,True,1992,2023
+120,Lao People's Democratic Republic,LAO,True,1961,2023
+121,Lebanon,LBN,True,1961,2023
+122,Lesotho,LSO,True,1961,2023
+123,Liberia,LBR,True,1961,2023
+124,Libya,LBY,True,1961,2023
+126,Lithuania,LTU,True,1992,2023
+127,Marshall Islands,MHL,True,1991,2023
+128,"China, Macao SAR",MAC,True,1961,2023
+129,Madagascar,MDG,True,1961,2023
+130,Malawi,MWI,True,1961,2023
+131,Malaysia,MYS,True,1961,2023
+132,Maldives,MDV,True,1961,2023
+133,Mali,MLI,True,1961,2023
+134,Malta,MLT,True,1961,2023
+135,Martinique,,False,1961,2006
+136,Mauritania,MRT,True,1961,2023
+137,Mauritius,MUS,True,1961,2023
+138,Mexico,MEX,True,1961,2023
+141,Mongolia,MNG,True,1961,2023
+143,Morocco,MAR,True,1961,2023
+144,Mozambique,MOZ,True,1961,2023
+145,Micronesia (Federated States of),FSM,True,1991,2023
+146,Republic of Moldova,MDA,True,1992,2023
+147,Namibia,NAM,True,1961,2023
+148,Nauru,NRU,True,1961,2023
+149,Nepal,NPL,True,1961,2023
+150,Netherlands (Kingdom of the),NLD,True,1961,2023
+153,New Caledonia,NCL,True,1961,2023
+154,North Macedonia,MKD,True,1992,2023
+155,Vanuatu,VUT,True,1961,2023
+156,New Zealand,NZL,True,1961,2023
+157,Nicaragua,NIC,True,1961,2023
+158,Niger,NER,True,1961,2023
+159,Nigeria,NGA,True,1961,2023
+160,Niue,NIU,True,1961,2023
+162,Norway,NOR,True,1961,2023
+165,Pakistan,PAK,True,1961,2023
+166,Panama,PAN,True,1961,2023
+167,Czechia,CZE,True,1993,2023
+168,Papua New Guinea,PNG,True,1961,2023
+169,Paraguay,PRY,True,1961,2023
+170,Peru,PER,True,1961,2023
+171,Philippines,PHL,True,1961,2023
+173,Poland,POL,True,1961,2023
+174,Portugal,PRT,True,1961,2023
+175,Guinea-Bissau,GNB,True,1961,2023
+176,Timor-Leste,TLS,True,1961,2023
+177,Puerto Rico,PRI,True,1961,2023
+178,Eritrea,ERI,True,1993,2023
+179,Qatar,QAT,True,1961,2023
+181,Zimbabwe,ZWE,True,1961,2023
+182,Réunion,,False,1961,2006
+183,Romania,ROU,True,1961,2023
+184,Rwanda,RWA,True,1961,2023
+185,Russian Federation,RUS,True,1992,2023
+186,Serbia and Montenegro,SCG,True,1992,2005
+188,Saint Kitts and Nevis,KNA,True,1961,2023
+189,Saint Lucia,LCA,True,1961,2023
+191,Saint Vincent and the Grenadines,VCT,True,1961,2023
+193,Sao Tome and Principe,STP,True,1961,2023
+194,Saudi Arabia,SAU,True,1961,2023
+195,Senegal,SEN,True,1961,2023
+196,Seychelles,SYC,True,1961,2023
+197,Sierra Leone,SLE,True,1961,2023
+198,Slovenia,SVN,True,1992,2023
+199,Slovakia,SVK,True,1993,2023
+200,Singapore,SGP,True,1961,2023
+201,Somalia,SOM,True,1961,2023
+202,South Africa,ZAF,True,1961,2023
+203,Spain,ESP,True,1961,2023
+206,Sudan (former),SDX,True,1961,2011
+207,Suriname,SUR,True,1961,2023
+208,Tajikistan,TJK,True,1992,2023
+209,Eswatini,SWZ,True,1961,2023
+210,Sweden,SWE,True,1961,2023
+211,Switzerland,CHE,True,1961,2023
+212,Syrian Arab Republic,SYR,True,1961,2023
+213,Turkmenistan,TKM,True,1992,2023
+214,"China, Taiwan Province of",TWN,True,1961,2023
+215,United Republic of Tanzania,TZA,True,1961,2023
+216,Thailand,THA,True,1961,2023
+217,Togo,TGO,True,1961,2023
+219,Tonga,TON,True,1961,2023
+220,Trinidad and Tobago,TTO,True,1961,2023
+221,Oman,OMN,True,1961,2023
+222,Tunisia,TUN,True,1961,2023
+223,Türkiye,TUR,True,1961,2023
+225,United Arab Emirates,ARE,True,1961,2023
+226,Uganda,UGA,True,1961,2023
+227,Tuvalu,TUV,True,1961,2023
+228,USSR,,False,1961,1991
+229,United Kingdom of Great Britain and Northern Ireland,GBR,True,1961,2023
+230,Ukraine,UKR,True,1992,2023
+231,United States of America,USA,True,1961,2023
+233,Burkina Faso,BFA,True,1961,2023
+234,Uruguay,URY,True,1961,2023
+235,Uzbekistan,UZB,True,1992,2023
+236,Venezuela (Bolivarian Republic of),VEN,True,1961,2023
+237,Viet Nam,VNM,True,1961,2023
+238,Ethiopia,ETH,True,1993,2023
+244,Samoa,WSM,True,1961,2023
+248,Yugoslav SFR,,False,1961,1991
+249,Yemen,YEM,True,1961,2023
+250,Democratic Republic of the Congo,COD,True,1961,2023
+251,Zambia,ZMB,True,1961,2023
+255,Belgium,BLX,True,2000,2023
+256,Luxembourg,BLX,True,2000,2023
+272,Serbia,SCG,True,2006,2023
+273,Montenegro,SCG,True,2006,2023
+276,Sudan,SDX,True,2012,2023
+277,South Sudan,SDX,True,2012,2023
+299,Palestine,PSE,True,1994,2022
+351,China,,False,1961,2023

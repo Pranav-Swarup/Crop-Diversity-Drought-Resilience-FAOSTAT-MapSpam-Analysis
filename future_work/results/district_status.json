@@ -1,0 +1,180 @@
+{
+  "status": "archived_complete",
+  "current_release_status": "unverified",
+  "release_id": "ICRISAT/TCI apportioned archive, 1966–2017 crop release",
+  "boundary_vintage": "DLD apportioned to 1966 parent districts on the publisher map",
+  "analysis_years": [
+    1966,
+    2017
+  ],
+  "price_reference_year": 2015,
+  "source_files": {
+    "apy": {
+      "file": "apy.json",
+      "source_url": "http://data.icrisat.org/dldAPI/apportioned/area-production-yield",
+      "captures": [
+        "20250216094951",
+        "20230516123017"
+      ],
+      "sha256": "e06d26c9062c5b9221fd0ac58892ece50d00207118d1f4de073ef2d54e0248e9"
+    },
+    "prices": {
+      "file": "fhp.json",
+      "source_url": "http://data.icrisat.org/dldAPI/apportioned/farm-harvest-prices",
+      "captures": [
+        "20230516144535",
+        "20230311180914"
+      ],
+      "sha256": "bbb4d051b46d00f4ba84489aa8ddf3b352ac1e64ef4a88a5e1b453975006e9bb"
+    },
+    "irrigation": {
+      "file": "irrig.json",
+      "source_url": "http://data.icrisat.org/dldAPI/apportioned/cropwise-irrigated-area",
+      "captures": [
+        "20230516144523",
+        "20230311180851"
+      ],
+      "sha256": "3bc9b9a9eac6a1bcfb648e65aaebff14c8109f147155cccf5822080dd88dc60b"
+    },
+    "geography": {
+      "file": "boundaries.geojson",
+      "source_url": "http://data.icrisat.org/dld/src/dld-apportioned.min.json",
+      "captures": [
+        "20230309185155"
+      ],
+      "sha256": "ffe53736102c2619dd3474c567df2b5a3bca0010be19d2ed7f5c94be9eaffa01"
+    },
+    "world_bank": {
+      "file": "worldbank_409_1152.zip",
+      "source_url": "https://reproducibility.worldbank.org/catalog/409/download/1152",
+      "doi": "10.60572/a89v-rt49",
+      "sha256": "f9ff83879f0065a7563aedccdb4590fa224eb1c75519cc725c35a9ae5f5d18cd"
+    },
+    "des_irrigation": {
+      "file": "des_cropwise_irrigation.csv",
+      "source_url": "https://ckandev.indiadataportal.com/dataset/8742251a-5ca1-483d-936a-f68306663cc9/resource/0fb99c18-a1f7-46f0-b40d-ddffca021319/download/crop-wise-irrigated-area.csv",
+      "catalogue": "https://ckandev.indiadataportal.com/api/3/action/resource_show?id=0fb99c18-a1f7-46f0-b40d-ddffca021319",
+      "upstream": "https://data.desagri.gov.in/weblus/lus-grand-query-report",
+      "sha256": "1c10ddcd1f56f4ef3734b841b95d5a9b6c014acc549fa587c19df1d330003c48"
+    }
+  },
+  "official_table_coverage": {
+    "apy": {
+      "rows": 16146,
+      "district_codes": 311,
+      "first_year": 1966,
+      "last_year": 2017,
+      "codes_outside_apy": []
+    },
+    "prices": {
+      "rows": 15150,
+      "district_codes": 312,
+      "first_year": 1966,
+      "last_year": 2016,
+      "codes_outside_apy": [
+        "520"
+      ]
+    },
+    "irrigation": {
+      "rows": 14506,
+      "district_codes": 311,
+      "first_year": 1966,
+      "last_year": 2017,
+      "codes_outside_apy": []
+    }
+  },
+  "map_features": 429,
+  "features_assigned_to_apy": 340,
+  "mapped_apy_districts": 311,
+  "source_cells_checked": 1210950,
+  "source_cell_differences": 0,
+  "modern_aligned_districts": 27,
+  "equal_polygon_pairs": 0,
+  "external_land_use": {
+    "rows": 605000,
+    "years": [
+      "1998-1999",
+      "1999-2000",
+      "2000-2001",
+      "2001-2002",
+      "2002-2003",
+      "2003-2004",
+      "2004-2005",
+      "2005-2006",
+      "2006-2007",
+      "2007-2008",
+      "2008-2009",
+      "2009-2010",
+      "2010-2011",
+      "2011-2012",
+      "2012-2013",
+      "2013-2014",
+      "2014-2015",
+      "2015-2016",
+      "2016-2017",
+      "2017-2018",
+      "2018-2019",
+      "2019-2020",
+      "2020-2021",
+      "2021-2022",
+      "2022-2023",
+      "2023-2024"
+    ],
+    "missing_area": 413811,
+    "datastore_records_checked": 35
+  },
+  "summary": "Archived ICRISAT/TCI data cover 311 parent districts. The 1966–2017 analysis values production at observed 2015 farm-harvest prices and admits 176 districts. The live portal’s latest apportioned edition could not be independently established.",
+  "registry_doi": "10.21421/D2/XFB1BZ",
+  "partner_catalog": "https://tci.cornell.edu/data/",
+  "checked_utc": "2026-11-20T17:15:26.812553+00:00",
+  "checks": [
+    {
+      "url": "https://data.icrisat.org/dld/",
+      "error": "ConnectTimeout"
+    },
+    {
+      "url": "http://data.icrisat.org/dld/src/crops.html",
+      "error": "ConnectTimeout"
+    },
+    {
+      "url": "https://www.icrisat.org/resources/data/district-level-data",
+      "http_status": 200,
+      "final_url": "https://www.icrisat.org/resources/data/district-level-data",
+      "download_links": []
+    },
+    {
+      "url": "https://dataverse.icrisat.org/api/datasets/:persistentId/?persistentId=doi:10.21421/D2/XFB1BZ",
+      "http_status": 200,
+      "final_url": "https://dataverse.icrisat.org/api/datasets/:persistentId/?persistentId=doi:10.21421/D2/XFB1BZ",
+      "version": "1.0",
+      "published": "2021-04-22T12:45:53Z",
+      "listed_files": [
+        "DLD Apportioned Data Documentation.pdf",
+        "DLD Unapportioned Data Documentation.pdf",
+        "Overview of District Level Database.docx"
+      ]
+    },
+    {
+      "url": "https://tci.cornell.edu/data/",
+      "http_status": 403,
+      "final_url": "https://tci.cornell.edu/data/"
+    },
+    {
+      "url": "https://tci.cornell.edu/?projects=district-level-database-for-indian-agriculture-and-allied-sectors",
+      "http_status": 403,
+      "final_url": "https://tci.cornell.edu/?projects=district-level-database-for-indian-agriculture-and-allied-sectors"
+    },
+    {
+      "url": "https://data.icrisat.org/dldAPI/apportioned/area-production-yield",
+      "error": "ConnectTimeout"
+    },
+    {
+      "url": "https://data.icrisat.org/dldAPI/apportioned/farm-harvest-prices",
+      "error": "ConnectTimeout"
+    },
+    {
+      "url": "https://data.icrisat.org/dldAPI/apportioned/cropwise-irrigated-area",
+      "error": "ConnectTimeout"
+    }
+  ]
+}

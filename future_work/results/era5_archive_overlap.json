@@ -1,0 +1,20 @@
+{
+  "date": "2023-01-01",
+  "utc_hours": [
+    0,
+    12,
+    23
+  ],
+  "grid_shape": [
+    121,
+    240
+  ],
+  "weatherbench_object": "11688.0.0",
+  "arco_objects": [
+    "1078200.0.0",
+    "1078212.0.0",
+    "1078223.0.0"
+  ],
+  "mean_absolute_kelvin": 1.8333141269977205e-05,
+  "max_absolute_kelvin": 0.000213623046875
+}

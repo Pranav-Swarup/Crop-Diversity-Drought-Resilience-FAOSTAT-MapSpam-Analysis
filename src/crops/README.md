@@ -1,5 +1,12 @@
 # Crop data notes (src/crops)
 
+## Post-presentation historical series
+
+Pmjarvis’s historical reader extends the original FAOSTAT series back to 1961 using the bulk inputs, preserves the 2014–2016 constant-price basis, and checks every overlapping crop row against the presented clean table. It records FAOSTAT territory coverage and exclusions in the extension. [Historical inputs and rules](../../future_work/README.md#extreme-drought-over-19612023) · [Findings](../../future_work/FINDINGS.md)
+
+The district follow-up uses observed district-crop farm-harvest prices from 2015. The presented India FAOSTAT schedule supplies a separate matched price comparison. Rice uses the milled product definition. Gur and cane, and lint and seed cotton, require different prices. [District commodity definitions and coverage](../../future_work/DISTRICT.md#what-enters-a-district-estimate) · [Price sensitivity](../../future_work/results/district_price_sensitivity.csv)
+
+
 Run order: `download`, `countries`, `crops`, `controls`, `quality`, `figures` (each as `python -m src.crops.<script>`). `countries` needs the Natural Earth file from `src.climate.download`.
 
 ## Team decisions (2026-10-02)

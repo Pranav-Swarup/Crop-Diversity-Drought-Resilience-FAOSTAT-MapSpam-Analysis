@@ -1,5 +1,19 @@
 # Metric map: what each metric operationalises
 
+## Follow-up definitions and verification
+
+The table below documents the original metrics. Pmjarvis’s follow-up adds planting-to-harvest SPEI, growing-season extreme degree-days, weekly Vegetation Condition Index, and a detectable-effect estimate for the extended panel. Units, source coverage and comparison tables are given alongside the new results. [Definitions](../../future_work/README.md) · [Results](../../future_work/FINDINGS.md)
+
+| Follow-up measurement | Unit or comparison |
+|---|---|
+| Crop-calendar drought | Monthly SPEI at maturity accumulated across all calendar months touched by the crop season. The drought cutoff is −1. |
+| Daily heat | Degree-days above 28, 30 and 32°C from hourly temperatures, accumulated on the same crop calendar. |
+| Vegetation response | Change in the observed 0–100 Vegetation Condition Index, in points. A second comparison measures differences between crop footprints. |
+| Detectable extreme-drought interaction | Percentage points of output trend per standard deviation of crop diversity, at 80% power. |
+| Archived district crop irrigation | Previous-year irrigated hectares divided by crop hectares across the balanced priced basket. Reported irrigation exceeding crop area and periods disputed by the publisher manual are flagged. [District methods and validation](../../future_work/DISTRICT.md) |
+| District quantity agreement | Share of jointly observed, non-both-zero crop-year pairs within the larger of 10 ha or tonnes and 1% of the comparator. The boundary overlap and exact equality counts are recorded separately. [Agreement by crop](../../future_work/results/district_quantity_agreement.csv) |
+
+
 Definitions are copied from `CLAUDE.md`. "Concept source" lists the papers that `CLAUDE.md` or the code docstrings in `src/metrics/` name for the metric. "Paper in our Review 1" lists only papers from our own literature review, matched by what the review says about them. The Review 1 matches are a first pass and must be checked against the papers before this goes on a slide (see the notes below the table).
 
 | Metric | Definition (from CLAUDE.md) | Concept source | Paper in our Review 1 it relates to |

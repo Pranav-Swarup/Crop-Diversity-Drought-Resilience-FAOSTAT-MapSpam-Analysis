@@ -1,5 +1,12 @@
 # EVST: Crop Diversity & Drought Resilience (POC)
 
+## Presented results and subsequent studies
+
+The November presentation is the frozen reference for Phases 1–4. Pmjarvis owns the four follow-up studies, their figures, verification, and documentation. The new analyses have a separate run command, source tables, and figure index. Use the local restoration snapshot for reproducing legacy build commands. [Follow-up studies](future_work/README.md) · [Results and comparisons](future_work/FINDINGS.md) · [Documentation inventory](future_work/DOCUMENTATION.md)
+
+The Indian district follow-up uses archived ICRISAT/TCI production, farm prices, crop-specific irrigation and historical district boundaries. It reports 176 eligible districts for 1966–2017, a later-window comparison, and a cross-check of irrigated hectares against government land-use records. [District findings and figures](future_work/FINDINGS.md#official-indian-district-data) · [Coverage, sources and limitations](future_work/DISTRICT.md)
+
+
 The study compares crop diversity with four measures of resilience across 107 countries during 1993–2023 and within Indian districts in two agricultural panels. Open the downloaded HTML file in a browser to explore the maps, crop histories, portfolio scenarios and underlying results offline. [Explorer](explorer/index.html) · [Research results](report.md) · [Methods and contracts](CLAUDE.md) · [November verification](metadata.md#november-2026-verification)
 
 ## Setup
@@ -53,7 +60,7 @@ All scripts run from the repo root as `python -m src.<module>.<script>`.
 3. Run `src.crops.countries`, `src.crops.crops`, `src.crops.controls` and `src.crops.quality`.
 4. Run `src.climate.geometry`, `src.climate.cropland`, `src.climate.aggregate --per-crop`, `src.climate.events` and `src.climate.mapspam_area` before fitting crop slopes. Run `src.climate.figures` and `src.crops.figures` for the base figures.
 5. Run `src.metrics.all`, then `src.validation.hit_rate` and `src.validation.case_studies` to reproduce the published India, Colombia and Finland cases and their shared crop-slope table. See [metric definitions](src/metrics/METHODS.md).
-6. Run the extensions below before building the complete explorer.
+6. To reproduce the presented explorer in a disposable copy, run the Phase 3 and Phase 4 commands below. The post-presentation studies have a separate entry point in `future_work/`.
 
 ### Phase 2 extensions
 

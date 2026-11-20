@@ -1,5 +1,12 @@
 # EVST Project: Crop Diversity & Drought Resilience (POC)
 
+## Ownership of the follow-up studies
+
+Pmjarvis owns the follow-up pipeline, data processing, analysis, figures, validation, and documentation under `future_work/`. The fixed historical choices and file contracts below describe the presented pipeline. The extension reads its inputs, verifies the frozen files, and writes to its own directory. Its source records and additional dependency are maintained there. [Extension methods and commands](future_work/README.md) · [Frozen file manifest](future_work/baseline.csv)
+
+For the Indian district study, `python -m future_work india` reads pinned ICRISAT/TCI captures, a World Bank reproducibility deposit, the DES land-use export and frozen climate and presentation comparators. Archive vintage, historical parent IDs, product form, price year, exclusions and measured boundary overlap are part of the data contract. [District methods](future_work/DISTRICT.md) · [District source pins](future_work/district_sources.json)
+
+
 ## Research question
 Does greater crop diversity make national agricultural production more resilient to climatic variability?
 POC angle (three upgrades over the literature):

@@ -1,0 +1,844 @@
+metric,iso3,item,n,december,season,unit
+Crop yield response,AFG,Barley,31.0,0.0650354370501365,0.0763673869290404,fraction of trend per SPEI unit
+Crop yield response,AFG,Maize (corn),27.0,-0.008984033958111,-0.0070871461233935,fraction of trend per SPEI unit
+Crop yield response,AFG,Potatoes,27.0,-0.0162912769790424,-0.0183524082983714,fraction of trend per SPEI unit
+Crop yield response,AFG,Rice,31.0,0.0269574218003293,0.0260385736576753,fraction of trend per SPEI unit
+Crop yield response,AFG,"Seed cotton, unginned",31.0,0.0170861586142813,0.0065402979390045,fraction of trend per SPEI unit
+Crop yield response,AFG,Wheat,27.0,0.0874850893446992,0.1018061950752716,fraction of trend per SPEI unit
+Crop yield response,AGO,"Beans, dry",27.0,-0.6562087996043624,-0.9725255713697823,fraction of trend per SPEI unit
+Crop yield response,AGO,"Cassava, fresh",29.0,0.000503297222877,0.0479430676850637,fraction of trend per SPEI unit
+Crop yield response,AGO,"Groundnuts, excluding shelled",26.0,-0.4088305451983727,-0.5218820901731446,fraction of trend per SPEI unit
+Crop yield response,AGO,Maize (corn),30.0,-0.3593786348393792,-0.2665264068415102,fraction of trend per SPEI unit
+Crop yield response,AGO,Potatoes,27.0,-0.0589955569141787,-0.1736885659353824,fraction of trend per SPEI unit
+Crop yield response,ALB,"Beans, dry",31.0,0.0155400699552356,0.031140322654493,fraction of trend per SPEI unit
+Crop yield response,ALB,Maize (corn),31.0,0.0213759186396083,0.0055722023653993,fraction of trend per SPEI unit
+Crop yield response,ALB,Potatoes,31.0,0.0008725346339271,0.0049092896983721,fraction of trend per SPEI unit
+Crop yield response,ALB,Wheat,31.0,-0.0175977201579395,-0.0382531388542849,fraction of trend per SPEI unit
+Crop yield response,ARG,Barley,31.0,0.0053333303944263,-0.0194224498167579,fraction of trend per SPEI unit
+Crop yield response,ARG,"Groundnuts, excluding shelled",31.0,0.0018977747035736,0.0765415248167472,fraction of trend per SPEI unit
+Crop yield response,ARG,Maize (corn),31.0,0.0273795682838916,0.0993284876874193,fraction of trend per SPEI unit
+Crop yield response,ARG,Rice,31.0,-0.0237204516715736,-0.0219990921247659,fraction of trend per SPEI unit
+Crop yield response,ARG,"Seed cotton, unginned",31.0,0.0079069438925521,0.0298386445347197,fraction of trend per SPEI unit
+Crop yield response,ARG,Sorghum,31.0,0.0384381497579664,0.0712904013366268,fraction of trend per SPEI unit
+Crop yield response,ARG,Soya beans,31.0,0.0478766868540953,0.1254316197848549,fraction of trend per SPEI unit
+Crop yield response,ARG,Sunflower seed,31.0,-0.0117654851212469,-0.0014568617668251,fraction of trend per SPEI unit
+Crop yield response,ARG,Wheat,31.0,0.0255025245808659,0.0224679526333335,fraction of trend per SPEI unit
+Crop yield response,ARM,Barley,31.0,0.0859348600726331,0.1171263000220704,fraction of trend per SPEI unit
+Crop yield response,ARM,Potatoes,31.0,0.0157326202740127,0.0090729711492628,fraction of trend per SPEI unit
+Crop yield response,ARM,Wheat,31.0,0.0396620463432065,0.0566584569632579,fraction of trend per SPEI unit
+Crop yield response,AUS,Barley,31.0,0.1943936417601738,0.1866007799265917,fraction of trend per SPEI unit
+Crop yield response,AUS,Potatoes,28.0,-0.013125327090536,-0.0180436752378882,fraction of trend per SPEI unit
+Crop yield response,AUS,Rape or colza seed,31.0,0.2028231801852754,0.1898796447836185,fraction of trend per SPEI unit
+Crop yield response,AUS,Rice,31.0,0.0127629002380012,-0.0141505271743523,fraction of trend per SPEI unit
+Crop yield response,AUS,"Seed cotton, unginned",25.0,-0.0148773299457947,-0.0536899444674053,fraction of trend per SPEI unit
+Crop yield response,AUS,Sorghum,31.0,0.0634425629760657,0.1714905335877481,fraction of trend per SPEI unit
+Crop yield response,AUS,Sugar cane,31.0,0.0302188141453509,0.0223135962294763,fraction of trend per SPEI unit
+Crop yield response,AUS,Wheat,31.0,0.2312774162868223,0.2141312054772332,fraction of trend per SPEI unit
+Crop yield response,AUT,Barley,31.0,0.0114623558848321,0.023938921825761,fraction of trend per SPEI unit
+Crop yield response,AUT,Maize (corn),31.0,0.0162460392024231,0.0209489712562714,fraction of trend per SPEI unit
+Crop yield response,AUT,Potatoes,31.0,0.0365735712378453,0.0554266424842485,fraction of trend per SPEI unit
+Crop yield response,AUT,Rape or colza seed,31.0,0.0373322465743563,0.0531084571218862,fraction of trend per SPEI unit
+Crop yield response,AUT,Soya beans,31.0,0.0153641302482123,0.0172162553224424,fraction of trend per SPEI unit
+Crop yield response,AUT,Sugar beet,31.0,0.0397291833937208,0.052737268117862,fraction of trend per SPEI unit
+Crop yield response,AUT,Sunflower seed,31.0,0.0168627834373597,0.0153871593483025,fraction of trend per SPEI unit
+Crop yield response,AUT,Wheat,31.0,0.0303322223430103,0.0422672947137558,fraction of trend per SPEI unit
+Crop yield response,AZE,Barley,31.0,0.0282226993812056,0.0233647211062447,fraction of trend per SPEI unit
+Crop yield response,AZE,Maize (corn),31.0,0.0219521501906577,0.0392676632587663,fraction of trend per SPEI unit
+Crop yield response,AZE,Potatoes,31.0,0.0118105757300681,0.0225811477011718,fraction of trend per SPEI unit
+Crop yield response,AZE,"Seed cotton, unginned",31.0,0.0596630950939168,0.0572069124924395,fraction of trend per SPEI unit
+Crop yield response,AZE,Wheat,31.0,0.0200628552542836,0.019108380711064,fraction of trend per SPEI unit
+Crop yield response,BEN,"Cassava, fresh",30.0,0.0157029764755939,0.012184449072844,fraction of trend per SPEI unit
+Crop yield response,BEN,"Groundnuts, excluding shelled",31.0,0.0020621399901004,-0.0024261034808517,fraction of trend per SPEI unit
+Crop yield response,BEN,Maize (corn),31.0,-0.008949744123612,-0.0178454098538404,fraction of trend per SPEI unit
+Crop yield response,BEN,Rice,31.0,0.0172123375133747,0.0146490750404267,fraction of trend per SPEI unit
+Crop yield response,BEN,"Seed cotton, unginned",31.0,-0.0024530726763112,-0.0114591711699383,fraction of trend per SPEI unit
+Crop yield response,BEN,Sorghum,31.0,-0.0059165767985484,-0.0176012433158703,fraction of trend per SPEI unit
+Crop yield response,BEN,Soya beans,30.0,0.0333915126630696,0.0514446622247514,fraction of trend per SPEI unit
+Crop yield response,BFA,"Groundnuts, excluding shelled",31.0,0.0394275003964639,0.0565082936639274,fraction of trend per SPEI unit
+Crop yield response,BFA,Maize (corn),31.0,-0.0064122329837093,0.0074887628765106,fraction of trend per SPEI unit
+Crop yield response,BFA,Millet,31.0,0.0309946858975815,0.0331453571907228,fraction of trend per SPEI unit
+Crop yield response,BFA,Rice,31.0,0.0089146708701577,0.0228347516257425,fraction of trend per SPEI unit
+Crop yield response,BFA,"Seed cotton, unginned",31.0,-0.0195968328802193,-0.0197580631925569,fraction of trend per SPEI unit
+Crop yield response,BFA,Sorghum,31.0,0.0066011441689247,0.0107877116805391,fraction of trend per SPEI unit
+Crop yield response,BGD,Maize (corn),31.0,0.0317445240093113,0.0859457095251705,fraction of trend per SPEI unit
+Crop yield response,BGD,Potatoes,31.0,-0.0022588508247377,0.0153645101238491,fraction of trend per SPEI unit
+Crop yield response,BGD,Rice,31.0,0.0024642962437741,-0.0049645165239334,fraction of trend per SPEI unit
+Crop yield response,BGD,Wheat,31.0,0.0121656769964393,0.0172029982176565,fraction of trend per SPEI unit
+Crop yield response,BGR,Barley,31.0,-0.0064474965303845,-0.0324028689201841,fraction of trend per SPEI unit
+Crop yield response,BGR,Maize (corn),30.0,0.129417404585595,0.1886242597656351,fraction of trend per SPEI unit
+Crop yield response,BGR,Potatoes,31.0,0.023413457030628,0.0435964463138117,fraction of trend per SPEI unit
+Crop yield response,BGR,Rape or colza seed,23.0,0.0356428242609424,0.0438697412771182,fraction of trend per SPEI unit
+Crop yield response,BGR,Sunflower seed,31.0,0.0456266850326085,0.0708183356615133,fraction of trend per SPEI unit
+Crop yield response,BGR,Wheat,31.0,0.0058225754733048,0.0495199116893479,fraction of trend per SPEI unit
+Crop yield response,BIH,Barley,27.0,-0.0153126500766787,-0.0093017531154697,fraction of trend per SPEI unit
+Crop yield response,BIH,"Beans, dry",27.0,0.1003514690199172,0.088091316063593,fraction of trend per SPEI unit
+Crop yield response,BIH,Maize (corn),27.0,0.0883132271345811,0.0871011080330534,fraction of trend per SPEI unit
+Crop yield response,BIH,Potatoes,26.0,0.0352547983782887,0.0325388330049408,fraction of trend per SPEI unit
+Crop yield response,BIH,Wheat,27.0,-0.036070105382042,-0.0359278468670058,fraction of trend per SPEI unit
+Crop yield response,BLR,Barley,31.0,0.0353987476456189,-0.0005783068627479,fraction of trend per SPEI unit
+Crop yield response,BLR,"Beans, dry",28.0,0.0238270131124538,0.036776118747984,fraction of trend per SPEI unit
+Crop yield response,BLR,Maize (corn),31.0,-0.0223551363983227,0.0174441876861772,fraction of trend per SPEI unit
+Crop yield response,BLR,Potatoes,31.0,-0.0017197091228038,-0.0043643089629705,fraction of trend per SPEI unit
+Crop yield response,BLR,Rape or colza seed,31.0,0.0790033447205968,0.0863729632987079,fraction of trend per SPEI unit
+Crop yield response,BLR,Sugar beet,31.0,0.0588366753432377,0.0816196709482115,fraction of trend per SPEI unit
+Crop yield response,BLR,Wheat,30.0,0.0122891741928501,0.0152637649649524,fraction of trend per SPEI unit
+Crop yield response,BLX,Barley,31.0,-0.0191176748780877,-0.0344702598535361,fraction of trend per SPEI unit
+Crop yield response,BLX,Maize (corn),31.0,0.043337442757045,0.0430420543127823,fraction of trend per SPEI unit
+Crop yield response,BLX,Potatoes,31.0,0.0088570686942009,0.0161983894744179,fraction of trend per SPEI unit
+Crop yield response,BLX,Sugar beet,31.0,-0.0250972770704917,-0.028107912497604,fraction of trend per SPEI unit
+Crop yield response,BLX,Wheat,31.0,-0.0275795768984923,-0.0451994729072405,fraction of trend per SPEI unit
+Crop yield response,BOL,"Beans, dry",31.0,0.0044583626573943,0.0521622648065945,fraction of trend per SPEI unit
+Crop yield response,BOL,"Cassava, fresh",31.0,0.0063811388791589,0.0148167696428656,fraction of trend per SPEI unit
+Crop yield response,BOL,Maize (corn),31.0,0.0124901825744863,-0.0346870784926814,fraction of trend per SPEI unit
+Crop yield response,BOL,Potatoes,31.0,-0.0125478991623524,-0.0068568216865671,fraction of trend per SPEI unit
+Crop yield response,BOL,Rice,31.0,0.0372302874330757,-0.0273393767445303,fraction of trend per SPEI unit
+Crop yield response,BOL,Sorghum,31.0,-0.0127702706736633,0.0080641899286904,fraction of trend per SPEI unit
+Crop yield response,BOL,Soya beans,31.0,0.0178667977140721,-0.0211281736401891,fraction of trend per SPEI unit
+Crop yield response,BOL,Sugar cane,31.0,-0.0003492780467775,-0.0003492897597784,fraction of trend per SPEI unit
+Crop yield response,BOL,Sunflower seed,30.0,-0.0222661954422234,0.0572513162544152,fraction of trend per SPEI unit
+Crop yield response,BOL,Wheat,31.0,-0.0210623321062612,-0.0080479926191284,fraction of trend per SPEI unit
+Crop yield response,BRA,"Beans, dry",31.0,-0.0328850703930958,-0.0382853902529789,fraction of trend per SPEI unit
+Crop yield response,BRA,"Cassava, fresh",31.0,0.0021292167382495,0.0109679739799413,fraction of trend per SPEI unit
+Crop yield response,BRA,Maize (corn),31.0,-0.0352184110441588,0.0215259689777525,fraction of trend per SPEI unit
+Crop yield response,BRA,Rice,31.0,0.0026242353296876,-0.0092690621767591,fraction of trend per SPEI unit
+Crop yield response,BRA,"Seed cotton, unginned",31.0,-0.0256664509032588,-0.0118492431732874,fraction of trend per SPEI unit
+Crop yield response,BRA,Soya beans,31.0,0.01211812793344,0.0609196311637575,fraction of trend per SPEI unit
+Crop yield response,BRA,Sugar cane,31.0,0.0109526579940869,0.0109526490777693,fraction of trend per SPEI unit
+Crop yield response,BRA,Wheat,31.0,-0.0226872563912396,-0.0435371747031903,fraction of trend per SPEI unit
+Crop yield response,CAN,Barley,31.0,0.0762084731848792,0.0654437295379835,fraction of trend per SPEI unit
+Crop yield response,CAN,Maize (corn),31.0,-0.0145676802295553,-0.014667785591326,fraction of trend per SPEI unit
+Crop yield response,CAN,Potatoes,31.0,-0.0113419914549232,0.0144445435554986,fraction of trend per SPEI unit
+Crop yield response,CAN,Rape or colza seed,31.0,0.0554896349310202,0.0491030824017991,fraction of trend per SPEI unit
+Crop yield response,CAN,Soya beans,31.0,0.0143542027915084,0.0365066675783445,fraction of trend per SPEI unit
+Crop yield response,CAN,Wheat,31.0,0.0743383013764139,0.0592173766328933,fraction of trend per SPEI unit
+Crop yield response,CHE,Barley,31.0,-0.0267192111275071,-0.0308436566619451,fraction of trend per SPEI unit
+Crop yield response,CHE,Maize (corn),31.0,0.0209430913705626,0.0198562746432771,fraction of trend per SPEI unit
+Crop yield response,CHE,Potatoes,31.0,-0.0373902098126507,-0.0121687432467009,fraction of trend per SPEI unit
+Crop yield response,CHE,Rape or colza seed,31.0,-0.0295031024687435,-0.0376070200704455,fraction of trend per SPEI unit
+Crop yield response,CHE,Sugar beet,31.0,-0.0248262673855184,-0.0167045185704148,fraction of trend per SPEI unit
+Crop yield response,CHE,Wheat,31.0,-0.0191567541266101,-0.0445520649009689,fraction of trend per SPEI unit
+Crop yield response,CHN,"Groundnuts, excluding shelled",31.0,-0.0005001286884169,0.0054291999074715,fraction of trend per SPEI unit
+Crop yield response,CHN,Maize (corn),31.0,0.0237666563230116,0.0328613366930089,fraction of trend per SPEI unit
+Crop yield response,CHN,Potatoes,24.0,0.0274601086952971,0.0291637170904932,fraction of trend per SPEI unit
+Crop yield response,CHN,Rape or colza seed,31.0,-0.0250057984062241,-0.0153616084754365,fraction of trend per SPEI unit
+Crop yield response,CHN,Rice,31.0,0.001961154450831,0.0044728958358292,fraction of trend per SPEI unit
+Crop yield response,CHN,"Seed cotton, unginned",26.0,-0.0340505721695892,-0.0262926730714439,fraction of trend per SPEI unit
+Crop yield response,CHN,Soya beans,30.0,0.0135158231829315,0.0130962035115741,fraction of trend per SPEI unit
+Crop yield response,CHN,Wheat,31.0,-0.0120563249863585,-0.0030161259573429,fraction of trend per SPEI unit
+Crop yield response,COL,"Cassava, fresh",31.0,0.0127074113216945,0.0138195964543332,fraction of trend per SPEI unit
+Crop yield response,COL,Maize (corn),31.0,-0.0144522370710075,-0.0160011254026412,fraction of trend per SPEI unit
+Crop yield response,COL,Potatoes,31.0,-0.0001564097603407,0.0186754708759868,fraction of trend per SPEI unit
+Crop yield response,COL,Rice,31.0,-0.0002022847052814,-0.0034598717134609,fraction of trend per SPEI unit
+Crop yield response,CRI,Rice,31.0,-0.0122781457466327,-0.0341015890471934,fraction of trend per SPEI unit
+Crop yield response,CUB,"Beans, dry",31.0,-0.0721950669764347,-0.2464689892412452,fraction of trend per SPEI unit
+Crop yield response,CUB,"Cassava, fresh",26.0,0.0236770707273654,0.0263419525350775,fraction of trend per SPEI unit
+Crop yield response,CUB,Maize (corn),31.0,-0.01985401779487,-0.0180115857258035,fraction of trend per SPEI unit
+Crop yield response,CUB,Potatoes,31.0,0.0183581879016164,0.0603058061060969,fraction of trend per SPEI unit
+Crop yield response,CUB,Rice,31.0,0.0307884608920431,0.0292586276506869,fraction of trend per SPEI unit
+Crop yield response,CUB,Sugar cane,29.0,-0.065662524071512,-0.065662480647367,fraction of trend per SPEI unit
+Crop yield response,CZE,Barley,31.0,-0.0015526861587039,0.0065347106914696,fraction of trend per SPEI unit
+Crop yield response,CZE,Maize (corn),31.0,0.0526769693825155,0.0459339251943196,fraction of trend per SPEI unit
+Crop yield response,CZE,Potatoes,31.0,0.0247126720331466,0.0423072048941807,fraction of trend per SPEI unit
+Crop yield response,CZE,Rape or colza seed,31.0,0.0329425263706024,0.0263151588825265,fraction of trend per SPEI unit
+Crop yield response,CZE,Sugar beet,31.0,0.0071463165177128,0.0138415475626674,fraction of trend per SPEI unit
+Crop yield response,CZE,Wheat,31.0,0.0229887916348495,0.0288379090058301,fraction of trend per SPEI unit
+Crop yield response,DEU,Barley,31.0,0.0137356811187871,0.0095865867062645,fraction of trend per SPEI unit
+Crop yield response,DEU,Maize (corn),31.0,0.0413402331219746,0.0498960317886173,fraction of trend per SPEI unit
+Crop yield response,DEU,Potatoes,31.0,0.0297808515447223,0.0402588021161903,fraction of trend per SPEI unit
+Crop yield response,DEU,Rape or colza seed,31.0,0.0114063519059346,0.0138698552776636,fraction of trend per SPEI unit
+Crop yield response,DEU,Sugar beet,31.0,0.02971489502506,0.036251385570581,fraction of trend per SPEI unit
+Crop yield response,DEU,Wheat,31.0,0.0053536519910419,0.0005432649057932,fraction of trend per SPEI unit
+Crop yield response,DNK,Barley,31.0,-0.0091529253035006,0.0176782139176988,fraction of trend per SPEI unit
+Crop yield response,DNK,Potatoes,31.0,0.016895736657609,0.0216712670069354,fraction of trend per SPEI unit
+Crop yield response,DNK,Rape or colza seed,31.0,0.0144508977249707,-0.0172284302566878,fraction of trend per SPEI unit
+Crop yield response,DNK,Sugar beet,31.0,0.0311786953895529,0.038488426555155,fraction of trend per SPEI unit
+Crop yield response,DNK,Wheat,31.0,0.0016424138208011,-0.0133735778149874,fraction of trend per SPEI unit
+Crop yield response,DOM,Rice,29.0,-0.0078007832016126,-0.0215404610346622,fraction of trend per SPEI unit
+Crop yield response,DOM,Sugar cane,31.0,-0.0109053605061906,-0.0109053533985596,fraction of trend per SPEI unit
+Crop yield response,DZA,Barley,29.0,0.2136796137405447,0.1982331300635593,fraction of trend per SPEI unit
+Crop yield response,DZA,Potatoes,29.0,0.0259465106406529,0.017146252058203,fraction of trend per SPEI unit
+Crop yield response,ECU,Maize (corn),31.0,0.0017930134255666,-0.0085558931909259,fraction of trend per SPEI unit
+Crop yield response,ECU,Rice,31.0,-0.0124207214302654,-0.0138544409871386,fraction of trend per SPEI unit
+Crop yield response,ECU,Sugar cane,30.0,0.0435703977907597,0.0435703977907597,fraction of trend per SPEI unit
+Crop yield response,EGY,Maize (corn),31.0,0.0083334025125673,0.0221135247592302,fraction of trend per SPEI unit
+Crop yield response,EGY,Potatoes,30.0,-0.0064946716143446,-0.0077834927095726,fraction of trend per SPEI unit
+Crop yield response,EGY,Rice,31.0,0.0062098181773205,0.0114969121338973,fraction of trend per SPEI unit
+Crop yield response,EGY,"Seed cotton, unginned",26.0,0.0220825652583196,-0.0195793975971127,fraction of trend per SPEI unit
+Crop yield response,EGY,Sugar beet,31.0,-0.0077527953120416,-0.0308075702938806,fraction of trend per SPEI unit
+Crop yield response,EGY,Sugar cane,31.0,-0.0019925488568354,-0.0019925488568354,fraction of trend per SPEI unit
+Crop yield response,EGY,Wheat,31.0,0.0143051718925376,0.013675794346248,fraction of trend per SPEI unit
+Crop yield response,ESP,Barley,31.0,0.1391841312626358,0.1241862166630122,fraction of trend per SPEI unit
+Crop yield response,ESP,Maize (corn),31.0,0.0119371171293594,0.0172685963072252,fraction of trend per SPEI unit
+Crop yield response,ESP,Potatoes,31.0,-0.0031155399928532,-0.0031036722896748,fraction of trend per SPEI unit
+Crop yield response,ESP,Sunflower seed,31.0,0.1101245124066206,0.1176334117225029,fraction of trend per SPEI unit
+Crop yield response,ESP,Wheat,31.0,0.1118268043177865,0.1774135154048752,fraction of trend per SPEI unit
+Crop yield response,EST,Barley,31.0,0.0208159673946829,0.034057091795107,fraction of trend per SPEI unit
+Crop yield response,EST,Potatoes,31.0,-0.0199172663961265,-0.0365202499439822,fraction of trend per SPEI unit
+Crop yield response,EST,Rape or colza seed,31.0,-0.0431761985437088,-0.0379175325107538,fraction of trend per SPEI unit
+Crop yield response,EST,Wheat,31.0,0.0224144293891852,0.0308096904252629,fraction of trend per SPEI unit
+Crop yield response,ETH,Barley,26.0,0.0426374518112778,-0.0138866977467037,fraction of trend per SPEI unit
+Crop yield response,ETH,"Beans, dry",25.0,0.2155357169134747,0.1348043977318052,fraction of trend per SPEI unit
+Crop yield response,ETH,Maize (corn),24.0,0.0741033214175555,0.0603853313740411,fraction of trend per SPEI unit
+Crop yield response,ETH,Millet,28.0,0.0320708489077499,0.0242049704656439,fraction of trend per SPEI unit
+Crop yield response,ETH,Sorghum,23.0,-0.0005402484043528,-0.0253867624754907,fraction of trend per SPEI unit
+Crop yield response,ETH,Wheat,23.0,0.0119410705983962,-0.0290297010552155,fraction of trend per SPEI unit
+Crop yield response,FIN,Barley,31.0,-0.007922884881297,-0.0189390598053195,fraction of trend per SPEI unit
+Crop yield response,FIN,Potatoes,31.0,-0.0169440484049746,-0.0208212889433441,fraction of trend per SPEI unit
+Crop yield response,FIN,Rape or colza seed,31.0,-0.0339635618642647,-0.0454345934248863,fraction of trend per SPEI unit
+Crop yield response,FIN,Sugar beet,31.0,-0.0320103660558675,-0.0331496678066041,fraction of trend per SPEI unit
+Crop yield response,FIN,Wheat,31.0,0.026283711008926,0.0228093684446615,fraction of trend per SPEI unit
+Crop yield response,FJI,"Cassava, fresh",23.0,-0.0193638212823014,-0.0594772444381866,fraction of trend per SPEI unit
+Crop yield response,FJI,Rice,28.0,-0.0026411378813474,0.0127659070997103,fraction of trend per SPEI unit
+Crop yield response,FJI,Sugar cane,31.0,0.0050882204713794,0.0050882193331151,fraction of trend per SPEI unit
+Crop yield response,FRA,Barley,31.0,0.0079936300413266,-0.0186662548024205,fraction of trend per SPEI unit
+Crop yield response,FRA,Maize (corn),31.0,0.0261298958343684,0.0293424008742555,fraction of trend per SPEI unit
+Crop yield response,FRA,Potatoes,31.0,0.0024552320576131,0.006333830657179,fraction of trend per SPEI unit
+Crop yield response,FRA,Rape or colza seed,31.0,-0.0472848119875298,-0.0512772561452174,fraction of trend per SPEI unit
+Crop yield response,FRA,Sugar beet,31.0,-0.0024832544039972,0.0101108836286759,fraction of trend per SPEI unit
+Crop yield response,FRA,Sunflower seed,31.0,0.0118884837834216,0.0265335512493345,fraction of trend per SPEI unit
+Crop yield response,FRA,Wheat,31.0,0.0069743316854188,-0.0212878851276112,fraction of trend per SPEI unit
+Crop yield response,GBR,Barley,31.0,-0.016201001893437,-0.027834197524478,fraction of trend per SPEI unit
+Crop yield response,GBR,Potatoes,31.0,-0.0153582375294285,-0.0180825533772665,fraction of trend per SPEI unit
+Crop yield response,GBR,Rape or colza seed,31.0,-0.037088934630588,-0.0664239697652932,fraction of trend per SPEI unit
+Crop yield response,GBR,Sugar beet,31.0,0.0001562177377325,0.0018920903876993,fraction of trend per SPEI unit
+Crop yield response,GBR,Wheat,31.0,-0.0093368729430241,-0.0318037504514168,fraction of trend per SPEI unit
+Crop yield response,GHA,"Groundnuts, excluding shelled",29.0,0.0330550863289058,0.0637023896627423,fraction of trend per SPEI unit
+Crop yield response,GHA,Maize (corn),31.0,0.0543734467658054,0.0590853981040649,fraction of trend per SPEI unit
+Crop yield response,GHA,Rice,28.0,0.0308606240994551,0.0352235311485812,fraction of trend per SPEI unit
+Crop yield response,GMB,"Groundnuts, excluding shelled",31.0,0.0872432099340747,0.0805071649991102,fraction of trend per SPEI unit
+Crop yield response,GMB,Maize (corn),30.0,0.088706270045891,0.0933785547066585,fraction of trend per SPEI unit
+Crop yield response,GMB,Millet,31.0,0.0672106345624863,0.0795654493291059,fraction of trend per SPEI unit
+Crop yield response,GMB,Rice,22.0,0.0181473913310546,0.0164903545598168,fraction of trend per SPEI unit
+Crop yield response,GMB,Sorghum,30.0,0.0631411489780729,0.0735134796019928,fraction of trend per SPEI unit
+Crop yield response,GRC,Maize (corn),31.0,0.0075089600368238,0.0062700013929928,fraction of trend per SPEI unit
+Crop yield response,GRC,Potatoes,31.0,0.0096652061235645,0.0027581612519435,fraction of trend per SPEI unit
+Crop yield response,GRC,"Seed cotton, unginned",31.0,0.009788023525848,0.002453383602137,fraction of trend per SPEI unit
+Crop yield response,GRC,Wheat,31.0,-0.0102228155487268,-0.0120599862979708,fraction of trend per SPEI unit
+Crop yield response,GTM,"Beans, dry",26.0,0.0002277624369612,0.0108511009736429,fraction of trend per SPEI unit
+Crop yield response,GTM,Maize (corn),26.0,-0.0019446829063156,0.0064528910916117,fraction of trend per SPEI unit
+Crop yield response,GTM,Potatoes,24.0,-0.0089474974498735,-0.0129276694765605,fraction of trend per SPEI unit
+Crop yield response,GTM,Sugar cane,24.0,-0.0038099360673508,-0.0038099351953614,fraction of trend per SPEI unit
+Crop yield response,GUY,Rice,27.0,-0.0148413948941226,0.0088848024450233,fraction of trend per SPEI unit
+Crop yield response,GUY,Sugar cane,30.0,-0.0269728342332618,-0.0269728342332618,fraction of trend per SPEI unit
+Crop yield response,HRV,Barley,31.0,-0.0212451476482611,-0.042588124292441,fraction of trend per SPEI unit
+Crop yield response,HRV,Maize (corn),31.0,0.0843321803721634,0.0807696075812053,fraction of trend per SPEI unit
+Crop yield response,HRV,Potatoes,31.0,0.0691390512722174,0.055717815924618,fraction of trend per SPEI unit
+Crop yield response,HRV,Rape or colza seed,31.0,-0.0113639180241009,-0.0023727579266558,fraction of trend per SPEI unit
+Crop yield response,HRV,Soya beans,31.0,0.0725042077581104,0.0771815299035968,fraction of trend per SPEI unit
+Crop yield response,HRV,Sugar beet,31.0,0.0639798058597723,0.0707571367971524,fraction of trend per SPEI unit
+Crop yield response,HRV,Sunflower seed,31.0,-0.0389541346657791,-0.0553209884848532,fraction of trend per SPEI unit
+Crop yield response,HRV,Wheat,31.0,-0.0399608347426045,-0.0407322817033272,fraction of trend per SPEI unit
+Crop yield response,HUN,Barley,31.0,0.0314026038766752,0.0484961319020632,fraction of trend per SPEI unit
+Crop yield response,HUN,Maize (corn),31.0,0.1243925876413638,0.1257400330867667,fraction of trend per SPEI unit
+Crop yield response,HUN,Potatoes,31.0,0.0393310325907841,0.0435984443263711,fraction of trend per SPEI unit
+Crop yield response,HUN,Rape or colza seed,31.0,0.0523666174925681,0.051249401310905,fraction of trend per SPEI unit
+Crop yield response,HUN,Sugar beet,31.0,0.0792067906626645,0.0851803707652157,fraction of trend per SPEI unit
+Crop yield response,HUN,Sunflower seed,31.0,0.0211099287238136,0.0113541841435766,fraction of trend per SPEI unit
+Crop yield response,HUN,Wheat,31.0,0.0349165063695412,0.0518166161237912,fraction of trend per SPEI unit
+Crop yield response,IND,"Beans, dry",31.0,0.0346203911740736,0.0325287354948252,fraction of trend per SPEI unit
+Crop yield response,IND,"Groundnuts, excluding shelled",31.0,0.1333265463067786,0.0878488169541435,fraction of trend per SPEI unit
+Crop yield response,IND,Maize (corn),31.0,0.0156243941182359,0.0228166688309309,fraction of trend per SPEI unit
+Crop yield response,IND,Millet,31.0,0.0911440381013823,0.0850388364459581,fraction of trend per SPEI unit
+Crop yield response,IND,Potatoes,31.0,-0.0080743850665207,-0.0214361306482267,fraction of trend per SPEI unit
+Crop yield response,IND,Rape or colza seed,31.0,-0.0126831967898888,-0.023571780064668,fraction of trend per SPEI unit
+Crop yield response,IND,Rice,31.0,0.0389290233087438,0.0456432641447986,fraction of trend per SPEI unit
+Crop yield response,IND,"Seed cotton, unginned",29.0,0.129839350410474,0.1486719714103461,fraction of trend per SPEI unit
+Crop yield response,IND,Soya beans,31.0,0.0233760964702377,0.0486624881588581,fraction of trend per SPEI unit
+Crop yield response,IND,Sugar cane,31.0,0.0123258278843369,0.0250510209046493,fraction of trend per SPEI unit
+Crop yield response,IND,Wheat,31.0,-0.0002567747589924,-0.0119502458000411,fraction of trend per SPEI unit
+Crop yield response,IRL,Barley,31.0,-0.0363239895561375,-0.0285331650837502,fraction of trend per SPEI unit
+Crop yield response,IRL,Potatoes,31.0,-0.0349914774992931,-0.0304700946159926,fraction of trend per SPEI unit
+Crop yield response,IRL,Rape or colza seed,31.0,-0.0127830858679157,-0.0234187413710599,fraction of trend per SPEI unit
+Crop yield response,IRL,Wheat,31.0,-0.0239962366257673,-0.0401642304630039,fraction of trend per SPEI unit
+Crop yield response,IRN,Barley,28.0,0.019969809690408,0.0538615847976413,fraction of trend per SPEI unit
+Crop yield response,IRN,Potatoes,28.0,0.014083039148225,0.0050266013755893,fraction of trend per SPEI unit
+Crop yield response,IRN,Rice,31.0,-0.0050180499094719,-0.0388520847719305,fraction of trend per SPEI unit
+Crop yield response,IRN,"Seed cotton, unginned",28.0,0.0257841654106748,0.0216705052285393,fraction of trend per SPEI unit
+Crop yield response,IRN,Wheat,28.0,0.0358879173419364,0.0709739219635058,fraction of trend per SPEI unit
+Crop yield response,ISR,"Seed cotton, unginned",30.0,-0.0560992564853777,0.0627012621113597,fraction of trend per SPEI unit
+Crop yield response,ISR,Wheat,31.0,0.0867356845741808,0.2245094320772774,fraction of trend per SPEI unit
+Crop yield response,ITA,Maize (corn),31.0,0.0363205798325751,0.0381145651652482,fraction of trend per SPEI unit
+Crop yield response,ITA,Potatoes,31.0,-0.0078067513504613,0.001642978936581,fraction of trend per SPEI unit
+Crop yield response,ITA,Rice,31.0,0.0006133227049137,-1.9845537104055185e-05,fraction of trend per SPEI unit
+Crop yield response,ITA,Soya beans,31.0,0.0590853820594778,0.0562786339011597,fraction of trend per SPEI unit
+Crop yield response,ITA,Sugar beet,31.0,0.0537410764314541,0.0508810713025099,fraction of trend per SPEI unit
+Crop yield response,ITA,Wheat,31.0,-0.0021749118941934,-0.007104839083257,fraction of trend per SPEI unit
+Crop yield response,JAM,Sugar cane,31.0,0.0080436138538843,0.0080435989344003,fraction of trend per SPEI unit
+Crop yield response,JOR,Potatoes,31.0,0.0098117493917807,0.0415891204324042,fraction of trend per SPEI unit
+Crop yield response,JPN,Potatoes,30.0,-0.0302424963094137,-0.0282446074205929,fraction of trend per SPEI unit
+Crop yield response,JPN,Sugar beet,31.0,-0.0383406132397995,-0.0452028872917565,fraction of trend per SPEI unit
+Crop yield response,JPN,Wheat,31.0,-0.0625527178291067,-0.0837455265591752,fraction of trend per SPEI unit
+Crop yield response,KAZ,Barley,31.0,0.1409427935759257,0.1356304512699133,fraction of trend per SPEI unit
+Crop yield response,KAZ,Maize (corn),31.0,0.1231527359260916,0.1028326684117105,fraction of trend per SPEI unit
+Crop yield response,KAZ,Potatoes,22.0,0.041325423199531,0.0536427705111548,fraction of trend per SPEI unit
+Crop yield response,KAZ,Rice,31.0,0.0436483571131935,0.0327767460814901,fraction of trend per SPEI unit
+Crop yield response,KAZ,"Seed cotton, unginned",31.0,-0.0237493128922112,-0.0276375801779416,fraction of trend per SPEI unit
+Crop yield response,KAZ,Sunflower seed,31.0,0.0871342474194148,0.0813223257574401,fraction of trend per SPEI unit
+Crop yield response,KAZ,Wheat,31.0,0.1246707442464523,0.1265849614897809,fraction of trend per SPEI unit
+Crop yield response,KGZ,Barley,31.0,0.1255191804989815,0.1282537086469416,fraction of trend per SPEI unit
+Crop yield response,KGZ,Maize (corn),31.0,0.038146706020394,0.0309648360696088,fraction of trend per SPEI unit
+Crop yield response,KGZ,Potatoes,31.0,0.0463209165866523,0.0374737011451883,fraction of trend per SPEI unit
+Crop yield response,KGZ,"Seed cotton, unginned",31.0,0.007587742998482,0.0132788403921055,fraction of trend per SPEI unit
+Crop yield response,KGZ,Sugar beet,30.0,0.1387938759657665,0.0706129154107863,fraction of trend per SPEI unit
+Crop yield response,KGZ,Sunflower seed,31.0,0.0350697262691786,0.0059096465974978,fraction of trend per SPEI unit
+Crop yield response,KGZ,Wheat,31.0,0.0784793999162233,0.0831227658910375,fraction of trend per SPEI unit
+Crop yield response,KHM,"Cassava, fresh",27.0,0.0375959275188021,0.0339737170966265,fraction of trend per SPEI unit
+Crop yield response,KHM,Maize (corn),29.0,0.0177371586104936,0.0319561901965572,fraction of trend per SPEI unit
+Crop yield response,KHM,Rice,31.0,0.0218916190441557,0.026519282168145,fraction of trend per SPEI unit
+Crop yield response,KOR,Potatoes,31.0,-0.0143745355801305,-0.01311683310998,fraction of trend per SPEI unit
+Crop yield response,KOR,Rice,31.0,-0.019218087274231,-0.0207460079187914,fraction of trend per SPEI unit
+Crop yield response,LAO,"Cassava, fresh",21.0,0.0248561759972706,0.0289923486719207,fraction of trend per SPEI unit
+Crop yield response,LAO,Maize (corn),31.0,0.0056821445587975,0.0009417996714262,fraction of trend per SPEI unit
+Crop yield response,LAO,Rice,31.0,0.0060240176625031,0.0090235987480795,fraction of trend per SPEI unit
+Crop yield response,LAO,Sugar cane,29.0,-0.0026919273075095,-0.00269192686362,fraction of trend per SPEI unit
+Crop yield response,LTU,Barley,31.0,0.0042796946634873,0.0173389543480054,fraction of trend per SPEI unit
+Crop yield response,LTU,"Beans, dry",23.0,0.1112971962773258,0.107670133881434,fraction of trend per SPEI unit
+Crop yield response,LTU,Potatoes,31.0,-0.0485370536328108,-0.0412089164155299,fraction of trend per SPEI unit
+Crop yield response,LTU,Rape or colza seed,31.0,0.0114093780328016,0.0147849305327745,fraction of trend per SPEI unit
+Crop yield response,LTU,Sugar beet,31.0,0.0083682627097662,0.0254240045252103,fraction of trend per SPEI unit
+Crop yield response,LTU,Wheat,31.0,0.0119061086037497,0.0156373389602385,fraction of trend per SPEI unit
+Crop yield response,LVA,Barley,31.0,-0.0097189664548292,0.0033426127560218,fraction of trend per SPEI unit
+Crop yield response,LVA,"Beans, dry",24.0,0.0491432389368649,0.038757151617777,fraction of trend per SPEI unit
+Crop yield response,LVA,Potatoes,31.0,-0.0237904209011115,-0.0295091918907262,fraction of trend per SPEI unit
+Crop yield response,LVA,Rape or colza seed,31.0,0.0099641420057732,0.0051879442285389,fraction of trend per SPEI unit
+Crop yield response,LVA,Wheat,31.0,0.0064213353908653,0.0073027446212817,fraction of trend per SPEI unit
+Crop yield response,MAR,Barley,31.0,0.1850658229825266,0.3121176824359345,fraction of trend per SPEI unit
+Crop yield response,MAR,Potatoes,31.0,0.0049124630156203,0.0132616707232445,fraction of trend per SPEI unit
+Crop yield response,MAR,Sugar beet,31.0,0.0092586044433319,0.0153400856055963,fraction of trend per SPEI unit
+Crop yield response,MAR,Wheat,31.0,0.0991543836276207,0.2240620803066116,fraction of trend per SPEI unit
+Crop yield response,MDA,Barley,31.0,0.0934379788295249,0.1271937246230556,fraction of trend per SPEI unit
+Crop yield response,MDA,Maize (corn),30.0,0.1144379603658254,0.1031599282800602,fraction of trend per SPEI unit
+Crop yield response,MDA,Potatoes,31.0,0.0638807295269884,0.0814292829354215,fraction of trend per SPEI unit
+Crop yield response,MDA,Sugar beet,31.0,0.1181428423409433,0.127616165348747,fraction of trend per SPEI unit
+Crop yield response,MDA,Sunflower seed,31.0,0.0782663168195317,0.0715840338086353,fraction of trend per SPEI unit
+Crop yield response,MDA,Wheat,30.0,0.1139021084321644,0.1659169019048821,fraction of trend per SPEI unit
+Crop yield response,MEX,"Beans, dry",31.0,0.0144908287724484,0.0190533854161337,fraction of trend per SPEI unit
+Crop yield response,MEX,Maize (corn),31.0,-0.001952987294176,-0.0030229164820186,fraction of trend per SPEI unit
+Crop yield response,MEX,Potatoes,31.0,-0.0174752157851714,-0.0104000554576594,fraction of trend per SPEI unit
+Crop yield response,MEX,"Seed cotton, unginned",31.0,0.0190057585146179,0.0249455223153545,fraction of trend per SPEI unit
+Crop yield response,MEX,Sorghum,31.0,0.0117061558360052,-8.65608020282093e-05,fraction of trend per SPEI unit
+Crop yield response,MEX,Sugar cane,28.0,0.0282814576535227,0.028281455888004,fraction of trend per SPEI unit
+Crop yield response,MKD,Barley,31.0,0.0572541272555748,0.0579592669820952,fraction of trend per SPEI unit
+Crop yield response,MKD,Maize (corn),31.0,0.0462231146960161,0.0561172922174683,fraction of trend per SPEI unit
+Crop yield response,MKD,Potatoes,31.0,0.0221995465616667,0.0245713396656843,fraction of trend per SPEI unit
+Crop yield response,MKD,Wheat,31.0,0.0393594554606793,0.0473333430561022,fraction of trend per SPEI unit
+Crop yield response,MLI,"Groundnuts, excluding shelled",31.0,0.034304233316931,0.029141587582149,fraction of trend per SPEI unit
+Crop yield response,MLI,Maize (corn),31.0,0.0558882867442001,0.0565059870343056,fraction of trend per SPEI unit
+Crop yield response,MLI,Millet,31.0,0.0753902280318198,0.0768726078288797,fraction of trend per SPEI unit
+Crop yield response,MLI,Rice,31.0,0.0030789390080583,-9.68018393989828e-05,fraction of trend per SPEI unit
+Crop yield response,MLI,"Seed cotton, unginned",31.0,-0.0240993813713485,-0.0222619558569985,fraction of trend per SPEI unit
+Crop yield response,MLI,Sorghum,31.0,0.0520931396385831,0.0564308505949068,fraction of trend per SPEI unit
+Crop yield response,MMR,"Beans, dry",28.0,0.0252050297513817,0.0149105660805824,fraction of trend per SPEI unit
+Crop yield response,MMR,"Groundnuts, excluding shelled",30.0,0.0037841215243975,0.0044664265150991,fraction of trend per SPEI unit
+Crop yield response,MMR,Maize (corn),30.0,0.0046913632346286,0.0028940239844993,fraction of trend per SPEI unit
+Crop yield response,MMR,Rice,30.0,0.0023810936249663,0.0038070342440912,fraction of trend per SPEI unit
+Crop yield response,MMR,"Seed cotton, unginned",30.0,-0.0079562169683218,0.0011966416385385,fraction of trend per SPEI unit
+Crop yield response,MMR,Sugar cane,30.0,0.0017944045252229,0.0017876559125585,fraction of trend per SPEI unit
+Crop yield response,MNG,Potatoes,31.0,0.0374548923840371,0.0408672604047024,fraction of trend per SPEI unit
+Crop yield response,MWI,"Beans, dry",24.0,0.0126587851560852,0.0267199979991778,fraction of trend per SPEI unit
+Crop yield response,MWI,"Cassava, fresh",29.0,0.0029490076525648,-0.0242690209561706,fraction of trend per SPEI unit
+Crop yield response,MWI,"Groundnuts, excluding shelled",30.0,0.0841491059634977,0.1371585679290121,fraction of trend per SPEI unit
+Crop yield response,MWI,Maize (corn),31.0,0.0581376792970527,0.0645510775483619,fraction of trend per SPEI unit
+Crop yield response,MWI,Potatoes,28.0,0.0229434847114644,0.0368870529991312,fraction of trend per SPEI unit
+Crop yield response,MWI,"Seed cotton, unginned",26.0,0.1174671751142917,0.1054606797734732,fraction of trend per SPEI unit
+Crop yield response,NER,"Groundnuts, excluding shelled",31.0,0.0610535375616925,0.0530846744390019,fraction of trend per SPEI unit
+Crop yield response,NER,Millet,31.0,0.0684930442451211,0.0599823453052293,fraction of trend per SPEI unit
+Crop yield response,NER,Rice,24.0,0.030069117786962,0.0308243832477682,fraction of trend per SPEI unit
+Crop yield response,NER,Sorghum,30.0,0.099310862586811,0.0716788757042964,fraction of trend per SPEI unit
+Crop yield response,NGA,"Cassava, fresh",29.0,0.0422212354411901,0.0531914797169289,fraction of trend per SPEI unit
+Crop yield response,NGA,"Groundnuts, excluding shelled",29.0,0.0221830400172747,0.0194360858348664,fraction of trend per SPEI unit
+Crop yield response,NGA,Maize (corn),30.0,0.0264779584095405,-0.0095962899075251,fraction of trend per SPEI unit
+Crop yield response,NGA,Millet,31.0,0.0464534430364006,0.0460879434705079,fraction of trend per SPEI unit
+Crop yield response,NGA,Rice,31.0,-0.0331786576757265,-0.046814051384544,fraction of trend per SPEI unit
+Crop yield response,NGA,Sorghum,30.0,0.0268553380686116,0.0307206722351471,fraction of trend per SPEI unit
+Crop yield response,NIC,"Beans, dry",31.0,0.0029064190592017,0.0148031463612331,fraction of trend per SPEI unit
+Crop yield response,NIC,"Groundnuts, excluding shelled",31.0,0.0011828060336806,-0.0090436305864589,fraction of trend per SPEI unit
+Crop yield response,NIC,Maize (corn),31.0,-0.0075468825058855,-0.0014581466523128,fraction of trend per SPEI unit
+Crop yield response,NIC,Rice,31.0,0.0286654351377673,0.0259194707811171,fraction of trend per SPEI unit
+Crop yield response,NIC,Sorghum,31.0,0.0152887885611094,0.0207157856700234,fraction of trend per SPEI unit
+Crop yield response,NIC,Sugar cane,31.0,0.0027204507646619,0.0027204507646625,fraction of trend per SPEI unit
+Crop yield response,NLD,Barley,31.0,-0.0317060198048508,-0.0326262332989183,fraction of trend per SPEI unit
+Crop yield response,NLD,Potatoes,31.0,0.011353318683937,0.0119144414066643,fraction of trend per SPEI unit
+Crop yield response,NLD,Sugar beet,31.0,-0.0072695466665193,-0.0061039171029189,fraction of trend per SPEI unit
+Crop yield response,NLD,Wheat,31.0,-0.0212580623088014,-0.0357259242118388,fraction of trend per SPEI unit
+Crop yield response,NOR,Barley,31.0,0.0045782442737094,0.0225161293803472,fraction of trend per SPEI unit
+Crop yield response,NOR,Potatoes,31.0,-0.0142573625761014,-0.0256783052761968,fraction of trend per SPEI unit
+Crop yield response,NOR,Rape or colza seed,31.0,0.0327121176122511,-0.0254745007169691,fraction of trend per SPEI unit
+Crop yield response,NPL,Maize (corn),31.0,-0.0076294861301539,-0.0058200896414388,fraction of trend per SPEI unit
+Crop yield response,NPL,Millet,31.0,0.0031976903611023,0.0053671038461121,fraction of trend per SPEI unit
+Crop yield response,NPL,Potatoes,31.0,-0.0076255635236162,-0.0104441158819503,fraction of trend per SPEI unit
+Crop yield response,NPL,Rice,31.0,0.0184864851131958,0.0192191526506166,fraction of trend per SPEI unit
+Crop yield response,NPL,Sugar cane,31.0,-0.0039302651349114,-0.0049886795289127,fraction of trend per SPEI unit
+Crop yield response,NPL,Wheat,31.0,0.004945378681432,0.0189484742732368,fraction of trend per SPEI unit
+Crop yield response,PAK,Maize (corn),31.0,0.0347732128671535,0.0257660287750695,fraction of trend per SPEI unit
+Crop yield response,PAK,Potatoes,31.0,-0.0130886776784528,-0.0229669319510027,fraction of trend per SPEI unit
+Crop yield response,PAK,Rice,31.0,-0.0179886999265244,-0.023713320075311,fraction of trend per SPEI unit
+Crop yield response,PAK,"Seed cotton, unginned",31.0,-0.0537826012710482,-0.0607738289980952,fraction of trend per SPEI unit
+Crop yield response,PAK,Sugar cane,31.0,0.0006778101511938,0.0007166781271892,fraction of trend per SPEI unit
+Crop yield response,PAK,Wheat,31.0,-0.0092229283932108,0.0030975945192012,fraction of trend per SPEI unit
+Crop yield response,PER,"Cassava, fresh",31.0,0.0007703078063382,0.0026755807444059,fraction of trend per SPEI unit
+Crop yield response,PER,Maize (corn),31.0,0.041558407206155,0.0476338436711049,fraction of trend per SPEI unit
+Crop yield response,PER,Potatoes,31.0,0.0088556534430082,0.0176594839738683,fraction of trend per SPEI unit
+Crop yield response,PER,Rice,31.0,0.0123126803884441,0.0162881168431639,fraction of trend per SPEI unit
+Crop yield response,PER,"Seed cotton, unginned",31.0,0.0528929609720287,0.032158043572674,fraction of trend per SPEI unit
+Crop yield response,PER,Sugar cane,22.0,0.0267547885187868,0.0267547823898385,fraction of trend per SPEI unit
+Crop yield response,PHL,"Cassava, fresh",31.0,-0.0007644748881587,-0.0027162249424572,fraction of trend per SPEI unit
+Crop yield response,PHL,Maize (corn),31.0,0.0067740639768892,-0.0011587651824923,fraction of trend per SPEI unit
+Crop yield response,PHL,Rice,31.0,-0.0064848130427141,-0.0024048975032701,fraction of trend per SPEI unit
+Crop yield response,PHL,Sugar cane,31.0,0.0273872191287742,0.0273872191287742,fraction of trend per SPEI unit
+Crop yield response,POL,Barley,31.0,0.0517182430534636,0.0559768281628542,fraction of trend per SPEI unit
+Crop yield response,POL,Maize (corn),31.0,0.0554783530571578,0.0522301495587625,fraction of trend per SPEI unit
+Crop yield response,POL,Potatoes,31.0,0.0299807523939086,0.0445541171915252,fraction of trend per SPEI unit
+Crop yield response,POL,Rape or colza seed,31.0,0.0305753181758065,0.0375843782262274,fraction of trend per SPEI unit
+Crop yield response,POL,Sugar beet,31.0,0.0156658450866766,0.0204383423988012,fraction of trend per SPEI unit
+Crop yield response,POL,Wheat,31.0,0.0371899020270986,0.0354923784839754,fraction of trend per SPEI unit
+Crop yield response,PRT,Maize (corn),31.0,0.0022119437857978,0.0109421087050531,fraction of trend per SPEI unit
+Crop yield response,PRT,Potatoes,31.0,-0.0133870753392493,-0.0046966765758702,fraction of trend per SPEI unit
+Crop yield response,PRT,Rice,31.0,-0.0071391248733858,-0.0022715544651977,fraction of trend per SPEI unit
+Crop yield response,PRT,Wheat,31.0,0.0511621963690312,0.0002454030992099,fraction of trend per SPEI unit
+Crop yield response,PRY,"Cassava, fresh",31.0,0.0247021838955643,0.0150018119130661,fraction of trend per SPEI unit
+Crop yield response,PRY,Maize (corn),31.0,0.0569889723488874,0.079128341936756,fraction of trend per SPEI unit
+Crop yield response,PRY,Rice,31.0,0.0138700606475465,0.0329486573990597,fraction of trend per SPEI unit
+Crop yield response,PRY,"Seed cotton, unginned",31.0,-0.0231843286192577,0.0230202921823394,fraction of trend per SPEI unit
+Crop yield response,PRY,Soya beans,31.0,0.0474496489592761,0.092131335045715,fraction of trend per SPEI unit
+Crop yield response,PRY,Sugar cane,31.0,-0.001735682060655,-0.0017355994546886,fraction of trend per SPEI unit
+Crop yield response,PRY,Wheat,31.0,-0.0571486187792166,-0.0660659383571594,fraction of trend per SPEI unit
+Crop yield response,ROU,Barley,31.0,0.0573446480917454,0.0682827426283626,fraction of trend per SPEI unit
+Crop yield response,ROU,Maize (corn),31.0,0.1023438846186305,0.1402997419924823,fraction of trend per SPEI unit
+Crop yield response,ROU,Potatoes,31.0,0.0131043412677777,0.0146242721652626,fraction of trend per SPEI unit
+Crop yield response,ROU,Rape or colza seed,31.0,0.1043982506266311,0.1347657046449432,fraction of trend per SPEI unit
+Crop yield response,ROU,Sunflower seed,31.0,0.0324950595424342,0.0331947240354093,fraction of trend per SPEI unit
+Crop yield response,ROU,Wheat,31.0,0.054869134252743,0.1183115956087031,fraction of trend per SPEI unit
+Crop yield response,RUS,Barley,31.0,0.0792686060445326,0.0966033996365664,fraction of trend per SPEI unit
+Crop yield response,RUS,Maize (corn),30.0,0.1019567492713468,0.1292886447282654,fraction of trend per SPEI unit
+Crop yield response,RUS,Potatoes,30.0,0.017377956832396,0.037876104837608,fraction of trend per SPEI unit
+Crop yield response,RUS,Rape or colza seed,31.0,0.0545308803612982,0.0699298746939723,fraction of trend per SPEI unit
+Crop yield response,RUS,Soya beans,31.0,0.0410538054754922,0.0514256747758531,fraction of trend per SPEI unit
+Crop yield response,RUS,Sugar beet,30.0,0.0696311486920572,0.0828272121545232,fraction of trend per SPEI unit
+Crop yield response,RUS,Sunflower seed,31.0,0.0249372121645433,0.030815453241739,fraction of trend per SPEI unit
+Crop yield response,RUS,Wheat,30.0,0.0727855784841737,0.0769642734280176,fraction of trend per SPEI unit
+Crop yield response,SAU,Barley,30.0,0.022179262866478,0.0152889915645817,fraction of trend per SPEI unit
+Crop yield response,SAU,Potatoes,31.0,-0.0329724173254237,-0.0635688504550524,fraction of trend per SPEI unit
+Crop yield response,SAU,Sorghum,31.0,0.006634558305123,-0.0025115996074508,fraction of trend per SPEI unit
+Crop yield response,SCG,Barley,31.0,0.0174262880141011,0.0155949114325941,fraction of trend per SPEI unit
+Crop yield response,SCG,Maize (corn),31.0,0.1253705839213757,0.1335431807150467,fraction of trend per SPEI unit
+Crop yield response,SCG,Potatoes,31.0,0.0450119758131374,0.0555891369750332,fraction of trend per SPEI unit
+Crop yield response,SCG,Soya beans,31.0,0.1231352084046616,0.1443454765818642,fraction of trend per SPEI unit
+Crop yield response,SCG,Sugar beet,31.0,0.0516952188237465,0.0648343507767927,fraction of trend per SPEI unit
+Crop yield response,SCG,Sunflower seed,31.0,-0.0029251219201696,0.0001936460099052,fraction of trend per SPEI unit
+Crop yield response,SCG,Wheat,31.0,0.009700982612633,0.0317009884741031,fraction of trend per SPEI unit
+Crop yield response,SDX,"Groundnuts, excluding shelled",28.0,0.0073651001071356,0.0143448109043265,fraction of trend per SPEI unit
+Crop yield response,SDX,Millet,30.0,0.1783674511166752,0.1600225295803463,fraction of trend per SPEI unit
+Crop yield response,SDX,Potatoes,24.0,-0.0154059753111842,-0.0084311615292625,fraction of trend per SPEI unit
+Crop yield response,SDX,"Seed cotton, unginned",31.0,0.0301694868208066,0.0328940714175815,fraction of trend per SPEI unit
+Crop yield response,SDX,Sorghum,29.0,0.0389667532520991,0.0445184682127599,fraction of trend per SPEI unit
+Crop yield response,SDX,Sugar cane,21.0,-0.0227745185329589,-0.0227745235319841,fraction of trend per SPEI unit
+Crop yield response,SDX,Wheat,30.0,-0.0098830727736263,0.0073110884558301,fraction of trend per SPEI unit
+Crop yield response,SEN,"Cassava, fresh",31.0,0.0949758886727537,0.0923361476159962,fraction of trend per SPEI unit
+Crop yield response,SEN,"Groundnuts, excluding shelled",31.0,0.1523171736966573,0.1497061603556237,fraction of trend per SPEI unit
+Crop yield response,SEN,Maize (corn),31.0,0.1173952777688761,0.0886337514144389,fraction of trend per SPEI unit
+Crop yield response,SEN,Millet,31.0,0.1067774737300691,0.1008429171157361,fraction of trend per SPEI unit
+Crop yield response,SEN,Rice,31.0,0.0691773974519471,0.0746558916666079,fraction of trend per SPEI unit
+Crop yield response,SEN,"Seed cotton, unginned",30.0,0.0247241417889652,0.0016177020986787,fraction of trend per SPEI unit
+Crop yield response,SEN,Sorghum,31.0,0.067611951649473,0.0627618930825411,fraction of trend per SPEI unit
+Crop yield response,SLV,"Beans, dry",30.0,-0.010783742876095,0.0028615909335745,fraction of trend per SPEI unit
+Crop yield response,SLV,Maize (corn),30.0,0.0582813283961747,0.0862784452815099,fraction of trend per SPEI unit
+Crop yield response,SLV,Rice,30.0,0.0064657287092153,0.0065984073120183,fraction of trend per SPEI unit
+Crop yield response,SLV,Sorghum,30.0,0.0130447761588863,0.0144378264235435,fraction of trend per SPEI unit
+Crop yield response,SLV,Sugar cane,30.0,0.0116760032782535,0.0116760330600837,fraction of trend per SPEI unit
+Crop yield response,SVK,Barley,31.0,0.0166231361301477,0.0249830514416222,fraction of trend per SPEI unit
+Crop yield response,SVK,Maize (corn),31.0,0.095114723223939,0.0957757843636641,fraction of trend per SPEI unit
+Crop yield response,SVK,Potatoes,31.0,-0.0284331099495456,-0.0151068910194227,fraction of trend per SPEI unit
+Crop yield response,SVK,Rape or colza seed,31.0,0.0725556317878245,0.0644723357638894,fraction of trend per SPEI unit
+Crop yield response,SVK,Soya beans,31.0,0.0921050229571457,0.1128527119267461,fraction of trend per SPEI unit
+Crop yield response,SVK,Sugar beet,31.0,0.0465351102876969,0.0495474286995773,fraction of trend per SPEI unit
+Crop yield response,SVK,Sunflower seed,31.0,-0.0022478749930215,-0.012086842149719,fraction of trend per SPEI unit
+Crop yield response,SVK,Wheat,31.0,0.0421843515478354,0.0322439787857981,fraction of trend per SPEI unit
+Crop yield response,SVN,Barley,31.0,0.0191053732806555,-0.011870273390833,fraction of trend per SPEI unit
+Crop yield response,SVN,Maize (corn),31.0,0.065963587615057,0.0948606870053808,fraction of trend per SPEI unit
+Crop yield response,SVN,Potatoes,31.0,0.0489346057271475,0.068650157203449,fraction of trend per SPEI unit
+Crop yield response,SVN,Wheat,31.0,0.0050304346172625,-0.0099888196818042,fraction of trend per SPEI unit
+Crop yield response,SWE,Barley,31.0,0.0051957716154196,0.0394913357970067,fraction of trend per SPEI unit
+Crop yield response,SWE,Potatoes,31.0,0.0105172690421912,0.0191592611911119,fraction of trend per SPEI unit
+Crop yield response,SWE,Rape or colza seed,31.0,0.0407629856843186,-0.0047511347326351,fraction of trend per SPEI unit
+Crop yield response,SWE,Sugar beet,31.0,0.0088451901239261,0.0153629363160578,fraction of trend per SPEI unit
+Crop yield response,SYR,Barley,31.0,0.2744228446261518,0.457494275707538,fraction of trend per SPEI unit
+Crop yield response,SYR,Potatoes,31.0,0.0010469856954793,0.0074255548897542,fraction of trend per SPEI unit
+Crop yield response,SYR,"Seed cotton, unginned",29.0,0.0641284525753784,0.02051338335461,fraction of trend per SPEI unit
+Crop yield response,SYR,Wheat,31.0,0.1096300950564756,0.1556857228308116,fraction of trend per SPEI unit
+Crop yield response,TCD,"Beans, dry",31.0,0.0717768239554501,0.0623616189642231,fraction of trend per SPEI unit
+Crop yield response,TCD,"Cassava, fresh",26.0,-0.1333102032956924,-0.1360419664855823,fraction of trend per SPEI unit
+Crop yield response,TCD,"Groundnuts, excluding shelled",31.0,0.0473441986518812,0.0419105946541159,fraction of trend per SPEI unit
+Crop yield response,TCD,Maize (corn),31.0,0.0944798088278867,0.0827720377766654,fraction of trend per SPEI unit
+Crop yield response,TCD,Millet,30.0,0.0924043330819073,0.0715180004197517,fraction of trend per SPEI unit
+Crop yield response,TCD,Rice,31.0,0.0652296412782724,0.0895299045924211,fraction of trend per SPEI unit
+Crop yield response,TCD,Sorghum,31.0,0.097548188679668,0.0940375799644638,fraction of trend per SPEI unit
+Crop yield response,TGO,"Beans, dry",30.0,0.0356297385562779,0.0393009212323331,fraction of trend per SPEI unit
+Crop yield response,TGO,"Cassava, fresh",30.0,0.0263746428529392,0.0371064877786413,fraction of trend per SPEI unit
+Crop yield response,TGO,"Groundnuts, excluding shelled",31.0,-0.0206650129033879,-0.017217397700336,fraction of trend per SPEI unit
+Crop yield response,TGO,Maize (corn),31.0,0.0021273755934524,-0.0113174611245895,fraction of trend per SPEI unit
+Crop yield response,TGO,Millet,31.0,-0.0618742142283995,-0.1016441782283541,fraction of trend per SPEI unit
+Crop yield response,TGO,Rice,30.0,0.0083134242264679,-0.014208920835659,fraction of trend per SPEI unit
+Crop yield response,TGO,"Seed cotton, unginned",25.0,-0.0772189743366027,-0.0367020349376194,fraction of trend per SPEI unit
+Crop yield response,TGO,Sorghum,31.0,0.0190023597987374,0.012595222414786,fraction of trend per SPEI unit
+Crop yield response,THA,"Cassava, fresh",30.0,-0.0128505682891118,-0.0108241598573562,fraction of trend per SPEI unit
+Crop yield response,THA,Maize (corn),30.0,0.0163742706673117,0.0161365102321162,fraction of trend per SPEI unit
+Crop yield response,THA,Rice,31.0,0.0029059794215202,0.0055594346094301,fraction of trend per SPEI unit
+Crop yield response,THA,Sugar cane,30.0,0.0241286702521798,0.0241286702521798,fraction of trend per SPEI unit
+Crop yield response,TJK,Maize (corn),30.0,-0.0006608261658626,0.007523454733993,fraction of trend per SPEI unit
+Crop yield response,TJK,Potatoes,31.0,-0.0624607651296397,-0.0040290368898234,fraction of trend per SPEI unit
+Crop yield response,TJK,Rice,31.0,0.0054877313427413,0.038667360518668,fraction of trend per SPEI unit
+Crop yield response,TJK,"Seed cotton, unginned",31.0,0.0316668306602703,0.0125226718355151,fraction of trend per SPEI unit
+Crop yield response,TJK,Wheat,31.0,0.0568162697637449,0.0652661997713115,fraction of trend per SPEI unit
+Crop yield response,TKM,Rice,26.0,0.0906393477816889,0.0287183142551063,fraction of trend per SPEI unit
+Crop yield response,TKM,"Seed cotton, unginned",31.0,-0.0070228736838051,0.0060391963717806,fraction of trend per SPEI unit
+Crop yield response,TKM,Wheat,24.0,0.0786662286672682,0.0889480353391712,fraction of trend per SPEI unit
+Crop yield response,TUR,Barley,31.0,0.0278446971395103,0.0662051832144165,fraction of trend per SPEI unit
+Crop yield response,TUR,Maize (corn),31.0,-0.0361095635087398,0.0065178948101867,fraction of trend per SPEI unit
+Crop yield response,TUR,Potatoes,31.0,-0.0009838218143833,0.0090558851726228,fraction of trend per SPEI unit
+Crop yield response,TUR,"Seed cotton, unginned",31.0,0.0014913149196281,0.0010388271998273,fraction of trend per SPEI unit
+Crop yield response,TUR,Sugar beet,31.0,0.0214124038501232,0.0309526233816167,fraction of trend per SPEI unit
+Crop yield response,TUR,Sunflower seed,31.0,0.0165606749219973,0.0314897854689891,fraction of trend per SPEI unit
+Crop yield response,TUR,Wheat,31.0,0.0120977608254413,0.0332078516975726,fraction of trend per SPEI unit
+Crop yield response,TWN,"Groundnuts, excluding shelled",31.0,-0.0198725953975323,-0.0300963031007853,fraction of trend per SPEI unit
+Crop yield response,TWN,Maize (corn),31.0,-0.0185962196950471,-0.0217468813791628,fraction of trend per SPEI unit
+Crop yield response,TWN,Rice,31.0,-0.0225116492636574,-0.0389379791441495,fraction of trend per SPEI unit
+Crop yield response,TWN,Sugar cane,31.0,-0.0173533887750669,-0.0173533887750669,fraction of trend per SPEI unit
+Crop yield response,TZA,"Cassava, fresh",26.0,0.0556336839493155,-0.0027904255603147,fraction of trend per SPEI unit
+Crop yield response,TZA,"Groundnuts, excluding shelled",20.0,0.0199316218935405,0.058879022716155,fraction of trend per SPEI unit
+Crop yield response,TZA,Maize (corn),30.0,0.0431643840397412,0.0545318308392936,fraction of trend per SPEI unit
+Crop yield response,TZA,Rice,28.0,-0.0139911980008714,0.0039857944105051,fraction of trend per SPEI unit
+Crop yield response,TZA,"Seed cotton, unginned",24.0,-0.0599017457915382,-0.058377574473954,fraction of trend per SPEI unit
+Crop yield response,TZA,Sorghum,26.0,0.0420327290884929,0.1170045131533619,fraction of trend per SPEI unit
+Crop yield response,UKR,Barley,31.0,0.0104253932514873,0.0371481045043593,fraction of trend per SPEI unit
+Crop yield response,UKR,Maize (corn),31.0,0.0254989087544072,0.0365973904325081,fraction of trend per SPEI unit
+Crop yield response,UKR,Potatoes,31.0,0.0045119885148542,0.0162835947970776,fraction of trend per SPEI unit
+Crop yield response,UKR,Rape or colza seed,31.0,0.0611953596143499,0.0527931581892679,fraction of trend per SPEI unit
+Crop yield response,UKR,Soya beans,31.0,0.0564827496236762,0.0567837607606865,fraction of trend per SPEI unit
+Crop yield response,UKR,Sugar beet,31.0,-0.0029285099380587,0.0070580928059378,fraction of trend per SPEI unit
+Crop yield response,UKR,Sunflower seed,31.0,-0.0027483330142037,-0.00158546370823,fraction of trend per SPEI unit
+Crop yield response,UKR,Wheat,30.0,0.0238581520235677,0.0366977382616942,fraction of trend per SPEI unit
+Crop yield response,URY,Barley,31.0,-0.0568155382857223,-0.0700335135879173,fraction of trend per SPEI unit
+Crop yield response,URY,Maize (corn),31.0,0.0163083237851338,0.1447446317020651,fraction of trend per SPEI unit
+Crop yield response,URY,Potatoes,31.0,-0.0079597655968806,-0.017216663647171,fraction of trend per SPEI unit
+Crop yield response,URY,Rice,31.0,-0.0190571788536784,-0.0257967926194645,fraction of trend per SPEI unit
+Crop yield response,URY,Sorghum,31.0,-0.0034603379292323,0.0710064372329116,fraction of trend per SPEI unit
+Crop yield response,URY,Soya beans,31.0,0.0434398797808285,0.1437706407119516,fraction of trend per SPEI unit
+Crop yield response,URY,Sunflower seed,26.0,-0.1351186086646204,-0.0447016599297106,fraction of trend per SPEI unit
+Crop yield response,URY,Wheat,31.0,-0.0347348366629056,-0.0623993030154418,fraction of trend per SPEI unit
+Crop yield response,USA,Maize (corn),31.0,0.0262247586501281,0.032558892441786,fraction of trend per SPEI unit
+Crop yield response,USA,Potatoes,31.0,0.0008888473339211,-0.0005324312063083,fraction of trend per SPEI unit
+Crop yield response,USA,Rice,31.0,0.0132700870602653,0.0081572469151143,fraction of trend per SPEI unit
+Crop yield response,USA,"Seed cotton, unginned",22.0,-0.0106866443482842,-0.0074290810830061,fraction of trend per SPEI unit
+Crop yield response,USA,Sorghum,31.0,0.0927080543364845,0.0930199742289614,fraction of trend per SPEI unit
+Crop yield response,USA,Soya beans,31.0,0.00463628297756,0.0081941127740536,fraction of trend per SPEI unit
+Crop yield response,USA,Wheat,31.0,0.0238414747663842,0.0325317800144834,fraction of trend per SPEI unit
+Crop yield response,UZB,Potatoes,31.0,0.0165085958208042,-0.0028148836221834,fraction of trend per SPEI unit
+Crop yield response,UZB,Rice,31.0,0.0360895407303917,0.0110813242214474,fraction of trend per SPEI unit
+Crop yield response,UZB,"Seed cotton, unginned",31.0,-0.0155799299948444,-0.0111199594240558,fraction of trend per SPEI unit
+Crop yield response,UZB,Wheat,31.0,0.007819285614684,0.0198814943607599,fraction of trend per SPEI unit
+Crop yield response,VEN,"Beans, dry",30.0,0.0104759750831895,-0.0014279593597301,fraction of trend per SPEI unit
+Crop yield response,VEN,"Cassava, fresh",30.0,-0.0078644329203728,-0.0138315126147542,fraction of trend per SPEI unit
+Crop yield response,VEN,Maize (corn),31.0,0.0120823684335548,0.0072388219788953,fraction of trend per SPEI unit
+Crop yield response,VEN,Potatoes,30.0,-0.0017158987667273,0.0016859647869852,fraction of trend per SPEI unit
+Crop yield response,VEN,Rice,31.0,-0.0072014022723286,0.006144108621239,fraction of trend per SPEI unit
+Crop yield response,VEN,Sorghum,30.0,-0.0006648665992668,-0.0260474675295464,fraction of trend per SPEI unit
+Crop yield response,VEN,Sugar cane,31.0,0.0099819338145912,0.009981864320569,fraction of trend per SPEI unit
+Crop yield response,VNM,"Cassava, fresh",31.0,-0.0539579905407003,-0.0420198305980891,fraction of trend per SPEI unit
+Crop yield response,VNM,"Groundnuts, excluding shelled",31.0,-0.0174379141401361,-0.0121810807891546,fraction of trend per SPEI unit
+Crop yield response,VNM,Maize (corn),31.0,-0.0105529344605375,0.0055052675399248,fraction of trend per SPEI unit
+Crop yield response,VNM,Rice,31.0,-0.0070842266524377,-0.0047827715148474,fraction of trend per SPEI unit
+Crop yield response,VNM,Sugar cane,31.0,0.0113273919838703,0.0113274241736406,fraction of trend per SPEI unit
+Crop yield response,YEM,Millet,27.0,0.028293777676494,0.0378852113172396,fraction of trend per SPEI unit
+Crop yield response,YEM,Potatoes,31.0,-0.0249696339775362,-0.0204450632961507,fraction of trend per SPEI unit
+Crop yield response,YEM,"Seed cotton, unginned",29.0,0.0218027651343677,0.0185208054998932,fraction of trend per SPEI unit
+Crop yield response,YEM,Sorghum,27.0,0.1310047247772541,0.1121150152309985,fraction of trend per SPEI unit
+Response diversity,AFG,,6.0,0.0371496515070875,0.0443368500093113,weighted SD of crop slopes
+Response diversity,AGO,,5.0,0.2178102908822149,0.3066402745409847,weighted SD of crop slopes
+Response diversity,ALB,,4.0,0.0163488339179135,0.0238077113166433,weighted SD of crop slopes
+Response diversity,ARG,,9.0,0.0191660878434305,0.048150698645353,weighted SD of crop slopes
+Response diversity,ARM,,3.0,0.022296481140592,0.0358655500051669,weighted SD of crop slopes
+Response diversity,AUS,,8.0,0.098512024895878,0.1010176029034225,weighted SD of crop slopes
+Response diversity,AUT,,8.0,0.010155509830363,0.0142813818957399,weighted SD of crop slopes
+Response diversity,AZE,,5.0,0.0159976559429233,0.0138967085615763,weighted SD of crop slopes
+Response diversity,BEN,,7.0,0.0111727610948099,0.0154787721909516,weighted SD of crop slopes
+Response diversity,BFA,,6.0,0.0220170821781197,0.0259118231806862,weighted SD of crop slopes
+Response diversity,BGD,,4.0,0.0039612727932691,0.0122578936528151,weighted SD of crop slopes
+Response diversity,BGR,,6.0,0.0448150283266596,0.0570249682151636,weighted SD of crop slopes
+Response diversity,BIH,,5.0,0.0482207503466204,0.0473014202916843,weighted SD of crop slopes
+Response diversity,BLR,,7.0,0.0236597875256677,0.0270391193295411,weighted SD of crop slopes
+Response diversity,BLX,,5.0,0.020839266043173,0.0297590995440863,weighted SD of crop slopes
+Response diversity,BOL,,10.0,0.0158369370806644,0.020619369010167,weighted SD of crop slopes
+Response diversity,BRA,,8.0,0.0186856673513018,0.0286051903922896,weighted SD of crop slopes
+Response diversity,CAN,,6.0,0.033121860887552,0.0241506745422126,weighted SD of crop slopes
+Response diversity,CHE,,6.0,0.0150996717462034,0.0187169114287122,weighted SD of crop slopes
+Response diversity,CHN,,8.0,0.0173957036725413,0.0169515710371834,weighted SD of crop slopes
+Response diversity,COL,,4.0,0.007001874964351,0.0125479491998658,weighted SD of crop slopes
+Response diversity,CUB,,6.0,0.038626083597952,0.060537556750548,weighted SD of crop slopes
+Response diversity,CZE,,6.0,0.0131540101047478,0.0109459477631261,weighted SD of crop slopes
+Response diversity,DEU,,6.0,0.0115651732398582,0.0175032407946492,weighted SD of crop slopes
+Response diversity,DNK,,5.0,0.0111536557338563,0.0181383945245253,weighted SD of crop slopes
+Response diversity,DOM,,2.0,0.0015449963643033,0.0052925731974925,weighted SD of crop slopes
+Response diversity,DZA,,2.0,0.0772491595987457,0.0745143446163088,weighted SD of crop slopes
+Response diversity,ECU,,3.0,0.0246647506030698,0.0259683158900303,weighted SD of crop slopes
+Response diversity,EGY,,7.0,0.00803386715599,0.0137641971023524,weighted SD of crop slopes
+Response diversity,ESP,,5.0,0.0558208822807169,0.0668277682599115,weighted SD of crop slopes
+Response diversity,EST,,4.0,0.0267130888902335,0.0340343634467645,weighted SD of crop slopes
+Response diversity,ETH,,6.0,0.0602144997132727,0.0533147413751818,weighted SD of crop slopes
+Response diversity,FIN,,5.0,0.0183328497537694,0.0198344044823722,weighted SD of crop slopes
+Response diversity,FJI,,3.0,0.0060406282038455,0.0158149507990951,weighted SD of crop slopes
+Response diversity,FRA,,7.0,0.0185121860415883,0.0239287233991077,weighted SD of crop slopes
+Response diversity,GBR,,5.0,0.0089523264000788,0.0151563972617722,weighted SD of crop slopes
+Response diversity,GHA,,3.0,0.0109675025552598,0.0112035579321739,weighted SD of crop slopes
+Response diversity,GMB,,5.0,0.0230527974779535,0.0219041561872281,weighted SD of crop slopes
+Response diversity,GRC,,4.0,0.0080543910015905,0.0065859459472795,weighted SD of crop slopes
+Response diversity,GTM,,4.0,0.001937726546883,0.0061580028465167,weighted SD of crop slopes
+Response diversity,GUY,,2.0,0.0056006367070479,0.0165541442028627,weighted SD of crop slopes
+Response diversity,HRV,,8.0,0.0549435733310213,0.0559225089135464,weighted SD of crop slopes
+Response diversity,HUN,,7.0,0.0441284239108202,0.0428438077762093,weighted SD of crop slopes
+Response diversity,IND,,11.0,0.0403107502645977,0.04335139597018,weighted SD of crop slopes
+Response diversity,IRL,,4.0,0.0062897574842058,0.0053157262778153,weighted SD of crop slopes
+Response diversity,IRN,,5.0,0.0156134834200118,0.0431282496845848,weighted SD of crop slopes
+Response diversity,ISR,,2.0,0.0704218462489547,0.0797762086968148,weighted SD of crop slopes
+Response diversity,ITA,,6.0,0.0228674572069152,0.0238017807563267,weighted SD of crop slopes
+Response diversity,JPN,,3.0,0.0121226734553922,0.0208944909431121,weighted SD of crop slopes
+Response diversity,KAZ,,7.0,0.0443358122337745,0.0439673006931311,weighted SD of crop slopes
+Response diversity,KGZ,,7.0,0.0310472522394395,0.0320480145566922,weighted SD of crop slopes
+Response diversity,KHM,,3.0,0.0066273273619856,0.0031476335492188,weighted SD of crop slopes
+Response diversity,KOR,,2.0,0.0011491143754843,0.001809992955493,weighted SD of crop slopes
+Response diversity,LAO,,4.0,0.0063239859917759,0.0073692412459186,weighted SD of crop slopes
+Response diversity,LTU,,6.0,0.027528008464537,0.0263381769016213,weighted SD of crop slopes
+Response diversity,LVA,,5.0,0.0151045601910424,0.0166045448684816,weighted SD of crop slopes
+Response diversity,MAR,,4.0,0.0605146402941654,0.1084388490465529,weighted SD of crop slopes
+Response diversity,MDA,,6.0,0.0189433113589603,0.0358363853804482,weighted SD of crop slopes
+Response diversity,MEX,,6.0,0.0134162420230612,0.0141439614338912,weighted SD of crop slopes
+Response diversity,MKD,,4.0,0.0117669226582441,0.0128281888522162,weighted SD of crop slopes
+Response diversity,MLI,,6.0,0.0355574042388493,0.0364098588799468,weighted SD of crop slopes
+Response diversity,MMR,,6.0,0.0079563006334129,0.0038544678517804,weighted SD of crop slopes
+Response diversity,MWI,,6.0,0.030387770649149,0.048245156544443,weighted SD of crop slopes
+Response diversity,NER,,4.0,0.0142836320788921,0.0073001478405594,weighted SD of crop slopes
+Response diversity,NGA,,6.0,0.0245387144582159,0.0343080085664509,weighted SD of crop slopes
+Response diversity,NIC,,6.0,0.0114816418331923,0.0117371386597033,weighted SD of crop slopes
+Response diversity,NLD,,4.0,0.0124510117224513,0.0163127244341268,weighted SD of crop slopes
+Response diversity,NOR,,3.0,0.0108678146360326,0.0240349672593339,weighted SD of crop slopes
+Response diversity,NPL,,6.0,0.0116223145918134,0.012692957343496,weighted SD of crop slopes
+Response diversity,PAK,,6.0,0.0234682284350787,0.0277786450616821,weighted SD of crop slopes
+Response diversity,PER,,6.0,0.012660098981557,0.0102225153941981,weighted SD of crop slopes
+Response diversity,PHL,,4.0,0.0112567843790784,0.0096631513234099,weighted SD of crop slopes
+Response diversity,POL,,6.0,0.0094864289463251,0.0084431657717563,weighted SD of crop slopes
+Response diversity,PRT,,4.0,0.0185569112339367,0.0070302222959675,weighted SD of crop slopes
+Response diversity,PRY,,7.0,0.0279208589937984,0.0438424184976945,weighted SD of crop slopes
+Response diversity,ROU,,6.0,0.0333674332685179,0.048808478936299,weighted SD of crop slopes
+Response diversity,RUS,,8.0,0.0271142999966955,0.0259565140531172,weighted SD of crop slopes
+Response diversity,SAU,,3.0,0.0252502813351939,0.0366235626393002,weighted SD of crop slopes
+Response diversity,SCG,,7.0,0.0550695118263122,0.0529900526781319,weighted SD of crop slopes
+Response diversity,SDX,,7.0,0.0510025665879392,0.0447843089586106,weighted SD of crop slopes
+Response diversity,SEN,,7.0,0.0364745915718184,0.0368775729436516,weighted SD of crop slopes
+Response diversity,SLV,,5.0,0.0238906774292503,0.034400833014806,weighted SD of crop slopes
+Response diversity,SVK,,8.0,0.0346819734708934,0.0340842960695999,weighted SD of crop slopes
+Response diversity,SVN,,4.0,0.0255710440575429,0.0470826337005172,weighted SD of crop slopes
+Response diversity,SWE,,4.0,0.0121667878685782,0.0155394033569274,weighted SD of crop slopes
+Response diversity,SYR,,4.0,0.0694631204087138,0.1336644481874029,weighted SD of crop slopes
+Response diversity,TCD,,7.0,0.0461633280035324,0.0452687787229733,weighted SD of crop slopes
+Response diversity,TGO,,8.0,0.0383525281536613,0.0325060833088049,weighted SD of crop slopes
+Response diversity,THA,,4.0,0.0113779264026437,0.0106424866420366,weighted SD of crop slopes
+Response diversity,TJK,,5.0,0.0427910614173212,0.0247339849891948,weighted SD of crop slopes
+Response diversity,TKM,,3.0,0.0396368607155193,0.0369393062275657,weighted SD of crop slopes
+Response diversity,TUR,,7.0,0.0152605226211939,0.0198539361695525,weighted SD of crop slopes
+Response diversity,TWN,,4.0,0.0017100923165839,0.0071157882592708,weighted SD of crop slopes
+Response diversity,TZA,,6.0,0.0338011592901906,0.0386403997060744,weighted SD of crop slopes
+Response diversity,UKR,,8.0,0.0159192045715863,0.0166680252418793,weighted SD of crop slopes
+Response diversity,URY,,8.0,0.038752355903818,0.0898029352246834,weighted SD of crop slopes
+Response diversity,USA,,7.0,0.0160674089408792,0.0172143492743397,weighted SD of crop slopes
+Response diversity,UZB,,4.0,0.0139533480623153,0.0134272428094921,weighted SD of crop slopes
+Response diversity,VEN,,7.0,0.0084561646679562,0.008922959017193,weighted SD of crop slopes
+Response diversity,VNM,,5.0,0.0118725362342474,0.0098302859658243,weighted SD of crop slopes
+Response diversity,YEM,,4.0,0.0706153448671318,0.0596792612467586,weighted SD of crop slopes
+Resistance,AFG,,,0.8655979163822223,0.8867780396225216,output-index ratio
+Resistance,ALB,,,1.006906416291436,1.0057678369233225,output-index ratio
+Resistance,ARE,,,1.042164546054787,1.042164546054787,output-index ratio
+Resistance,ARG,,,0.9899385995509477,0.7870421346811981,output-index ratio
+Resistance,ARM,,,0.9423045214619836,1.0198589911049445,output-index ratio
+Resistance,AUS,,,0.7636853387014543,0.7636853387014543,output-index ratio
+Resistance,AUT,,,0.9613439940498671,1.0023765279464685,output-index ratio
+Resistance,AZE,,,0.8856822359261464,0.8856822359261464,output-index ratio
+Resistance,BEN,,,0.9170449669072592,0.919290843074456,output-index ratio
+Resistance,BFA,,,0.869353046927203,0.869353046927203,output-index ratio
+Resistance,BGD,,,0.996290381543266,0.986073826747516,output-index ratio
+Resistance,BGR,,,1.0349314931382845,0.8656266554159833,output-index ratio
+Resistance,BIH,,,0.8966716966252049,0.8966716966252049,output-index ratio
+Resistance,BLR,,,0.852401974948837,0.8838659660745689,output-index ratio
+Resistance,BLX,,,1.0183491737736663,1.0363942810336726,output-index ratio
+Resistance,BOL,,,0.9681009491306244,0.984207433513353,output-index ratio
+Resistance,CHE,,,0.9635420051638428,0.9766519929480256,output-index ratio
+Resistance,COL,,,1.0006199364822483,1.0230239461416233,output-index ratio
+Resistance,CRI,,,1.0859943744653298,1.0859943744653298,output-index ratio
+Resistance,CUB,,,1.046479208113319,1.046479208113319,output-index ratio
+Resistance,CZE,,,1.029233285828893,0.93255738826484,output-index ratio
+Resistance,DEU,,,0.910718717445462,0.910718717445462,output-index ratio
+Resistance,DNK,,,1.0066862640805303,1.0271618116297354,output-index ratio
+Resistance,DOM,,,1.0129499023639386,1.012273103583487,output-index ratio
+Resistance,DZA,,,0.943528772939458,0.8939375371683858,output-index ratio
+Resistance,ECU,,,0.9686534504548326,1.0055885343351905,output-index ratio
+Resistance,EGY,,,1.009972028607501,1.009972028607501,output-index ratio
+Resistance,ESP,,,0.9472727961106144,1.1029733456030562,output-index ratio
+Resistance,EST,,,0.875756655740539,0.9083311311116884,output-index ratio
+Resistance,ETH,,,0.9433064632458354,0.9433064632458354,output-index ratio
+Resistance,FIN,,,0.9869936888552212,0.9249592877979632,output-index ratio
+Resistance,FJI,,,1.0353450682946503,1.0353450682946503,output-index ratio
+Resistance,FRA,,,0.9976933941043948,1.0516047554544568,output-index ratio
+Resistance,GBR,,,1.0069756592109522,0.9932023745857218,output-index ratio
+Resistance,GMB,,,0.6978911542814619,1.0693317188082534,output-index ratio
+Resistance,GRC,,,1.0131726024025745,1.0331087484806258,output-index ratio
+Resistance,GTM,,,1.012776408350453,1.0293674454300228,output-index ratio
+Resistance,HRV,,,0.8169860716105166,0.8859885087270049,output-index ratio
+Resistance,HUN,,,0.8926924238049879,0.7974293793777439,output-index ratio
+Resistance,IRL,,,1.025785194153933,0.7296141244418116,output-index ratio
+Resistance,IRN,,,0.9365508388885484,0.9967319519740424,output-index ratio
+Resistance,ISR,,,0.945283733985761,0.945283733985761,output-index ratio
+Resistance,ITA,,,0.9268307548623428,0.9253627749865554,output-index ratio
+Resistance,JAM,,,0.9960950741467908,0.9960950741467908,output-index ratio
+Resistance,JOR,,,0.8656897032542188,0.8656897032542188,output-index ratio
+Resistance,KAZ,,,0.9341701065215624,0.8887747548374189,output-index ratio
+Resistance,KGZ,,,1.0084333327754724,0.9716373934210882,output-index ratio
+Resistance,KHM,,,0.9386326411396078,0.9386326411396078,output-index ratio
+Resistance,KOR,,,0.9854296184524308,0.9854296184524308,output-index ratio
+Resistance,LAO,,,0.981065635316998,0.981065635316998,output-index ratio
+Resistance,LTU,,,1.150213769508139,0.9015111766833196,output-index ratio
+Resistance,LVA,,,0.9818607974448648,1.0064728946782695,output-index ratio
+Resistance,MAR,,,1.0860103612740286,0.8765242882219076,output-index ratio
+Resistance,MDA,,,0.9499206868638924,0.8883051784854913,output-index ratio
+Resistance,MKD,,,1.0189570929125955,0.943059484349262,output-index ratio
+Resistance,MLI,,,1.053048975159191,1.053048975159191,output-index ratio
+Resistance,MMR,,,0.9046233314054,0.892682987272579,output-index ratio
+Resistance,MNG,,,0.8969581056917902,0.8966800255526375,output-index ratio
+Resistance,MWI,,,0.8753779863455416,0.8287458764115908,output-index ratio
+Resistance,NER,,,0.9911326763309438,0.8272355959214364,output-index ratio
+Resistance,NIC,,,1.0062164829920448,0.9301615686282464,output-index ratio
+Resistance,NLD,,,0.9525457847614932,0.9981940691931752,output-index ratio
+Resistance,NOR,,,0.6996844503311085,1.0271286739192895,output-index ratio
+Resistance,NPL,,,0.978132082811715,0.9753026920601888,output-index ratio
+Resistance,PAK,,,1.0255283148342391,1.0494856334950553,output-index ratio
+Resistance,POL,,,0.9079103197755214,0.9079103197755214,output-index ratio
+Resistance,PRT,,,0.9205873844798074,0.9858398271980062,output-index ratio
+Resistance,PRY,,,1.0888138262648652,1.0888138262648652,output-index ratio
+Resistance,ROU,,,1.0601783423179356,0.6954820668018625,output-index ratio
+Resistance,RUS,,,0.9764068073081188,0.8367055233000863,output-index ratio
+Resistance,SAU,,,1.0029723320749793,0.9471224831280578,output-index ratio
+Resistance,SCG,,,0.8632651877025352,0.7720241131492689,output-index ratio
+Resistance,SDX,,,0.9852217298184108,0.9852217298184108,output-index ratio
+Resistance,SEN,,,0.9119970192078204,0.9119970192078204,output-index ratio
+Resistance,SLV,,,0.9530733662115904,0.9498856837206736,output-index ratio
+Resistance,SVK,,,0.9122764837742038,0.8431284447169354,output-index ratio
+Resistance,SVN,,,1.0278900141818443,1.037850792209602,output-index ratio
+Resistance,SWE,,,0.6314028966087221,0.6314028966087221,output-index ratio
+Resistance,SYR,,,0.8241409112145446,0.8028494483169807,output-index ratio
+Resistance,TCD,,,0.9469371356418936,0.9469371356418936,output-index ratio
+Resistance,TGO,,,0.8595998192317937,0.9990208947527932,output-index ratio
+Resistance,THA,,,0.9870364885003065,0.9870364885003065,output-index ratio
+Resistance,TJK,,,1.0092999638319653,1.0315307587236755,output-index ratio
+Resistance,TKM,,,1.0769572564326164,1.001170032866482,output-index ratio
+Resistance,TUR,,,1.0000405699732744,0.9187903879869644,output-index ratio
+Resistance,TWN,,,1.049090865849755,1.07348781961038,output-index ratio
+Resistance,TZA,,,0.909648458558062,0.94022807752053,output-index ratio
+Resistance,UKR,,,1.0628319781567288,0.8927981677479817,output-index ratio
+Resistance,URY,,,0.9426940713196814,0.9426940713196814,output-index ratio
+Resistance,USA,,,0.9367463188858716,0.9367463188858716,output-index ratio
+Resistance,UZB,,,0.9775855284538058,0.9834429000104244,output-index ratio
+Resistance,VEN,,,1.0148750911995503,1.0048257220009158,output-index ratio
+Resistance,VNM,,,1.0007432594702803,0.9850658794021588,output-index ratio
+Resistance,VUT,,,0.9820271488326306,1.1228611998692224,output-index ratio
+Recovery,AFG,,,1.114454620772942,1.1533333350957302,output-index ratio
+Recovery,ALB,,,1.0006419601937186,0.9946626631696116,output-index ratio
+Recovery,ARE,,,1.5268198269940063,1.5268198269940063,output-index ratio
+Recovery,ARG,,,0.9258388979588912,1.2397541015783269,output-index ratio
+Recovery,ARM,,,0.8931007714121659,1.0018469750852137,output-index ratio
+Recovery,AUS,,,1.1372374892737618,1.1372374892737618,output-index ratio
+Recovery,AUT,,,1.0463050917342178,0.9493210185949754,output-index ratio
+Recovery,AZE,,,1.0685556781775196,1.0685556781775196,output-index ratio
+Recovery,BEN,,,1.0792683221062525,1.0999283605083063,output-index ratio
+Recovery,BFA,,,1.152467631708375,1.152467631708375,output-index ratio
+Recovery,BGD,,,1.001111127493929,0.9967580741748576,output-index ratio
+Recovery,BGR,,,0.9467258893556416,1.206619003052429,output-index ratio
+Recovery,BIH,,,1.0777998167775154,1.0777998167775154,output-index ratio
+Recovery,BLR,,,1.1239979723851403,1.0795479800477228,output-index ratio
+Recovery,BLX,,,1.0217776986518716,0.9647517656949884,output-index ratio
+Recovery,BOL,,,1.0140262625474896,1.0051166197642394,output-index ratio
+Recovery,CHE,,,1.0446345901891363,1.1010289442814614,output-index ratio
+Recovery,COL,,,0.9780611226388032,1.0039647689058144,output-index ratio
+Recovery,CRI,,,0.967302859642846,0.967302859642846,output-index ratio
+Recovery,CUB,,,1.055000105103726,1.055000105103726,output-index ratio
+Recovery,CZE,,,0.9602736423187578,1.0499114257983106,output-index ratio
+Recovery,DEU,,,1.0631498898779297,1.0631498898779297,output-index ratio
+Recovery,DNK,,,1.0239730608954605,1.0239730608954605,output-index ratio
+Recovery,DOM,,,0.9585968238889168,0.9316567492697404,output-index ratio
+Recovery,DZA,,,0.951711788687328,1.1650317936680643,output-index ratio
+Recovery,ECU,,,1.0121827208301792,0.9893325887964646,output-index ratio
+Recovery,EGY,,,0.959613419620548,0.959613419620548,output-index ratio
+Recovery,ESP,,,1.0271666461884086,0.8711306712551332,output-index ratio
+Recovery,EST,,,1.2489202913871398,1.2447738261672228,output-index ratio
+Recovery,ETH,,,1.018065453101232,1.018065453101232,output-index ratio
+Recovery,FIN,,,1.0853239265251136,1.1372730839787808,output-index ratio
+Recovery,FJI,,,1.0554180490426537,1.0554180490426537,output-index ratio
+Recovery,FRA,,,0.9864802462414431,0.9864802462414431,output-index ratio
+Recovery,GBR,,,0.9698059710189816,0.9952433451238208,output-index ratio
+Recovery,GMB,,,1.2071429924931767,0.9766642890561896,output-index ratio
+Recovery,GRC,,,0.9883127720488368,0.9565670328415928,output-index ratio
+Recovery,GTM,,,0.981702956753428,0.9683886928634408,output-index ratio
+Recovery,HRV,,,1.03457492360865,1.14163011066266,output-index ratio
+Recovery,HUN,,,1.0369584777355958,1.1364071466074348,output-index ratio
+Recovery,IRL,,,1.0540511017500485,1.2541340528879492,output-index ratio
+Recovery,IRN,,,0.9895283369401529,0.9457749146193172,output-index ratio
+Recovery,ISR,,,0.9777546047132536,0.9777546047132536,output-index ratio
+Recovery,ITA,,,1.0230524019829863,1.1042372680841157,output-index ratio
+Recovery,JAM,,,0.981475144105586,0.981475144105586,output-index ratio
+Recovery,JOR,,,1.1664559984197358,1.1664559984197358,output-index ratio
+Recovery,KAZ,,,1.052696716458312,1.144798564483104,output-index ratio
+Recovery,KGZ,,,1.0145313059150771,1.026872516346505,output-index ratio
+Recovery,KHM,,,1.1197847466931117,1.1197847466931117,output-index ratio
+Recovery,KOR,,,1.007242982361944,1.007242982361944,output-index ratio
+Recovery,LAO,,,1.0226916760072324,0.989830735490554,output-index ratio
+Recovery,LTU,,,0.9868119643527876,1.075906908779353,output-index ratio
+Recovery,LVA,,,0.9369993633431208,1.0349778026846237,output-index ratio
+Recovery,MAR,,,0.9259698067944886,1.024102116909767,output-index ratio
+Recovery,MDA,,,1.1991688503261495,1.0485841877391904,output-index ratio
+Recovery,MKD,,,1.030067276734088,1.0650337204640334,output-index ratio
+Recovery,MLI,,,1.0182253958436422,1.0182253958436422,output-index ratio
+Recovery,MMR,,,1.0701093639916608,1.0232791918129405,output-index ratio
+Recovery,MNG,,,0.911716313282802,1.2454415378204855,output-index ratio
+Recovery,MWI,,,0.9972603615901672,1.3036387399220524,output-index ratio
+Recovery,NER,,,1.022493948436352,1.1226361694247715,output-index ratio
+Recovery,NIC,,,1.0082369335194477,1.0304611571198488,output-index ratio
+Recovery,NLD,,,1.0510281619753987,1.0054413869958652,output-index ratio
+Recovery,NOR,,,1.3593319576121128,0.9802559341624126,output-index ratio
+Recovery,NPL,,,0.990267153151499,1.030980582063432,output-index ratio
+Recovery,PAK,,,0.9455106431918192,0.9156966864251618,output-index ratio
+Recovery,POL,,,1.0564614258008145,1.0564614258008145,output-index ratio
+Recovery,PRT,,,1.09372001417965,0.9920102118296236,output-index ratio
+Recovery,PRY,,,0.7870719325164671,0.9731946757023098,output-index ratio
+Recovery,ROU,,,0.8524912087522628,1.3304300161448568,output-index ratio
+Recovery,RUS,,,1.0409222110944156,1.1850254191994316,output-index ratio
+Recovery,SAU,,,1.0021372773814723,1.0503344375714567,output-index ratio
+Recovery,SCG,,,1.0669914136509726,1.2100754163417229,output-index ratio
+Recovery,SDX,,,0.9580831998399164,0.9580831998399164,output-index ratio
+Recovery,SEN,,,1.0451727018004269,1.0451727018004269,output-index ratio
+Recovery,SLV,,,1.0377363245524198,1.043324499051455,output-index ratio
+Recovery,SVK,,,1.0558321120249785,1.1765252259514076,output-index ratio
+Recovery,SVN,,,0.9388339904509806,0.8878163646959143,output-index ratio
+Recovery,SWE,,,1.564945119996444,1.564945119996444,output-index ratio
+Recovery,SYR,,,1.2107329988487354,1.227951330523336,output-index ratio
+Recovery,TCD,,,1.0503968895438538,1.0503968895438538,output-index ratio
+Recovery,TGO,,,1.1038232521813025,1.0090672387139878,output-index ratio
+Recovery,THA,,,0.968090843332424,0.968090843332424,output-index ratio
+Recovery,TJK,,,1.067270291644869,1.031387788420944,output-index ratio
+Recovery,TKM,,,0.9256558920982676,0.977826503232756,output-index ratio
+Recovery,TUR,,,0.9980310941867426,1.0434213976212183,output-index ratio
+Recovery,TWN,,,0.9489120352747108,0.9606542059669356,output-index ratio
+Recovery,TZA,,,1.1202147098755106,1.1141121573799466,output-index ratio
+Recovery,UKR,,,0.9402621560861368,1.1424448588480027,output-index ratio
+Recovery,URY,,,1.1511450830086876,1.1511450830086876,output-index ratio
+Recovery,USA,,,1.0778972138532954,1.0778972138532954,output-index ratio
+Recovery,UZB,,,1.0016124409590392,1.0016124409590392,output-index ratio
+Recovery,VEN,,,1.0024450465207406,0.9196495567651451,output-index ratio
+Recovery,VNM,,,0.9996110931483816,1.0500871068245088,output-index ratio
+Recovery,VUT,,,1.071801121117983,0.937975260535178,output-index ratio

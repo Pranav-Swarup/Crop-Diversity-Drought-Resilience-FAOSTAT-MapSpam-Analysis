@@ -1,5 +1,10 @@
 # Phase 4 design: does crop diversity cause drought resilience? Evidence from Indian districts
 
+## Status after the presented Phase 4 study
+
+This document preserves the design used for the presented DES and five-crop results. Pmjarvis’s follow-up estimates the same type of diversity interaction on the ICRISAT/TCI 1966 parent geography, using historical farm prices and prior-year crop irrigation. It also compares agricultural quantities on geographically aligned units and tests four price schedules on the same observations. [Follow-up findings](../future_work/FINDINGS.md#official-indian-district-data) · [District sources and boundary rules](../future_work/DISTRICT.md)
+
+
 This is the original Phase 4 proposal. The district pipeline shipped in November 2026. It uses the DES core sample and a separate five-crop ICRISAT mirror sample. The methods note records the adopted sources, periods, boundary matching and remaining limitations. [Implemented methods](../src/india/README.md) · [District results](../outputs/stats/india_panel.csv)
 
 ## 1. Why this phase

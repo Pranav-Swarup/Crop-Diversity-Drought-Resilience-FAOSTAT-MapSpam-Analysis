@@ -1,5 +1,11 @@
 # src/india: phase 4, Indian districts (docs/phase4-design.md)
 
+## Official apportioned-data follow-up
+
+Pmjarvis implemented the follow-up on 311 historical ICRISAT/TCI districts. The archived crop and irrigation exports cover 1966–2017 and the farm-price export covers 1966–2016. The main model uses observed 2015 prices. The core and five-crop models below are the presented comparators. [Results and figures](../../future_work/FINDINGS.md#official-indian-district-data) · [Sources and limits](../../future_work/DISTRICT.md)
+
+The extension audits the crop export against a World Bank deposit and compares crop-specific irrigated area with the government land-use series on aligned districts. The data retain conflicting source values and flag uncertain units and boundaries. The release dates visible in the archive do not establish the current live edition. [Boundary and unit rules](../../future_work/DISTRICT.md#what-can-be-compared-across-district-boundaries) · [Access record](../../future_work/results/district_status.json)
+
 The DES core covers 308 eligible districts from 1998–2022, with 6,160 observations in the lagged-diversity model. The separate five-crop analysis covers 127 districts from 1993–2015, with 2,286 model observations. The explorer displays each sample on a separate map. [Sample counts](../../outputs/stats/india_summary.csv) · [Panel estimates](../../outputs/stats/india_panel.csv)
 
 ## Run order

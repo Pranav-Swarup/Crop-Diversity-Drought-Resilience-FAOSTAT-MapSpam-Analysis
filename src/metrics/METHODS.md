@@ -1,5 +1,12 @@
 # Metrics: methods note
 
+## Follow-up estimators
+
+Pmjarvis’s separate pipeline reuses the presented event, detrending, resilience, and country-clustered estimators. Its new inputs are calendar-aligned SPEI, hourly heat accumulation, satellite vegetation, and the historical FAOSTAT panel. Its methods specify the crop coverage denominator, temperature thresholds, historical eligibility, and power calculation. [Follow-up methods](../../future_work/README.md) · [Comparison tables](../../future_work/FINDINGS.md)
+
+The district extension uses district and state-by-year fixed effects, prior five-year Hill-1 crop diversity, observed constant farm prices, prior-year crop irrigation and district-clustered intervals. Independent fits and shared-price-basket estimates document sample and weighting effects. [District estimator and coverage](../../future_work/DISTRICT.md) · [Model results](../../future_work/results/district_comparison.csv)
+
+
 Factual description of what `src/metrics/` computes. Fixed choices come from `CLAUDE.md`; choices marked **default** are ones `CLAUDE.md` leaves open and can be changed.
 
 ## Run

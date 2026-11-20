@@ -1,5 +1,16 @@
 # Research Report: Crop Diversity & Drought Resilience
 
+## Post-presentation studies by Pmjarvis
+
+The original report describes the delivered presentation. Pmjarvis’s separate studies compare that baseline with planting-to-harvest drought, hourly ERA5 heat and satellite vegetation, a 1961–2023 extreme-drought panel, and historical Indian district estimates using ICRISAT farm prices and crop-wise irrigation. [Follow-up findings and figure index](future_work/FINDINGS.md) · [Methods and source access](future_work/README.md)
+
+- **Growing-season drought.** On 3,317 country-years, the presented definition classified 626 as dry. December drought on the matched crop basket classified 622, and the planting-to-harvest definition classified 524. At mean crop diversity the estimated output difference changed from −4.41% of trend under the presented definition to −5.48% under the seasonal definition. [Figure and values](future_work/results/figure_01_drought.csv)
+- **Daily heat and crop stress.** Among the same 2,771 country-years in 99 countries, the presented heat and drought definitions identified 150 jointly hot and dry years. Seasonal ERA5 heat above 30°C and seasonal drought identified 194. Estimated crop output was 5.68% of trend lower under the presented classification and 8.48% lower under the seasonal classification, each relative to years meeting neither threshold. Satellite greenness was 2.64 Vegetation Condition Index points lower in the new compound group. [Figure and values](future_work/results/figure_03_heat.csv)
+- **Power for extreme droughts.** Across the same 75 countries, adding 1961–1992 increased extreme observations from 30 to 49. The approximate effect detectable with 80% power fell from 7.50 to 4.89 percentage points of output trend per standard deviation of crop diversity. [Figure and values](future_work/results/figure_04_extremes.csv)
+
+- **Better district data.** The 1966–2017 archived model includes 176 districts and 8,272 district-years. The interaction between moisture balance and prior diversity is −0.67 percentage points of output trend (95% interval −2.20 to +0.86). The later 1998–2017 fit gives +1.46 (−0.08 to +3.00). Both intervals include zero. [District model comparison and source checks](future_work/FINDINGS.md#official-indian-district-data)
+
+
 **FAOSTAT × MapSPAM × SPEIbase Analysis (1993–2023)**
 
 This document is the comprehensive record of the methodology, data pipelines, assumptions, reproducible analyses, and statistical findings for evaluating whether greater crop diversity makes national agricultural production more resilient to climatic variability.
@@ -156,5 +167,5 @@ python -m src.validation.case_studies --high COL --low FIN
 python -m src.explorer               # → explorer/index.html, figures/deck/*
 ```
 
-All statistical outputs are saved as CSVs in `outputs/stats/` for inspection and further analysis.
+The presented analyses save their statistical tables in `outputs/stats/`. Follow-up figures and statistical tables are indexed in the [post-presentation findings](future_work/FINDINGS.md).
 

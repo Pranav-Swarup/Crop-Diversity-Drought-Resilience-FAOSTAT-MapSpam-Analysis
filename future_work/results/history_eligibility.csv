@@ -1,0 +1,181 @@
+iso3,first_year,last_year,n_years,good_years,crops,mean_ha,old_cohort,eligible,reason
+AFG,1961,2023,63,53,40,3327917.285714286,True,True,
+AGO,1961,2023,63,31,35,2816033.714285714,True,False,insufficient years meeting the reporting rule
+ALB,1961,2023,63,56,60,412477.3650793651,True,True,
+ARE,1961,2023,63,44,30,59832.031746031746,True,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+ARG,1961,2023,63,63,74,23410295.873015873,True,True,
+ARM,1992,2023,32,32,41,271442.0,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+ATG,1961,2023,63,11,28,2166.222222222222,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+AUS,1961,2023,63,63,91,18702602.111111112,True,True,
+AUT,1961,2023,63,63,64,1168237.380952381,True,True,
+AZE,1992,2023,32,32,63,1258152.0,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+BDI,1961,2023,63,14,26,1191152.0158730159,False,False,insufficient years meeting the reporting rule
+BEN,1961,2023,63,62,43,1925669.396825397,True,True,
+BFA,1961,2023,63,58,38,4419016.031746032,True,True,
+BGD,1961,2023,63,63,63,13927823.142857144,True,True,
+BGR,1961,2023,63,63,89,3129365.206349206,True,True,
+BHR,1961,2023,63,21,23,3043.2380952380954,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+BHS,1961,2023,63,4,24,6407.539682539683,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+BIH,1992,2023,32,26,55,548260.96875,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+BLR,1992,2023,32,32,38,3484661.09375,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+BLX,1961,2023,63,63,55,636757.3333333334,True,True,
+BLZ,1961,2023,63,60,40,65549.49206349206,False,False,crop count or area below baseline rule
+BOL,1961,2023,63,63,69,1927095.507936508,True,True,
+BRA,1961,2023,63,63,71,54347953.428571425,True,True,
+BRB,1961,2023,63,52,28,14609.968253968254,False,False,crop count or area below baseline rule
+BRN,1961,2023,63,7,26,17127.93650793651,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+BTN,1961,2023,63,22,66,113522.61904761905,False,False,insufficient years meeting the reporting rule
+BWA,1961,2023,63,3,21,171066.0,False,False,insufficient years meeting the reporting rule
+CAF,1961,2023,63,41,33,912825.126984127,False,False,insufficient years meeting the reporting rule
+CAN,1961,2023,63,63,60,25475829.984126985,True,True,
+CHE,1961,2023,63,63,60,266702.65079365077,True,True,
+CHL,1961,2023,63,45,72,1343757.650793651,False,False,insufficient years meeting the reporting rule
+CHN,1961,2023,63,51,116,153268214.2063492,True,True,
+CIV,1961,2023,63,38,56,6262914.857142857,False,False,insufficient years meeting the reporting rule
+CMR,1961,2023,63,33,67,4100517.523809524,False,False,insufficient years meeting the reporting rule
+COD,1961,2023,63,40,55,6969110.063492063,False,False,insufficient years meeting the reporting rule
+COG,1961,2023,63,18,43,262314.50793650793,False,False,insufficient years meeting the reporting rule
+COL,1961,2023,63,61,74,3990234.1746031744,True,True,
+CRI,1961,2023,63,61,56,446808.5238095238,True,True,
+CUB,1961,2023,63,62,45,1895698.650793651,True,True,
+CYP,1961,2023,63,60,74,147191.3492063492,False,True,
+CZE,1993,2023,31,31,68,2143982.0322580645,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+DEU,1961,2023,63,63,60,9430223.396825397,True,True,
+DJI,1961,2023,63,0,24,10704.539682539682,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+DMA,1961,2023,63,9,40,17230.777777777777,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+DNK,1961,2023,63,63,44,1847735.7142857143,True,True,
+DOM,1961,2023,63,55,59,913727.5396825396,True,True,
+DZA,1961,2023,63,61,60,3778194.714285714,True,True,
+ECU,1961,2023,63,63,79,2078276.396825397,True,True,
+EGY,1961,2023,63,63,77,4281648.507936508,True,True,
+ERI,1993,2023,31,5,22,604573.9032258064,False,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+ESP,1961,2023,63,63,104,13126457.396825397,True,True,
+EST,1992,2023,32,32,37,423242.59375,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+ETH,1993,2023,31,25,72,13617287.35483871,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+FIN,1961,2023,63,63,39,1248336.0952380951,True,True,
+FJI,1961,2023,63,63,37,104871.98412698413,True,True,
+FRA,1961,2023,63,63,88,13377217.333333334,True,True,
+GAB,1961,2023,63,0,25,193974.15873015873,False,False,insufficient years meeting the reporting rule
+GBR,1961,2023,63,63,40,4526749.0,True,True,
+GEO,1992,2023,32,25,51,477315.5625,False,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+GHA,1961,2023,63,51,48,4832992.095238095,True,True,
+GIN,1961,2023,63,11,41,2615434.9206349207,False,False,insufficient years meeting the reporting rule
+GMB,1961,2023,63,45,17,239087.20634920636,True,False,insufficient years meeting the reporting rule
+GNB,1961,2023,63,0,27,359310.04761904763,False,False,insufficient years meeting the reporting rule
+GNQ,1961,2023,63,0,10,111281.90476190476,False,False,insufficient years meeting the reporting rule
+GRC,1961,2023,63,63,91,2815841.095238095,True,True,
+GRD,1961,2023,63,2,45,13555.682539682539,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+GTM,1961,2023,63,58,60,1732160.4444444445,True,True,
+GUY,1961,2023,63,58,45,192093.50793650793,True,True,
+HKG,1961,2023,63,19,15,8428.095238095239,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+HND,1961,2023,63,49,50,898930.2857142857,False,False,insufficient years meeting the reporting rule
+HRV,1992,2023,32,32,72,850572.15625,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+HTI,1961,2023,63,7,44,1216815.492063492,False,False,insufficient years meeting the reporting rule
+HUN,1961,2023,63,63,87,4008156.9206349207,True,True,
+IDN,1961,2023,63,53,60,28762898.07936508,False,True,
+IND,1961,2023,63,63,85,177130310.17460316,True,True,
+IRL,1961,2023,63,63,32,399510.4603174603,True,True,
+IRN,1961,2023,63,41,86,11118548.174603175,True,False,insufficient years meeting the reporting rule
+IRQ,1961,2023,63,48,68,2975324.9365079366,False,False,insufficient years meeting the reporting rule
+ISL,1961,2023,63,38,7,1121.5555555555557,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+ISR,1961,2023,63,47,74,304008.95238095237,True,False,insufficient years meeting the reporting rule
+ITA,1961,2023,63,63,91,9037984.19047619,True,True,
+JAM,1961,2023,63,63,52,169130.7142857143,True,True,
+JOR,1961,2023,63,63,68,257804.60317460317,True,True,
+JPN,1961,2023,63,63,78,4118332.238095238,True,True,
+KAZ,1992,2023,32,32,66,17274628.40625,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+KEN,1961,2023,63,35,85,4217714.428571428,False,False,insufficient years meeting the reporting rule
+KGZ,1992,2023,32,32,68,918888.40625,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+KHM,1961,2023,63,57,31,2700076.507936508,True,True,
+KNA,1961,2023,63,30,19,4043.3015873015875,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+KOR,1961,2023,63,63,62,2327424.095238095,True,True,
+KWT,1961,2023,63,45,36,5183.460317460317,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+LAO,1961,2023,63,62,36,1067995.9841269841,True,True,
+LBN,1961,2023,63,45,65,233541.47619047618,False,False,insufficient years meeting the reporting rule
+LBR,1961,2023,63,2,23,483935.6984126984,False,False,insufficient climate coverage | insufficient years meeting the reporting rule
+LBY,1961,2023,63,29,46,660136.3174603175,False,False,insufficient years meeting the reporting rule
+LCA,1961,2023,63,11,34,10443.380952380952,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+LKA,1961,2023,63,42,52,2137354.698412698,False,False,insufficient years meeting the reporting rule
+LSO,1961,2023,63,36,10,232600.9841269841,False,False,insufficient years meeting the reporting rule
+LTU,1992,2023,32,32,59,1507923.9375,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+LVA,1992,2023,32,32,46,724512.5,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+MAC,1961,2023,63,0,1,91.41269841269842,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+MAR,1961,2023,63,63,94,6465552.19047619,True,True,
+MDA,1992,2023,32,32,55,1659898.78125,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+MDG,1961,2023,63,50,71,2594924.396825397,False,False,insufficient years meeting the reporting rule
+MEX,1961,2023,63,63,110,15557613.412698412,True,True,
+MKD,1992,2023,32,29,67,355119.9375,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+MLI,1961,2023,63,62,57,3856844.777777778,True,True,
+MLT,1961,2023,63,34,42,10324.15873015873,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+MMR,1961,2023,63,62,44,11577488.444444444,True,True,
+MNG,1961,2023,63,63,17,431085.4285714286,True,True,
+MOZ,1961,2023,63,27,41,4400860.222222222,False,False,insufficient years meeting the reporting rule
+MRT,1961,2023,63,29,19,306438.34920634923,False,False,insufficient years meeting the reporting rule
+MUS,1961,2023,63,63,38,80659.38095238095,False,False,crop count or area below baseline rule
+MWI,1961,2023,63,27,66,2818983.8095238097,True,False,insufficient years meeting the reporting rule
+MYS,1961,2023,63,24,52,5118748.555555556,False,False,insufficient years meeting the reporting rule
+NAM,1961,2023,63,0,25,282887.5396825397,False,False,insufficient years meeting the reporting rule
+NCL,1961,2023,63,0,20,14057.888888888889,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+NER,1961,2023,63,63,47,9811583.61904762,True,True,
+NGA,1961,2023,63,46,51,34877233.26984127,True,False,insufficient years meeting the reporting rule
+NIC,1961,2023,63,63,34,809547.4126984127,True,True,
+NLD,1961,2023,63,63,51,623595.126984127,True,True,
+NOR,1961,2023,63,63,31,340274.5714285714,True,True,
+NPL,1961,2023,63,63,54,3702728.1587301586,True,True,
+NZL,1961,2023,63,50,61,278218.84126984124,False,False,insufficient years meeting the reporting rule
+OMN,1961,2023,63,33,29,46478.36507936508,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+PAK,1961,2023,63,63,79,18390129.507936507,True,True,
+PAN,1961,2023,63,12,46,302929.15873015876,False,False,insufficient years meeting the reporting rule
+PER,1961,2023,63,63,97,2385721.111111111,True,True,
+PHL,1961,2023,63,63,72,12281535.492063493,True,True,
+PNG,1961,2023,63,0,34,833181.873015873,False,False,insufficient years meeting the reporting rule
+POL,1961,2023,63,63,68,11469568.42857143,True,True,
+PRI,1961,2023,63,32,41,95870.95238095238,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+PRK,1961,2023,63,1,34,2665891.73015873,False,False,insufficient years meeting the reporting rule
+PRT,1961,2023,63,43,82,1930403.4603174604,True,False,insufficient years meeting the reporting rule
+PRY,1961,2023,63,63,50,2724223.9365079366,True,True,
+PSE,1994,2022,29,22,71,148845.7931034483,False,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+QAT,1961,2023,63,44,34,3970.8571428571427,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+ROU,1961,2023,63,63,76,8679385.952380951,True,True,
+RUS,1992,2023,32,31,67,58030552.8125,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+RWA,1961,2023,63,46,42,1306621.126984127,False,False,insufficient years meeting the reporting rule
+SAU,1961,2023,63,53,39,688954.0952380953,True,True,
+SCG,1992,2023,32,32,69,2956775.5625,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+SDX,1961,2023,63,60,51,10677291.650793651,True,True,
+SEN,1961,2023,63,59,40,2551930.3492063493,True,True,
+SGP,1961,2023,63,2,16,3727.5873015873017,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+SLB,1961,2023,63,7,17,65559.57142857143,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+SLE,1961,2023,63,34,39,921256.4126984127,False,False,insufficient years meeting the reporting rule
+SLV,1961,2023,63,62,45,728498.9841269841,True,True,
+SOM,1961,2023,63,17,24,698107.2063492064,False,False,insufficient years meeting the reporting rule
+STP,1961,2023,63,1,20,45740.11111111111,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+SUR,1961,2023,63,63,31,64416.68253968254,False,False,crop count or area below baseline rule
+SVK,1993,2023,31,31,73,1116693.4193548388,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+SVN,1992,2023,32,32,71,144445.1875,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+SWE,1961,2023,63,63,45,1505091.4444444445,True,True,
+SWZ,1961,2023,63,42,28,158112.22222222222,False,False,insufficient years meeting the reporting rule
+SYR,1961,2023,63,63,74,4135086.587301587,True,True,
+TCD,1961,2023,63,62,24,2785424.206349206,True,True,
+TGO,1961,2023,63,51,37,1315671.0952380951,True,True,
+THA,1961,2023,63,57,69,16583932.587301588,True,True,
+TJK,1992,2023,32,28,44,831984.84375,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+TKM,1992,2023,32,28,26,1467750.25,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+TLS,1961,2023,63,16,29,148394.09523809524,False,False,insufficient years meeting the reporting rule
+TTO,1961,2023,63,36,42,69009.73015873016,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+TUN,1961,2023,63,46,73,3253069.396825397,False,False,insufficient years meeting the reporting rule
+TUR,1961,2023,63,63,95,19225315.634920634,True,True,
+TWN,1961,2023,63,60,73,1121278.0793650793,True,True,
+TZA,1961,2023,63,35,70,8592590.952380951,True,False,insufficient years meeting the reporting rule
+UGA,1961,2023,63,45,37,5758434.031746032,False,False,insufficient years meeting the reporting rule
+UKR,1992,2023,32,32,80,22664244.125,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+URY,1961,2023,63,63,45,1173032.7777777778,True,True,
+USA,1961,2023,63,63,93,99138827.33333333,True,True,
+UZB,1992,2023,32,32,76,3607949.0625,True,False,incomplete observations on a mapped territory | insufficient years meeting the reporting rule
+VCT,1961,2023,63,11,30,12662.904761904761,False,False,insufficient years meeting the reporting rule | crop count or area below baseline rule
+VEN,1961,2023,63,62,59,1743553.5396825396,True,True,
+VNM,1961,2023,63,63,43,10158679.61904762,True,True,
+VUT,1961,2023,63,51,31,88361.14285714286,True,False,insufficient climate coverage | crop count or area below baseline rule
+YEM,1961,2023,63,54,58,1125452.2698412698,True,True,
+ZAF,1961,2023,63,54,71,7201005.142857143,False,True,
+ZMB,1961,2023,63,34,32,1494592.9682539683,False,False,insufficient years meeting the reporting rule
+ZWE,1961,2023,63,50,79,2424412.587301587,False,False,insufficient years meeting the reporting rule

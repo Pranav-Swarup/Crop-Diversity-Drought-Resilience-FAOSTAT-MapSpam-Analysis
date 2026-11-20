@@ -1,0 +1,103 @@
+{
+  "source_spei": [
+    {
+      "iso3": "IND",
+      "mapspam_crop": "WHEA",
+      "year": 1994,
+      "season_spei_from_source": -0.27377691928668435,
+      "observed_ha": 20045465.880405933
+    },
+    {
+      "iso3": "BRA",
+      "mapspam_crop": "SOYB",
+      "year": 2015,
+      "season_spei_from_source": -0.4173502776372376,
+      "observed_ha": 34525725.91761345
+    },
+    {
+      "iso3": "NGA",
+      "mapspam_crop": "PMIL",
+      "year": 2005,
+      "season_spei_from_source": 0.15341221915272876,
+      "observed_ha": 2005502.2192918563
+    }
+  ],
+  "source_heat_seasons": [
+    {
+      "iso3": "JAM",
+      "mapspam_crop": "SUGC",
+      "year": 1994,
+      "calendar_ha": 5440.794377102749,
+      "first_day": "1994-01-01",
+      "last_day": "1994-12-31",
+      "weatherbench_days": 365,
+      "arco_days": 0,
+      "edd28": 18.549397141306034,
+      "edd30": 0.001687171216322535,
+      "edd32": 0.0
+    },
+    {
+      "iso3": "GMB",
+      "mapspam_crop": "POTA",
+      "year": 1994,
+      "calendar_ha": 1215.5691793898761,
+      "first_day": "1994-06-01",
+      "last_day": "1994-10-31",
+      "weatherbench_days": 153,
+      "arco_days": 0,
+      "edd28": 212.14112592357878,
+      "edd30": 102.72596577598631,
+      "edd32": 39.72727022524537
+    },
+    {
+      "iso3": "DOM",
+      "mapspam_crop": "COTT",
+      "year": 1994,
+      "calendar_ha": 185.7784743402167,
+      "first_day": "1993-08-01",
+      "last_day": "1994-02-28",
+      "weatherbench_days": 212,
+      "arco_days": 0,
+      "edd28": 24.641251487151052,
+      "edd30": 1.7244722043830745,
+      "edd32": 0.0
+    },
+    {
+      "iso3": "DOM",
+      "mapspam_crop": "COTT",
+      "year": 2023,
+      "calendar_ha": 185.7784743402167,
+      "first_day": "2022-08-01",
+      "last_day": "2023-02-28",
+      "weatherbench_days": 153,
+      "arco_days": 59,
+      "edd28": 34.44863549826631,
+      "edd30": 1.8816536791073297,
+      "edd32": 0.0
+    }
+  ],
+  "hourly_recalculations": [
+    {
+      "day": "1994-06-17",
+      "utc_hours": 24,
+      "thresholds_c": [
+        28,
+        30,
+        32
+      ],
+      "grid_cells": 29040,
+      "max_abs_difference_degree_days": 0.0
+    },
+    {
+      "day": "2023-01-04",
+      "utc_hours": 24,
+      "thresholds_c": [
+        28,
+        30,
+        32
+      ],
+      "grid_cells": 29040,
+      "max_abs_difference_degree_days": 0.0
+    }
+  ]
+}

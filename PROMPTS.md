@@ -1,5 +1,12 @@
 # Claude Code prompts, one per person
 
+## Assignments after the presentation
+
+The assignments below are the original project brief. Pmjarvis owns the four studies from the future-work slide in the delivered presentation, including new figures, data verification, and documentation. The dated inventory identifies the project guides and historical artifacts. [Current studies](future_work/README.md) · [Documentation inventory](future_work/DOCUMENTATION.md)
+
+The district assignment now has an empirical result on the publisher’s 1966 parent geography. Pmjarvis verified the archived crop tables against the World Bank copy, tested the farm-price and irrigation definitions, and compared the measurements with the presented and government series. [District results](future_work/FINDINGS.md#official-indian-district-data) · [Remaining limitations](future_work/DISTRICT.md)
+
+
 These are the original task assignments. The current implementation, build order and November verification are documented in the [README](README.md) and [project metadata](metadata.md#november-2026-verification).
 
 Put `CLAUDE.md` at the repo root first; Claude Code reads it automatically. Paste your prompt into Claude Code from the repo root. Start in plan mode (review the plan before it writes code).

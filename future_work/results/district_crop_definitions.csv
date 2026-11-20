@@ -1,0 +1,30 @@
+crop,inclusion,reason,price_field,irrigation_field,production_form
+RICE,included,,RICE HARVEST PRICE,RICE IRRIGATED AREA,"rice, milled"
+WHEAT,included,,WHEAT HARVEST PRICE,WHEAT IRRIGATED AREA,wheat
+KHARIF SORGHUM,excluded,included in annual sorghum,,KHARIF SORGHUM IRRIGATED AREA,kharif sorghum
+RABI SORGHUM,excluded,included in annual sorghum,,RABI SORGHUM IRRIGATED AREA,rabi sorghum
+SORGHUM,included,,SORGHUM HARVEST PRICE,SORGHUM IRRIGATED AREA,sorghum
+PEARL MILLET,included,,PEARL MILLET HARVEST PRICE,PEARL MILLET IRRIGATED AREA,pearl millet
+MAIZE,included,,MAIZE HARVEST PRICE,MAIZE IRRIGATED AREA,maize
+FINGER MILLET,included,,FINGER MILLET HARVEST PRICE,FINGER MILLET IRRIGATED AREA,finger millet
+BARLEY,included,,BARLEY HARVEST PRICE,BARLEY IRRIGATED AREA,barley
+CHICKPEA,included,,CHICKPEA HARVEST PRICE,CHICKPEA IRRIGATED AREA,chickpea
+PIGEONPEA,included,,PIGEONPEA HARVEST PRICE,PIGEONPEA IRRIGATED AREA,pigeonpea
+MINOR PULSES,excluded,residual group of several species,,MINOR PULSES IRRIGATED AREA,minor pulses
+GROUNDNUT,included,,GROUNDNUT HARVEST PRICE,GROUNDNUT IRRIGATED AREA,groundnut
+SESAMUM,included,,SEASMUM HARVEST PRICE,SESAMUM IRRIGATED AREA,sesamum
+RAPESEED AND MUSTARD,included,,RAPE AND MUSTARD HARVEST PRICE,RAPE AND MUSTARD IRRIGATED AREA,rapeseed and mustard
+SAFFLOWER,included,,,,safflower
+CASTOR,included,,CASTOR HARVEST PRICE,,castor
+LINSEED,included,,LINSEED HARVEST PRICE,LINSEED IRRIGATED AREA,linseed
+SUNFLOWER,included,,,,sunflower
+SOYABEAN,included,,,,soyabean
+OILSEEDS,excluded,aggregate overlaps individual oilseeds,,,oilseeds
+SUGARCANE,included,,SUGARCANE GUR HARVEST PRICE,SUGARCANE IRRIGATED AREA,"gur, raw sugar"
+COTTON,included,,,COTTON IRRIGATED AREA,lint
+FRUITS,excluded,area only; no production series,,,fruits
+VEGETABLES,excluded,area only; no production series,,,vegetables
+FRUITS AND VEGETABLES,excluded,area only; no production series,,FRUITS AND VEGETABLES IRRIGATED AREA,fruits and vegetables
+POTATOES,excluded,area only; no production series,,,potatoes
+ONION,excluded,area only; no production series,,,onion
+FODDER,excluded,area only; no production series,,FODDER IRRIGATED AREA,fodder

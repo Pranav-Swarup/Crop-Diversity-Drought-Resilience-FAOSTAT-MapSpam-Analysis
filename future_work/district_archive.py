@@ -304,6 +304,59 @@ def coverage_table(crop, names, climate, metrics, years):
     return out
 
 
+def archive_exclusions(crop, climate, names, years, dropped):
+    """Record the first failed eligibility rule for each district dropped by the presented estimator."""
+    from src.metrics.detrend import detrend
+
+    source = crop[crop.year.isin(years)]
+    measured = district.value_sample(source, years)
+    available = climate[climate.year.isin(years)].groupby("dist_code").spei12_w.count()
+    rows = []
+    for code in dropped.dist_code:
+        raw = source[source.dist_code.eq(code)]
+        priced = raw.loc[raw.reference_price_inr_t.notna(), "crop"].nunique()
+        balanced, share = district.metrics.district_value(
+            measured[measured.dist_code.eq(code)], years
+        )
+        if available.get(code, 0) < len(years):
+            reason = "incomplete district climate"
+        elif not priced:
+            reason = "no usable 2015 district-crop price"
+        elif len(balanced) < district.metrics.MIN_CROPS_VALUE:
+            reason = "fewer than three complete positively producing priced crops"
+        elif not np.isfinite(share) or share < district.metrics.MIN_COVERAGE:
+            reason = "complete crops cover less than 70% of priced value"
+        else:
+            index = detrend(balanced.sum(axis=0).to_numpy(), x=years)["index"]
+            if np.isfinite(index).all():
+                raise ValueError(f"Unexplained model exclusion for {code}")
+            reason = "output index undefined for at least one fitted trend year"
+        rows.append(
+            {
+                "dist_code": code,
+                "reason": reason,
+                "crops_with_reference_price": priced,
+                "balanced_crops": len(balanced),
+                "balanced_share_of_priced_value": share,
+                "missing_apy_start_years": ", ".join(map(str, sorted(set(years) - set(raw.year)))),
+            }
+        )
+    frame = pd.DataFrame(
+        rows,
+        columns=[
+            "dist_code",
+            "reason",
+            "crops_with_reference_price",
+            "balanced_crops",
+            "balanced_share_of_priced_value",
+            "missing_apy_start_years",
+        ],
+    )
+    return frame.merge(
+        names[["dist_code", "state_name", "district_name"]], on="dist_code", validate="1:1"
+    )
+
+
 def price_sensitivity(crop, main_panel):
     """Hold district, year, crop quantities, diversity and climate fixed across four price schedules."""
     from src.india import panel
@@ -432,7 +485,9 @@ def analyse_archived(destination):
         estimates.append(stats)
         coverage = coverage_table(crop, names, climate, m, years)
         eligibility.append(coverage.assign(window=tag))
-        exclusions.append(dropped.assign(window=tag))
+        exclusions.append(
+            archive_exclusions(crop, climate, names, years, dropped).assign(window=tag)
+        )
         suffix = "" if tag == "archive" else "_overlap"
         panel.to_parquet(destination / f"district_panel{suffix}.parquet", index=False)
         m.to_csv(destination / f"district_metrics{suffix}.csv", index=False)

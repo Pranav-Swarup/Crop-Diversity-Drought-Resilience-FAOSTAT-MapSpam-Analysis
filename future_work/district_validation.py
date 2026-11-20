@@ -13,6 +13,8 @@ from statsmodels.regression.linear_model import OLS
 from statsmodels.stats.sandwich_covariance import cov_cluster
 
 from .district_archive import ARCHIVE, PINS
+from .district_land_use import FIELDS as LAND_USE_FIELDS
+from .district_land_use import PAGES, verify_export
 from .freeze import digest
 from .storage import RESULT, ROOT, spei_path
 
@@ -108,6 +110,15 @@ def verify_native(crop, codebook, status):
         path = ARCHIVE / spec["file"]
         if path.exists() and digest(path) != spec["sha256"]:
             raise ValueError(f"District source digest differs for {role}")
+    land = status["external_land_use"]
+    pages = pd.read_csv(PAGES)
+    assert pages.offset.tolist() == [0, *pages.rows.cumsum().iloc[:-1].tolist()]
+    assert pages.canonical_sha256.str.fullmatch("[0-9a-f]{64}").all()
+    assert land["rows"] == land["datastore_records_checked"] == pages.rows.sum()
+    assert land["datastore_fields_checked"] == len(LAND_USE_FIELDS) * land["rows"]
+    export = ARCHIVE / pins["des_irrigation"]["file"]
+    if export.is_file():
+        assert verify_export(export) == land["rows"]
     fields = {
         "apy": [("area_ha_reported", " AREA", 1000), ("prod_t", " PRODUCTION", 1000)],
         "prices": [("price_inr_t", "price_field", 10)],
@@ -234,7 +245,43 @@ def validate(status):
         p = pd.read_parquet(RESULT / f"district_panel{suffix}.parquet")
         book = coverage[coverage.window.eq(tag)]
         assert set(book[book.eligible].dist_code) == set(p.dist_code)
-        assert set(book[~book.eligible].dist_code) == set(dropped[dropped.window.eq(tag)].dist_code)
+        reasons = dropped[dropped.window.eq(tag)].set_index("dist_code")
+        assert set(book[~book.eligible].dist_code) == set(reasons.index)
+        source = crop[crop.year.isin(p.year.unique()) & crop.dist_code.isin(reasons.index)]
+        reference_counts = (
+            source[source.reference_price_inr_t.notna()].groupby("dist_code").crop.nunique()
+        )
+        equal(
+            reasons.crops_with_reference_price,
+            reference_counts.reindex(reasons.index, fill_value=0),
+        )
+        prices_missing = reasons.reason.eq("no usable 2015 district-crop price")
+        assert reasons.crops_with_reference_price.eq(0).equals(prices_missing)
+        assert (
+            reasons.loc[reasons.reason.str.startswith("fewer than three"), "balanced_crops"]
+            .lt(3)
+            .all()
+        )
+        low_share = reasons[reasons.reason.str.startswith("complete crops cover")]
+        assert (
+            low_share.balanced_crops.ge(3).all()
+            and low_share.balanced_share_of_priced_value.lt(0.7).all()
+        )
+        years = set(p.year)
+        for code, g in source.groupby("dist_code"):
+            missing = ", ".join(map(str, sorted(years - set(g.year))))
+            recorded = reasons.at[code, "missing_apy_start_years"]
+            assert missing == ("" if pd.isna(recorded) else recorded)
+            if reasons.at[code, "reason"].startswith("output index undefined"):
+                values = (
+                    g.dropna(subset=["area_ha"])
+                    .pivot(index="year", columns="crop", values="value_const")
+                    .reindex(sorted(years))
+                    .dropna(axis=1)
+                )
+                totals = values.sum(axis=1)
+                trend = lowess(totals, totals.index, frac=0.5, return_sorted=False)
+                assert (~np.isfinite(trend) | (trend <= 0)).any()
         check_window(crop, p)
         for model in [tag, tag + "_irrigation_sample", tag + "_crop_irrigation"]:
             reestimate(p, stats[stats.model.eq(model)], model != tag)

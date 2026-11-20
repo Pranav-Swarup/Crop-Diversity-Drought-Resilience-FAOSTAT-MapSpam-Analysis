@@ -13,6 +13,13 @@ MANIFEST = HOME / "baseline.csv"
 SNAPSHOT = HOME / "local" / "baseline"
 DECK = "Crop Diversity and Drought Resilience (updated) (1).pdf"
 DECK_SHA = "493dadbcb4c0a70055ea6bbf0aac589e230881377fe033c3c9a5a60dc8206c58"
+# These four captured drafts belong only to the historical snapshot.
+RETIRED_SLIDES = {
+    "Crop Diversity and Drought Resilience (updated).pdf",
+    "Crop Diversity and Drought Resilience Phases 2–4.pptx",
+    "data/clean/Crop Diversity and Drought Resilience (1).pdf",
+    "data/clean/Crop Diversity and Drought Resilience.pptx",
+}
 # Generated baseline guides travel with their assets. The current documentation index covers them.
 GENERATED = {"figures/deck/INDEX.md", "outputs/dummy/README.md", "data/dummy/README.md"}
 
@@ -77,6 +84,10 @@ def verify(snapshot=False):
         if not snapshot and row["policy"] == "documentation":
             continue
         path = source / row["path"]
+        if not snapshot and row["path"] in RETIRED_SLIDES:
+            if path.exists() or path.is_symlink():
+                errors.append(row["path"])
+            continue
         if (
             not path.is_file()
             or path.stat().st_size != int(row["bytes"])

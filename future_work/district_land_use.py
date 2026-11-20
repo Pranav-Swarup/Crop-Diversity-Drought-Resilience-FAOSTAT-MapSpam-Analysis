@@ -163,7 +163,7 @@ def audit():
     else:
         tmp = PAGES.with_suffix(".tmp")
         with tmp.open("w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=list(pages[0]))
+            writer = csv.DictWriter(f, fieldnames=list(pages[0]), lineterminator="\n")
             writer.writeheader()
             writer.writerows(pages)
         tmp.replace(PAGES)

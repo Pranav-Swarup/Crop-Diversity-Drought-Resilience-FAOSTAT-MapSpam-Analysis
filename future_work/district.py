@@ -500,7 +500,9 @@ def run():
         raise FileNotFoundError(
             "The saved district results require their registered release to refresh"
         )
-    with TemporaryDirectory(dir=RESULT.parent) as tmpdir:
+    scratch = RESULT.parent / "local"
+    scratch.mkdir(exist_ok=True)
+    with TemporaryDirectory(prefix="district-", dir=scratch) as tmpdir:
         staging = Path(tmpdir)
         if path.exists():
             status = analyse(json.loads(path.read_text()), INPUT, staging)

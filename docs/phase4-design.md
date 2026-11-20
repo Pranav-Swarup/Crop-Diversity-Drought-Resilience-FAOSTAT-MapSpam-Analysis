@@ -49,7 +49,7 @@ Phase 4 goes deep instead of wide. Indian districts have long crop records, and 
 
 ### 4.1 ICRISAT District Level Database (DLD)
 
-Source: ICRISAT–TCI District Level Database for Indian Agriculture, `http://data.icrisat.org/dld/`. Registration required, so it is downloaded **by hand by a team member**. The site could not be reached when this was written; the module and year details below are **unverified** and must be confirmed from the downloaded files.
+The original proposal anticipated a manual download from the ICRISAT–TCI District Level Database for Indian Agriculture. The table below records the proposed variables. Pmjarvis recovered the publisher’s apportioned exports, confirmed the available table-specific dates and documented the differences from those expectations. [Observed inputs, units and coverage](../future_work/DISTRICT.md#what-the-publishers-actually-supply)
 
 Put the files in `data/raw/icrisat/` (gitignored), unchanged.
 
@@ -128,7 +128,7 @@ All pipelines end with assertions and a summary, as `CLAUDE.md` requires. No dum
 ## 9. Milestones
 
 0. **Review phase 2 and 3 code** by the module owners (it is unreviewed and phase 4 reuses `src/metrics/`).
-1. ICRISAT registration and download; report coverage (section 4.1).
+1. Acquire the ICRISAT inputs and report coverage (section 4.1). The follow-up uses the archived publisher exports.
 2. Team decisions marked **[team]**: window, download-script exception, price base period, module ownership.
 3. District boundaries and district SPEI (on the gridded-data machine).
 4. Clean district crop table with assertions.

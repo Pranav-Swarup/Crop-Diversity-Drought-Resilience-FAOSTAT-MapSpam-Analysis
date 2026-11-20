@@ -72,7 +72,7 @@ def write_sources():
 def write_outputs():
     tmp = OUTPUT_PINS.with_suffix(".tmp")
     with tmp.open("w", newline="") as out:
-        writer = csv.writer(out)
+        writer = csv.writer(out, lineterminator="\n")
         writer.writerow(["path", "bytes", "sha256"])
         for path in sorted([*RESULT.glob("*"), *FIG.glob("*")]):
             if path.is_file():

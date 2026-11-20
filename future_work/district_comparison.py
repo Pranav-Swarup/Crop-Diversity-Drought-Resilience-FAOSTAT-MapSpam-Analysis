@@ -8,6 +8,8 @@ import pandas as pd
 
 from .district import crop_year
 from .district_archive import DES_NAMES, bank_source
+from .district_land_use import FIELDS as LAND_USE_FIELDS
+from .district_land_use import verify_export
 from .figures import finish, plt
 from .storage import BASE, ROOT
 
@@ -111,7 +113,11 @@ def read_irrigation(path, units):
                 if pd.isna(actual) or str(actual) != str(expected):
                     raise ValueError(f"Land-use record {record['id']} differs in {field}")
             checked += 1
-    coverage["datastore_records_checked"] = checked
+    coverage["illustrative_datastore_records"] = checked
+    coverage["datastore_records_checked"] = verify_export(path)
+    coverage["datastore_fields_checked"] = coverage["datastore_records_checked"] * len(
+        LAND_USE_FIELDS
+    )
     src["old_code"] = (
         pd.to_numeric(src.district_code, errors="raise").astype("Int64").astype("string")
     )

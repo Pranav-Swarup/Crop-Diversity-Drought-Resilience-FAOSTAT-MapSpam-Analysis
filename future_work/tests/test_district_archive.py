@@ -49,3 +49,53 @@ def test_native_headers_units_and_negative_sentinel_are_strict():
     d.loc[0, "WHEAT AREA"] = "-9"
     with pytest.raises(ValueError, match="negative"):
         district_archive.measurements(d, units, "WHEAT AREA", "1000 ha", 1000)
+
+
+def test_land_use_datastore_reconciliation_joins_ids_and_preserves_blank(tmp_path):
+    import csv
+    import hashlib
+
+    from future_work.district_land_use import FIELDS, canonical, compare_export
+
+    def record(key, area):
+        return [
+            key,
+            "2000-2001",
+            "State",
+            7,
+            "District",
+            12,
+            "Food",
+            "Cereal",
+            "Cereal",
+            "Wheat",
+            8,
+            "nan",
+            area,
+        ]
+
+    pages = [
+        {
+            "offset": 0,
+            "rows": 2,
+            "canonical_sha256": hashlib.sha256(
+                canonical(record(0, None)) + canonical(record(1, 12.50))
+            ).hexdigest(),
+        }
+    ]
+    path = tmp_path / "land_use.csv"
+
+    def write(rows):
+        with path.open("w", newline="") as f:
+            writer = csv.writer(f)
+            writer.writerow(FIELDS)
+            writer.writerows(rows)
+
+    write([record(1, "12.500"), record(0, "")])
+    assert compare_export(path, pages) == 2
+    write([record(1, "12.500"), record(0, "0")])
+    with pytest.raises(ValueError, match="fields differ"):
+        compare_export(path, pages)
+    write([record(0, ""), record(0, "")])
+    with pytest.raises(ValueError, match="repeated"):
+        compare_export(path, pages)

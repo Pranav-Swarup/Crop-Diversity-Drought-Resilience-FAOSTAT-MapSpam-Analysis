@@ -133,6 +133,7 @@ def report():
             published = pd.read_csv(RESULT / "district_manual_sensitivity.csv").query('term == "spei_z"').set_index("model").loc["as_printed_crop_irrigation"]
             cov = pd.read_csv(RESULT / "district_coverage.csv").query('eligible and window == "archive"')
             farm = pd.read_csv(RESULT / "district_farm_price_agreement.csv")
+            land = info["external_land_use"]
             lines += [
                 "",
                 "The long and later windows give opposite point estimates. Every interval includes zero. These samples do not establish whether more diverse districts consistently lose less output in drought. The new rows also change the crop basket, district geography and time window relative to the presentation. [Model comparison figure](figures/05_district_comparison.png) · [All estimates and sample sizes](results/district_comparison.csv)",
@@ -142,6 +143,8 @@ def report():
                 f"Holding {int(latest.n_districts)} districts, {int(latest.n_obs):,} district-years, crop quantities and the weather fixed, the estimated interaction is **{100*latest.beta:+.2f} points** at 2015 district farm prices and **{100*intl.beta:+.2f}** at the presented FAOSTAT prices. This isolates price weighting from the other sample differences. [Price comparison figure](figures/05c_district_price_comparison.png) · [Four price specifications](results/district_price_sensitivity.csv)",
                 "",
                 f"All **{info['source_cells_checked']:,} numerical entries** in the archived official crop export match the independently deposited World Bank copy. In the separate comparison of apportioned and unapportioned farm-price series, {int(farm.identical.sum()):,} of {int(farm.joint_prices.sum()):,} joint positive prices agree exactly. [Crop-file audit](results/district_source_reconciliation.csv) · [Price audit](results/district_farm_price_agreement.csv)",
+                "",
+                f"The government land-use CSV agrees with the portal datastore across **{land['datastore_fields_checked']:,} fields in {land['datastore_records_checked']:,} rows** when joined by record ID. This verifies the downloaded observations, including blanks. The comparison with ICRISAT below addresses whether the two agricultural publications actually give the same hectares. [Datastore queries and page digests](district_land_use_pages.csv)",
                 "",
                 f"Of {info['modern_aligned_districts']} aligned historical and modern districts, {int(irr.districts)} contribute positive irrigation pairs from both agricultural publications. **{int(irr.within_tolerance):,} of {int(irr.positive_pairs):,} ({100*irr.within_tolerance/irr.positive_pairs:.1f}%)** agree within 10 hectares or 1% of the government comparator, whichever is larger. The median absolute difference is {irr.median_absolute_difference:g} ha and the largest is {irr.max_absolute_difference:,.0f} ha. Jaisalmer chickpea in 2013–14 is the largest discrepancy. No historical and modern comparison polygon is identical. [Quantity agreement figure](figures/05b_district_quantity_agreement.png) · [Values by crop and source](results/district_quantity_agreement.csv) · [Boundary sensitivity](results/district_boundary_sensitivity.csv) · [Methods, sources and limitations](DISTRICT.md)",
                 "",
@@ -154,7 +157,7 @@ def report():
     lines += [
         "## Verification",
         "",
-        "The baseline manifest verifies the original figures, statistics, code, data, slides and explorer. The extension’s tests reconcile source identities, calendar bounds, exposure and country coverage, model estimates and plotted values. [Freeze manifest](baseline.csv) · [Source checksums](source_files.csv.gz) · [Follow-up output checksums](outputs.csv) · [Documentation inventory](DOCUMENTATION.md)",
+        "The working-tree check verifies the presented figures, statistics, code, data, delivered slide PDF and explorer. The historical snapshot preserves all original slide versions. The extension’s tests reconcile source identities, calendar bounds, exposure and country coverage, model estimates and plotted values. [Freeze manifest](baseline.csv) · [Source checksums](source_files.csv.gz) · [Follow-up output checksums](outputs.csv) · [Documentation inventory](DOCUMENTATION.md)",
         "",
     ]
     (BASE / "FINDINGS.md").write_text("\n".join(lines))

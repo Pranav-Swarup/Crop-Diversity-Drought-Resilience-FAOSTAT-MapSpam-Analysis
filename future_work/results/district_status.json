@@ -121,12 +121,14 @@
       "2023-2024"
     ],
     "missing_area": 413811,
-    "datastore_records_checked": 35
+    "illustrative_datastore_records": 35,
+    "datastore_records_checked": 605000,
+    "datastore_fields_checked": 7865000
   },
   "summary": "Archived ICRISAT/TCI data cover 311 parent districts. The 1966–2017 analysis values production at observed 2015 farm-harvest prices and admits 176 districts. The live portal’s latest apportioned edition could not be independently established.",
   "registry_doi": "10.21421/D2/XFB1BZ",
   "partner_catalog": "https://tci.cornell.edu/data/",
-  "checked_utc": "2026-11-20T17:15:26.812553+00:00",
+  "checked_utc": "2026-11-20T18:18:42.786654+00:00",
   "checks": [
     {
       "url": "https://data.icrisat.org/dld/",
